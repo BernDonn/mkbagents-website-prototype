@@ -154,8 +154,7 @@
         <a href="#agents">AI-agents</a>
         <a href="#oplossingen">Oplossingen</a>
         <a href="#security">Security</a>
-        <a href="#prijzen">Prijzen</a>
-        <a href="#deploy">Start een pilot</a>
+                <a href="#deploy">Start een pilot</a>
         <a href="#providers">Modelkeuze</a>
         <a href="#hosting">Hosting</a>
                 <a href="#juridisch">Voorwaarden</a>
@@ -284,32 +283,31 @@
       </div>
     </section>
 
-    <section class="section" id="prijzen">
-      <div class="eyebrow">Pakketten</div>
-      <h2>Drie manieren om je agent te draaien</h2>
-      <div class="products">
-        <article class="product featured">
-          <span class="tag">1 · Starter</span>
-          <h3>Managed Agent</h3>
-          <p class="muted">Voor MKB-bedrijven die snel willen starten: jouw agent draait in de beheerde MKBAgents-omgeving met eigen botkoppeling, gescheiden configuratie en duidelijke beheerafspraken.</p>
-          <ul><li>Telegram-bot, WhatsApp-flow of e-mail routing</li><li>Eigen AI-sleutel of afgesproken modelroute</li><li>Geïsoleerde agent-worker</li><li>Menselijke goedkeuring voor gevoelige acties</li></ul>
-          <div class="price">€29 <span>/ maand per bot</span></div>
+    <section class="section" id="hosting">
+      <div class="eyebrow">Waar draait je Agent?</div>
+      <h2>Managed, dedicated of bring your own</h2>
+      <p class="lead">De standaardroute is een beheerde MKBAgents-omgeving. Wie meer isolatie of eigenaarschap wil, kiest voor een dedicated server of brengt eigen infrastructuur mee.</p>
+      <div class="provider-grid">
+        <article class="provider-card">
+          <span class="tag">1 · Managed</span>
+          <strong>MKBAgents Cloud</strong>
+          <p class="muted">De agent draait op door MKBAgents beheerde Europese infrastructuur. Klanten krijgen een eigen bot, eigen configuratie en gescheiden geheimen.</p>
+          <ul><li>Beste start voor €29/maand</li><li>Snelle activatie</li><li>Beheer, updates en monitoring inbegrepen</li></ul>
         </article>
-        <article class="product">
+        <article class="provider-card">
           <span class="tag">2 · Dedicated</span>
-          <h3>Private Agent Server</h3>
-          <p class="muted">Voor klanten die extra isolatie willen: een eigen beheerde omgeving op Europese cloudinfrastructuur, met aparte monitoring en onderhoud.</p>
-          <ul><li>Dedicated VPS of private workspace</li><li>Automatische installatie en updates</li><li>Meer controle over data en toegang</li><li>Geschikt voor privacygevoelige processen</li></ul>
-          <div class="price">Vanaf €79 <span>/ maand</span></div>
+          <strong>Eigen Hetzner VPS</strong>
+          <p class="muted">Voor klanten met hogere eisen aan isolatie. De server wordt automatisch ingericht en door MKBAgents beheerd.</p>
+          <ul><li>Eigen VPS per klant</li><li>Cloud-init/Terraform-ready</li><li>Geschikt voor gevoelige workflows</li></ul>
         </article>
-        <article class="product">
+        <article class="provider-card">
           <span class="tag">3 · Bring your own</span>
-          <h3>Eigen cloud of Mac</h3>
-          <p class="muted">Voor organisaties die zelf eigenaar willen blijven van de infrastructuur. MKBAgents helpt met setup, koppeling en beheerafspraken.</p>
-          <ul><li>Eigen VPS, Mac mini of bestaande omgeving</li><li>Eenmalige setup</li><li>Maandelijkse support mogelijk</li><li>Jij houdt de infrastructuurrelatie</li></ul>
-          <div class="price">Setup + beheer</div>
+          <strong>Eigen cloud, VPS of Mac</strong>
+          <p class="muted">Voor mensen en organisaties die zelf de infrastructuurrelatie houden. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.</p>
+          <ul><li>Eigen Mac mini, VPS of bestaande cloud</li><li>Meer eigenaarschap</li><li>Setupfee + beheerabonnement mogelijk</li></ul>
         </article>
       </div>
+      <div class="flow-note"><strong>Infrastructuurkeuze:</strong> voor automatische provisioning is Hetzner de voorkeursroute. Hostinger blijft interessant als optionele affiliate- of klant-hostingroute, maar niet als standaard backend voor de managed omgeving.</div>
     </section>
 
     <section class="section" id="deploy">
@@ -371,33 +369,6 @@
         </article>
       </div>
       <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment kiezen we de primaire modelroute en minimaal één fallback. Sleutels of OAuth-tokens worden niet in de website gezet; ze horen in de private agent-workspace. Hermes gebruikt de gekozen provider voor het denkwerk, OpenClaw levert het Telegram/WhatsApp-kanaal, en gevoelige acties blijven wachten op menselijke goedkeuring.</div>
-    </section>
-
-    <section class="section" id="hosting">
-      <div class="eyebrow">Waar draait je agent?</div>
-      <h2>Managed, dedicated of bring your own</h2>
-      <p class="lead">De standaardroute is een beheerde MKBAgents-omgeving. Wie meer isolatie of eigenaarschap wil, kiest voor een dedicated server of brengt eigen infrastructuur mee.</p>
-      <div class="provider-grid">
-        <article class="provider-card">
-          <span class="tag">1 · Managed</span>
-          <strong>MKBAgents Cloud</strong>
-          <p class="muted">De agent draait op door MKBAgents beheerde Europese infrastructuur. Klanten krijgen een eigen bot, eigen configuratie en gescheiden geheimen.</p>
-          <ul><li>Beste start voor €29/maand</li><li>Snelle activatie</li><li>Beheer, updates en monitoring inbegrepen</li></ul>
-        </article>
-        <article class="provider-card">
-          <span class="tag">2 · Dedicated</span>
-          <strong>Eigen Hetzner VPS</strong>
-          <p class="muted">Voor klanten met hogere eisen aan isolatie. De server wordt automatisch ingericht en door MKBAgents beheerd.</p>
-          <ul><li>Eigen VPS per klant</li><li>Cloud-init/Terraform-ready</li><li>Geschikt voor gevoelige workflows</li></ul>
-        </article>
-        <article class="provider-card">
-          <span class="tag">3 · Bring your own</span>
-          <strong>Eigen cloud, VPS of Mac</strong>
-          <p class="muted">Voor mensen en organisaties die zelf de infrastructuurrelatie houden. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.</p>
-          <ul><li>Eigen Mac mini, VPS of bestaande cloud</li><li>Meer eigenaarschap</li><li>Setupfee + beheerabonnement mogelijk</li></ul>
-        </article>
-      </div>
-      <div class="flow-note"><strong>Infrastructuurkeuze:</strong> voor automatische provisioning is Hetzner de voorkeursroute. Hostinger blijft interessant als optionele affiliate- of klant-hostingroute, maar niet als standaard backend voor de managed omgeving.</div>
     </section>
 
     <section class="section" id="security">
@@ -494,7 +465,7 @@
         "MKBAgents levert beheerde AI-agents voor Nederlandse MKB-bedrijven en directie: veilig, controleerbaar en AVG-bewust.": "MKBAgents delivers managed AI agents for Dutch SMEs and leadership teams: secure, controllable and GDPR-aware.",
         "AI-agents": "AI agents",
         "Oplossingen": "Solutions",
-        "Prijzen": "Pricing",
+        "Hosting": "Hosting",
         "Start een pilot": "Start a pilot",
         "Modelkeuze": "Model choice",
         "Voorwaarden": "Terms",
@@ -580,33 +551,9 @@
         "Het herhaalbare werk geregeld": "Recurring work handled",
         "Controleer dossiers, verwerk intake en signaleer ontbrekende informatie voordat werk blijft liggen of fouten doorlekken.": "Check files, process intake and flag missing information before work stalls or errors leak through.",
         "“Nieuwe aanvraag binnen → checklist doorlopen → ontbrekende stukken gevraagd.”": "“New request received → checklist completed → missing documents requested.”",
-        "Pakketten": "Packages",
-        "Drie manieren om je agent te draaien": "Three ways to run your agent",
-        "1 · Starter": "1 · Starter",
-        "Managed Agent": "Managed Agent",
-        "Voor MKB-bedrijven die snel willen starten: jouw agent draait in de beheerde MKBAgents-omgeving met eigen botkoppeling, gescheiden configuratie en duidelijke beheerafspraken.": "For individuals and small-scale human-centered trajectories that want to start quickly: your agent runs in the managed MKBAgents environment with its own bot connection and separated configuration.",
-        "Telegram-bot, WhatsApp-flow of e-mail routing": "Telegram bot, WhatsApp flow or email routing",
-        "Eigen AI-sleutel of afgesproken modelroute": "Own AI key or agreed model route",
-        "Geïsoleerde agent-worker": "Isolated agent worker",
-        "Menselijke goedkeuring voor gevoelige acties": "Human approval for sensitive actions",
-        "/ maand per bot": "/ month per bot",
         "2 · Dedicated": "2 · Dedicated",
-        "Private Agent Server": "Private Agent Server",
-        "Voor klanten die extra isolatie willen: een eigen beheerde omgeving op Europese cloudinfrastructuur, met aparte monitoring en onderhoud.": "For customers who want extra isolation: their own managed environment on European cloud infrastructure, with separate monitoring and maintenance.",
-        "Dedicated VPS of private workspace": "Dedicated VPS or private workspace",
-        "Automatische installatie en updates": "Automatic installation and updates",
-        "Meer controle over data en toegang": "More control over data and access",
         "Geschikt voor privacygevoelige processen": "Suitable for privacy-sensitive processes",
-        "Vanaf €79": "From €79",
-        "/ maand": "/ month",
         "3 · Bring your own": "3 · Bring your own",
-        "Eigen cloud of Mac": "Own cloud or Mac",
-        "Voor organisaties die zelf eigenaar willen blijven van de infrastructuur. MKBAgents helpt met setup, koppeling en beheerafspraken.": "For people and organizations that want to remain owners of the infrastructure. MKBAgents helps with setup, integration and management agreements.",
-        "Eigen VPS, Mac mini of bestaande omgeving": "Own VPS, Mac mini or existing environment",
-        "Eenmalige setup": "One-time setup",
-        "Maandelijkse support mogelijk": "Monthly support possible",
-        "Jij houdt de infrastructuurrelatie": "You keep the infrastructure relationship",
-        "Setup + beheer": "Setup + management",
         "Start een pilot": "Start a pilot",
         "Van eerste gesprek naar werkende agentflow": "From first conversation to working agent workflow",
         "We maken inzet concreet: niet “we doen iets met AI”, maar een beheerde agentflow die veilig draait en aansluit op de kanalen en processen die je team al gebruikt.": "We make deployment concrete: not “we do something with AI”, but a managed agent workflow that runs safely and connects to the channels and processes your team already uses.",
@@ -651,7 +598,7 @@
         "Toegang kan later worden ingetrokken": "Access can be revoked later",
         "Hoe het werkt:": "How it works:",
         "tijdens deployment kiezen we de primaire modelroute en minimaal één fallback. Sleutels of OAuth-tokens worden niet in de website gezet; ze horen in de private agent-workspace. Hermes gebruikt de gekozen provider voor het denkwerk, OpenClaw levert het Telegram/WhatsApp-kanaal, en gevoelige acties blijven wachten op menselijke goedkeuring.": "during deployment we choose the primary model route and at least one fallback. Keys or OAuth tokens are not placed in the website; they belong in the private agent workspace. Hermes uses the chosen provider for reasoning, OpenClaw provides the Telegram/WhatsApp channel, and sensitive actions keep waiting for human approval.",
-        "Waar draait je agent?": "Where does your agent run?",
+        "Waar draait je Agent?": "Where does your Agent run?",
         "Managed, dedicated of bring your own": "Managed, dedicated or bring your own",
         "De standaardroute is een beheerde MKBAgents-omgeving. Wie meer isolatie of eigenaarschap wil, kiest voor een dedicated server of brengt eigen infrastructuur mee.": "The standard route is a managed MKBAgents environment. Those who want more isolation or ownership choose a dedicated server or bring their own infrastructure.",
         "1 · Managed": "1 · Managed",
