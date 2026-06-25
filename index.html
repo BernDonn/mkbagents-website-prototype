@@ -134,6 +134,15 @@
     .diagram-dot.lime{background:var(--lime)}
     .diagram-dot.green{background:#78c28c}
     .diagram-dot.sand{background:#e7cfa0}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .compare-card{background:rgba(255,250,241,.82);border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 12px 35px rgba(20,35,24,.05);display:grid;gap:14px}
+    .compare-card h3{margin:0;font-size:30px}
+    .compare-card .muted{font-size:16px}
+    .compare-card.proprietary{background:rgba(255,248,242,.82)}
+    .compare-card.opensource{background:linear-gradient(180deg, rgba(22,63,43,.96), rgba(16,41,31,.98));color:#fff;border-color:rgba(255,255,255,.08)}
+    .compare-card.opensource .muted,.compare-card.opensource li{color:#dce7dc}
+    .compare-card.opensource .tag{background:rgba(215,242,104,.16);color:var(--lime);border-color:rgba(215,242,104,.3)}
+    .compare-note{margin-top:18px;background:#f0e6d6;border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#304034;line-height:1.6}
     .proof{background:#13291f;color:#fff;border-radius:42px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
     .proof h2{color:#fff}.proof .muted{color:#dce7dc}.quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:22px;border-radius:26px;font-size:22px;line-height:1.35;letter-spacing:-.03em}
     .footer-cta{background:linear-gradient(135deg, #143f2b, #0c1d16);color:#fff;border-radius:48px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;overflow:hidden;position:relative}
@@ -170,9 +179,9 @@
   <main>
     <section class="section hero">
       <div>
-        <div class="eyebrow">Hermes + OpenClaw · Managed AI agents · MKB & directie</div>
-        <h1>AI-agents voor bedrijven. Controle voor directie.</h1>
-        <p class="lead">Initiatiefnemer Bernard Donners, Lector AI aan TIO Business School in Amsterdam en Groningen, werkt met een team van experts aan agent-oplossingen op basis van Hermes en OpenClaw die MKB-bedrijven helpen om processen te stroomlijnen, overzicht te houden en veilige AI-ondersteuning direct in de operatie te plaatsen.</p>
+        <div class="eyebrow">Open-source agentvarianten · Hermes of OpenClaw · MKB & directie</div>
+        <h1>Minder vendor lock-in. Meer controle voor directie.</h1>
+        <p class="lead">Claude en OpenAI zijn sterke modellen, maar blijven proprietary routes met terugkerende tokenkosten en afhankelijkheid van één leverancier. MKBAgents zet daar een open-source agentlaag naast: met Hermes of OpenClaw houd je workflows, tools en providerkeuze in eigen hand — en kun je goedkoper opschalen of wisselen wanneer dat nodig is.</p>
         <div class="hero-actions">
           <a class="button light" href="#deploy">Start een pilot</a>
           <a class="button secondary" href="#security">Bekijk security-aanpak</a>
@@ -181,7 +190,7 @@
           <span class="pill">Private EU-server</span>
           <span class="pill">AVG/GDPR-bewust</span>
           <span class="pill">Human approval</span>
-          <span class="pill">Hermes + OpenClaw</span>
+          <span class="pill">Hermes of OpenClaw</span>
         </div>
       </div>
       <aside class="agent-card" aria-label="AI agent demo kaart">
@@ -191,10 +200,31 @@
         </div>
         <div class="chat">
           <div class="bubble"><div class="mini">Sales desk · 09:41</div>Welke leads en dossiers vragen vandaag directe opvolging?</div>
-          <div class="bubble agent"><div class="mini">MKBAgent via OpenClaw · 09:42</div>Ik zie drie dossiers en twee warme leads. Twee acties kunnen direct worden voorbereid; één voorstel wacht op akkoord. Ik zet de conceptmail klaar, maar verstuur niets zonder jouw bevestiging.</div>
+          <div class="bubble agent"><div class="mini">MKBAgent · 09:42</div>Ik zie drie dossiers en twee warme leads. Twee acties kunnen direct worden voorbereid; één voorstel wacht op akkoord. Ik zet de conceptmail klaar, maar verstuur niets zonder jouw bevestiging.</div>
           <div class="bubble"><div class="mini">Security policy</div>Actie vereist menselijke goedkeuring · gegevens blijven binnen EU-workspace.</div>
         </div>
       </aside>
+    </section>
+
+    <section class="section" style="padding-top:10px;padding-bottom:18px">
+      <div class="eyebrow">Waarom open source?</div>
+      <h2>Claude en OpenAI zijn modellen. Hermes houdt de agentlaag van jou.</h2>
+      <p class="lead">Voor veel bedrijven zit de echte lock-in niet alleen in het model, maar in de workflows, het geheugen, de tooling en de manier waarop alles aan elkaar hangt. Daar maakt open source het verschil.</p>
+      <div class="compare-grid">
+        <article class="compare-card proprietary">
+          <span class="tag">Claude / OpenAI</span>
+          <h3>Sterk in modelkwaliteit, minder in eigenaarschap</h3>
+          <p class="muted">Je bouwt bovenop prijs per token, beleid, limieten en roadmap van één leverancier. Als die veranderen, verandert je agent mee.</p>
+          <ul><li>Terugkerende tokenkosten per workflow</li><li>Meer afhankelijk van vendorbeleid en API-wijzigingen</li><li>Migreren kost later vaak extra werk</li></ul>
+        </article>
+        <article class="compare-card opensource">
+          <span class="tag">Hermes</span>
+          <h3>Beter als agentlaag. Vaak goedkoper op termijn.</h3>
+          <p class="muted">Hermes is open source: je houdt controle over geheugen, tools, skills en providerkeuze. Daardoor kun je Claude, OpenAI of open modellen gebruiken zonder dat je hele werkwijze vastzit aan één partij.</p>
+          <ul><li>Minder vendor lock-in</li><li>Goedkoper optimaliseren via meerdere modelroutes</li><li>Beter aanpasbaar aan je eigen processen</li></ul>
+        </article>
+      </div>
+      <div class="compare-note"><strong>Belangrijk:</strong> Claude en OpenAI kunnen nog steeds prima modelroutes zijn. Het verschil is dat Hermes de agentlaag, het geheugen en de workflowlogica van jou houdt — niet van de leverancier.</div>
     </section>
 
     <section class="section" style="padding-top:0">
@@ -248,64 +278,47 @@
         </div>
         <article class="trust-visual">
           <div class="diagram-title">
-            <h3>Hermes-architectuur</h3>
-            <span>Kanalen · geheugen · tools · modellen</span>
+            <h3>Open-source varianten</h3>
+            <span>Hermes en OpenClaw zijn los inzetbaar</span>
           </div>
           <div class="diagram-frame">
-            <svg viewBox="0 0 760 470" role="img" aria-label="Hermes architectuurdiagram voor MKBAgents">
-              <defs>
-                <linearGradient id="boxFill" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stop-color="rgba(255,250,241,.10)"/>
-                  <stop offset="100%" stop-color="rgba(255,250,241,.04)"/>
-                </linearGradient>
-                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#d7f268"/>
-                </marker>
-              </defs>
+            <svg viewBox="0 0 760 470" role="img" aria-label="Hermes en OpenClaw als losse open-source varianten voor MKBAgents">
               <rect x="8" y="8" width="744" height="454" rx="26" fill="rgba(3,12,8,.26)" stroke="rgba(255,255,255,.08)"/>
-              <text x="34" y="48" fill="#fffaf1" font-size="24" font-weight="700">Gebruiker & kanalen</text>
-              <rect x="34" y="72" width="148" height="58" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.32)"/>
-              <text x="108" y="106" text-anchor="middle" fill="#fffaf1" font-size="22" font-weight="700">WhatsApp</text>
-              <rect x="34" y="146" width="148" height="58" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.32)"/>
-              <text x="108" y="180" text-anchor="middle" fill="#fffaf1" font-size="22" font-weight="700">Telegram</text>
-              <rect x="34" y="220" width="148" height="58" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.32)"/>
-              <text x="108" y="254" text-anchor="middle" fill="#fffaf1" font-size="22" font-weight="700">E-mail</text>
-              <rect x="34" y="294" width="148" height="58" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.32)"/>
-              <text x="108" y="328" text-anchor="middle" fill="#fffaf1" font-size="22" font-weight="700">Browser</text>
-              <line x1="182" y1="101" x2="250" y2="170" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
-              <line x1="182" y1="175" x2="250" y2="184" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
-              <line x1="182" y1="249" x2="250" y2="198" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
-              <line x1="182" y1="323" x2="250" y2="212" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
-              <rect x="250" y="118" width="248" height="146" rx="24" fill="rgba(22,63,43,.72)" stroke="rgba(255,255,255,.14)"/>
-              <text x="374" y="158" text-anchor="middle" fill="#fffaf1" font-size="30" font-weight="800">OpenClaw</text>
-              <text x="374" y="190" text-anchor="middle" fill="#dce7dc" font-size="18">communicatie & routing</text>
-              <rect x="294" y="212" width="160" height="34" rx="12" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.08)"/>
-              <text x="374" y="234" text-anchor="middle" fill="#fffaf1" font-size="15">berichten → acties → feedback</text>
-              <line x1="498" y1="191" x2="560" y2="191" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
-              <rect x="560" y="92" width="160" height="198" rx="24" fill="rgba(255,250,241,.06)" stroke="rgba(255,255,255,.12)"/>
-              <text x="640" y="132" text-anchor="middle" fill="#fffaf1" font-size="30" font-weight="800">Hermes</text>
-              <text x="640" y="164" text-anchor="middle" fill="#dce7dc" font-size="18">agent-engine</text>
-              <rect x="586" y="188" width="108" height="32" rx="12" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.26)"/>
-              <text x="640" y="209" text-anchor="middle" fill="#fffaf1" font-size="15">memory</text>
-              <rect x="586" y="228" width="108" height="32" rx="12" fill="rgba(120,194,140,.14)" stroke="rgba(120,194,140,.26)"/>
-              <text x="640" y="249" text-anchor="middle" fill="#fffaf1" font-size="15">skills</text>
-              <line x1="640" y1="290" x2="640" y2="342" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
-              <rect x="300" y="332" width="176" height="94" rx="22" fill="rgba(255,250,241,.06)" stroke="rgba(255,255,255,.12)"/>
-              <text x="388" y="368" text-anchor="middle" fill="#fffaf1" font-size="24" font-weight="700">Tools</text>
-              <text x="388" y="394" text-anchor="middle" fill="#dce7dc" font-size="16">browser · web · terminal</text>
-              <text x="388" y="416" text-anchor="middle" fill="#dce7dc" font-size="16">planning · automation</text>
-              <rect x="510" y="332" width="210" height="94" rx="22" fill="rgba(231,207,160,.10)" stroke="rgba(231,207,160,.28)"/>
-              <text x="615" y="368" text-anchor="middle" fill="#fffaf1" font-size="24" font-weight="700">Modelroutes</text>
-              <text x="615" y="394" text-anchor="middle" fill="#dce7dc" font-size="16">Claude · OpenRouter · Codex</text>
-              <text x="615" y="416" text-anchor="middle" fill="#dce7dc" font-size="16">fallbacks per workflow</text>
-              <line x1="560" y1="380" x2="476" y2="380" stroke="#d7f268" stroke-width="4" marker-end="url(#arrow)"/>
+              <text x="44" y="50" fill="#fffaf1" font-size="24" font-weight="700">Kies de variant die past bij je workflow</text>
+              <rect x="38" y="78" width="318" height="330" rx="28" fill="rgba(255,250,241,.05)" stroke="rgba(255,255,255,.1)"/>
+              <text x="66" y="120" fill="#fffaf1" font-size="34" font-weight="800">Hermes</text>
+              <text x="66" y="150" fill="#dce7dc" font-size="18">agent-engine · geheugen · tools</text>
+              <rect x="66" y="176" width="262" height="48" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.30)"/>
+              <text x="197" y="206" text-anchor="middle" fill="#fffaf1" font-size="20" font-weight="700">memory</text>
+              <rect x="66" y="236" width="262" height="48" rx="16" fill="rgba(120,194,140,.14)" stroke="rgba(120,194,140,.30)"/>
+              <text x="197" y="266" text-anchor="middle" fill="#fffaf1" font-size="20" font-weight="700">skills</text>
+              <rect x="66" y="296" width="126" height="70" rx="18" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+              <text x="129" y="334" text-anchor="middle" fill="#fffaf1" font-size="19" font-weight="700">tools</text>
+              <text x="129" y="354" text-anchor="middle" fill="#dce7dc" font-size="13">browser · web</text>
+              <rect x="202" y="296" width="126" height="70" rx="18" fill="rgba(231,207,160,.10)" stroke="rgba(231,207,160,.28)"/>
+              <text x="265" y="334" text-anchor="middle" fill="#fffaf1" font-size="19" font-weight="700">modellen</text>
+              <text x="265" y="354" text-anchor="middle" fill="#dce7dc" font-size="13">Claude · OpenAI · open</text>
+              <rect x="402" y="78" width="318" height="330" rx="28" fill="rgba(255,250,241,.05)" stroke="rgba(255,255,255,.1)"/>
+              <text x="430" y="120" fill="#fffaf1" font-size="34" font-weight="800">OpenClaw</text>
+              <text x="430" y="150" fill="#dce7dc" font-size="18">kanaalwerk · routing · workflows</text>
+              <rect x="430" y="176" width="118" height="48" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.30)"/>
+              <text x="489" y="206" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">Telegram</text>
+              <rect x="562" y="176" width="118" height="48" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.30)"/>
+              <text x="621" y="206" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">WhatsApp</text>
+              <rect x="430" y="238" width="250" height="52" rx="16" fill="rgba(120,194,140,.14)" stroke="rgba(120,194,140,.30)"/>
+              <text x="555" y="270" text-anchor="middle" fill="#fffaf1" font-size="20" font-weight="700">custom workflows</text>
+              <rect x="430" y="304" width="118" height="48" rx="16" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+              <text x="489" y="334" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">browser</text>
+              <rect x="562" y="304" width="118" height="48" rx="16" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+              <text x="621" y="334" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">automations</text>
+              <text x="380" y="438" text-anchor="middle" fill="#d7e2d7" font-size="16">Geen koppellijn: dit zijn twee losse open-source varianten, geen vaste stack.</text>
             </svg>
           </div>
-          <p class="diagram-caption">De dagelijkse kanalen lopen via OpenClaw naar Hermes. Hermes gebruikt geheugen, skills, tools en modelroutes om werkflows veilig en herhaalbaar uit te voeren.</p>
+          <p class="diagram-caption">Hermes en OpenClaw zijn twee verschillende open-source routes. Hermes is sterk als agentlaag met geheugen en tools; OpenClaw is sterk voor kanaalwerk, routing en workflow-interfaces.</p>
           <div class="diagram-legend">
             <span class="diagram-pill"><span class="diagram-dot lime"></span> Kanalen</span>
-            <span class="diagram-pill"><span class="diagram-dot green"></span> Agent & tools</span>
-            <span class="diagram-pill"><span class="diagram-dot sand"></span> Modelkeuze</span>
+            <span class="diagram-pill"><span class="diagram-dot green"></span> Agentlaag</span>
+            <span class="diagram-pill"><span class="diagram-dot sand"></span> Modelvrijheid</span>
           </div>
         </article>
       </div>
@@ -360,7 +373,7 @@
       <div class="deploy-grid">
         <article class="deploy-panel">
           <h3>Wat je krijgt</h3>
-          <p class="muted">Een werkende MKBAgent met Hermes als motor en OpenClaw als communicatiekanaal. Eerst één proces, daarna uitbreiden.</p>
+          <p class="muted">Een werkende MKBAgent op Hermes of OpenClaw, afhankelijk van workflow en kanaal. Eerst één proces, daarna uitbreiden.</p>
           <div class="channel-row">
             <span class="channel">Telegram</span>
             <span class="channel">WhatsApp</span>
@@ -369,7 +382,7 @@
           </div>
           <div class="deploy-steps">
             <div class="deploy-step"><div><strong>Intake & use-case</strong><br><span class="muted">We kiezen één workflow: inbox, monitoring, dossiers, content of leadopvolging.</span></div></div>
-            <div class="deploy-step"><div><strong>Private agent workspace</strong><br><span class="muted">We richten Hermes/OpenClaw in op een beheerde EU-omgeving met duidelijke data-afspraken.</span></div></div>
+            <div class="deploy-step"><div><strong>Private agent workspace</strong><br><span class="muted">We richten de gekozen variant in op een beheerde EU-omgeving met duidelijke data-afspraken.</span></div></div>
             <div class="deploy-step"><div><strong>Kanaal koppelen</strong><br><span class="muted">Telegram, WhatsApp of e-mail wordt het dagelijkse bedieningspaneel. Geen nieuw portaal nodig.</span></div></div>
             <div class="deploy-step"><div><strong>Human approval</strong><br><span class="muted">De agent zet concepten en acties klaar, maar gevoelige stappen wachten op jouw akkoord.</span></div></div>
           </div>
@@ -379,7 +392,7 @@
           <p class="muted">De agent leeft in het kanaal waar je team al werkt. Telegram is snel voor interne workflows; WhatsApp en e-mail zijn handig voor opvolging, klantcontact en directie-overzicht.</p>
           <div class="chat" style="background:#13291f;border-radius:24px;padding:18px">
             <div class="bubble"><div class="mini">Sales · WhatsApp</div>Zet de drie warmste leads klaar en vat de laatste inbox-updates samen.</div>
-            <div class="bubble agent"><div class="mini">OpenClaw → Hermes</div>Ik heb 18 mails en 6 leads bekeken. Drie vragen directe actie. Ik heb conceptantwoorden opgesteld en één follow-up reminder gezet. Wil je ze controleren?</div>
+            <div class="bubble agent"><div class="mini">MKBAgent · update</div>Ik heb 18 mails en 6 leads bekeken. Drie vragen directe actie. Ik heb conceptantwoorden opgesteld en één follow-up reminder gezet. Wil je ze controleren?</div>
             <div class="bubble"><div class="mini">Directie · Telegram</div>Akkoord met lead 1 en 2. Lead 3 eerst aanpassen: korter en scherper.</div>
           </div>
           <p class="muted" style="margin-top:18px">Voor de eerste commerciële versie houden we de belofte scherp: start met één agent, één workflow, één team. Daarna pas uitbreiden.</p>
@@ -411,7 +424,7 @@
           <ul><li>Geen API-key kopiëren</li><li>Handig voor Codex/ChatGPT-workflows</li><li>Toegang kan later worden ingetrokken</li></ul>
         </article>
       </div>
-      <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment kiezen we de primaire modelroute en minimaal één fallback. Sleutels of OAuth-tokens worden niet in de website gezet; ze horen in de private agent-workspace. Hermes gebruikt de gekozen provider voor het denkwerk, OpenClaw levert het Telegram/WhatsApp-kanaal, en gevoelige acties blijven wachten op menselijke goedkeuring.</div>
+      <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment kiezen we de primaire modelroute en minimaal één fallback. Sleutels of OAuth-tokens worden niet in de website gezet; ze horen in de private agent-workspace. Daarna kiezen we de best passende open-source route — Hermes of OpenClaw — plus de juiste kanalen en goedkeuringsstappen voor jouw workflow.</div>
     </section>
 
     <section class="section" id="security">
@@ -511,11 +524,27 @@
         "Hosting": "Hosting",
         "Start een pilot": "Start a pilot",
         "Modelkeuze": "Model choice",
+        "Waarom open source?": "Why open source?",
+        "Claude en OpenAI zijn modellen. Hermes houdt de agentlaag van jou.": "Claude and OpenAI are models. Hermes keeps the agent layer in your hands.",
+        "Voor veel bedrijven zit de echte lock-in niet alleen in het model, maar in de workflows, het geheugen, de tooling en de manier waarop alles aan elkaar hangt. Daar maakt open source het verschil.": "For many companies, the real lock-in is not only in the model, but in the workflows, memory, tooling and the way everything is wired together. That is where open source makes the difference.",
+        "Claude / OpenAI": "Claude / OpenAI",
+        "Sterk in modelkwaliteit, minder in eigenaarschap": "Strong in model quality, weaker in ownership",
+        "Je bouwt bovenop prijs per token, beleid, limieten en roadmap van één leverancier. Als die veranderen, verandert je agent mee.": "You build on top of price per token, policy, limits and the roadmap of a single vendor. If those change, your agent changes with them.",
+        "Terugkerende tokenkosten per workflow": "Recurring token costs per workflow",
+        "Meer afhankelijk van vendorbeleid en API-wijzigingen": "More dependent on vendor policy and API changes",
+        "Migreren kost later vaak extra werk": "Migration often costs extra work later",
+        "Beter als agentlaag. Vaak goedkoper op termijn.": "Better as an agent layer. Often cheaper over time.",
+        "Hermes is open source: je houdt controle over geheugen, tools, skills en providerkeuze. Daardoor kun je Claude, OpenAI of open modellen gebruiken zonder dat je hele werkwijze vastzit aan één partij.": "Hermes is open source: you keep control over memory, tools, skills and provider choice. That lets you use Claude, OpenAI or open models without locking your entire way of working to one party.",
+        "Minder vendor lock-in": "Less vendor lock-in",
+        "Goedkoper optimaliseren via meerdere modelroutes": "Cheaper to optimize through multiple model routes",
+        "Beter aanpasbaar aan je eigen processen": "Better adaptable to your own processes",
+        "Belangrijk:": "Important:",
+        "Claude en OpenAI kunnen nog steeds prima modelroutes zijn. Het verschil is dat Hermes de agentlaag, het geheugen en de workflowlogica van jou houdt — niet van de leverancier.": "Claude and OpenAI can still be excellent model routes. The difference is that Hermes keeps the agent layer, memory and workflow logic in your hands — not the vendor.",
         "Voorwaarden": "Terms",
         "Plan pilot": "Book pilot",
-        "Hermes + OpenClaw · Managed AI agents · MKB & directie": "Hermes + OpenClaw · Managed AI agents · SMEs & leadership teams",
-        "AI-agents voor bedrijven. Controle voor directie.": "AI agents for companies. Control for leadership.",
-        "Initiatiefnemer Bernard Donners, Lector AI aan TIO Business School in Amsterdam en Groningen, werkt met een team van experts aan agent-oplossingen op basis van Hermes en OpenClaw die MKB-bedrijven helpen om processen te stroomlijnen, overzicht te houden en veilige AI-ondersteuning direct in de operatie te plaatsen.": "Founder Bernard Donners, Professor of Applied AI at TIO Business School in Amsterdam and Groningen, works with a team of experts on agent solutions based on Hermes and OpenClaw that help SMEs streamline processes, keep operational overview and place secure AI support directly inside the business workflow.",
+        "Open-source agentvarianten · Hermes of OpenClaw · MKB & directie": "Open-source agent variants · Hermes or OpenClaw · SMEs & leadership teams",
+        "Minder vendor lock-in. Meer controle voor directie.": "Less vendor lock-in. More control for leadership.",
+        "Claude en OpenAI zijn sterke modellen, maar blijven proprietary routes met terugkerende tokenkosten en afhankelijkheid van één leverancier. MKBAgents zet daar een open-source agentlaag naast: met Hermes of OpenClaw houd je workflows, tools en providerkeuze in eigen hand — en kun je goedkoper opschalen of wisselen wanneer dat nodig is.": "Claude and OpenAI are strong models, but they remain proprietary routes with recurring token costs and dependence on a single vendor. MKBAgents places an open-source agent layer next to that: with Hermes or OpenClaw you keep workflows, tools and provider choice in your own hands — and can scale or switch more cheaply when needed.",
         "Bekijk security-aanpak": "View security approach",
         "Private EU-server": "Private EU server",
         "AVG/GDPR-bewust": "GDPR-aware",
@@ -550,6 +579,24 @@
         "Dagelijkse briefings, controles, monitoring en opvolging draaien op schema — zonder dat iemand eraan hoeft te denken.": "Daily briefings, checks, monitoring and follow-up run on schedule — without anyone having to remember.",
         "Waar je al werkt": "Where you already work",
         "Leeft in Telegram & WhatsApp. Geen nieuwe app.": "Lives in Telegram & WhatsApp. No new app.",
+        "Open-source varianten": "Open-source variants",
+        "Hermes en OpenClaw zijn los inzetbaar": "Hermes and OpenClaw can be used independently",
+        "Kies de variant die past bij je workflow": "Choose the variant that fits your workflow",
+        "Hermes": "Hermes",
+        "agent-engine · geheugen · tools": "agent engine · memory · tools",
+        "skills": "skills",
+        "tools": "tools",
+        "modellen": "models",
+        "Claude · OpenAI · open": "Claude · OpenAI · open",
+        "OpenClaw": "OpenClaw",
+        "kanaalwerk · routing · workflows": "channel work · routing · workflows",
+        "custom workflows": "custom workflows",
+        "browser": "browser",
+        "automations": "automations",
+        "Geen koppellijn: dit zijn twee losse open-source varianten, geen vaste stack.": "No connection line: these are two separate open-source variants, not one fixed stack.",
+        "Hermes en OpenClaw zijn twee verschillende open-source routes. Hermes is sterk als agentlaag met geheugen en tools; OpenClaw is sterk voor kanaalwerk, routing en workflow-interfaces.": "Hermes and OpenClaw are two different open-source routes. Hermes is strong as an agent layer with memory and tools; OpenClaw is strong for channel work, routing and workflow interfaces.",
+        "Agentlaag": "Agent layer",
+        "Modelvrijheid": "Model freedom",
         "Hermes-architectuur": "Hermes architecture",
         "Kanalen · geheugen · tools · modellen": "Channels · memory · tools · models",
         "WhatsApp": "WhatsApp",
@@ -611,13 +658,13 @@
         "Van eerste gesprek naar werkende agentflow": "From first conversation to working agent workflow",
         "We maken inzet concreet: niet “we doen iets met AI”, maar een beheerde agentflow die veilig draait en aansluit op de kanalen en processen die je team al gebruikt.": "We make deployment concrete: not “we do something with AI”, but a managed agent workflow that runs safely and connects to the channels and processes your team already uses.",
         "Wat je krijgt": "What you get",
-        "Een werkende MKBAgent met Hermes als motor en OpenClaw als communicatiekanaal. Eerst één proces, daarna uitbreiden.": "A working Trusted Agent with Hermes as the engine and OpenClaw as the communication channel. Start small, then expand.",
+        "Een werkende MKBAgent op Hermes of OpenClaw, afhankelijk van workflow en kanaal. Eerst één proces, daarna uitbreiden.": "A working MKBAgent on Hermes or OpenClaw, depending on workflow and channel. Start with one process, then expand.",
         "E-mail concepten": "Email drafts",
         "Browser / desktop": "Browser / desktop",
         "Intake & use-case": "Intake & use case",
         "We kiezen één workflow: inbox, monitoring, dossiers, content of leadopvolging.": "We choose one workflow: inbox, monitoring, files, content or lead follow-up.",
         "Private agent workspace": "Private agent workspace",
-        "We richten Hermes/OpenClaw in op een beheerde EU-omgeving met duidelijke data-afspraken.": "We set up Hermes/OpenClaw in a managed EU environment with clear data agreements.",
+        "We richten de gekozen variant in op een beheerde EU-omgeving met duidelijke data-afspraken.": "We set up the chosen variant in a managed EU environment with clear data agreements.",
         "Kanaal koppelen": "Connect channel",
         "Telegram, WhatsApp of e-mail wordt het dagelijkse bedieningspaneel. Geen nieuw portaal nodig.": "Telegram, WhatsApp or email becomes the daily control surface. No new portal needed.",
         "De agent zet concepten en acties klaar, maar gevoelige stappen wachten op jouw akkoord.": "The agent prepares drafts and actions, but sensitive steps wait for your approval.",
@@ -650,7 +697,7 @@
         "Handig voor Codex/ChatGPT-workflows": "Useful for Codex/ChatGPT workflows",
         "Toegang kan later worden ingetrokken": "Access can be revoked later",
         "Hoe het werkt:": "How it works:",
-        "tijdens deployment kiezen we de primaire modelroute en minimaal één fallback. Sleutels of OAuth-tokens worden niet in de website gezet; ze horen in de private agent-workspace. Hermes gebruikt de gekozen provider voor het denkwerk, OpenClaw levert het Telegram/WhatsApp-kanaal, en gevoelige acties blijven wachten op menselijke goedkeuring.": "during deployment we choose the primary model route and at least one fallback. Keys or OAuth tokens are not placed in the website; they belong in the private agent workspace. Hermes uses the chosen provider for reasoning, OpenClaw provides the Telegram/WhatsApp channel, and sensitive actions keep waiting for human approval.",
+        "tijdens deployment kiezen we de primaire modelroute en minimaal één fallback. Sleutels of OAuth-tokens worden niet in de website gezet; ze horen in de private agent-workspace. Daarna kiezen we de best passende open-source route — Hermes of OpenClaw — plus de juiste kanalen en goedkeuringsstappen voor jouw workflow.": "during deployment we choose the primary model route and at least one fallback. Keys or OAuth tokens are not placed in the website; they belong in the private agent workspace. We then choose the best-fitting open-source route — Hermes or OpenClaw — plus the right channels and approval steps for your workflow.",
         "Waar draait je Agent?": "Where does your Agent run?",
         "Managed, dedicated of bring your own": "Managed, dedicated or bring your own",
         "De standaardroute is een beheerde MKBAgents-omgeving. Wie meer isolatie of eigenaarschap wil, kiest voor een dedicated server of brengt eigen infrastructuur mee.": "The standard route is a managed MKBAgents environment. Those who want more isolation or ownership choose a dedicated server or bring their own infrastructure.",
