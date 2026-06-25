@@ -106,10 +106,31 @@
     .legal-card h3{margin-bottom:0}.legal-card p,.legal-card li{color:var(--muted);line-height:1.62;font-size:16px}.legal-card ul{padding-left:20px}
     .acceptance-box{background:#10291f;color:#fff;border-radius:26px;padding:24px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
     .acceptance-box h3{color:#fff}.acceptance-box p,.acceptance-box li{color:#dce7dc}.checkline{display:flex;gap:12px;align-items:flex-start;margin-top:14px;font-weight:700;color:#fff}.checkline:before{content:"✓";display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--lime);color:#10291f;flex:0 0 26px;font-weight:900}
-    .embargo-card{background:linear-gradient(135deg,#10291f,#173a2a);color:#fff;border-color:#10291f;position:relative;overflow:hidden}
-    .embargo-card:after{content:"Onder embargo";position:absolute;right:18px;bottom:14px;font-weight:900;font-size:38px;letter-spacing:-.06em;color:rgba(255,255,255,.07)}
-    body[data-lang="en"] .embargo-card:after{content:"Under embargo"}
-    .embargo-lines{display:grid;gap:10px;margin-top:18px}.embargo-lines span{display:block;height:13px;border-radius:999px;background:rgba(255,255,255,.16);filter:blur(2px)}
+    .trust-stack{background:#11161f;color:#eef2f6;border-radius:42px;padding:56px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
+    .trust-stack .eyebrow{background:transparent;border:0;padding:0;color:#22d3ee;letter-spacing:.16em}
+    .trust-stack h2{color:#f4f7fb;font-size:clamp(42px,5.2vw,74px);line-height:1.02;max-width:980px}
+    .trust-stack .lead{color:#aeb8c6;max-width:980px;margin-top:10px}
+    .trust-layout{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;margin-top:42px;align-items:start}
+    .trust-list{display:grid;gap:18px}
+    .trust-item{display:grid;grid-template-columns:72px 1fr 42px;gap:18px;align-items:start;background:rgba(255,255,255,.03);border:1px solid rgba(163,177,197,.18);border-radius:24px;padding:22px 24px;color:#d8e0ea}
+    .trust-item.active{border-color:#22d3ee;box-shadow:0 0 0 1px rgba(34,211,238,.28) inset;background:rgba(34,211,238,.04)}
+    .trust-icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(34,211,238,.12);color:#22d3ee;font-size:28px;line-height:1}
+    .trust-icon.muted{background:rgba(255,255,255,.06);color:#c8d1de}
+    .trust-copy h3{margin:0 0 6px;color:#f4f7fb;font-size:22px}
+    .trust-copy p{margin:0;color:#9aa5b4;line-height:1.5;font-size:16px}
+    .trust-no{font-weight:800;color:#96a2b3;font-size:17px;align-self:start;margin-top:4px}
+    .trust-detail{position:relative;overflow:hidden;background:linear-gradient(180deg, rgba(28,37,50,.96), rgba(24,31,43,.98));border:1px solid rgba(163,177,197,.18);border-radius:32px;padding:44px}
+    .trust-detail:after{content:"";position:absolute;right:-120px;top:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle, rgba(34,211,238,.12) 0%, rgba(34,211,238,0) 68%)}
+    .trust-detail > *{position:relative;z-index:1}
+    .trust-detail h3{margin:0 0 16px;color:#f4f7fb;font-size:30px;line-height:1.12}
+    .trust-detail p{margin:0;color:#b3bdc9;font-size:18px;line-height:1.65}
+    .trust-signals{display:grid;gap:14px;margin-top:28px}
+    .trust-signal{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.03);border:1px solid rgba(163,177,197,.16);border-radius:20px;padding:18px 20px;color:#c9d2de;font-size:16px}
+    .trust-signal .signal-icon{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:rgba(34,211,238,.12);color:#22d3ee;font-size:22px;line-height:1}
+    .trust-metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+    .trust-metric{background:rgba(255,255,255,.03);border:1px solid rgba(163,177,197,.16);border-radius:20px;padding:22px}
+    .trust-metric strong{display:block;color:#f4f7fb;font-size:42px;line-height:1;margin-bottom:12px}
+    .trust-metric span{color:#8f9baa;font-size:15px}
     .proof{background:#13291f;color:#fff;border-radius:42px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
     .proof h2{color:#fff}.proof .muted{color:#dce7dc}.quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:22px;border-radius:26px;font-size:22px;line-height:1.35;letter-spacing:-.03em}
     .footer-cta{background:linear-gradient(135deg, #143f2b, #0c1d16);color:#fff;border-radius:48px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;overflow:hidden;position:relative}
@@ -137,8 +158,7 @@
         <a href="#deploy">Start een pilot</a>
         <a href="#providers">Modelkeuze</a>
         <a href="#hosting">Hosting</a>
-        <a href="#pilots">Pilots</a>
-        <a href="#juridisch">Voorwaarden</a>
+                <a href="#juridisch">Voorwaarden</a>
         <a class="button secondary" href="https://www.bernarddonners-ai.nl">Bernard Donners</a>
         <a class="button" href="#contact">Plan pilot</a>
       </div>
@@ -178,7 +198,7 @@
     <section class="section" style="padding-top:0">
       <div class="logos">Voor MKB-bedrijven en directies waar details, vertrouwen en privacy tellen
         <div class="sector-row">
-          <span>Directie & MT</span><span>Inbox & agenda</span><span>Sales & opvolging</span><span>Onderzoek & monitoring</span><span>Workflowautomatisering</span><span>Onder embargo</span>
+          <span>Directie & MT</span><span>Inbox & agenda</span><span>Sales & opvolging</span><span>Onderzoek & monitoring</span><span>Workflowautomatisering</span><span>Dossiers & intake</span>
         </div>
       </div>
     </section>
@@ -195,16 +215,57 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section trust-stack">
       <div class="eyebrow">Wat maakt een agent vertrouwd?</div>
-      <h2>Niet alleen slim. Ook beheersbaar.</h2>
-      <div class="grid">
-        <article class="tile"><span class="nr">01</span><h3>Blijvend geheugen</h3><p class="muted">De agent onthoudt afspraken, voorkeuren en eerdere sessies, zodat context niet telkens opnieuw hoeft.</p></article>
-        <article class="tile"><span class="nr">02</span><h3>Menselijke controle</h3><p class="muted">Mail, publicaties en gevoelige acties worden klaargezet voor akkoord. Jij blijft eigenaar van de beslissing.</p></article>
-        <article class="tile dark"><span class="nr">03</span><h3>Private EU-infrastructuur</h3><p class="muted">Een beheerde omgeving met duidelijke afspraken over toegang, logging, back-ups en data-opslag.</p></article>
-        <article class="tile"><span class="nr">04</span><h3>Gepland & proactief</h3><p class="muted">Dagelijkse briefings, controles, monitoring en opvolging draaien op schema — zonder dat iemand eraan hoeft te denken.</p></article>
-        <article class="tile"><span class="nr">05</span><h3>Waar je al werkt</h3><p class="muted">Gebruik via mail, Telegram, WhatsApp of browser. Geen extra portaal als dat niet nodig is.</p></article>
-        <article class="tile"><span class="nr">06</span><h3>AI-geletterdheid</h3><p class="muted">Bernards rol als Lector AI helpt teams begrijpen wat AI wel en niet moet doen.</p></article>
+      <h2>De zelflerende agent die het werk doet</h2>
+      <p class="lead">Geen chatbot die vragen beantwoordt — een zelflerende agent die leert hoe je bedrijf werkt, eigen skills schrijft en de operationele last van je team haalt. Hij wordt slimmer hoe langer hij draait, op infrastructuur die jij beheert.</p>
+      <div class="trust-layout">
+        <div class="trust-list">
+          <article class="trust-item active">
+            <div class="trust-icon">◉</div>
+            <div class="trust-copy">
+              <h3>Blijvend geheugen</h3>
+              <p>Onthoudt elk gesprek — en doorzoekt ze.</p>
+            </div>
+            <div class="trust-no">01</div>
+          </article>
+          <article class="trust-item">
+            <div class="trust-icon muted">✦</div>
+            <div class="trust-copy">
+              <h3>Zelflerend</h3>
+              <p>Schrijft zijn eigen skills. Wordt slimmer naarmate je het gebruikt.</p>
+            </div>
+            <div class="trust-no">02</div>
+          </article>
+          <article class="trust-item">
+            <div class="trust-icon muted">↯</div>
+            <div class="trust-copy">
+              <h3>Autonoom & gepland</h3>
+              <p>Handelt proactief en draait taken op schema.</p>
+            </div>
+            <div class="trust-no">03</div>
+          </article>
+          <article class="trust-item">
+            <div class="trust-icon muted">▢</div>
+            <div class="trust-copy">
+              <h3>Waar je al werkt</h3>
+              <p>Leeft in Telegram & WhatsApp. Geen nieuwe app.</p>
+            </div>
+            <div class="trust-no">04</div>
+          </article>
+        </div>
+        <article class="trust-detail">
+          <h3>Een geheugen dat zich opbouwt</h3>
+          <p>Hermes onthoudt je klanten, je voorkeuren en hoe je bedrijf écht werkt — met full-text zoeken door elke eerdere sessie. Niemand legt ooit nog context uit. Hoe langer het draait, hoe meer het je oplevert.</p>
+          <div class="trust-signals">
+            <div class="trust-signal"><span class="signal-icon">◌</span><span>Opgehaald: klantdossier #M-2231, laatste contact 9 dagen geleden</span></div>
+            <div class="trust-signal"><span class="signal-icon">✎</span><span>Automatisch je huisstijl toegepast</span></div>
+          </div>
+          <div class="trust-metrics">
+            <div class="trust-metric"><strong>∞</strong><span>Langetermijngeheugen</span></div>
+            <div class="trust-metric"><strong>0</strong><span>Context herhalen</span></div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -220,26 +281,6 @@
         <article class="case"><small>Business development</small><h3>Kansen vinden zonder ruis</h3><p class="muted">Zoek leads, beoordeel relevantie en bereid persoonlijke outreach of opvolging voor zonder handmatig speurwerk.</p><div class="example">“Vind 10 bedrijven die passen bij deze propositie en zet conceptmails klaar.”</div></article>
         <article class="case"><small>AI-training</small><h3>Teams leren kritisch werken met AI</h3><p class="muted">Niet alleen tools uitleggen, maar oordeel, verantwoordelijkheid en werkafspraken ontwikkelen binnen directie en team.</p><div class="example">“A lot of people got better at producing output, not better at thinking.”</div></article>
         <article class="case"><small>Dossiers & intake</small><h3>Het herhaalbare werk geregeld</h3><p class="muted">Controleer dossiers, verwerk intake en signaleer ontbrekende informatie voordat werk blijft liggen of fouten doorlekken.</p><div class="example">“Nieuwe aanvraag binnen → checklist doorlopen → ontbrekende stukken gevraagd.”</div></article>
-      </div>
-    </section>
-
-    <section class="section" id="pilots">
-      <div class="eyebrow">In ontwikkeling</div>
-      <h2>Onder embargo</h2>
-      <p class="lead">Een zakelijke AI-pilot voor MKB en directie is in voorbereiding. De inhoudelijke uitwerking blijft voorlopig bewust niet openbaar, zodat concept, aanpak en partners beschermd blijven.</p>
-      <div class="deploy-grid">
-        <article class="deploy-panel embargo-card">
-          <span class="tag" style="color:var(--lime);border-color:rgba(215,242,104,.32);background:rgba(215,242,104,.12)">Niet publiek</span>
-          <h3>Details afgeschermd</h3>
-          <p style="color:#dce7dc;line-height:1.65;font-size:17px">Deze pilot wordt alleen gedeeld in één-op-één gesprekken of onder afspraak. De publieke site vermeldt bewust geen werkwijze, scenario’s of namen.</p>
-          <div class="embargo-lines" aria-hidden="true"><span style="width:88%"></span><span style="width:72%"></span><span style="width:94%"></span><span style="width:64%"></span></div>
-        </article>
-        <article class="deploy-panel">
-          <span class="tag">Publiek kader</span>
-          <h3>Wat we wél zeggen</h3>
-          <p class="muted">MKBAgents onderzoekt naast praktische ondersteuningsworkflows ook zorgvuldig hoe AI kan bijdragen aan rust, overzicht en vertrouwen in persoonlijke contexten. Altijd met privacy, menselijke regie en maatschappelijke zorgvuldigheid als grens.</p>
-          <div class="flow-note" style="margin-top:18px"><strong>Beschermd:</strong> conceptdetails, demonstraties, namen en mogelijke samenwerkingen worden pas gedeeld wanneer dat expliciet is afgesproken.</div>
-        </article>
       </div>
     </section>
 
@@ -472,28 +513,40 @@
         "Ik zie drie dossiers en twee warme leads. Twee acties kunnen direct worden voorbereid; één voorstel wacht op akkoord. Ik zet de conceptmail klaar, maar verstuur niets zonder jouw bevestiging.": "I see three files and two warm leads. Two actions can be prepared immediately; one proposal is waiting for approval. I will draft the email, but send nothing without your confirmation.",
         "Actie vereist menselijke goedkeuring · gegevens blijven binnen EU-workspace.": "Action requires human approval · data remains inside the EU workspace.",
         "Voor MKB-bedrijven en directies waar details, vertrouwen en privacy tellen": "For SMEs and leadership teams where detail, trust and privacy matter",
-        "Persoonlijke assistentie": "Personal assistance",
-        "Zorg & welzijn": "Care & wellbeing",
         "Dossiers & intake": "Files & intake",
         "Business development": "Business development",
-        "Onderwijs": "Education",
-        "Onder embargo": "Under embargo",
+        "Directie & MT": "Leadership & management",
+        "Sales & opvolging": "Sales & follow-up",
+        "Workflowautomatisering": "Workflow automation",
         "De stelling": "The point",
         "Ruis vertraagt bedrijven. Vertrouwde AI-agents geven focus en regie terug.": "Noise slows companies down. Trusted AI agents bring focus and control back.",
         "Veel AI-projecten blijven hangen in losse prompts en experimenten. MKBAgents draait het om: we beginnen bij terugkerende werkprocessen, afspraken over data, duidelijke grenzen en een agent die pas handelt wanneer dat verantwoord is.": "Many AI projects get stuck in loose prompts and experiments. MKBAgents reverses that: we start with recurring support, data agreements, clear boundaries and an agent that only acts when it is responsible to do so.",
         "Bernard Donners is Lector AI aan TIO Business School in Amsterdam en Groningen. Op": "Bernard Donners is Professor of Applied AI at TIO Business School in Amsterdam and Groningen. On",
         "werkt hij zijn visie uit: generatieve AI is een General Purpose Technology, maar de waarde ontstaat pas na de hype — als mensen beter leren denken, beslissen en organiseren.": "he develops his vision: generative AI is a General Purpose Technology, but value only emerges after the hype — when people learn to think, decide and organize better.",
         "Wat maakt een agent vertrouwd?": "What makes an agent trusted?",
+        "De zelflerende agent die het werk doet": "The self-learning agent that gets the work done",
+        "Geen chatbot die vragen beantwoordt — een zelflerende agent die leert hoe je bedrijf werkt, eigen skills schrijft en de operationele last van je team haalt. Hij wordt slimmer hoe langer hij draait, op infrastructuur die jij beheert.": "Not a chatbot that answers questions — a self-learning agent that learns how your company works, writes its own skills and takes operational load off your team. It gets smarter the longer it runs, on infrastructure you control.",
         "Niet alleen slim. Ook beheersbaar.": "Not just smart. Also controllable.",
         "Blijvend geheugen": "Persistent memory",
+        "Onthoudt elk gesprek — en doorzoekt ze.": "Remembers every conversation — and searches across them.",
+        "Zelflerend": "Self-learning",
+        "Schrijft zijn eigen skills. Wordt slimmer naarmate je het gebruikt.": "Writes its own skills. Gets smarter the more you use it.",
         "De agent onthoudt afspraken, voorkeuren en eerdere sessies, zodat context niet telkens opnieuw hoeft.": "The agent remembers agreements, preferences and previous sessions, so context does not need to be repeated every time.",
         "Menselijke controle": "Human control",
         "Mail, publicaties en gevoelige acties worden klaargezet voor akkoord. Jij blijft eigenaar van de beslissing.": "Email, publications and sensitive actions are prepared for approval. You remain the owner of the decision.",
         "Private EU-infrastructuur": "Private EU infrastructure",
         "Een beheerde omgeving met duidelijke afspraken over toegang, logging, back-ups en data-opslag.": "A managed environment with clear agreements about access, logging, backups and data storage.",
-        "Gepland & proactief": "Scheduled & proactive",
+        "Autonoom & gepland": "Autonomous & scheduled",
+        "Handelt proactief en draait taken op schema.": "Acts proactively and runs tasks on schedule.",
         "Dagelijkse briefings, controles, monitoring en opvolging draaien op schema — zonder dat iemand eraan hoeft te denken.": "Daily briefings, checks, monitoring and follow-up run on schedule — without anyone having to remember.",
         "Waar je al werkt": "Where you already work",
+        "Leeft in Telegram & WhatsApp. Geen nieuwe app.": "Lives in Telegram & WhatsApp. No new app.",
+        "Een geheugen dat zich opbouwt": "A memory that compounds",
+        "Hermes onthoudt je klanten, je voorkeuren en hoe je bedrijf écht werkt — met full-text zoeken door elke eerdere sessie. Niemand legt ooit nog context uit. Hoe langer het draait, hoe meer het je oplevert.": "Hermes remembers your clients, your preferences and how your company really works — with full-text search across every previous session. No one has to explain context ever again. The longer it runs, the more it delivers.",
+        "Opgehaald: klantdossier #M-2231, laatste contact 9 dagen geleden": "Retrieved: client file #M-2231, last contact 9 days ago",
+        "Automatisch je huisstijl toegepast": "Automatically applied your house style",
+        "Langetermijngeheugen": "Long-term memory",
+        "Context herhalen": "Repeat context",
         "Gebruik via mail, Telegram, WhatsApp of browser. Geen extra portaal als dat niet nodig is.": "Use it through email, Telegram, WhatsApp or browser. No extra portal when it is not needed.",
         "AI-geletterdheid": "AI literacy",
         "Bernards rol als Lector AI helpt teams begrijpen wat AI wel en niet moet doen.": "Bernard's role as Professor of Applied AI helps teams understand what AI should and should not do.",
@@ -527,17 +580,6 @@
         "Het herhaalbare werk geregeld": "Recurring work handled",
         "Controleer dossiers, verwerk intake en signaleer ontbrekende informatie voordat werk blijft liggen of fouten doorlekken.": "Check files, process intake and flag missing information before work stalls or errors leak through.",
         "“Nieuwe aanvraag binnen → checklist doorlopen → ontbrekende stukken gevraagd.”": "“New request received → checklist completed → missing documents requested.”",
-        "In ontwikkeling": "In development",
-        "Onder embargo": "Under embargo",
-        "Een zakelijke AI-pilot voor MKB en directie is in voorbereiding. De inhoudelijke uitwerking blijft voorlopig bewust niet openbaar, zodat concept, aanpak en partners beschermd blijven.": "A business-focused AI pilot for SMEs and leadership teams is in preparation. The substantive details deliberately remain private for now, protecting the concept, approach and partners.",
-        "Niet publiek": "Not public",
-        "Details afgeschermd": "Details protected",
-        "Deze pilot wordt alleen gedeeld in één-op-één gesprekken of onder afspraak. De publieke site vermeldt bewust geen werkwijze, scenario’s of namen.": "This pilot is only shared in one-to-one conversations or under agreement. The public site deliberately does not disclose methods, scenarios or names.",
-        "Publiek kader": "Public frame",
-        "Wat we wél zeggen": "What we do say",
-        "MKBAgents onderzoekt naast praktische ondersteuningsworkflows ook zorgvuldig hoe AI kan bijdragen aan rust, overzicht en vertrouwen in persoonlijke contexten. Altijd met privacy, menselijke regie en maatschappelijke zorgvuldigheid als grens.": "Alongside practical business workflows, MKBAgents carefully explores how AI can contribute to calm, overview and trust in personal contexts. Always bounded by privacy, human control and social responsibility.",
-        "Beschermd:": "Protected:",
-        "conceptdetails, demonstraties, namen en mogelijke samenwerkingen worden pas gedeeld wanneer dat expliciet is afgesproken.": "concept details, demonstrations, names and potential collaborations are only shared when explicitly agreed.",
         "Pakketten": "Packages",
         "Drie manieren om je agent te draaien": "Three ways to run your agent",
         "1 · Starter": "1 · Starter",
