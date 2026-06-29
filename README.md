@@ -3,7 +3,7 @@
 Afgeleide van de Trusted Agents homepage, herpositioneerd voor Nederlands MKB en directie.
 
 ## Doel
-- aparte merklaag voor MKB/directie
+- aparte merklaag voor MKB
 - afgeleid van de Trusted Agents stijl en structuur
 - snel publiceerbaar via GitHub Pages
 
