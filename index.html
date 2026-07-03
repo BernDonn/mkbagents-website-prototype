@@ -86,6 +86,15 @@
     .case{background:#fffaf1;border:1px solid var(--line);border-radius:26px;padding:24px;display:grid;gap:18px}
     .case small{font-weight:850;letter-spacing:.1em;color:var(--green);text-transform:uppercase}
     .example{background:#f0e6d6;border-radius:18px;padding:13px;color:#304034;font-size:14px}
+    .integration-wrap{background:linear-gradient(180deg,rgba(255,250,241,.86),rgba(240,230,214,.74));border:1px solid var(--line);border-radius:38px;padding:34px;box-shadow:0 16px 42px rgba(20,35,24,.06)}
+    .integration-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .integration-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:22px;display:grid;gap:12px;min-height:230px}
+    .integration-card h3{font-size:22px;margin:0}
+    .integration-card .muted{font-size:16px}
+    .integration-apps{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+    .app-chip{display:inline-flex;border:1px solid rgba(22,63,43,.14);background:#f0e6d6;border-radius:999px;padding:7px 10px;color:var(--green);font-size:13px;font-weight:800}
+    .integration-note{margin-top:22px;background:#10291f;color:#fff;border-radius:24px;padding:22px;line-height:1.55}
+    .integration-note .muted{color:#dce7dc}
     .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
     .product{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:28px;display:flex;flex-direction:column;gap:18px;min-height:390px}
     .product.featured{background:#10291f;color:white;transform:none}
@@ -213,14 +222,14 @@
     @media(max-width:900px){
       .section{padding:64px 20px}
       .hero,.two-col,.proof,.footer-cta,.trust-layout,.compare-grid{grid-template-columns:1fr}
-      .products,.grid,.usecases,.deploy-grid,.provider-grid,.legal-grid{grid-template-columns:1fr}
+      .products,.grid,.usecases,.deploy-grid,.provider-grid,.legal-grid,.integration-grid{grid-template-columns:1fr}
       .hero{min-height:auto;padding-top:48px}
       h1{font-size:clamp(38px, 12vw, 54px);margin:18px 0}
       h2{font-size:clamp(30px, 9vw, 40px)}
       .lead,.muted{font-size:16px}
       .hero-actions,.footer-cta .button{width:100%}
       .hero-actions .button,.footer-cta .button{justify-content:center}
-      .agent-card,.trust-stack,.proof,.footer-cta,.compare-card,.deploy-panel,.provider-card,.product,.tile,.case,.legal-card,.acceptance-box{padding:22px;border-radius:28px}
+      .agent-card,.trust-stack,.proof,.footer-cta,.compare-card,.deploy-panel,.provider-card,.product,.tile,.case,.legal-card,.acceptance-box,.integration-wrap,.integration-card{padding:22px;border-radius:28px}
       .trust-stack{margin-top:32px}
       .trust-item{grid-template-columns:42px 1fr 24px;padding:14px}
       .trust-icon{width:36px;height:36px;font-size:18px}
@@ -251,6 +260,7 @@
       </div>
       <div class="nav-links">
         <a href="#oplossingen">Oplossingen</a>
+        <a href="#koppelingen">Koppelingen</a>
         <a href="#security">Security</a>
         <a href="#providers">Modelkeuze</a>
         <a href="#hosting">Hosting</a>
@@ -419,6 +429,53 @@
         <article class="case"><small>Vergaderingen & gesprekken</small><h3>Opnames transcriberen, rubriceren en samenvatten</h3><p class="muted">Werk vergader- en gespreksopnames uit, vat ze samen en verdeel inzichten, acties of thema’s per persoon, onderwerp of opvolging.</p><div class="example">“Werk deze opname uit, vat haar samen en verdeel acties per persoon en onderwerp.”</div></article>
         <article class="case"><small>Dossiers & intake</small><h3>Het herhaalbare werk geregeld</h3><p class="muted">Controleer dossiers, verwerk intake en signaleer ontbrekende informatie voordat werk blijft liggen of fouten doorlekken.</p><div class="example">“Nieuwe aanvraag binnen → checklist doorlopen → ontbrekende stukken gevraagd.”</div></article>
         <article class="case"><small>Downloads & screenshots</small><h3>Altijd je laatste bestand of screenshot in beeld</h3><p class="muted">Laat downloads meteen op het bureaublad verschijnen en gebruik <code>/SS</code> om de laatste screenshot direct kort te laten uitleggen.</p><div class="example">“Zet iedere download op mijn bureaublad en leg bij /SS de laatste screenshot meteen even uit.”</div></article>
+      </div>
+    </section>
+
+    <section class="section" id="koppelingen">
+      <div class="integration-wrap">
+        <div class="eyebrow">Koppelingen met n8n</div>
+        <h2>Koppelt met de software die je al gebruikt</h2>
+        <p class="lead">Met n8n verbinden we je agent met de systemen waar je bedrijf nu al op draait: mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools. Waar een standaardkoppeling bestaat gebruiken we die. Waar die ontbreekt, kijken we naar API, webhook of een veilige handmatige route.</p>
+        <div class="integration-grid">
+          <article class="integration-card">
+            <span class="tag">Mail & agenda</span>
+            <h3>Inbox, afspraken en opvolging</h3>
+            <p class="muted">Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en Teams- of agenda-updates doorgeven zonder dat de agent zomaar namens jou verstuurt.</p>
+            <div class="integration-apps"><span class="app-chip">Outlook</span><span class="app-chip">Gmail</span><span class="app-chip">Teams</span><span class="app-chip">Google Calendar</span></div>
+          </article>
+          <article class="integration-card">
+            <span class="tag">Spreadsheets & bestanden</span>
+            <h3>Lijsten, rapportages en documenten</h3>
+            <p class="muted">Gebruik Sheets, Excel, Drive of OneDrive als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.</p>
+            <div class="integration-apps"><span class="app-chip">Google Sheets</span><span class="app-chip">Excel</span><span class="app-chip">Drive</span><span class="app-chip">OneDrive</span></div>
+          </article>
+          <article class="integration-card">
+            <span class="tag">CRM & klantvragen</span>
+            <h3>Leads en dossiers komen op de juiste plek</h3>
+            <p class="muted">Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.</p>
+            <div class="integration-apps"><span class="app-chip">HubSpot</span><span class="app-chip">Pipedrive</span><span class="app-chip">Airtable</span><span class="app-chip">Notion</span></div>
+          </article>
+          <article class="integration-card">
+            <span class="tag">Betaling & intake</span>
+            <h3>Van aanvraag naar activatie</h3>
+            <p class="muted">Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden: eerst gegevens, daarna bevestiging, betaling en installatie.</p>
+            <div class="integration-apps"><span class="app-chip">Mollie</span><span class="app-chip">Webhooks</span><span class="app-chip">Formulieren</span><span class="app-chip">WooCommerce</span></div>
+          </article>
+          <article class="integration-card">
+            <span class="tag">AI & agenttaken</span>
+            <h3>n8n stuurt de flow, Hermes of OpenClaw doet het werk</h3>
+            <p class="muted">Voor AI-flows koppelen we n8n aan modellen, documenten, vector databases en tools. De agent maakt samenvattingen, concepten of acties klaar.</p>
+            <div class="integration-apps"><span class="app-chip">OpenAI</span><span class="app-chip">Anthropic</span><span class="app-chip">Gemini</span><span class="app-chip">AI Agent</span></div>
+          </article>
+          <article class="integration-card">
+            <span class="tag">Eigen systemen</span>
+            <h3>Ook zonder standaardknop vaak koppelbaar</h3>
+            <p class="muted">Heeft je software een API, database of webhook? Dan kunnen we vaak koppelen zonder dat je hoeft te migreren naar een ander platform.</p>
+            <div class="integration-apps"><span class="app-chip">HTTP/API</span><span class="app-chip">Postgres</span><span class="app-chip">MySQL</span><span class="app-chip">Supabase</span></div>
+          </article>
+        </div>
+        <div class="integration-note"><strong>Waarom n8n noemen?</strong><p class="muted">MKBAgents is geen n8n-bureau, maar gebruikt n8n waar een proces zichtbaar, controleerbaar en uitbreidbaar moet zijn. Zo blijft de agentlaag open en blijft je bestaande software leidend.</p></div>
       </div>
     </section>
 
@@ -745,7 +802,7 @@
     <section class="section" style="padding-top:10px;padding-bottom:8px">
       <div class="logos">Voor ZZP’ers en MKB waar details, vertrouwen en privacy tellen
         <div class="sector-row">
-          <span>Directie & MT</span><span>Inbox & agenda</span><span>Sales & opvolging</span><span>Onderzoek & monitoring</span><span>Workflowautomatisering</span><span>Dossiers & intake</span>
+          <span>Directie & MT</span><span>Inbox & agenda</span><span>Microsoft 365</span><span>Google Workspace</span><span>CRM & opvolging</span><span>Workflowautomatisering</span><span>Dossiers & intake</span>
         </div>
       </div>
     </section>
@@ -903,6 +960,33 @@
         "Altijd je laatste bestand of screenshot in beeld": "Always keep your latest file or screenshot in view",
         "Laat downloads meteen op het bureaublad verschijnen en gebruik <code>/SS</code> om de laatste screenshot direct kort te laten uitleggen.": "Show downloads on the desktop right away and use <code>/SS</code> to get a short explanation of the latest screenshot immediately.",
         "“Zet iedere download op mijn bureaublad en leg bij /SS de laatste screenshot meteen even uit.”": "“Put every download on my desktop and explain the latest screenshot right away when I use /SS.”",
+        "Koppelingen": "Integrations",
+        "Koppelingen met n8n": "Integrations with n8n",
+        "Koppelt met de software die je al gebruikt": "Connects with the software you already use",
+        "Met n8n verbinden we je agent met de systemen waar je bedrijf nu al op draait: mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools. Waar een standaardkoppeling bestaat gebruiken we die. Waar die ontbreekt, kijken we naar API, webhook of een veilige handmatige route.": "With n8n we connect your agent to the systems your company already runs on: email, calendar, spreadsheets, forms, CRM, payments and internal tools. Where a standard integration exists, we use it. Where it does not, we look at API, webhook or a safe manual route.",
+        "Mail & agenda": "Email & calendar",
+        "Inbox, afspraken en opvolging": "Inbox, appointments and follow-up",
+        "Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en Teams- of agenda-updates doorgeven zonder dat de agent zomaar namens jou verstuurt.": "Have email summarized, urgent messages marked, reminders prepared and Teams or calendar updates passed on without the agent sending on your behalf by default.",
+        "Spreadsheets & bestanden": "Spreadsheets & files",
+        "Lijsten, rapportages en documenten": "Lists, reports and documents",
+        "Gebruik Sheets, Excel, Drive of OneDrive als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.": "Use Sheets, Excel, Drive or OneDrive as a practical source for overviews, reports, intake files and document processing.",
+        "CRM & klantvragen": "CRM & customer questions",
+        "Leads en dossiers komen op de juiste plek": "Leads and files land in the right place",
+        "Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.": "New requests can automatically go to your CRM, spreadsheet or mailbox, with a short summary and suggested follow-up.",
+        "Betaling & intake": "Payment & intake",
+        "Van aanvraag naar activatie": "From request to activation",
+        "Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden: eerst gegevens, daarna bevestiging, betaling en installatie.": "Forms, webhooks and Mollie can keep intake, payment status and activation separate: first details, then confirmation, payment and installation.",
+        "AI & agenttaken": "AI & agent tasks",
+        "n8n stuurt de flow, Hermes of OpenClaw doet het werk": "n8n routes the flow, Hermes or OpenClaw does the work",
+        "Voor AI-flows koppelen we n8n aan modellen, documenten, vector databases en tools. De agent maakt samenvattingen, concepten of acties klaar.": "For AI flows we connect n8n to models, documents, vector databases and tools. The agent prepares summaries, drafts or actions.",
+        "Eigen systemen": "Own systems",
+        "Ook zonder standaardknop vaak koppelbaar": "Often connectable even without a standard button",
+        "Heeft je software een API, database of webhook? Dan kunnen we vaak koppelen zonder dat je hoeft te migreren naar een ander platform.": "Does your software have an API, database or webhook? Then we can often connect without requiring a migration to another platform.",
+        "Waarom n8n noemen?": "Why mention n8n?",
+        "MKBAgents is geen n8n-bureau, maar gebruikt n8n waar een proces zichtbaar, controleerbaar en uitbreidbaar moet zijn. Zo blijft de agentlaag open en blijft je bestaande software leidend.": "MKBAgents is not an n8n agency, but uses n8n where a process needs to be visible, controllable and extensible. That keeps the agent layer open and your existing software leading.",
+        "Microsoft 365": "Microsoft 365",
+        "Google Workspace": "Google Workspace",
+        "CRM & opvolging": "CRM & follow-up",
         "Prijzen": "Pricing",
         "Pakketten": "Packages",
         "Drie manieren om je agent te draaien": "Three ways to run your agent",
