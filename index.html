@@ -273,18 +273,18 @@
     <section class="section hero">
       <div>
         <div class="eyebrow">Open-source agentvarianten · Hermes of OpenClaw · MKB</div>
-        <h1>Minder vendor lock-in. Meer controle voor jou.</h1>
+        <h1 style="font-size:clamp(36px,4.7vw,58px);font-weight:700;letter-spacing:-.03em">Minder vendor lock-in. Meer controle voor jou.</h1>
         <p class="lead">Claude en ChatGPT zijn sterke maar gesloten modellen met terugkerende tokenkosten. MKBAgents zet daar een open-source agentlaag naast: met Hermes of OpenClaw houd je workflows, tools en providerkeuze in eigen hand, en kun je goedkoper opschalen of wisselen wanneer dat nodig is.</p>
-        <div class="hero-disclosures" style="margin:16px 0 10px 0">
-          <details style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-bottom:6px">
-            <summary style="padding:12px 18px;font-size:15px;font-weight:600;color:var(--lime);cursor:pointer;list-style:none">Security</summary>
+        <div class="hero-disclosures" style="margin:16px 0 10px 0;display:flex;gap:6px;flex-wrap:wrap">
+          <details style="flex:1;min-width:120px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px">
+            <summary style="padding:10px 16px;font-size:14px;font-weight:600;color:#000;cursor:pointer;list-style:none;text-align:center">Security</summary>
             <div style="padding:0 18px 16px 18px">
               <p class="muted" style="margin-bottom:12px">Controle, governance en privacy zijn geen details. Ze zijn de basis. Wanneer AI met klantgegevens, bedrijfsinformatie of gevoelige context werkt, moet het niet alleen handig zijn. Het moet uitlegbaar, beheersbaar en begrensd zijn.</p>
               <div class="quote" style="margin-top:0">"Niet alles wat technologisch kan is ook maatschappelijk gewenst."<br><span style="font-size:13px;color:#c9d6cc">— bernarddonners-ai.nl</span></div>
             </div>
           </details>
-          <details style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-bottom:6px">
-            <summary style="padding:12px 18px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;list-style:none">Voorwaarden</summary>
+          <details style="flex:1;min-width:120px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px">
+            <summary style="padding:10px 16px;font-size:14px;font-weight:600;color:#000;cursor:pointer;list-style:none;text-align:center">Voorwaarden</summary>
             <div style="padding:0 18px 16px 18px;font-size:14px;color:#c9d6cc">
               <p style="margin-bottom:10px">MKBAgents levert advies, configuratie, automatisering en beheer van AI-agents voor zakelijke gebruikers. De dienstverlening is gericht op ondersteuning van werkprocessen, niet op het overnemen van professionele verantwoordelijkheid van de klant.</p>
               <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
@@ -295,8 +295,8 @@
               </ul>
             </div>
           </details>
-          <details style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-bottom:6px">
-            <summary style="padding:12px 18px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;list-style:none">Privacy</summary>
+          <details style="flex:1;min-width:120px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px">
+            <summary style="padding:10px 16px;font-size:14px;font-weight:600;color:#000;cursor:pointer;list-style:none;text-align:center">Privacy</summary>
             <div style="padding:0 18px 16px 18px;font-size:14px;color:#c9d6cc">
               <p style="margin-bottom:10px">MKBAgents verwerkt persoonsgegevens en bedrijfsgegevens alleen voor zover nodig om de agent te configureren, beveiligen, uitvoeren en beheren.</p>
               <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
@@ -307,8 +307,8 @@
               </ul>
             </div>
           </details>
-          <details style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-bottom:6px">
-            <summary style="padding:12px 18px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;list-style:none">Menselijke controle</summary>
+          <details style="flex:1;min-width:120px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px">
+            <summary style="padding:10px 16px;font-size:14px;font-weight:600;color:#000;cursor:pointer;list-style:none;text-align:center">Menselijke controle</summary>
             <div style="padding:0 18px 16px 18px;font-size:14px;color:#c9d6cc">
               <p style="margin-bottom:10px">Een MKBAgent mag voorbereiden, samenvatten, signaleren, ordenen en concepten klaarzetten. De agent handelt niet zelfstandig bij gevoelige of externe acties, tenzij dat uitdrukkelijk is afgesproken en technisch begrensd.</p>
               <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
@@ -535,7 +535,7 @@
             <div class="integration-apps"><span class="app-chip">HTTP/API</span><span class="app-chip">Postgres</span><span class="app-chip">MySQL</span><span class="app-chip">Supabase</span></div>
           </article>
         </div>
-        <div class="integration-note"><strong>Waarom n8n noemen?</strong><p class="muted">MKBAgents is geen n8n-bureau, maar gebruikt n8n waar een proces zichtbaar, controleerbaar en uitbreidbaar moet zijn. Zo blijft de agentlaag open en blijft je bestaande software leidend.</p></div>
+        <div class="integration-note"><strong>Inzet van Deterministische Agenten</strong><p class="muted">Hermes en OpenClaw werken samen met deterministische workflow-tools zoals n8n: de agent denkt, de workflow voert uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper — terwijl de agent zich richt op waar echt inzicht nodig is.</p></div>
       </div>
     </section>
 
