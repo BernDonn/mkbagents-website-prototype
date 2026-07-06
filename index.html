@@ -398,12 +398,41 @@
             <span class="diagram-pill"><span class="diagram-dot green"></span> Agentlaag</span>
             <span class="diagram-pill"><span class="diagram-dot sand"></span> Modelvrijheid</span>
           </div>
-          <div class="device-icons" style="display:flex;gap:24px;justify-content:center;align-items:center;margin-top:18px">
-            <svg width="48" height="80" viewBox="0 0 48 80" role="img" aria-label="Smartphone"><rect x="10" y="4" width="28" height="72" rx="4" fill="none" stroke="rgba(215,242,104,.35)" stroke-width="1.5"/><rect x="14" y="10" width="20" height="44" rx="1" fill="rgba(215,242,104,.08)"/><circle cx="24" cy="70" r="2" fill="rgba(255,255,255,.2)"/></svg>
-            <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="iPhone"><rect x="12" y="2" width="40" height="60" rx="6" fill="none" stroke="rgba(120,194,140,.4)" stroke-width="1.5"/><rect x="16" y="8" width="32" height="40" rx="1" fill="rgba(120,194,140,.1)"/><circle cx="32" cy="56" r="2" fill="rgba(255,255,255,.2)"/><rect x="24" y="4" width="16" height="2" rx="1" fill="rgba(255,255,255,.1)"/></svg>
-            <svg width="80" height="56" viewBox="0 0 80 56" role="img" aria-label="MacBook"><rect x="4" y="8" width="72" height="44" rx="3" fill="none" stroke="rgba(231,207,160,.35)" stroke-width="1.5"/><rect x="8" y="12" width="64" height="36" rx="1" fill="rgba(231,207,160,.08)"/><rect x="20" y="52" width="40" height="4" rx="1" fill="none" stroke="rgba(231,207,160,.25)" stroke-width="1"/></svg>
+          <div class="device-icons" style="display:flex;gap:32px;justify-content:center;align-items:flex-end;margin-top:20px">
+            <!-- Smartphone -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+              <svg width="56" height="96" viewBox="0 0 56 96" role="img" aria-label="Smartphone">
+                <rect x="10" y="4" width="36" height="88" rx="6" fill="#1a1a2e" stroke="#d7f268" stroke-width="2"/>
+                <rect x="14" y="12" width="28" height="58" rx="2" fill="url(#sg1)"/>
+                <defs><linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6c63ff"/><stop offset="33%" stop-color="#e94560"/><stop offset="66%" stop-color="#f5a623"/><stop offset="100%" stop-color="#50e3c2"/></linearGradient></defs>
+                <rect x="14" y="76" width="28" height="4" rx="2" fill="rgba(255,255,255,.15)"/>
+                <circle cx="28" cy="90" r="2" fill="rgba(255,255,255,.3)"/>
+              </svg>
+              <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500">Smartphone</span>
+            </div>
+            <!-- iPhone -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+              <svg width="62" height="100" viewBox="0 0 62 100" role="img" aria-label="iPhone">
+                <rect x="6" y="2" width="50" height="96" rx="10" fill="#1c1c1e" stroke="#78c28c" stroke-width="2"/>
+                <rect x="14" y="16" width="34" height="64" rx="4" fill="url(#ipg)"/>
+                <defs><linearGradient id="ipg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#007aff"/><stop offset="30%" stop-color="#5ac8fa"/><stop offset="60%" stop-color="#34c759"/><stop offset="100%" stop-color="#ff9500"/></linearGradient></defs>
+                <rect x="12" y="6" width="14" height="4" rx="2" fill="rgba(255,255,255,.15)"/>
+                <circle cx="46" cy="8" r="2" fill="rgba(255,255,255,.15)"/>
+              </svg>
+              <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500">iPhone</span>
+            </div>
+            <!-- Mac -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+              <svg width="90" height="64" viewBox="0 0 90 64" role="img" aria-label="Mac">
+                <rect x="4" y="6" width="82" height="44" rx="5" fill="#1c1c1e" stroke="#e7cfa0" stroke-width="2"/>
+                <rect x="8" y="10" width="74" height="36" rx="2" fill="url(#mg)"/>
+                <defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#af52de"/><stop offset="25%" stop-color="#5856d6"/><stop offset="50%" stop-color="#007aff"/><stop offset="75%" stop-color="#34c759"/><stop offset="100%" stop-color="#ff9500"/></linearGradient></defs>
+                <rect x="24" y="50" width="42" height="6" rx="2" fill="#2c2c2e" stroke="rgba(231,207,160,.4)" stroke-width="1"/>
+                <path d="M24 50 L24 54 Q24 56 26 56 L64 56 Q66 56 66 54 L66 50" fill="none" stroke="rgba(231,207,160,.3)" stroke-width="1"/>
+              </svg>
+              <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500">Mac</span>
+            </div>
           </div>
-          <p style="text-align:center;margin-top:10px;font-size:13px;color:rgba(255,255,255,.5)">Smartphone · iPhone · Mac</p>
         </article>
       </div>
       </div>
