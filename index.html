@@ -275,50 +275,19 @@
         <div class="eyebrow">Open-source agentvarianten · Hermes of OpenClaw · MKB</div>
         <h1 style="font-size:clamp(36px,4.7vw,58px);font-weight:700;letter-spacing:-.03em">Minder vendor lock-in. Meer controle voor jou.</h1>
         <p class="lead">Claude en ChatGPT zijn sterke maar gesloten modellen met terugkerende tokenkosten. MKBAgents zet daar een open-source agentlaag naast: met Hermes of OpenClaw houd je workflows, tools en providerkeuze in eigen hand, en kun je goedkoper opschalen of wisselen wanneer dat nodig is.</p>
-        <div class="hero-disclosures" style="margin:16px 0 10px 0;display:flex;gap:10px;flex-wrap:wrap">
-          <details>
-            <summary style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Security</summary>
-            <div style="margin-top:12px;padding:20px 22px;background:rgba(215,242,104,.07);border:1px solid rgba(215,242,104,.18);border-radius:16px">
-              <p class="muted" style="margin-bottom:12px;color:#dce7dc">Controle, governance en privacy zijn geen details. Ze zijn de basis. Wanneer AI met klantgegevens, bedrijfsinformatie of gevoelige context werkt, moet het niet alleen handig zijn. Het moet uitlegbaar, beheersbaar en begrensd zijn.</p>
-              <div class="quote" style="margin-top:0;border-color:rgba(215,242,104,.15)">"Niet alles wat technologisch kan is ook maatschappelijk gewenst."<br><span style="font-size:13px;color:#c9d6cc">— bernarddonners-ai.nl</span></div>
-            </div>
-          </details>
-          <details>
-            <summary style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Voorwaarden</summary>
-            <div style="margin-top:12px;padding:20px 22px;background:rgba(215,242,104,.07);border:1px solid rgba(215,242,104,.18);border-radius:16px;font-size:14px;color:#dce7dc">
-              <p style="margin-bottom:10px">MKBAgents levert advies, configuratie, automatisering en beheer van AI-agents voor zakelijke gebruikers. De dienstverlening is gericht op ondersteuning van werkprocessen, niet op het overnemen van professionele verantwoordelijkheid van de klant.</p>
-              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
-                <li>De klant blijft verantwoordelijk voor AI-output die wordt gebruikt, verstuurd of omgezet in een besluit.</li>
-                <li>AI-output kan onjuist, onvolledig of ongeschikt zijn voor de specifieke situatie.</li>
-                <li>Risicovolle acties vereisen menselijke controle en expliciet akkoord.</li>
-                <li>Aansprakelijkheid is beperkt tot directe schade en maximaal het betaalde bedrag.</li>
-              </ul>
-            </div>
-          </details>
-          <details>
-            <summary style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Privacy</summary>
-            <div style="margin-top:12px;padding:20px 22px;background:rgba(215,242,104,.07);border:1px solid rgba(215,242,104,.18);border-radius:16px;font-size:14px;color:#dce7dc">
-              <p style="margin-bottom:10px">MKBAgents verwerkt persoonsgegevens en bedrijfsgegevens alleen voor zover nodig om de agent te configureren, beveiligen, uitvoeren en beheren.</p>
-              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
-                <li>Gegevens worden niet verkocht aan derden.</li>
-                <li>Toegang wordt beperkt tot wat noodzakelijk is voor inrichting, beheer en support.</li>
-                <li>Waar mogelijk worden gegevens geminimaliseerd en binnen een afgesproken hostingomgeving verwerkt.</li>
-                <li>Verzoeken over inzage, correctie of verwijdering kunnen via het contactadres van MKBAgents.</li>
-              </ul>
-            </div>
-          </details>
-          <details>
-            <summary style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Menselijke controle</summary>
-            <div style="margin-top:12px;padding:20px 22px;background:rgba(215,242,104,.07);border:1px solid rgba(215,242,104,.18);border-radius:16px;font-size:14px;color:#dce7dc">
-              <p style="margin-bottom:10px">Een MKBAgent mag voorbereiden, samenvatten, signaleren, ordenen en concepten klaarzetten. De agent handelt niet zelfstandig bij gevoelige of externe acties, tenzij dat uitdrukkelijk is afgesproken en technisch begrensd.</p>
-              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
-                <li>Geen automatische verzending zonder akkoord waar reputatie, geld, rechten of privacy geraakt kunnen worden.</li>
-                <li>Geen gebruik voor onrechtmatige, misleidende of schadelijke doeleinden.</li>
-                <li>Geen invoer van bijzondere persoonsgegevens zonder passende grondslag.</li>
-                <li>Bij twijfel: eerst menselijke beoordeling, daarna pas actie.</li>
-              </ul>
-            </div>
-          </details>
+        <div class="hero-disclosures" style="margin:16px 0 10px 0">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:0">
+            <button onclick="toggleDisclosure('security')" data-key="security" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Security</button>
+            <button onclick="toggleDisclosure('voorwaarden')" data-key="voorwaarden" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Voorwaarden</button>
+            <button onclick="toggleDisclosure('privacy')" data-key="privacy" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Privacy</button>
+            <button onclick="toggleDisclosure('controle')" data-key="controle" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Menselijke controle</button>
+          </div>
+          <div id="disclosure-panel" style="display:none;margin-top:12px;padding:20px 22px;background:rgba(215,242,104,.07);border:1px solid rgba(215,242,104,.18);border-radius:16px;font-size:14px;color:#dce7dc"></div>
+          <template id="disc-security"><p class="muted" style="margin-bottom:12px;color:#dce7dc">Controle, governance en privacy zijn geen details. Ze zijn de basis. Wanneer AI met klantgegevens, bedrijfsinformatie of gevoelige context werkt, moet het niet alleen handig zijn. Het moet uitlegbaar, beheersbaar en begrensd zijn.</p><div class="quote" style="margin-top:0;border-color:rgba(215,242,104,.15)">"Niet alles wat technologisch kan is ook maatschappelijk gewenst."<br><span style="font-size:13px;color:#c9d6cc">— bernarddonners-ai.nl</span></div></template>
+          <template id="disc-voorwaarden"><p style="margin-bottom:10px">MKBAgents levert advies, configuratie, automatisering en beheer van AI-agents voor zakelijke gebruikers. De dienstverlening is gericht op ondersteuning van werkprocessen, niet op het overnemen van professionele verantwoordelijkheid van de klant.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>De klant blijft verantwoordelijk voor AI-output die wordt gebruikt, verstuurd of omgezet in een besluit.</li><li>AI-output kan onjuist, onvolledig of ongeschikt zijn voor de specifieke situatie.</li><li>Risicovolle acties vereisen menselijke controle en expliciet akkoord.</li><li>Aansprakelijkheid is beperkt tot directe schade en maximaal het betaalde bedrag.</li></ul></template>
+          <template id="disc-privacy"><p style="margin-bottom:10px">MKBAgents verwerkt persoonsgegevens en bedrijfsgegevens alleen voor zover nodig om de agent te configureren, beveiligen, uitvoeren en beheren.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Gegevens worden niet verkocht aan derden.</li><li>Toegang wordt beperkt tot wat noodzakelijk is voor inrichting, beheer en support.</li><li>Waar mogelijk worden gegevens geminimaliseerd en binnen een afgesproken hostingomgeving verwerkt.</li><li>Verzoeken over inzage, correctie of verwijdering kunnen via het contactadres van MKBAgents.</li></ul></template>
+          <template id="disc-controle"><p style="margin-bottom:10px">Een MKBAgent mag voorbereiden, samenvatten, signaleren, ordenen en concepten klaarzetten. De agent handelt niet zelfstandig bij gevoelige of externe acties, tenzij dat uitdrukkelijk is afgesproken en technisch begrensd.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Geen automatische verzending zonder akkoord waar reputatie, geld, rechten of privacy geraakt kunnen worden.</li><li>Geen gebruik voor onrechtmatige, misleidende of schadelijke doeleinden.</li><li>Geen invoer van bijzondere persoonsgegevens zonder passende grondslag.</li><li>Bij twijfel: eerst menselijke beoordeling, daarna pas actie.</li></ul></template>
+          <script>function toggleDisclosure(key){var p=document.getElementById('disclosure-panel');var t=document.getElementById('disc-'+key);var btn=document.querySelector('[data-key="'+key+'"]');var cur=p.getAttribute('data-open');if(cur===key){p.style.display='none';p.removeAttribute('data-open');p.innerHTML='';btn.style.background='rgba(255,250,241,.72)';return}p.setAttribute('data-open',key);p.innerHTML=t.innerHTML;p.style.display='block';document.querySelectorAll('.disclosure-btn').forEach(function(b){b.style.background='rgba(255,250,241,.72)'});btn.style.background='rgba(215,242,104,.22)'}</script>
         </div>
       </div>
       <aside class="agent-card" aria-label="AI agent demo kaart">
