@@ -122,6 +122,8 @@
     .provider-detail{display:grid;gap:20px;padding-top:8px}
     .provider-detail .provider-grid{margin-top:0}
     .provider-detail .provider-card{min-height:0}
+    .macmini-inline .provider-grid{grid-template-columns:1fr;gap:12px}
+    .macmini-inline .provider-card{padding:18px;border-radius:22px}
     .price-mini-table{display:grid;gap:10px;margin-top:4px}
     .price-mini-row{display:grid;grid-template-columns:1.15fr .9fr;gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:18px;background:#fff}
     .price-mini-row strong{font-size:15px;letter-spacing:-.01em}
@@ -534,6 +536,37 @@
           <p class="muted">Voor organisaties die zelf eigenaar willen blijven van de infrastructuurrelatie: eigen Mac mini, VPS of bestaande cloud. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.</p>
           <ul><li>Eigen Mac mini, VPS of bestaande cloud</li><li>Eenmalige setup</li><li>Maandelijkse support of beheerabonnement mogelijk</li><li>Jij houdt eigenaarschap over infrastructuur en toegang</li></ul>
           <div class="price">Set up: €400</div>
+          <details class="macmini-inline" id="macmini" style="margin-top:18px">
+            <summary class="provider-summary" style="cursor:pointer">
+              <span class="provider-toggle">Bekijk Mac mini AI-workstation</span>
+            </summary>
+            <div class="provider-detail" style="padding-top:18px">
+              <div class="eyebrow">Mac mini AI-workstation</div>
+              <h3>Zet een Mac mini M4 in als eigen AI-werkstation</h3>
+              <p class="muted">Voor bedrijven die hun agent liever op eigen hardware of in een eigen kantooropstelling laten draaien, richt MKBAgents een Mac mini M4 of bestaande Mac in als private AI-basis. Afhankelijk van de workflow kiezen we Hermes, OpenClaw of de best passende route per kanaal, team en automatisering.</p>
+              <div class="provider-grid">
+                <article class="provider-card">
+                  <span class="tag">Setup</span>
+                  <strong>Wat we opleveren</strong>
+                  <p class="muted">Een werkende zakelijke basisconfiguratie voor ZZP’ers, support, sales of interne workflowautomatisering, niet alleen een promptscherm.</p>
+                  <ul><li>Installatie en configuratie van Hermes of OpenClaw</li><li>Koppeling met Slack, Telegram, WhatsApp of browser</li><li>Modelroutes via jullie eigen accounts en budgetkeuzes</li><li>Eerste automatisering, overdracht en beheerafspraken</li></ul>
+                </article>
+                <article class="provider-card">
+                  <span class="tag">Waarom dit werkt</span>
+                  <strong>Meer eigenaarschap, minder lock-in</strong>
+                  <p class="muted">De hardware staat bij jullie. Jullie houden grip op toegang, sleutels, kosten en uitbreidingen, met de optie om later door te groeien naar cloud of hybride beheer.</p>
+                  <ul><li>Chats, documenten en logs op eigen infrastructuur</li><li>Remote toegang na oplevering intrekbaar</li><li>Lokale modellen mogelijk voor privacygevoelige taken</li><li>Past bij bedrijven die AI willen integreren zonder volledig platformslot</li></ul>
+                </article>
+                <article class="provider-card">
+                  <span class="tag">Praktisch</span>
+                  <strong>Samen testen op jullie eigen proces</strong>
+                  <p class="muted">Tijdens de installatie testen we meteen jullie eigen vragen, documenten en workflows. Hebben jullie al een Mac? Dan kan alleen installatie en configuratie ook.</p>
+                  <ul><li>Intake vooraf op use-case, team en maandbudget</li><li>Directe live test tijdens de setup</li><li>Nazorg, updates en doorontwikkeling mogelijk</li><li>Geschikt voor ZZP’ers, kleine teams en eigen kantooromgeving</li></ul>
+                </article>
+              </div>
+              <div class="flow-note"><strong>Belangrijk over kosten:</strong> hardware, AI-API's, domeinen, telefonie, cloudopslag en andere externe diensten vallen buiten de setupprijs. Tijdens intake bepalen we of eigen Mac mini, managed cloud of een hybride route de beste zakelijke keuze is.</div>
+            </div>
+          </details>
         </article>
       </div>
     </section>
@@ -925,6 +958,33 @@
         "Maandelijkse support of beheerabonnement mogelijk": "Monthly support or management subscription possible",
         "Jij houdt eigenaarschap over infrastructuur en toegang": "You keep ownership of infrastructure and access",
         "Set up: €400": "Set up: €400",
+        "Bekijk Mac mini AI-workstation": "View Mac mini AI workstation",
+        "Mac mini AI-workstation": "Mac mini AI workstation",
+        "Zet een Mac mini M4 in als eigen AI-werkstation": "Turn a Mac mini M4 into your own AI workstation",
+        "Voor bedrijven die hun agent liever op eigen hardware of in een eigen kantooropstelling laten draaien, richt MKBAgents een Mac mini M4 of bestaande Mac in als private AI-basis. Afhankelijk van de workflow kiezen we Hermes, OpenClaw of de best passende route per kanaal, team en automatisering.": "For companies that prefer to run their agent on their own hardware or in their own office setup, MKBAgents can set up a Mac mini M4 or existing Mac as a private AI base. Depending on the workflow, we choose Hermes, OpenClaw or the best-fitting route per channel, team and automation.",
+        "Setup": "Setup",
+        "Wat we opleveren": "What we deliver",
+        "Een werkende zakelijke basisconfiguratie voor ZZP’ers, support, sales of interne workflowautomatisering, niet alleen een promptscherm.": "A working business base configuration for freelancers, support, sales or internal workflow automation, not just a prompt screen.",
+        "Installatie en configuratie van Hermes of OpenClaw": "Installation and configuration of Hermes or OpenClaw",
+        "Koppeling met Slack, Telegram, WhatsApp of browser": "Connection to Slack, Telegram, WhatsApp or browser",
+        "Modelroutes via jullie eigen accounts en budgetkeuzes": "Model routes through your own accounts and budget choices",
+        "Eerste automatisering, overdracht en beheerafspraken": "Initial automation, handover and management agreements",
+        "Waarom dit werkt": "Why this works",
+        "Meer eigenaarschap, minder lock-in": "More ownership, less lock-in",
+        "De hardware staat bij jullie. Jullie houden grip op toegang, sleutels, kosten en uitbreidingen, met de optie om later door te groeien naar cloud of hybride beheer.": "The hardware sits with you. You keep control over access, keys, costs and expansions, with the option to grow later into cloud or hybrid management.",
+        "Chats, documenten en logs op eigen infrastructuur": "Chats, documents and logs on your own infrastructure",
+        "Remote toegang na oplevering intrekbaar": "Remote access revocable after delivery",
+        "Lokale modellen mogelijk voor privacygevoelige taken": "Local models possible for privacy-sensitive tasks",
+        "Past bij bedrijven die AI willen integreren zonder volledig platformslot": "Fits companies that want to integrate AI without full platform lock-in",
+        "Praktisch": "Practical",
+        "Samen testen op jullie eigen proces": "Test together on your own process",
+        "Tijdens de installatie testen we meteen jullie eigen vragen, documenten en workflows. Hebben jullie al een Mac? Dan kan alleen installatie en configuratie ook.": "During installation we immediately test your own questions, documents and workflows. Already have a Mac? Then installation and configuration alone is also possible.",
+        "Intake vooraf op use-case, team en maandbudget": "Intake first around use case, team and monthly budget",
+        "Directe live test tijdens de setup": "Direct live testing during setup",
+        "Nazorg, updates en doorontwikkeling mogelijk": "Aftercare, updates and further development possible",
+        "Geschikt voor ZZP’ers, kleine teams en eigen kantooromgeving": "Suitable for freelancers, small teams and your own office environment",
+        "Belangrijk over kosten:": "Important about costs:",
+        "hardware, AI-API's, domeinen, telefonie, cloudopslag en andere externe diensten vallen buiten de setupprijs. Tijdens intake bepalen we of eigen Mac mini, managed cloud of een hybride route de beste zakelijke keuze is.": "hardware, AI APIs, domains, telephony, cloud storage and other external services fall outside the setup price. During intake we determine whether your own Mac mini, managed cloud or a hybrid route is the best business choice.",
         "2 · Dedicated": "2 · Dedicated",
         "Geschikt voor privacygevoelige workflows": "Suitable for privacy-sensitive workflows",
         "3 · Bring your own": "3 · Bring your own",
