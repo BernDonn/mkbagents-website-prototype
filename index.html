@@ -264,7 +264,6 @@
         <a href="#oplossingen">Oplossingen</a>
         <a href="#koppelingen">Koppelingen</a>
         <a href="#providers">Modelkeuze</a>
-        <a href="#hosting">Hosting</a>
         <a class="button secondary" href="https://www.bernarddonners-ai.nl">Bernard Donners</a>
         <a class="button" href="#contact">Plan pilot</a>
       </div>
@@ -539,62 +538,6 @@
       </div>
     </section>
 
-    <section class="section" id="hosting">
-      <div class="eyebrow">Waar draait je Agent?</div>
-      <h2>Managed, dedicated and bring your own</h2>
-      <p class="lead">De standaardroute is een beheerde MKBAgents-omgeving. Wie meer isolatie of eigenaarschap wil, kiest voor een dedicated server of brengt eigen infrastructuur mee.</p>
-      <div class="provider-grid">
-        <article class="provider-card">
-          <span class="tag">1 · Managed</span>
-          <strong>MKBAgents Cloud</strong>
-          <p class="muted">De agent draait op door MKBAgents beheerde Europese infrastructuur. Klanten krijgen een eigen bot, eigen configuratie en gescheiden toegangsgegevens.</p>
-          <ul><li>Beste start voor €29/maand</li><li>Snelle activatie</li><li>Beheer, updates en monitoring inbegrepen</li></ul>
-        </article>
-        <article class="provider-card">
-          <span class="tag">2 · Dedicated</span>
-          <strong>Eigen Hetzner VPS</strong>
-          <p class="muted">Voor klanten met hogere eisen aan isolatie. De server wordt automatisch ingericht en door MKBAgents beheerd.</p>
-          <ul><li>Eigen VPS per klant, vanaf €79 / maand</li><li>Cloud-init/Terraform-ready</li><li>Geschikt voor gevoelige workflows</li></ul>
-        </article>
-        <details class="provider-card" id="macmini">
-          <summary class="provider-summary">
-          <span class="tag">3 · Bring your own</span>
-          <strong>Eigen cloud, VPS of Mac</strong>
-          <p class="muted">Voor mensen en organisaties die zelf de infrastructuurrelatie houden. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.</p>
-          <ul><li>Eigen Mac mini, VPS of bestaande cloud</li><li>Meer eigenaarschap</li><li>Setupfee + beheerabonnement mogelijk</li></ul>
-            <span class="provider-toggle">Bekijk Mac mini AI-workstation</span>
-          </summary>
-          <div class="provider-detail">
-            <div class="eyebrow">Mac mini AI-workstation</div>
-            <h3>Zet een Mac mini M4 in als eigen AI-werkstation</h3>
-            <p class="muted">Voor bedrijven die hun agent liever op eigen hardware of in een eigen kantooropstelling laten draaien, richt MKBAgents een Mac mini M4 of bestaande Mac in als private AI-basis. Afhankelijk van de workflow kiezen we Hermes, OpenClaw of de best passende route per kanaal, team en automatisering.</p>
-            <div class="provider-grid">
-              <article class="provider-card">
-                <span class="tag">Setup</span>
-                <strong>Wat we opleveren</strong>
-                <p class="muted">Een werkende zakelijke basisconfiguratie voor ZZP’ers, support, sales of interne workflowautomatisering , niet alleen een promptscherm.</p>
-                <ul><li>Installatie en configuratie van Hermes of OpenClaw</li><li>Koppeling met Slack, Telegram, WhatsApp of browser</li><li>Modelroutes via jullie eigen accounts en budgetkeuzes</li><li>Eerste automatisering, overdracht en beheerafspraken</li></ul>
-              </article>
-              <article class="provider-card">
-                <span class="tag">Waarom dit werkt</span>
-                <strong>Meer eigenaarschap, minder lock-in</strong>
-                <p class="muted">De hardware staat bij jullie. Jullie houden grip op toegang, sleutels, kosten en uitbreidingen , met de optie om later door te groeien naar cloud of hybride beheer.</p>
-                <ul><li>Chats, documenten en logs op eigen infrastructuur</li><li>Remote toegang na oplevering intrekbaar</li><li>Lokale modellen mogelijk voor privacygevoelige taken</li><li>Past bij bedrijven die AI willen integreren zonder volledig platformslot</li></ul>
-              </article>
-              <article class="provider-card">
-                <span class="tag">Praktisch</span>
-                <strong>Samen testen op jullie eigen proces</strong>
-                <p class="muted">Tijdens de installatie testen we meteen jullie eigen vragen, documenten en workflows. Hebben jullie al een Mac? Dan kan alleen installatie en configuratie ook.</p>
-                <ul><li>Intake vooraf op use-case, team en maandbudget</li><li>Directe live test tijdens de setup</li><li>Nazorg, updates en doorontwikkeling mogelijk</li><li>Geschikt voor ZZP’ers, kleine teams en eigen kantooromgeving</li></ul>
-              </article>
-            </div>
-            <div class="flow-note"><strong>Belangrijk over kosten:</strong> hardware, AI-API's, domeinen, telefonie, cloudopslag en andere externe diensten vallen buiten de setupprijs. Tijdens intake bepalen we of eigen Mac mini, managed cloud of een hybride route de beste zakelijke keuze is.</div>
-          </div>
-        </details>
-      </div>
-      <div class="flow-note"><strong>Infrastructuurkeuze:</strong> voor automatische provisioning is Hetzner de voorkeursroute. Hostinger blijft interessant als optionele affiliate- of klant-hostingroute, maar niet als standaard backend voor de managed omgeving.</div>
-    </section>
-
     <section class="section" id="deploy">
       <div class="eyebrow">Start een pilot</div>
       <h2>Van eerste gesprek naar werkende agentflow</h2>
@@ -784,8 +727,6 @@
         "MKBAgents levert beheerde AI-agents voor ZZP’ers en MKB die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.": "MKBAgents delivers managed AI agents for freelancers and SMEs that want to automate quickly: secure, controllable and GDPR-aware.",
         "AI-agents": "AI agents",
         "Oplossingen": "Solutions",
-        "Hosting": "Hosting",
-        "Mac mini setup": "Mac mini setup",
         "Security-aanpak": "Security approach",
         "Voorwaarden & Privacy": "Terms & Privacy",
         "Menselijke Controle": "Human Control",
@@ -1058,53 +999,6 @@
         "Hermes of OpenClaw kiest daarna per taak de ingestelde route": "Hermes or OpenClaw then chooses the configured route for each task",
         "Hoe het werkt:": "How it works:",
         "tijdens deployment bepalen we of een OAuth-route (ChatGPT of Claude) of OpenRouter de primaire route wordt, plus minimaal één fallback. Als een OAuth-route zijn limiet bereikt of niet beschikbaar is, schakelt de agent door naar het OpenRouter-model dat we vooraf hebben gekozen. Sleutels en OAuth-tokens horen in de private agent-workspace, niet in de website.": "during deployment we decide whether an OAuth route (ChatGPT or Claude) or OpenRouter becomes the primary route, plus at least one fallback. If an OAuth route hits its limit or is unavailable, the agent switches to the OpenRouter model we selected in advance. Keys and OAuth tokens belong in the private agent workspace, not in the website.",
-        "Waar draait je Agent?": "Where does your Agent run?",
-        "Managed, dedicated and bring your own": "Managed, dedicated and bring your own",
-        "De standaardroute is een beheerde MKBAgents-omgeving. Wie meer isolatie of eigenaarschap wil, kiest voor een dedicated server of brengt eigen infrastructuur mee.": "The standard route is a managed MKBAgents environment. Those who want more isolation or ownership choose a dedicated server or bring their own infrastructure.",
-        "1 · Managed": "1 · Managed",
-        "MKBAgents Cloud": "MKBAgents Cloud",
-        "De agent draait op door MKBAgents beheerde Europese infrastructuur. Klanten krijgen een eigen bot, eigen configuratie en gescheiden toegangsgegevens.": "The agent runs on European infrastructure managed by MKBAgents. Customers get their own bot, configuration and separate credentials.",
-        "Beste start voor €29/maand": "Best start for €29/month",
-        "Snelle activatie": "Quick activation",
-        "Beheer, updates en monitoring inbegrepen": "Management, updates and monitoring included",
-        "Eigen Hetzner VPS": "Own Hetzner VPS",
-        "Voor klanten met hogere eisen aan isolatie. De server wordt automatisch ingericht en door MKBAgents beheerd.": "For customers with higher isolation requirements. The server is automatically set up and managed by MKBAgents.",
-        "Eigen VPS per klant, vanaf €79 / maand": "Own VPS per customer, from €79 / month",
-        "Geschikt voor gevoelige workflows": "Suitable for sensitive workflows",
-        "Eigen cloud, VPS of Mac": "Own cloud, VPS or Mac",
-        "Voor mensen en organisaties die zelf de infrastructuurrelatie houden. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.": "For people and organizations that keep the infrastructure relationship themselves. MKBAgents provides setup, integration, updates or support as agreed.",
-        "Eigen Mac mini, VPS of bestaande cloud": "Own Mac mini, VPS or existing cloud",
-        "Meer eigenaarschap": "More ownership",
-        "Setupfee + beheerabonnement mogelijk": "Setup fee + management subscription possible",
-        "Bekijk Mac mini AI-workstation": "View Mac mini AI workstation",
-        "Infrastructuurkeuze:": "Infrastructure choice:",
-        "voor automatische provisioning is Hetzner de voorkeursroute. Hostinger blijft interessant als optionele affiliate- of klant-hostingroute, maar niet als standaard backend voor de managed omgeving.": "for automatic provisioning, Hetzner is the preferred route. Hostinger remains interesting as an optional affiliate- or customer-hosting route, but not as the standard backend for the managed environment.",
-        "Mac mini AI-workstation": "Mac mini AI workstation",
-        "Zet een Mac mini M4 in als eigen AI-werkstation": "Turn a Mac mini M4 into your own AI workstation",
-        "Voor bedrijven die hun agent liever op eigen hardware of in een eigen kantooropstelling laten draaien, richt MKBAgents een Mac mini M4 of bestaande Mac in als private AI-basis. Afhankelijk van de workflow kiezen we Hermes, OpenClaw of de best passende route per kanaal, team en automatisering.": "For companies that prefer to run their agent on their own hardware or in their own office setup, MKBAgents can set up a Mac mini M4 or existing Mac as a private AI base. Depending on the workflow, we choose Hermes, OpenClaw or the best-fitting route per channel, team and automation.",
-        "Setup": "Setup",
-        "Wat we opleveren": "What we deliver",
-        "Een werkende zakelijke basisconfiguratie voor ZZP’ers, support, sales of interne workflowautomatisering , niet alleen een promptscherm.": "A working business base configuration for freelancers, support, sales or internal workflow automation , not just a prompt screen.",
-        "Installatie en configuratie van Hermes of OpenClaw": "Installation and configuration of Hermes or OpenClaw",
-        "Koppeling met Slack, Telegram, WhatsApp of browser": "Connection to Slack, Telegram, WhatsApp or browser",
-        "Modelroutes via jullie eigen accounts en budgetkeuzes": "Model routes through your own accounts and budget choices",
-        "Eerste automatisering, overdracht en beheerafspraken": "Initial automation, handover and management agreements",
-        "Waarom dit werkt": "Why this works",
-        "Meer eigenaarschap, minder lock-in": "More ownership, less lock-in",
-        "De hardware staat bij jullie. Jullie houden grip op toegang, sleutels, kosten en uitbreidingen , met de optie om later door te groeien naar cloud of hybride beheer.": "The hardware sits with you. You keep control over access, keys, costs and expansions , with the option to grow later into cloud or hybrid management.",
-        "Chats, documenten en logs op eigen infrastructuur": "Chats, documents and logs on your own infrastructure",
-        "Remote toegang na oplevering intrekbaar": "Remote access revocable after delivery",
-        "Lokale modellen mogelijk voor privacygevoelige taken": "Local models possible for privacy-sensitive tasks",
-        "Past bij bedrijven die AI willen integreren zonder volledig platformslot": "Fits companies that want to integrate AI without full platform lock-in",
-        "Praktisch": "Practical",
-        "Samen testen op jullie eigen proces": "Test together on your own process",
-        "Tijdens de installatie testen we meteen jullie eigen vragen, documenten en workflows. Hebben jullie al een Mac? Dan kan alleen installatie en configuratie ook.": "During installation we immediately test your own questions, documents and workflows. Already have a Mac? Then installation and configuration alone is also possible.",
-        "Intake vooraf op use-case, team en maandbudget": "Intake first around use case, team and monthly budget",
-        "Directe live test tijdens de setup": "Direct live testing during setup",
-        "Nazorg, updates en doorontwikkeling mogelijk": "Aftercare, updates and further development possible",
-        "Geschikt voor ZZP’ers, kleine teams en eigen kantooromgeving": "Suitable for freelancers, small teams and your own office environment",
-        "Belangrijk over kosten:": "Important about costs:",
-        "hardware, AI-API's, domeinen, telefonie, cloudopslag en andere externe diensten vallen buiten de setupprijs. Tijdens intake bepalen we of eigen Mac mini, managed cloud of een hybride route de beste zakelijke keuze is.": "hardware, AI APIs, domains, telephony, cloud storage and other external services fall outside the setup price. During intake we determine whether your own Mac mini, managed cloud or a hybrid route is the best business choice.",
         "Security & data": "Security & data",
         "Controle, governance en privacy zijn geen details. Ze zijn de basis.": "Control, governance and privacy are not details. They are the basis.",
         "Wanneer AI met klantgegevens, bedrijfsinformatie of gevoelige context werkt, moet het niet alleen handig zijn. Het moet uitlegbaar, beheersbaar en begrensd zijn.": "When AI works with client data, business information or sensitive context, it must not only be useful. It must be explainable, controllable and bounded.",
