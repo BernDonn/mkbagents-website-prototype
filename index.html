@@ -64,6 +64,19 @@
     .trust-row{display:flex;gap:10px;flex-wrap:wrap;color:#2b362e;font-size:14px}
     .pill{border:1px solid var(--line);background:rgba(255,250,241,.82);padding:9px 12px;border-radius:999px;font-weight:650}
     .agent-card{background:#122b20;color:#f7f2e7;border-radius:38px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .phone-frame{width:170px;margin:18px auto 0 auto;background:#1a1a1a;border-radius:22px;padding:10px 4px 8px 4px;border:2px solid #333;position:relative}
+    .phone-notch{width:50px;height:5px;background:#333;margin:0 auto 8px auto;border-radius:10px}
+    .phone-screen{background:linear-gradient(135deg,#0e1621 0%,#1a2a3a 50%,#0e1621 100%);border-radius:12px;overflow:hidden;min-height:260px;position:relative}
+    .tg-header{background:#2a6ea8;padding:10px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .tg-back{color:#fff;font-size:16px;line-height:1}
+    .tg-contact{display:flex;flex-direction:column}
+    .tg-chat{padding:12px 10px;display:flex;flex-direction:column;gap:10px;min-height:150px}
+    .tg-msg{max-width:88%;padding:8px 10px;border-radius:12px;font-size:11px;line-height:1.4;position:relative}
+    .tg-msg-agent{background:#2b5278;color:#fff;align-self:flex-start;border-bottom-left-radius:3px}
+    .tg-msg-user{background:#1ea356;color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+    .tg-msg-time{font-size:9px;margin-top:4px;opacity:.65;text-align:right}
+    .tg-input-bar{background:#17212b;padding:8px 12px;margin:0 4px 4px 4px;border-radius:14px;display:flex;align-items:center}
+    .phone-home{width:30px;height:4px;background:#444;margin:8px auto 0 auto;border-radius:3px}
     .hero .agent-card{margin-top:38px}
     .agent-card:before{content:"";position:absolute;inset:-80px -140px auto auto;width:260px;height:260px;border-radius:50%;background:rgba(215,242,104,.22);filter:blur(8px)}
     .card-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
@@ -300,10 +313,31 @@
           <div><strong>Trusted Agent</strong><div class="status">online · Telegram + WhatsApp · private EU workspace</div></div>
           <div class="metric">11u/week<br><small>ruis minder</small></div>
         </div>
-        <div class="chat">
-          <div class="bubble"><div class="mini">Sales desk · 09:41</div>Welke leads en dossiers vragen vandaag directe opvolging?</div>
-          <div class="bubble agent"><div class="mini">MKBAgent · 09:42</div>Ik zie drie dossiers en twee warme leads. Twee acties kunnen direct worden voorbereid; één voorstel wacht op akkoord. Ik zet de conceptmail klaar, maar verstuur niets zonder jouw bevestiging.</div>
-          <div class="bubble"><div class="mini">Security policy</div>Actie vereist menselijke goedkeuring · gegevens blijven binnen EU-workspace.</div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="tg-header">
+              <span class="tg-back">←</span>
+              <div class="tg-contact">
+                <strong style="font-size:13px;color:#fff">MKBAgent</strong>
+                <span style="font-size:10px;color:rgba(255,255,255,.7)">online</span>
+              </div>
+            </div>
+            <div class="tg-chat">
+              <div class="tg-msg tg-msg-agent">
+                <div class="tg-msg-text">Welke leads en dossiers vragen vandaag directe opvolging?</div>
+                <div class="tg-msg-time">09:41</div>
+              </div>
+              <div class="tg-msg tg-msg-user">
+                <div class="tg-msg-text">Ik zie drie dossiers en twee warme leads. Conceptmail is klaargezet — verstuur niets zonder jouw akkoord.</div>
+                <div class="tg-msg-time">09:42 ✓✓</div>
+              </div>
+            </div>
+            <div class="tg-input-bar">
+              <span style="font-size:11px;color:#888">Bericht…</span>
+            </div>
+          </div>
+          <div class="phone-home"></div>
         </div>
       </aside>
     </section>
