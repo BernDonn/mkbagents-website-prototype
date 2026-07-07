@@ -649,9 +649,9 @@
           </div>
         </div>
         <article class="order-card">
-          <div class="eyebrow">Bestel je agent</div>
-          <h2>Start met je intake, niet met afrekenen</h2>
-          <p class="lead">Kies hieronder Hermes of OpenClaw en vul de gegevens in die nodig zijn voor de eerste activatiestap. Daarna volgt pas bevestiging, betaling en installatie.</p>
+          <div class="eyebrow" id="order-eyebrow">Hermes intake</div>
+          <h2 id="order-title">Start je Hermes-intake, niet met afrekenen</h2>
+          <p class="lead" id="order-lead">Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna volgen pas bevestiging, betaling en installatie.</p>
           <form id="order-form" style="display:grid;gap:18px;margin-top:28px">
             <div class="field full">
               <label for="order-email">E-mailadres</label>
@@ -666,11 +666,11 @@
               <input id="order-company" name="company_name" autocomplete="organization" required>
             </div>
             <div class="field full">
-              <label>Kies je AI Agent</label>
+              <label>Gekozen AI-agent</label>
               <input type="hidden" name="agent" id="order-agent" value="hermes">
               <div class="agent-choice-grid">
                 <button type="button" class="agent-option active" data-agent-option="hermes"><strong>Hermes Agent</strong><span class="muted">Managed agent voor rustige, beheersbare workflowautomatisering.</span></button>
-                <button type="button" class="agent-option" data-agent-option="openclaw"><strong>OpenClaw Bot</strong><span class="muted">Open-source agentlaag voor Telegram-first intake en activering.</span></button>
+                <button type="button" class="agent-option" data-agent-option="openclaw"><strong>OpenClaw Agent</strong><span class="muted">Open-source agentlaag voor Telegram-first intake en activering.</span></button>
               </div>
             </div>
             <div class="field full">
@@ -1018,16 +1018,16 @@
         "Pas na deze intake volgen akkoord, betaling en eerste botinstallatie.": "Only after this intake do approval, payment and the first bot installation follow.",
         "€29 / maand per bot": "€29 / month per bot",
         "Geen grote startkosten, direct opzegbaar en eerst je gegevens verzamelen zoals in de Trustable-flow.": "No large start-up costs, cancel any time and first gather your details as in the Trustable flow.",
-        "Bestel je agent": "Order your agent",
-        "Start met je intake, niet met afrekenen": "Start with your intake, not with checkout",
-        "Kies hieronder Hermes of OpenClaw en vul de gegevens in die nodig zijn voor de eerste activatiestap. Daarna volgt pas bevestiging, betaling en installatie.": "Choose Hermes or OpenClaw below and fill in the details needed for the first activation step. Only then come confirmation, payment and installation.",
+        "Hermes intake": "Hermes intake",
+        "Start je Hermes-intake, niet met afrekenen": "Start your Hermes intake, not with checkout",
+        "Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna volgen pas bevestiging, betaling en installatie.": "Fill in the details needed to prepare Hermes for your first workflow. Only then come confirmation, payment and installation.",
         "E-mailadres": "Email address",
         "Naam": "Name",
         "Bedrijf": "Company",
-        "Kies je AI Agent": "Choose your AI Agent",
+        "Gekozen AI-agent": "Selected AI agent",
         "Hermes Agent": "Hermes Agent",
         "Managed agent voor rustige, beheersbare workflowautomatisering.": "Managed agent for calm, controllable workflow automation.",
-        "OpenClaw Bot": "OpenClaw Bot",
+        "OpenClaw Agent": "OpenClaw Agent",
         "Open-source agentlaag voor Telegram-first intake en activering.": "Open-source agent layer for Telegram-first intake and activation.",
         "Telegram": "Telegram",
         "WhatsApp binnenkort": "WhatsApp coming soon",
@@ -1115,6 +1115,9 @@
       document.querySelectorAll('[data-lang-button]').forEach(button => {
         button.classList.toggle('active', button.dataset.langButton === lang);
       });
+      if(orderAgentInput){
+        setSelectedAgent(orderAgentInput.value || 'hermes');
+      }
       localStorage.setItem('trustedAgentsLang', lang);
     }
 
@@ -1125,15 +1128,52 @@
     const orderForm = document.querySelector('#order-form');
     const orderResult = document.querySelector('#order-result');
     const orderSection = document.querySelector('#bestel-agent');
+    const orderEyebrow = document.querySelector('#order-eyebrow');
+    const orderTitle = document.querySelector('#order-title');
+    const orderLead = document.querySelector('#order-lead');
     const orderAgentInput = document.querySelector('#order-agent');
     const orderChannelInput = document.querySelector('#order-channel');
+    const orderCopy = {
+      nl: {
+        hermes: {
+          eyebrow: 'Hermes intake',
+          title: 'Start je Hermes-intake, niet met afrekenen',
+          lead: 'Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna volgen pas bevestiging, betaling en installatie.'
+        },
+        openclaw: {
+          eyebrow: 'OpenClaw intake',
+          title: 'Start je OpenClaw-intake, niet met afrekenen',
+          lead: 'Vul de gegevens in die nodig zijn om OpenClaw Agent voor jouw eerste workflow voor te bereiden. Daarna volgen pas bevestiging, betaling en installatie.'
+        }
+      },
+      en: {
+        hermes: {
+          eyebrow: 'Hermes intake',
+          title: 'Start your Hermes intake, not with checkout',
+          lead: 'Fill in the details needed to prepare Hermes for your first workflow. Only then come confirmation, payment and installation.'
+        },
+        openclaw: {
+          eyebrow: 'OpenClaw intake',
+          title: 'Start your OpenClaw intake, not with checkout',
+          lead: 'Fill in the details needed to prepare OpenClaw Agent for your first workflow. Only then come confirmation, payment and installation.'
+        }
+      }
+    };
 
     function setSelectedAgent(agent){
       if(!orderAgentInput) return;
-      orderAgentInput.value = agent;
+      const selectedAgent = agent === 'openclaw' ? 'openclaw' : 'hermes';
+      orderAgentInput.value = selectedAgent;
       document.querySelectorAll('[data-agent-option]').forEach(button => {
-        button.classList.toggle('active', button.dataset.agentOption === agent);
+        button.classList.toggle('active', button.dataset.agentOption === selectedAgent);
       });
+      const lang = document.body.dataset.lang === 'en' ? 'en' : 'nl';
+      const copy = orderCopy[lang][selectedAgent];
+      if(copy){
+        if(orderEyebrow) orderEyebrow.textContent = copy.eyebrow;
+        if(orderTitle) orderTitle.textContent = copy.title;
+        if(orderLead) orderLead.textContent = copy.lead;
+      }
     }
 
     function setSelectedChannel(channel){
@@ -1172,7 +1212,7 @@
       orderForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(orderForm).entries());
-        const agentLabel = data.agent === 'openclaw' ? 'OpenClaw Bot' : 'Hermes Agent';
+        const agentLabel = data.agent === 'openclaw' ? 'OpenClaw Agent' : 'Hermes Agent';
         const lines = [
           'Ik wil graag een agent starten via de €29-route.',
           '',
