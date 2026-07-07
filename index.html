@@ -53,7 +53,7 @@
     .button.secondary{background:transparent;color:var(--green);box-shadow:none}
     .button.light{background:var(--lime);color:#17240f;border-color:var(--lime)}
     .section{max-width:var(--max);margin:0 auto;padding:86px 24px}
-    .hero{display:grid;grid-template-columns:1.07fr .93fr;gap:54px;align-items:center;min-height:760px;padding-top:74px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;min-height:auto;padding-top:74px;padding-bottom:40px}
     .eyebrow{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,250,241,.72);padding:8px 12px;border-radius:999px;color:var(--green);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.09em}
     h1,h2,h3,p{margin:0}
     h1{font-size:clamp(50px, 6.6vw, 86px);font-weight:800;line-height:.98;letter-spacing:-.04em;margin:24px 0 24px;max-width:900px}
@@ -64,21 +64,21 @@
     .trust-row{display:flex;gap:10px;flex-wrap:wrap;color:#2b362e;font-size:14px}
     .pill{border:1px solid var(--line);background:rgba(255,250,241,.82);padding:9px 12px;border-radius:999px;font-weight:650}
     .agent-card{background:#122b20;color:#f7f2e7;border-radius:38px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-    .phone-frame{width:170px;margin:18px auto 0 auto;background:#1a1a1a;border-radius:22px;padding:10px 4px 8px 4px;border:2px solid #333;position:relative}
-    .phone-notch{width:50px;height:5px;background:#333;margin:0 auto 8px auto;border-radius:10px}
-    .phone-screen{background:linear-gradient(135deg,#0e1621 0%,#1a2a3a 50%,#0e1621 100%);border-radius:12px;overflow:hidden;min-height:260px;position:relative}
-    .tg-header{background:#2a6ea8;padding:10px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.1)}
-    .tg-back{color:#fff;font-size:16px;line-height:1}
+    .phone-frame{width:140px;margin:14px auto 0 auto;background:#1a1a1a;border-radius:20px;padding:8px 3px 6px 3px;border:2px solid #333;position:relative;max-height:340px}
+    .phone-notch{width:42px;height:4px;background:#333;margin:0 auto 6px auto;border-radius:8px}
+    .phone-screen{background:linear-gradient(135deg,#0e1621 0%,#1a2a3a 50%,#0e1621 100%);border-radius:10px;overflow:hidden;min-height:180px;position:relative}
+    .tg-header{background:#2a6ea8;padding:7px 10px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .tg-back{color:#fff;font-size:13px;line-height:1}
     .tg-contact{display:flex;flex-direction:column}
-    .tg-chat{padding:12px 10px;display:flex;flex-direction:column;gap:10px;min-height:150px}
-    .tg-msg{max-width:88%;padding:8px 10px;border-radius:12px;font-size:11px;line-height:1.4;position:relative}
+    .tg-chat{padding:8px 8px;display:flex;flex-direction:column;gap:7px;min-height:110px}
+    .tg-msg{max-width:88%;padding:6px 8px;border-radius:10px;font-size:10px;line-height:1.35;position:relative}
     .tg-msg-agent{background:#2b5278;color:#fff;align-self:flex-start;border-bottom-left-radius:3px}
     .tg-msg-user{background:#1ea356;color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
-    .tg-msg-time{font-size:9px;margin-top:4px;opacity:.65;text-align:right}
-    .tg-input-bar{background:#17212b;padding:8px 12px;margin:0 4px 4px 4px;border-radius:14px;display:flex;align-items:center}
-    .phone-home{width:30px;height:4px;background:#444;margin:8px auto 0 auto;border-radius:3px}
-    .hero .agent-card{margin-top:38px}
-    .agent-card:before{content:"";position:absolute;inset:-80px -140px auto auto;width:260px;height:260px;border-radius:50%;background:rgba(215,242,104,.22);filter:blur(8px)}
+    .tg-msg-time{font-size:8px;margin-top:3px;opacity:.65;text-align:right}
+    .tg-input-bar{background:#17212b;padding:6px 10px;margin:0 3px 3px 3px;border-radius:12px;display:flex;align-items:center}
+    .phone-home{width:26px;height:3px;background:#444;margin:6px auto 0 auto;border-radius:3px}
+    .hero .agent-card{margin-top:38px;max-height:480px}
+    .agent-card:before{content:"";position:absolute;inset:-40px -80px auto auto;width:180px;height:180px;border-radius:50%;background:rgba(215,242,104,.15);filter:blur(6px)}
     .card-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
     .status{color:#bde9c5;font-size:13px}
     .metric{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:12px;border-radius:18px;color:#fff}
@@ -329,16 +329,12 @@
                 <div class="tg-msg-time">08:02</div>
               </div>
               <div class="tg-msg tg-msg-agent">
-                <div class="tg-msg-text">Goedemorgen! Je hebt om 10:00 een offertebespreking met Jansen BV. Ik heb hun laatste drie mails samengevat en het conceptcontract bijgewerkt.</div>
+                <div class="tg-msg-text">Goedemorgen! 10:00 offerte Jansen BV — mails samengevat, contract bijgewerkt. En De Vries heeft een offerteaanvraag gestuurd.</div>
                 <div class="tg-msg-time">08:02 ✓✓</div>
               </div>
               <div class="tg-msg tg-msg-user">
-                <div class="tg-msg-text">Top. En de mailbox?</div>
+                <div class="tg-msg-text">Zet de conceptreactie klaar. Ik kijk er straks naar.</div>
                 <div class="tg-msg-time">08:03</div>
-              </div>
-              <div class="tg-msg tg-msg-agent">
-                <div class="tg-msg-text">4 nieuwe mails. 2 nieuwsbrieven — die heb ik weggezet. 1 offerteaanvraag van De Vries Installatie — conceptreactie staat klaar. En een herinnering van de accountant die vandaag aandacht nodig heeft.</div>
-                <div class="tg-msg-time">08:03 ✓✓</div>
               </div>
             </div>
             <div class="tg-input-bar">
