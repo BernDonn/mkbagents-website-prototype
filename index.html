@@ -219,6 +219,12 @@
     .field{display:grid;gap:8px}
     .field.full{grid-column:1/-1}
     .field label{font-size:15px;font-weight:800;color:#243228}
+    .label-help{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .label-help details{display:inline-block}
+    .label-help summary{list-style:none;width:20px;height:20px;border-radius:999px;display:inline-grid;place-items:center;background:#d7f268;color:#17240f;border:1px solid rgba(22,63,43,.18);font-size:13px;font-weight:900;cursor:pointer}
+    .label-help summary::-webkit-details-marker{display:none}
+    .label-help details[open] summary{background:#17240f;color:#d7f268}
+    .help-pop{margin-top:8px;background:#17240f;color:#f7f2e7;border-radius:16px;padding:12px 14px;line-height:1.45;font-size:13px;font-weight:550;max-width:560px;box-shadow:0 12px 26px rgba(16,21,18,.18)}
     .field input{width:100%;border:1px solid var(--line);border-radius:18px;padding:16px 18px;background:#fff;font:inherit;color:var(--ink)}
     .field input:focus{outline:2px solid rgba(35,86,60,.18);border-color:var(--green2)}
     .agent-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -727,11 +733,11 @@
               </div>
             </div>
             <div class="field full">
-              <label for="order-telegram-token">Telegram Bot Token</label>
+              <label for="order-telegram-token" class="label-help">Telegram Bot Token <details><summary aria-label="Uitleg Telegram Bot Token">?</summary><div class="help-pop">Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Je maakt de bot gratis aan via BotFather in Telegram; daarna plak je hier de token zodat wij het kanaal veilig kunnen koppelen.</div></details></label>
               <input id="order-telegram-token" name="telegram_bot_token" required>
             </div>
             <div class="field full">
-              <label for="order-model-key">Anthropic API-sleutel</label>
+              <label for="order-model-key" class="label-help">ChatGPT OAuth <details><summary aria-label="Uitleg ChatGPT OAuth">?</summary><div class="help-pop">ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.</div></details></label>
               <input id="order-model-key" name="model_api_key" required>
             </div>
             <div class="field full">
@@ -1075,7 +1081,9 @@
         "Telegram": "Telegram",
         "WhatsApp binnenkort": "WhatsApp coming soon",
         "Telegram Bot Token": "Telegram Bot Token",
-        "Anthropic API-sleutel": "Anthropic API key",
+        "Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Je maakt de bot gratis aan via BotFather in Telegram; daarna plak je hier de token zodat wij het kanaal veilig kunnen koppelen.": "This is the key that lets your agent receive and answer messages through your own Telegram bot. You create the bot for free through BotFather in Telegram; then paste the token here so we can connect the channel securely.",
+        "ChatGPT OAuth": "ChatGPT OAuth",
+        "ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.": "ChatGPT OAuth means you sign in with your own ChatGPT/Codex account instead of copying a separate API key. During installation we open the official login, you confirm access and the secure connection is stored only in your private agent workspace.",
         "Vouchercode": "Voucher code",
         "Ik heb de voorwaarden en het privacybeleid gelezen.": "I have read the terms and the privacy policy.",
         "Ik begrijp dat ik verantwoordelijk blijf voor de configuratie en antwoorden van mijn bot en gevoelige acties eerst moet goedkeuren.": "I understand that I remain responsible for my bot's configuration and answers and must approve sensitive actions first.",
@@ -1265,7 +1273,7 @@
           `Bedrijf: ${data.company_name || ''}`,
           `E-mail: ${data.email || ''}`,
           `Telegram Bot Token: ${data.telegram_bot_token || ''}`,
-          `Anthropic API-sleutel: ${data.model_api_key || ''}`,
+          `ChatGPT OAuth: ${data.model_api_key || ''}`,
           `Vouchercode: ${data.voucher_code || '-'}`,
           '',
           'Ik heb de voorwaarden gelezen en begrijp dat gevoelige acties eerst akkoord nodig hebben.'
@@ -1279,7 +1287,7 @@
           Controleer de samenvatting hieronder en open daarna de intake-mail met alle ingevulde gegevens.<br><br>
           <span><strong>Gekozen agent:</strong> ${agentLabel}</span><br>
           <span><strong>Kanaal:</strong> ${data.channel || 'telegram'}</span><br>
-          <span><strong>Modelroute:</strong> Anthropic</span><br><br>
+          <span><strong>Modelroute:</strong> ChatGPT OAuth</span><br><br>
           <a class="button secondary" href="${href}">Open intake-mail</a>
           <div style="margin-top:12px">Eerst invullen, dan pas bevestiging en betaling.</div>
         `;
