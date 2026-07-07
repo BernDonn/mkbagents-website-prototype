@@ -64,6 +64,7 @@
     .trust-row{display:flex;gap:10px;flex-wrap:wrap;color:#2b362e;font-size:14px}
     .pill{border:1px solid var(--line);background:rgba(255,250,241,.82);padding:9px 12px;border-radius:999px;font-weight:650}
     .agent-card{background:#122b20;color:#f7f2e7;border-radius:38px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .hero .agent-card{margin-top:38px}
     .agent-card:before{content:"";position:absolute;inset:-80px -140px auto auto;width:260px;height:260px;border-radius:50%;background:rgba(215,242,104,.22);filter:blur(8px)}
     .card-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
     .status{color:#bde9c5;font-size:13px}
@@ -233,6 +234,7 @@
       .hero-actions,.footer-cta .button{width:100%}
       .hero-actions .button,.footer-cta .button{justify-content:center}
       .agent-card,.trust-stack,.proof,.footer-cta,.compare-card,.deploy-panel,.provider-card,.product,.tile,.case,.legal-card,.acceptance-box,.integration-wrap,.integration-card{padding:22px;border-radius:28px}
+      .hero .agent-card{margin-top:0}
       .trust-stack{margin-top:32px}
       .trust-item{grid-template-columns:42px 1fr 24px;padding:14px}
       .trust-icon{width:36px;height:36px;font-size:18px}
@@ -571,40 +573,6 @@
       </div>
     </section>
 
-    <section class="section" id="deploy">
-      <div class="eyebrow">Start een pilot</div>
-      <h2>Van eerste gesprek naar werkende agentflow</h2>
-      <p class="lead">We maken inzet concreet: niet “we doen iets met AI”, maar een beheerde agentflow die veilig draait en aansluit op de kanalen en processen die je team al gebruikt.</p>
-      <div class="deploy-grid">
-        <article class="deploy-panel">
-          <h3>Wat je krijgt</h3>
-          <p class="muted">Een werkende MKBAgent op Hermes of OpenClaw, afhankelijk van workflow en kanaal. Eerst één proces, daarna uitbreiden.</p>
-          <div class="channel-row">
-            <span class="channel">Telegram</span>
-            <span class="channel">WhatsApp</span>
-            <span class="channel">Slack</span><span class="channel">E-mail concepten</span>
-            <span class="channel">Browser / desktop / iPhone</span>
-          </div>
-          <div class="deploy-steps">
-            <div class="deploy-step"><div><strong>Intake & use-case</strong><br><span class="muted">We kiezen één workflow: inbox, monitoring, dossiers, content of leadopvolging.</span></div></div>
-            <div class="deploy-step"><div><strong>Private agent workspace</strong><br><span class="muted">We richten de gekozen variant in op een beheerde EU-omgeving met duidelijke data-afspraken.</span></div></div>
-            <div class="deploy-step"><div><strong>Kanaal koppelen</strong><br><span class="muted">Telegram, WhatsApp, Slack of e-mail wordt het dagelijkse bedieningspaneel. Ook via de Web UI op iPhone of desktop — geen app nodig.</span></div></div>
-            <div class="deploy-step"><div><strong>Human approval</strong><br><span class="muted">De agent zet concepten en acties klaar, maar gevoelige stappen wachten op jouw akkoord.</span></div></div>
-          </div>
-        </article>
-        <article class="deploy-panel">
-          <h3>Telegram + WhatsApp + Slack flow</h3>
-          <p class="muted">De agent leeft in het kanaal waar je team al werkt. Telegram, WhatsApp en Slack voor directe communicatie met het systeem.</p>
-          <div class="chat" style="background:#13291f;border-radius:24px;padding:18px">
-            <div class="bubble"><div class="mini">Sales · WhatsApp</div>Zet de drie warmste leads klaar en vat de laatste inbox-updates samen.</div>
-            <div class="bubble agent"><div class="mini">MKBAgent · update</div>Ik heb 18 mails en 6 leads bekeken. Drie vragen directe actie. Ik heb conceptantwoorden opgesteld en één follow-up reminder gezet. Wil je ze controleren?</div>
-            <div class="bubble"><div class="mini">Directie · Telegram</div>Akkoord met lead 1 en 2. Lead 3 eerst aanpassen: korter en scherper.</div>
-          </div>
-          <p class="muted" style="margin-top:18px">Voor de eerste commerciële versie houden we de belofte scherp: start met één agent, één workflow, één team. Daarna pas uitbreiden.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="section" id="providers">
       <div class="eyebrow">Modelkeuze & toegang</div>
       <h2>Wijs per taak het juiste model toe</h2>
@@ -662,7 +630,7 @@
           <a class="button light" href="#bestel-agent" data-onboarding-agent="hermes">Deploy Hermes</a>
           <a class="button secondary" href="#bestel-agent" data-onboarding-agent="openclaw">Deploy OpenClaw</a>
           <a class="button secondary" href="https://www.bernarddonners-ai.nl">Lees Bernards AI-visie</a>
-          <p class="muted" style="font-size:14px">Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Eerst gegevens, dan pas bevestiging, betaling en activatie.</p>
+          <p class="muted" style="font-size:14px">Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Start met één agent, één workflow en één team; daarna pas uitbreiden. Eerst gegevens, dan pas bevestiging, betaling en activatie.</p>
         </div>
       </div>
     </section>
@@ -988,28 +956,6 @@
         "2 · Dedicated": "2 · Dedicated",
         "Geschikt voor privacygevoelige workflows": "Suitable for privacy-sensitive workflows",
         "3 · Bring your own": "3 · Bring your own",
-        "Start een pilot": "Start a pilot",
-        "Van eerste gesprek naar werkende agentflow": "From first conversation to working agent workflow",
-        "We maken inzet concreet: niet “we doen iets met AI”, maar een beheerde agentflow die veilig draait en aansluit op de kanalen en processen die je team al gebruikt.": "We make deployment concrete: not “we do something with AI”, but a managed agent workflow that runs safely and connects to the channels and processes your team already uses.",
-        "Wat je krijgt": "What you get",
-        "Een werkende MKBAgent op Hermes of OpenClaw, afhankelijk van workflow en kanaal. Eerst één proces, daarna uitbreiden.": "A working MKBAgent on Hermes or OpenClaw, depending on workflow and channel. Start with one process, then expand.",
-        "E-mail concepten": "Email drafts",
-        "Browser / desktop": "Browser / desktop",
-        "Intake & use-case": "Intake & use case",
-        "We kiezen één workflow: inbox, monitoring, dossiers, content of leadopvolging.": "We choose one workflow: inbox, monitoring, files, content or lead follow-up.",
-        "Private agent workspace": "Private agent workspace",
-        "We richten de gekozen variant in op een beheerde EU-omgeving met duidelijke data-afspraken.": "We set up the chosen variant in a managed EU environment with clear data agreements.",
-        "Kanaal koppelen": "Connect channel",
-        "Telegram, WhatsApp, Slack of e-mail wordt het dagelijkse bedieningspaneel. Ook via de Web UI op iPhone of desktop — geen app nodig.": "Telegram, WhatsApp, Slack or email becomes the daily control surface. Also via the Web UI on iPhone or desktop — no app needed.",
-        "De agent zet concepten en acties klaar, maar gevoelige stappen wachten op jouw akkoord.": "The agent prepares drafts and actions, but sensitive steps wait for your approval.",
-        "Telegram + WhatsApp + Slack flow": "Telegram + WhatsApp + Slack flow",
-        "De agent leeft in het kanaal waar je team al werkt. Telegram, WhatsApp en Slack voor directe communicatie met het systeem.": "The agent lives in the channel where your team already works. Telegram, WhatsApp and Slack for direct communication with the system.",
-        "Sales · WhatsApp": "Sales · WhatsApp",
-        "Zet de drie warmste leads klaar en vat de laatste inbox-updates samen.": "Prepare the three warmest leads and summarize the latest inbox updates.",
-        "Ik heb 18 mails en 6 leads bekeken. Drie vragen directe actie. Ik heb conceptantwoorden opgesteld en één follow-up reminder gezet. Wil je ze controleren?": "I reviewed 18 emails and 6 leads. Three need immediate action. I drafted replies and set one follow-up reminder. Do you want to review them?",
-        "Directie · Telegram": "Leadership · Telegram",
-        "Akkoord met lead 1 en 2. Lead 3 eerst aanpassen: korter en scherper.": "Approved for leads 1 and 2. Adjust lead 3 first: shorter and sharper.",
-        "Voor de eerste commerciële versie houden we de belofte scherp: start met één agent, één workflow, één team. Daarna pas uitbreiden.": "For the first commercial version we keep the promise sharp: start with one agent, one workflow, one team. Only then expand.",
         "Modelkeuze & toegang": "Model choice & access",
         "Wijs per taak het juiste model toe": "Assign the right model to each task",
         "Gebruik ChatGPT/Codex via OAuth, gebaseerd op je maandelijkse abonnement én de commodity modellen via OpenRouter. Als het tegoed van ChatGPT op is, schakelen Hermes en OpenClaw vanzelf over op de modellen van OpenRouter.": "Use ChatGPT/Codex through OAuth, based on your monthly subscription, and commodity models through OpenRouter. If ChatGPT runs out of allowance, Hermes and OpenClaw automatically switch to the models on OpenRouter.",
@@ -1067,7 +1013,7 @@
         "Klaar om je eerste MKB-agent te starten?": "Ready to start your first SME agent?",
         "Begin niet met betalen, maar met invullen. Kies eerst Hermes of OpenClaw, vul je gegevens in en bepaal pas daarna hoe de activatie verdergaat.": "Start with your intake, not with checkout. Choose Hermes or OpenClaw first, fill in your details and decide only afterwards how activation should continue.",
         "Lees Bernards AI-visie": "Read Bernard's AI vision",
-        "Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Eerst gegevens, dan pas bevestiging, betaling en activatie.": "Always with human approval, clear data boundaries and responsible use. First details, then confirmation, payment and activation.",
+        "Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Start met één agent, één workflow en één team; daarna pas uitbreiden. Eerst gegevens, dan pas bevestiging, betaling en activatie.": "Always with human approval, clear data boundaries and responsible use. Start with one agent, one workflow and one team; only then expand. First details, then confirmation, payment and activation.",
         "Vul je gegevens in": "Enter your details",
         "Naam, e-mailadres en bedrijfsnaam voor de eerste intake.": "Name, email address and company name for the first intake.",
         "Kies Hermes of OpenClaw": "Choose Hermes or OpenClaw",
