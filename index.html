@@ -749,7 +749,7 @@
             <label class="check"><input type="checkbox" name="accepted_terms" required> <span>Ik heb de voorwaarden en het privacybeleid gelezen.</span></label>
             <label class="check"><input type="checkbox" name="accepted_responsibility" required> <span>Ik begrijp dat ik verantwoordelijk blijf voor de configuratie en antwoorden van mijn bot en gevoelige acties eerst moet goedkeuren.</span></label>
             <div class="hero-actions" style="margin:0">
-              <button type="submit" class="button light">Maak intake klaar</button>
+              <button type="submit" class="button light">Maak intake-mail klaar</button>
             </div>
             <div id="order-result" class="notice" hidden></div>
           </form>
@@ -1090,9 +1090,9 @@
         "Vouchercode": "Voucher code",
         "Ik heb de voorwaarden en het privacybeleid gelezen.": "I have read the terms and the privacy policy.",
         "Ik begrijp dat ik verantwoordelijk blijf voor de configuratie en antwoorden van mijn bot en gevoelige acties eerst moet goedkeuren.": "I understand that I remain responsible for my bot's configuration and answers and must approve sensitive actions first.",
-        "Maak intake klaar": "Prepare intake",
-        "Gegevens klaar voor activatie.": "Details ready for activation.",
-        "Controleer de samenvatting hieronder en open daarna de intake-mail met alle ingevulde gegevens.": "Check the summary below and then open the intake email with all entered details.",
+        "Maak intake-mail klaar": "Prepare intake email",
+        "Intake-mail staat klaar, nog niet verzonden.": "Intake email is ready, not sent yet.",
+        "Open de mail, controleer de gegevens en verstuur hem vanuit je mailprogramma. Je ingevulde e-mailadres staat alvast in cc.": "Open the email, check the details and send it from your email app. The email address you entered is already added as cc.",
         "Gekozen agent:": "Selected agent:",
         "Kanaal:": "Channel:",
         "Modelroute:": "Model route:",
@@ -1283,11 +1283,12 @@
         ];
         const subject = encodeURIComponent(`${agentLabel} intake via MKBAgents`);
         const body = encodeURIComponent(lines.join('\n'));
-        const href = `mailto:info@mkbagents.nl?subject=${subject}&body=${body}`;
+        const cc = data.email ? `&cc=${encodeURIComponent(data.email)}` : '';
+        const href = `mailto:info@mkbagents.nl?subject=${subject}&body=${body}${cc}`;
         orderResult.hidden = false;
         orderResult.innerHTML = `
-          <strong>Gegevens klaar voor activatie.</strong>
-          Controleer de samenvatting hieronder en open daarna de intake-mail met alle ingevulde gegevens.<br><br>
+          <strong>Intake-mail staat klaar, nog niet verzonden.</strong>
+          Open de mail, controleer de gegevens en verstuur hem vanuit je mailprogramma. Je ingevulde e-mailadres staat alvast in cc.<br><br>
           <span><strong>Gekozen agent:</strong> ${agentLabel}</span><br>
           <span><strong>Kanaal:</strong> ${data.channel || 'telegram'}</span><br>
           <span><strong>Modelroute:</strong> ChatGPT OAuth</span><br><br>
