@@ -225,6 +225,7 @@
     .label-help summary::-webkit-details-marker{display:none}
     .label-help details[open] summary{background:#17240f;color:#d7f268}
     .help-pop{margin-top:8px;background:#17240f;color:#f7f2e7;border-radius:16px;padding:12px 14px;line-height:1.45;font-size:13px;font-weight:550;max-width:560px;box-shadow:0 12px 26px rgba(16,21,18,.18)}
+    .setup-note{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;color:#304034;line-height:1.55}
     .field input{width:100%;border:1px solid var(--line);border-radius:18px;padding:16px 18px;background:#fff;font:inherit;color:var(--ink)}
     .field input:focus{outline:2px solid rgba(35,86,60,.18);border-color:var(--green2)}
     .agent-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -737,8 +738,9 @@
               <input id="order-telegram-token" name="telegram_bot_token" required>
             </div>
             <div class="field full">
-              <label for="order-model-key" class="label-help">ChatGPT OAuth <details><summary aria-label="Uitleg ChatGPT OAuth">?</summary><div class="help-pop">ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.</div></details></label>
-              <input id="order-model-key" name="model_api_key" required>
+              <label class="label-help">ChatGPT OAuth <details><summary aria-label="Uitleg ChatGPT OAuth">?</summary><div class="help-pop">ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Je hoeft hier niets in te vullen: tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.</div></details></label>
+              <div class="setup-note">Geen code nodig in dit formulier. We koppelen ChatGPT OAuth samen tijdens de installatie via de officiële login.</div>
+              <input type="hidden" id="order-model-key" name="model_api_key" value="Koppelen tijdens installatie via officiële login">
             </div>
             <div class="field full">
               <label for="order-voucher">Vouchercode</label>
@@ -1083,7 +1085,8 @@
         "Telegram Bot Token": "Telegram Bot Token",
         "Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Je maakt de bot gratis aan via BotFather in Telegram; daarna plak je hier de token zodat wij het kanaal veilig kunnen koppelen.": "This is the key that lets your agent receive and answer messages through your own Telegram bot. You create the bot for free through BotFather in Telegram; then paste the token here so we can connect the channel securely.",
         "ChatGPT OAuth": "ChatGPT OAuth",
-        "ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.": "ChatGPT OAuth means you sign in with your own ChatGPT/Codex account instead of copying a separate API key. During installation we open the official login, you confirm access and the secure connection is stored only in your private agent workspace.",
+        "ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Je hoeft hier niets in te vullen: tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.": "ChatGPT OAuth means you sign in with your own ChatGPT/Codex account instead of copying a separate API key. You do not need to fill anything in here: during installation we open the official login, you confirm access and the secure connection is stored only in your private agent workspace.",
+        "Geen code nodig in dit formulier. We koppelen ChatGPT OAuth samen tijdens de installatie via de officiële login.": "No code needed in this form. We connect ChatGPT OAuth together during installation through the official login.",
         "Vouchercode": "Voucher code",
         "Ik heb de voorwaarden en het privacybeleid gelezen.": "I have read the terms and the privacy policy.",
         "Ik begrijp dat ik verantwoordelijk blijf voor de configuratie en antwoorden van mijn bot en gevoelige acties eerst moet goedkeuren.": "I understand that I remain responsible for my bot's configuration and answers and must approve sensitive actions first.",
@@ -1273,7 +1276,7 @@
           `Bedrijf: ${data.company_name || ''}`,
           `E-mail: ${data.email || ''}`,
           `Telegram Bot Token: ${data.telegram_bot_token || ''}`,
-          `ChatGPT OAuth: ${data.model_api_key || ''}`,
+          `ChatGPT OAuth: koppelen tijdens installatie via officiële login`,
           `Vouchercode: ${data.voucher_code || '-'}`,
           '',
           'Ik heb de voorwaarden gelezen en begrijp dat gevoelige acties eerst akkoord nodig hebben.'
