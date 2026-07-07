@@ -669,8 +669,18 @@
               <label>Gekozen AI-agent</label>
               <input type="hidden" name="agent" id="order-agent" value="hermes">
               <div class="agent-choice-grid">
-                <button type="button" class="agent-option active" data-agent-option="hermes"><strong>Hermes Agent</strong><span class="muted">Managed agent voor rustige, beheersbare workflowautomatisering.</span></button>
-                <button type="button" class="agent-option" data-agent-option="openclaw"><strong>OpenClaw Agent</strong><span class="muted">Open-source agentlaag voor Telegram-first intake en activering.</span></button>
+                <button type="button" class="agent-option active" data-agent-option="hermes">
+                  <strong style="display:flex;align-items:center;gap:10px">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="3" width="26" height="22" rx="5" fill="#D7F268" stroke="#10291f" stroke-width="1.2"/><rect x="6" y="8" width="7" height="5" rx="1.5" fill="#10291f" opacity=".4"/><rect x="15" y="8" width="7" height="5" rx="1.5" fill="#10291f" opacity=".4"/><rect x="6" y="16" width="16" height="4" rx="2" fill="#10291f" opacity=".25"/></svg>
+                    Hermes Agent
+                  </strong>
+                </button>
+                <button type="button" class="agent-option" data-agent-option="openclaw">
+                  <strong style="display:flex;align-items:center;gap:10px">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="4" width="22" height="20" rx="5" fill="#4a6741" stroke="#10291f" stroke-width="1.2"/><rect x="7" y="9" width="6" height="4" rx="1.5" fill="#D7F268" opacity=".7"/><rect x="15" y="9" width="6" height="4" rx="1.5" fill="#D7F268" opacity=".7"/><rect x="7" y="16" width="14" height="3" rx="1.5" fill="#D7F268" opacity=".4"/><circle cx="22" cy="7" r="3" fill="#D7F268" opacity=".9"/></svg>
+                    OpenClaw Agent
+                  </strong>
+                </button>
               </div>
             </div>
             <div class="field full">
@@ -1026,9 +1036,7 @@
         "Bedrijf": "Company",
         "Gekozen AI-agent": "Selected AI agent",
         "Hermes Agent": "Hermes Agent",
-        "Managed agent voor rustige, beheersbare workflowautomatisering.": "Managed agent for calm, controllable workflow automation.",
         "OpenClaw Agent": "OpenClaw Agent",
-        "Open-source agentlaag voor Telegram-first intake en activering.": "Open-source agent layer for Telegram-first intake and activation.",
         "Telegram": "Telegram",
         "WhatsApp binnenkort": "WhatsApp coming soon",
         "Telegram Bot Token": "Telegram Bot Token",
