@@ -625,14 +625,14 @@
           <p class="muted">Begin niet met betalen, maar met invullen. Kies eerst Hermes of OpenClaw, vul je gegevens in en bepaal pas daarna hoe de activatie verdergaat.</p>
         </div>
         <div class="footer-cta-actions">
-          <a class="button light" href="#bestel-agent" data-onboarding-agent="hermes">Deploy Hermes</a>
-          <a class="button secondary" href="#bestel-agent" data-onboarding-agent="openclaw">Deploy OpenClaw</a>
+          <a class="button light" href="#bestel-agent" data-onboarding-agent="hermes">Start Hermes</a>
+          <a class="button secondary" href="#bestel-agent" data-onboarding-agent="openclaw">Start OpenClaw</a>
           <a class="button secondary" href="https://www.bernarddonners-ai.nl">Lees Bernards AI-visie</a>
           <p class="muted" style="font-size:14px">Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Start met één agent, één workflow en één team; daarna pas uitbreiden. Eerst gegevens, dan pas bevestiging, betaling en activatie.</p>
         </div>
       </div>
     </section>
-    <section class="section" id="bestel-agent">
+    <section class="section" id="bestel-agent" hidden>
       <div class="order-layout">
         <div>
           <div class="order-steps">
@@ -729,8 +729,8 @@
         "Security-aanpak": "Security approach",
         "Voorwaarden & Privacy": "Terms & Privacy",
         "Menselijke Controle": "Human Control",
-        "Deploy Hermes": "Deploy Hermes",
-        "Deploy OpenClaw": "Deploy OpenClaw",
+        "Start Hermes": "Start Hermes",
+        "Start OpenClaw": "Start OpenClaw",
         "Modelkeuze": "Model choice",
         "Waarom open source?": "Why open source?",
         "Claude en ChatGPT als vervangbare premium: Hermes en OpenClaw houden de agentlaag van jou.": "Claude and ChatGPT as replaceable premium: Hermes and OpenClaw keep the agent layer in your hands.",
@@ -1124,6 +1124,7 @@
 
     const orderForm = document.querySelector('#order-form');
     const orderResult = document.querySelector('#order-result');
+    const orderSection = document.querySelector('#bestel-agent');
     const orderAgentInput = document.querySelector('#order-agent');
     const orderChannelInput = document.querySelector('#order-channel');
 
@@ -1143,8 +1144,20 @@
       });
     }
 
+    function revealOrderSection(agent){
+      setSelectedAgent(agent || 'hermes');
+      if(orderSection){
+        orderSection.hidden = false;
+        requestAnimationFrame(() => orderSection.scrollIntoView({behavior:'smooth', block:'start'}));
+      }
+    }
+
     document.querySelectorAll('[data-onboarding-agent]').forEach(link => {
-      link.addEventListener('click', () => setSelectedAgent(link.dataset.onboardingAgent || 'hermes'));
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        revealOrderSection(link.dataset.onboardingAgent || 'hermes');
+        history.replaceState(null, '', '#bestel-agent');
+      });
     });
 
     document.querySelectorAll('[data-agent-option]').forEach(button => {
