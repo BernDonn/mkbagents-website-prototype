@@ -130,16 +130,24 @@
     .tile .nr{color:var(--green);font-weight:850;font-size:13px;letter-spacing:.12em;margin-bottom:42px;display:block}
     .tile.dark{background:var(--green);color:#fff;border-color:var(--green)}
     .tile.dark .muted{color:#dfe8db}
-    .usecases{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px}
-    .case{background:#fffaf1;border:1px solid var(--line);border-radius:26px;padding:24px;display:grid;gap:18px}
-    .case small{font-weight:850;letter-spacing:.1em;color:var(--green);text-transform:uppercase}
+    .usecases{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+    .case{background:#fffaf1;border:1px solid var(--line);border-radius:26px;padding:0;overflow:hidden;box-shadow:0 12px 35px rgba(20,35,24,.05)}
+    .case summary,.integration-card summary{list-style:none;cursor:pointer}
+    .case summary::-webkit-details-marker,.integration-card summary::-webkit-details-marker{display:none}
+    .case-summary,.integration-summary{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:20px 22px}
+    .case-summary small,.integration-summary .tag{font-weight:850;letter-spacing:.1em;color:var(--green);text-transform:uppercase}
+    .case-summary h3,.integration-summary h3{margin:6px 0 0;font-size:22px;line-height:1.12}
+    .expand-label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(22,63,43,.14);background:#f0e6d6;border-radius:999px;padding:8px 11px;color:var(--green);font-size:13px;font-weight:850;white-space:nowrap}
+    .expand-label:after{content:"+";display:grid;place-items:center;width:20px;height:20px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+    details[open] > summary .expand-label:after{content:"−"}
+    .case-body,.integration-body{display:grid;gap:16px;padding:0 22px 22px;border-top:1px solid rgba(222,213,196,.72)}
+    .case-body{padding-top:18px}
     .example{background:#f0e6d6;border-radius:18px;padding:13px;color:#304034;font-size:14px}
     .integration-wrap{background:linear-gradient(180deg,rgba(255,250,241,.86),rgba(240,230,214,.74));border:1px solid var(--line);border-radius:38px;padding:34px;box-shadow:0 16px 42px rgba(20,35,24,.06)}
-    .integration-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-    .integration-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:22px;display:grid;gap:12px;min-height:230px}
-    .integration-card h3{font-size:22px;margin:0}
+    .integration-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+    .integration-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:0;overflow:hidden;box-shadow:0 12px 30px rgba(20,35,24,.045)}
     .integration-card .muted{font-size:16px}
-    .integration-apps{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+    .integration-apps{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
     .app-chip{display:inline-flex;border:1px solid rgba(22,63,43,.14);background:#f0e6d6;border-radius:999px;padding:7px 10px;color:var(--green);font-size:13px;font-weight:800}
     .integration-note{margin-top:22px;background:#10291f;color:#fff;border-radius:24px;padding:22px;line-height:1.55}
     .integration-note .muted{color:#dce7dc}
@@ -305,6 +313,12 @@
       .product.featured{transform:none}
       .order-card{padding:26px}
       #voorwaarden,.acceptance-box,#privacy,.legal-card.agents-usage{grid-column:auto;grid-row:auto}
+    }
+    @media(max-width:560px){
+      .case-summary,.integration-summary{grid-template-columns:1fr;gap:12px;padding:18px}
+      .expand-label{justify-content:space-between;width:100%}
+      .case-body,.integration-body{padding:16px 18px 18px}
+      .integration-wrap{padding:22px}
     }
   </style>
 </head>
@@ -530,17 +544,15 @@
 
     <section class="section" id="oplossingen">
       <div class="eyebrow">Oplossingen</div>
-      <h2>Acht soorten werk die je kunt overdragen</h2>
+      <h2>Zes soorten werk die je kunt overdragen</h2>
       <p class="lead">De eerste versie richt zich op concrete, terugkerende workflows voor ZZP’ers en MKB. Klein beginnen, veilig bewijzen, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.</p>
       <div class="usecases">
-        <article class="case"><small>Inbox & agenda</small><h3>Een assistent die voorwerk doet</h3><p class="muted">Samenvatten, triëren, conceptantwoorden schrijven en reminders klaarzetten.</p><div class="example">“Elke ochtend: vat mijn inbox samen, markeer urgente mails en zet conceptantwoorden klaar.”</div></article>
-        <article class="case"><small>Onderzoek & monitoring</small><h3>Continu zicht op wat ertoe doet</h3><p class="muted">Volg bronnen, afspraken, ontwikkelingen of signalen die voor jou of je omgeving relevant zijn en ontvang rustige, bruikbare briefings.</p><div class="example">“Elke maandag 09:00: vat samen wat er veranderd is en wat ik echt moet onthouden.”</div></article>
-        <article class="case"><small>Workflowautomatisering</small><h3>Het herhaalbare dagelijks geregeld</h3><p class="muted">Documenten ordenen, lijstjes bijhouden, intake vastleggen en ontbrekende informatie signaleren zonder onnodige frictie.</p><div class="example">“Nieuwe notitie binnen → op de juiste plek zetten → markeren wat nog ontbreekt.”</div><details style="margin-top:16px"><summary style="display:inline-block;padding:8px 16px;font-size:13px;font-weight:800;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Van AI gebruiken naar AI die waarde oplevert</summary><div style="margin-top:12px;padding:18px 20px;background:rgba(215,242,104,.10);border:1px solid rgba(215,242,104,.22);border-radius:18px;color:#304034;line-height:1.62"><p>Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. Dat verschil wordt in 2026 steeds belangrijker. Bij veel grote organisaties is AI inmiddels overal aanwezig: in klantcontact, softwareontwikkeling, juridische analyse, marketing, interne kennisbanken en financiële processen. Maar de opbrengst is grilliger dan de boardroomslides doen vermoeden. De eerste les uit de praktijk is vrij simpel: AI levert pas echt iets op als het onderdeel wordt van een workflow, niet wanneer het als losse tool naast het werk hangt.</p><p style="margin-top:12px">Met een AI-workflow bedoel ik: een terugkerend bedrijfsproces waarin AI informatie leest, samenvat, voorspelt, genereert, routeert of controleert, mét koppeling aan bestaande systemen en met duidelijke menselijke verantwoordelijkheid. Dus niet alleen een medewerker die ChatGPT gebruikt om een tekst te herschrijven, maar bijvoorbeeld een klantenservicemedewerker die tijdens een gesprek automatisch relevante klantinformatie, productsuggesties en conceptantwoorden krijgt. En daarna nog steeds zelf beslist wat er naar de klant gaat.</p></div></details></article>
-        <article class="case"><small>Content & kennis</small><h3>Van briefing naar consistente output</h3><p class="muted">Artikelen, posts, klantupdates en interne notities in een herkenbare toon en vaste structuur.</p><div class="example">“Maak van deze briefing een LinkedIn-post, klantmail en interne notitie.”</div></article>
-        <article class="case"><small>Business development</small><h3>Kansen vinden zonder ruis</h3><p class="muted">Zoek leads, beoordeel relevantie en bereid persoonlijke outreach of opvolging voor zonder handmatig speurwerk.</p><div class="example">“Vind 10 bedrijven die passen bij deze propositie en zet conceptmails klaar.”</div></article>
-        <article class="case"><small>Vergaderingen & gesprekken</small><h3>Opnames transcriberen, rubriceren en samenvatten</h3><p class="muted">Werk vergader- en gespreksopnames uit, vat ze samen en verdeel inzichten, acties of thema’s per persoon, onderwerp of opvolging.</p><div class="example">“Werk deze opname uit, vat haar samen en verdeel acties per persoon en onderwerp.”</div></article>
-        <article class="case"><small>Dossiers & intake</small><h3>Het herhaalbare werk geregeld</h3><p class="muted">Controleer dossiers, verwerk intake en signaleer ontbrekende informatie voordat werk blijft liggen of fouten doorlekken.</p><div class="example">“Nieuwe aanvraag binnen → checklist doorlopen → ontbrekende stukken gevraagd.”</div></article>
-        <article class="case"><small>Downloads & screenshots</small><h3>Altijd je laatste bestand of screenshot in beeld</h3><p class="muted">Laat downloads meteen op het bureaublad verschijnen en gebruik <code>/SS</code> om de laatste screenshot direct kort te laten uitleggen.</p><div class="example">“Zet iedere download op mijn bureaublad en leg bij /SS de laatste screenshot meteen even uit.”</div></article>
+        <details class="case"><summary class="case-summary"><span><small>Inbox & agenda</small><h3>Een assistent die voorwerk doet</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Samenvatten, triëren, conceptantwoorden schrijven en reminders klaarzetten.</p><div class="example">“Elke ochtend: vat mijn inbox samen, markeer urgente mails en zet conceptantwoorden klaar.”</div></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Onderzoek & monitoring</small><h3>Continu zicht op wat ertoe doet</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Volg bronnen, afspraken, ontwikkelingen of signalen die voor jou of je omgeving relevant zijn en ontvang rustige, bruikbare briefings.</p><div class="example">“Elke maandag 09:00: vat samen wat er veranderd is en wat ik echt moet onthouden.”</div></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Workflowautomatisering</small><h3>Het herhaalbare dagelijks geregeld</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Documenten ordenen, lijstjes bijhouden, intake vastleggen en ontbrekende informatie signaleren zonder onnodige frictie.</p><div class="example">“Nieuwe notitie binnen → op de juiste plek zetten → markeren wat nog ontbreekt.”</div><details style="margin-top:4px"><summary style="display:inline-block;padding:8px 16px;font-size:13px;font-weight:800;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Van AI gebruiken naar AI die waarde oplevert</summary><div style="margin-top:12px;padding:18px 20px;background:rgba(215,242,104,.10);border:1px solid rgba(215,242,104,.22);border-radius:18px;color:#304034;line-height:1.62"><p>Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. Dat verschil wordt in 2026 steeds belangrijker. Bij veel grote organisaties is AI inmiddels overal aanwezig: in klantcontact, softwareontwikkeling, juridische analyse, marketing, interne kennisbanken en financiële processen. Maar de opbrengst is grilliger dan de boardroomslides doen vermoeden. De eerste les uit de praktijk is vrij simpel: AI levert pas echt iets op als het onderdeel wordt van een workflow, niet wanneer het als losse tool naast het werk hangt.</p><p style="margin-top:12px">Met een AI-workflow bedoel ik: een terugkerend bedrijfsproces waarin AI informatie leest, samenvat, voorspelt, genereert, routeert of controleert, mét koppeling aan bestaande systemen en met duidelijke menselijke verantwoordelijkheid. Dus niet alleen een medewerker die ChatGPT gebruikt om een tekst te herschrijven, maar bijvoorbeeld een klantenservicemedewerker die tijdens een gesprek automatisch relevante klantinformatie, productsuggesties en conceptantwoorden krijgt. En daarna nog steeds zelf beslist wat er naar de klant gaat.</p></div></details></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Content & kennis</small><h3>Van briefing naar consistente output</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Artikelen, posts, klantupdates en interne notities in een herkenbare toon en vaste structuur.</p><div class="example">“Maak van deze briefing een LinkedIn-post, klantmail en interne notitie.”</div></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Business development</small><h3>Kansen vinden zonder ruis</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Zoek leads, beoordeel relevantie en bereid persoonlijke outreach of opvolging voor zonder handmatig speurwerk.</p><div class="example">“Vind 10 bedrijven die passen bij deze propositie en zet conceptmails klaar.”</div></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Vergaderingen & gesprekken</small><h3>Opnames transcriberen, rubriceren en samenvatten</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Werk vergader- en gespreksopnames uit, vat ze samen en verdeel inzichten, acties of thema’s per persoon, onderwerp of opvolging.</p><div class="example">“Werk deze opname uit, vat haar samen en verdeel acties per persoon en onderwerp.”</div></div></details>
       </div>
     </section>
 
@@ -550,42 +562,30 @@
         <h2>Koppelt met de software die je al gebruikt</h2>
         <p class="lead">Hoewel OpenClaw en Hermes beide sterke agentsystemen zijn, is een toevoeging zoals n8n soms effectiever voor deterministische workflows: de agent denkt, de workflow voert uit. Met n8n verbinden we je agent met de systemen waar je bedrijf nu al op draait: mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools. Waar een standaardkoppeling bestaat gebruiken we die. Waar die ontbreekt, kijken we naar API, webhook of een veilige handmatige route.</p>
         <div class="integration-grid">
-          <article class="integration-card">
-            <span class="tag">Mail & agenda</span>
-            <h3>Inbox, afspraken en opvolging</h3>
-            <p class="muted">Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en Teams- of agenda-updates doorgeven zonder dat de agent zomaar namens jou verstuurt.</p>
-            <div class="integration-apps"><span class="app-chip">Outlook</span><span class="app-chip">Gmail</span><span class="app-chip">Teams</span><span class="app-chip">Google Calendar</span></div>
-          </article>
-          <article class="integration-card">
-            <span class="tag">Spreadsheets & bestanden</span>
-            <h3>Lijsten, rapportages en documenten</h3>
-            <p class="muted">Gebruik Sheets, Excel, Drive of OneDrive als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.</p>
-            <div class="integration-apps"><span class="app-chip">Google Sheets</span><span class="app-chip">Excel</span><span class="app-chip">Drive</span><span class="app-chip">OneDrive</span></div>
-          </article>
-          <article class="integration-card">
-            <span class="tag">CRM & klantvragen</span>
-            <h3>Leads en dossiers komen op de juiste plek</h3>
-            <p class="muted">Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.</p>
-            <div class="integration-apps"><span class="app-chip">HubSpot</span><span class="app-chip">Pipedrive</span><span class="app-chip">Airtable</span><span class="app-chip">Notion</span></div>
-          </article>
-          <article class="integration-card">
-            <span class="tag">Betaling & intake</span>
-            <h3>Van aanvraag naar activatie</h3>
-            <p class="muted">Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden: eerst gegevens, daarna bevestiging, betaling en installatie.</p>
-            <div class="integration-apps"><span class="app-chip">Mollie</span><span class="app-chip">Webhooks</span><span class="app-chip">Formulieren</span><span class="app-chip">WooCommerce</span></div>
-          </article>
-          <article class="integration-card">
-            <span class="tag">AI & agenttaken</span>
-            <h3>n8n stuurt de flow, Hermes of OpenClaw doet het werk</h3>
-            <p class="muted">Voor AI-flows koppelen we n8n aan modellen, documenten, vector databases en tools. De agent maakt samenvattingen, concepten of acties klaar.</p>
-            <div class="integration-apps"><span class="app-chip">OpenAI</span><span class="app-chip">Anthropic</span><span class="app-chip">Gemini</span><span class="app-chip">AI Agent</span></div>
-          </article>
-          <article class="integration-card">
-            <span class="tag">Eigen systemen</span>
-            <h3>Ook zonder standaardknop vaak koppelbaar</h3>
-            <p class="muted">Heeft je software een API, database of webhook? Dan kunnen we vaak koppelen zonder dat je hoeft te migreren naar een ander platform.</p>
-            <div class="integration-apps"><span class="app-chip">HTTP/API</span><span class="app-chip">Postgres</span><span class="app-chip">MySQL</span><span class="app-chip">Supabase</span></div>
-          </article>
+          <details class="integration-card">
+            <summary class="integration-summary"><span><span class="tag">Mail & agenda</span><h3>Inbox, afspraken en opvolging</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <div class="integration-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en Teams- of agenda-updates doorgeven zonder dat de agent zomaar namens jou verstuurt.</p><div class="integration-apps"><span class="app-chip">Outlook</span><span class="app-chip">Gmail</span><span class="app-chip">Teams</span><span class="app-chip">Google Calendar</span></div></div>
+          </details>
+          <details class="integration-card">
+            <summary class="integration-summary"><span><span class="tag">Spreadsheets & bestanden</span><h3>Lijsten, rapportages en documenten</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <div class="integration-body"><p class="muted">Gebruik Sheets, Excel, Drive of OneDrive als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.</p><div class="integration-apps"><span class="app-chip">Google Sheets</span><span class="app-chip">Excel</span><span class="app-chip">Drive</span><span class="app-chip">OneDrive</span></div></div>
+          </details>
+          <details class="integration-card">
+            <summary class="integration-summary"><span><span class="tag">CRM & klantvragen</span><h3>Leads en dossiers komen op de juiste plek</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <div class="integration-body"><p class="muted">Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.</p><div class="integration-apps"><span class="app-chip">HubSpot</span><span class="app-chip">Pipedrive</span><span class="app-chip">Airtable</span><span class="app-chip">Notion</span></div></div>
+          </details>
+          <details class="integration-card">
+            <summary class="integration-summary"><span><span class="tag">Betaling & intake</span><h3>Van aanvraag naar activatie</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <div class="integration-body"><p class="muted">Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden: eerst gegevens, daarna bevestiging, betaling en installatie.</p><div class="integration-apps"><span class="app-chip">Mollie</span><span class="app-chip">Webhooks</span><span class="app-chip">Formulieren</span><span class="app-chip">WooCommerce</span></div></div>
+          </details>
+          <details class="integration-card">
+            <summary class="integration-summary"><span><span class="tag">AI & agenttaken</span><h3>n8n stuurt de flow, Hermes of OpenClaw doet het werk</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <div class="integration-body"><p class="muted">Voor AI-flows koppelen we n8n aan modellen, documenten, vector databases en tools. De agent maakt samenvattingen, concepten of acties klaar.</p><div class="integration-apps"><span class="app-chip">OpenAI</span><span class="app-chip">Anthropic</span><span class="app-chip">Gemini</span><span class="app-chip">AI Agent</span></div></div>
+          </details>
+          <details class="integration-card">
+            <summary class="integration-summary"><span><span class="tag">Eigen systemen</span><h3>Ook zonder standaardknop vaak koppelbaar</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <div class="integration-body"><p class="muted">Heeft je software een API, database of webhook? Dan kunnen we vaak koppelen zonder dat je hoeft te migreren naar een ander platform.</p><div class="integration-apps"><span class="app-chip">HTTP/API</span><span class="app-chip">Postgres</span><span class="app-chip">MySQL</span><span class="app-chip">Supabase</span></div></div>
+          </details>
         </div>
         <div class="integration-note"><strong>Inzet van Deterministische Agenten</strong><p class="muted">Hermes en OpenClaw werken samen met deterministische workflow-tools zoals n8n: de agent denkt, de workflow voert uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper — terwijl de agent zich richt op waar echt inzicht nodig is.</p></div>
       </div>
@@ -917,7 +917,7 @@
         "Gebruik via mail, Telegram, WhatsApp of browser. Geen extra portaal als dat niet nodig is.": "Use it through email, Telegram, WhatsApp or browser. No extra portal when it is not needed.",
         "AI-geletterdheid": "AI literacy",
         "Bernards rol als Lector AI helpt teams begrijpen wat AI wel en niet moet doen.": "Bernard's role as Professor of Applied AI helps teams understand what AI should and should not do.",
-        "Acht soorten werk die je kunt overdragen": "Eight types of work you can hand over",
+        "Zes soorten werk die je kunt overdragen": "Six types of work you can hand over",
         "De eerste versie richt zich op concrete, terugkerende workflows voor ZZP’ers en MKB. Klein beginnen, veilig bewijzen, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.": "The first version focuses on concrete, recurring workflows for freelancers and SMEs. Start small, prove value safely, then expand, with a focus on time savings, overview and controllable AI.",
         "Inbox & agenda": "Inbox & calendar",
         "Een assistent die voorwerk doet": "An assistant that prepares the work",
@@ -946,16 +946,9 @@
         "Opnames transcriberen, rubriceren en samenvatten": "Transcribe, classify and summarize recordings",
         "Werk vergader- en gespreksopnames uit, vat ze samen en verdeel inzichten, acties of thema’s per persoon, onderwerp of opvolging.": "Process meeting and conversation recordings, summarize them, and distribute insights, actions or themes by person, topic or follow-up.",
         "“Werk deze opname uit, vat haar samen en verdeel acties per persoon en onderwerp.”": "“Process this recording, summarize it, and split the actions by person and topic.”",
-        "Dossiers & intake": "Files & intake",
-        "Het herhaalbare werk geregeld": "Recurring work handled",
-        "Controleer dossiers, verwerk intake en signaleer ontbrekende informatie voordat werk blijft liggen of fouten doorlekken.": "Check files, process intake and flag missing information before work stalls or errors leak through.",
-        "“Nieuwe aanvraag binnen → checklist doorlopen → ontbrekende stukken gevraagd.”": "“New request received → checklist completed → missing documents requested.”",
-        "Downloads & screenshots": "Downloads & screenshots",
-        "Altijd je laatste bestand of screenshot in beeld": "Always keep your latest file or screenshot in view",
-        "Laat downloads meteen op het bureaublad verschijnen en gebruik <code>/SS</code> om de laatste screenshot direct kort te laten uitleggen.": "Show downloads on the desktop right away and use <code>/SS</code> to get a short explanation of the latest screenshot immediately.",
-        "“Zet iedere download op mijn bureaublad en leg bij /SS de laatste screenshot meteen even uit.”": "“Put every download on my desktop and explain the latest screenshot right away when I use /SS.”",
         "Koppelingen": "Integrations",
         "Koppelingen met n8n": "Integrations with n8n",
+        "Bekijk details": "View details",
         "Koppelt met de software die je al gebruikt": "Connects with the software you already use",
         "Hoewel OpenClaw en Hermes beide sterke agentsystemen zijn, is een toevoeging zoals n8n soms effectiever voor deterministische workflows: de agent denkt, de workflow voert uit. Met n8n verbinden we je agent met de systemen waar je bedrijf nu al op draait: mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools. Waar een standaardkoppeling bestaat gebruiken we die. Waar die ontbreekt, kijken we naar API, webhook of een veilige handmatige route.": "Although OpenClaw and Hermes are both strong agent systems, an addition such as n8n can sometimes be more effective for deterministic workflows: the agent thinks, the workflow executes. With n8n we connect your agent to the systems your company already runs on: email, calendar, spreadsheets, forms, CRM, payments and internal tools. Where a standard integration exists, we use it. Where it is missing, we look at API, webhook or a safe manual route.",
         "Mail & agenda": "Email & calendar",
