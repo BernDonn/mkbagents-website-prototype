@@ -476,48 +476,61 @@
             </svg>
           </div>
           <p class="diagram-caption">Hermes en OpenClaw zijn twee verschillende open-source routes met dezelfde praktische ingang: Telegram, WhatsApp, Slack, browser en automatiseringen. De keuze maken we per workflow, team en gewenste beheerroute. En dat allemaal met bekende apparaten zoals de Apple Watch, iPhone en Mac.</p>
-          <div class="device-icons" style="display:flex;gap:32px;justify-content:center;align-items:flex-end;margin-top:20px">
-            <!-- Apple Watch Ultra -->
+          <div class="device-icons" style="display:flex;gap:28px;justify-content:center;align-items:flex-end;margin-top:22px;flex-wrap:wrap">
+            <!-- Apple Watch Ultra, in the same dark glossy studio style as the hero iPhone render -->
             <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-              <svg width="72" height="80" viewBox="0 0 72 80" role="img" aria-label="Apple Watch Ultra">
-                <rect x="14" y="8" width="44" height="48" rx="10" fill="#1a1a2e" stroke="#d7f268" stroke-width="2"/>
-                <rect x="18" y="12" width="36" height="30" rx="3" fill="url(#awg)"/>
-                <defs><linearGradient id="awg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b35"/><stop offset="25%" stop-color="#ff9f1c"/><stop offset="50%" stop-color="#f72585"/><stop offset="100%" stop-color="#7209b7"/></linearGradient></defs>
-                <!-- orange action button -->
-                <rect x="58" y="22" width="4" height="14" rx="2" fill="#ff6b35"/>
-                <!-- digital crown -->
-                <rect x="4" y="18" width="3" height="12" rx="1.5" fill="rgba(255,255,255,.25)"/>
-                <!-- strap top -->
-                <rect x="22" y="4" width="28" height="6" rx="3" fill="#2c2c2e" stroke="rgba(255,255,255,.1)" stroke-width="0.5"/>
-                <!-- strap bottom -->
-                <rect x="22" y="56" width="28" height="16" rx="3" fill="#2c2c2e" stroke="rgba(255,255,255,.1)" stroke-width="0.5"/>
+              <svg width="78" height="94" viewBox="0 0 78 94" role="img" aria-label="Apple Watch Ultra">
+                <defs>
+                  <linearGradient id="watchCase" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#050606"/><stop offset="9%" stop-color="#4a4b46"/><stop offset="21%" stop-color="#0a0b0b"/><stop offset="72%" stop-color="#121515"/><stop offset="91%" stop-color="#5d5a50"/><stop offset="100%" stop-color="#050606"/></linearGradient>
+                  <linearGradient id="watchGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#121719"/><stop offset="58%" stop-color="#030404"/><stop offset="100%" stop-color="#171a1a"/></linearGradient>
+                  <linearGradient id="warmReflect" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,250,230,.42)"/><stop offset="42%" stop-color="rgba(255,250,230,.08)"/><stop offset="100%" stop-color="rgba(255,250,230,0)"/></linearGradient>
+                </defs>
+                <ellipse cx="39" cy="88" rx="25" ry="5" fill="rgba(0,0,0,.32)"/>
+                <path d="M28 2h22c3 0 5 2 5 5v13H23V7c0-3 2-5 5-5Z" fill="#090a0a" stroke="rgba(255,255,255,.18)"/>
+                <path d="M27 70h24c3 0 5 2 5 5v12c0 3-2 5-5 5H27c-3 0-5-2-5-5V75c0-3 2-5 5-5Z" fill="#090a0a" stroke="rgba(255,255,255,.16)"/>
+                <rect x="15" y="17" width="48" height="56" rx="15" fill="url(#watchCase)" stroke="rgba(255,255,255,.46)" stroke-width="1.4"/>
+                <rect x="20" y="22" width="38" height="46" rx="11" fill="url(#watchGlass)"/>
+                <path d="M48 23c-8 12-15 25-18 44h28V23Z" fill="url(#warmReflect)" opacity=".58"/>
+                <rect x="64" y="36" width="4" height="15" rx="2" fill="#0b0c0c" stroke="rgba(255,255,255,.28)"/>
+                <rect x="10" y="33" width="3" height="16" rx="1.5" fill="#111" stroke="rgba(255,255,255,.20)"/>
               </svg>
-              <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500">Apple Watch</span>
+              <span style="font-size:12px;color:rgba(255,255,255,.62);font-weight:600">Apple Watch</span>
             </div>
-            <!-- iPhone -->
+            <!-- iPhone, matched to the uploaded/ChatGPT product-render style -->
             <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-              <svg width="62" height="100" viewBox="0 0 62 100" role="img" aria-label="iPhone">
-                <rect x="6" y="2" width="50" height="96" rx="10" fill="#1c1c1e" stroke="#78c28c" stroke-width="2"/>
-                <rect x="14" y="16" width="34" height="64" rx="4" fill="url(#ipg)"/>
-                <defs><linearGradient id="ipg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#007aff"/><stop offset="30%" stop-color="#5ac8fa"/><stop offset="60%" stop-color="#34c759"/><stop offset="100%" stop-color="#ff9500"/></linearGradient></defs>
-                <rect x="12" y="6" width="14" height="4" rx="2" fill="rgba(255,255,255,.15)"/>
-                <circle cx="46" cy="8" r="2" fill="rgba(255,255,255,.15)"/>
+              <svg width="68" height="112" viewBox="0 0 68 112" role="img" aria-label="iPhone">
+                <defs>
+                  <linearGradient id="iphoneEdge" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#050606"/><stop offset="7%" stop-color="#4b4d4c"/><stop offset="16%" stop-color="#060707"/><stop offset="50%" stop-color="#111314"/><stop offset="88%" stop-color="#60605b"/><stop offset="100%" stop-color="#030404"/></linearGradient>
+                  <linearGradient id="iphoneGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#111618"/><stop offset="64%" stop-color="#030303"/><stop offset="100%" stop-color="#171a1a"/></linearGradient>
+                  <linearGradient id="iphoneSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,255,245,.24)"/><stop offset="38%" stop-color="rgba(255,255,245,.05)"/><stop offset="100%" stop-color="rgba(255,255,245,0)"/></linearGradient>
+                </defs>
+                <ellipse cx="34" cy="106" rx="22" ry="5" fill="rgba(0,0,0,.34)"/>
+                <rect x="10" y="2" width="48" height="102" rx="15" fill="url(#iphoneEdge)" stroke="rgba(255,255,255,.58)" stroke-width="1.4"/>
+                <rect x="14" y="7" width="40" height="92" rx="12" fill="url(#iphoneGlass)"/>
+                <rect x="25" y="10" width="18" height="6" rx="3" fill="#020303"/>
+                <path d="M43 8c-7 18-11 46-12 90h23V8Z" fill="url(#iphoneSheen)" opacity=".72"/>
+                <rect x="7" y="28" width="2" height="12" rx="1" fill="#151616" stroke="rgba(255,255,255,.18)"/>
+                <rect x="7" y="44" width="2" height="13" rx="1" fill="#151616" stroke="rgba(255,255,255,.18)"/>
+                <rect x="59" y="38" width="2" height="19" rx="1" fill="#151616" stroke="rgba(255,255,255,.20)"/>
               </svg>
-              <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500">iPhone</span>
+              <span style="font-size:12px;color:rgba(255,255,255,.62);font-weight:600">iPhone</span>
             </div>
-            <!-- MacBook Air -->
+            <!-- MacBook Air, dark glossy studio product render -->
             <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-              <svg width="84" height="56" viewBox="0 0 60 40" role="img" aria-label="MacBook Air">
-                <!-- lid frame -->
-                <rect x="2" y="2" width="56" height="24" rx="2" fill="#1c1c1e" stroke="#e7cfa0" stroke-width="1.2"/>
-                <!-- screen -->
-                <rect x="5" y="4" width="50" height="18" rx="1" fill="url(#mg)"/>
-                <defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#af52de"/><stop offset="25%" stop-color="#5856d6"/><stop offset="50%" stop-color="#007aff"/><stop offset="75%" stop-color="#34c759"/><stop offset="100%" stop-color="#ff9500"/></linearGradient></defs>
-                <!-- base: wedge -->
-                <path d="M14 28 L14 30 Q14 31 16 31 L44 31 Q46 31 46 30 L46 26" fill="#2c2c2e" stroke="rgba(231,207,160,.35)" stroke-width="0.8"/>
-                <rect x="18" y="27" width="24" height="0.8" rx="0.3" fill="rgba(255,255,255,.08)"/>
+              <svg width="112" height="76" viewBox="0 0 112 76" role="img" aria-label="MacBook Air">
+                <defs>
+                  <linearGradient id="macFrame" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#050606"/><stop offset="8%" stop-color="#5c5a54"/><stop offset="18%" stop-color="#111313"/><stop offset="78%" stop-color="#141615"/><stop offset="94%" stop-color="#777267"/><stop offset="100%" stop-color="#050606"/></linearGradient>
+                  <linearGradient id="macScreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#121718"/><stop offset="60%" stop-color="#030404"/><stop offset="100%" stop-color="#171a1a"/></linearGradient>
+                  <linearGradient id="macSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,250,230,.26)"/><stop offset="42%" stop-color="rgba(255,250,230,.05)"/><stop offset="100%" stop-color="rgba(255,250,230,0)"/></linearGradient>
+                </defs>
+                <ellipse cx="56" cy="69" rx="43" ry="5" fill="rgba(0,0,0,.34)"/>
+                <rect x="18" y="5" width="76" height="48" rx="5" fill="url(#macFrame)" stroke="rgba(255,255,255,.42)" stroke-width="1.2"/>
+                <rect x="23" y="10" width="66" height="38" rx="2" fill="url(#macScreen)"/>
+                <path d="M66 10c-11 10-18 22-22 38h45V10Z" fill="url(#macSheen)" opacity=".72"/>
+                <path d="M7 57h98l7 8c-4 3-16 5-56 5s-52-2-56-5l7-8Z" fill="url(#macFrame)" stroke="rgba(255,255,255,.24)" stroke-width="1"/>
+                <path d="M45 58h22c-1.5 2-3.8 3-11 3s-9.5-1-11-3Z" fill="rgba(255,255,255,.10)"/>
               </svg>
-              <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500">MacBook Air</span>
+              <span style="font-size:12px;color:rgba(255,255,255,.62);font-weight:600">MacBook Air</span>
             </div>
           </div>
         </article>
