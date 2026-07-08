@@ -221,7 +221,8 @@
     .diagram-title span{color:#d7e2d7;font-size:13px}
     .diagram-frame{background:rgba(6,18,12,.36);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:14px}
     .diagram-frame svg{display:block;width:100%;height:auto}
-    .diagram-caption{margin-top:14px;color:#d7e2d7;font-size:14px;line-height:1.5}
+    .device-showcase{margin-top:22px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.10);background:rgba(3,12,8,.34);box-shadow:0 24px 60px rgba(0,0,0,.28)}
+    .device-showcase img{display:block;width:100%;height:auto}
     .diagram-legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .diagram-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.04);border-radius:999px;padding:7px 10px;color:#e5eee5;font-size:12px;font-weight:700}
     .diagram-dot{width:9px;height:9px;border-radius:50%}
@@ -489,53 +490,8 @@
               <text x="380" y="438" text-anchor="middle" fill="#d7e2d7" font-size="16">Geen koppellijn: dit zijn twee losse open-source varianten, geen vaste stack.</text>
             </svg>
           </div>
-          <p class="diagram-caption">Hermes en OpenClaw zijn twee verschillende open-source routes met dezelfde praktische ingang: Telegram, WhatsApp, Slack, browser en automatiseringen. De keuze maken we per workflow, team en gewenste beheerroute. En dat allemaal met bekende apparaten zoals de Apple Watch, iPhone en Mac.</p>
-          <div class="device-icons" style="display:flex;gap:20px;justify-content:center;align-items:flex-end;margin-top:22px;flex-wrap:wrap">
-            <!-- Product-render row: warm studio cards, dark glass, no colourful UI screens -->
-            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-              <div style="width:86px;height:104px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(90deg,#d9c7a8 0%,#f3e6cf 45%,#b8a58a 100%);box-shadow:inset 0 0 24px rgba(255,255,255,.22),0 12px 28px rgba(0,0,0,.22);overflow:hidden">
-                <svg width="68" height="88" viewBox="0 0 68 88" role="img" aria-label="Apple Watch Ultra">
-                  <defs>
-                    <linearGradient id="mkbWatchCase2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#030404"/><stop offset="10%" stop-color="#6e6a5f"/><stop offset="24%" stop-color="#0b0d0d"/><stop offset="72%" stop-color="#101313"/><stop offset="93%" stop-color="#8f8776"/><stop offset="100%" stop-color="#030404"/></linearGradient>
-                    <linearGradient id="mkbWatchGlass2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#15191a"/><stop offset="55%" stop-color="#020202"/><stop offset="100%" stop-color="#111414"/></linearGradient>
-                  </defs>
-                  <ellipse cx="34" cy="82" rx="23" ry="5" fill="rgba(0,0,0,.34)"/>
-                  <rect x="25" y="2" width="18" height="19" rx="4" fill="#070808" stroke="rgba(255,255,255,.18)"/>
-                  <rect x="24" y="66" width="20" height="18" rx="4" fill="#070808" stroke="rgba(255,255,255,.18)"/>
-                  <rect x="12" y="17" width="44" height="54" rx="15" fill="url(#mkbWatchCase2)" stroke="rgba(255,255,255,.55)" stroke-width="1.2"/>
-                  <rect x="17" y="22" width="34" height="44" rx="11" fill="url(#mkbWatchGlass2)"/>
-                  <path d="M44 23c-8 12-14 25-17 43h24V23Z" fill="rgba(255,250,232,.18)"/>
-                  <path d="M26 23c-3 11-5 26-5 42" stroke="rgba(255,255,255,.10)" stroke-width="5" stroke-linecap="round"/>
-                  <rect x="57" y="35" width="4" height="14" rx="2" fill="#080909" stroke="rgba(255,255,255,.32)"/>
-                  <rect x="8" y="33" width="3" height="16" rx="1.5" fill="#080909" stroke="rgba(255,255,255,.22)"/>
-                </svg>
-              </div>
-              <span style="font-size:12px;color:rgba(255,255,255,.68);font-weight:600">Apple Watch</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-              <div style="width:86px;height:104px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(90deg,#d9c7a8 0%,#f3e6cf 45%,#b8a58a 100%);box-shadow:inset 0 0 24px rgba(255,255,255,.22),0 12px 28px rgba(0,0,0,.22);overflow:hidden">
-                <img src="assets/mkbagents-iphone17-product.jpg" alt="iPhone" style="height:104px;width:auto;display:block;object-fit:cover;object-position:center;mix-blend-mode:multiply;filter:contrast(1.08) saturate(.78) brightness(.88)" />
-              </div>
-              <span style="font-size:12px;color:rgba(255,255,255,.68);font-weight:600">iPhone</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-              <div style="width:116px;height:104px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(90deg,#d9c7a8 0%,#f3e6cf 45%,#b8a58a 100%);box-shadow:inset 0 0 24px rgba(255,255,255,.22),0 12px 28px rgba(0,0,0,.22);overflow:hidden">
-                <svg width="106" height="82" viewBox="0 0 106 82" role="img" aria-label="MacBook Air">
-                  <defs>
-                    <linearGradient id="mkbMacFrame2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#030404"/><stop offset="8%" stop-color="#6f695d"/><stop offset="18%" stop-color="#111313"/><stop offset="78%" stop-color="#111413"/><stop offset="94%" stop-color="#8d8372"/><stop offset="100%" stop-color="#030404"/></linearGradient>
-                    <linearGradient id="mkbMacGlass2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#15191a"/><stop offset="58%" stop-color="#020202"/><stop offset="100%" stop-color="#101313"/></linearGradient>
-                  </defs>
-                  <ellipse cx="53" cy="74" rx="41" ry="5" fill="rgba(0,0,0,.35)"/>
-                  <rect x="18" y="12" width="70" height="44" rx="5" fill="url(#mkbMacFrame2)" stroke="rgba(255,255,255,.48)" stroke-width="1.2"/>
-                  <rect x="23" y="17" width="60" height="34" rx="2" fill="url(#mkbMacGlass2)"/>
-                  <path d="M64 17c-10 9-17 21-21 34h40V17Z" fill="rgba(255,250,232,.17)"/>
-                  <path d="M34 18c-3 9-5 20-5 32" stroke="rgba(255,255,255,.08)" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M5 61h96l5 8c-6 3-21 5-53 5S6 72 0 69l5-8Z" fill="url(#mkbMacFrame2)" stroke="rgba(255,255,255,.26)" stroke-width="1"/>
-                  <path d="M42 62h22c-1.4 2.2-4 3.2-11 3.2S43.4 64.2 42 62Z" fill="rgba(255,255,255,.12)"/>
-                </svg>
-              </div>
-              <span style="font-size:12px;color:rgba(255,255,255,.68);font-weight:600">MacBook Air</span>
-            </div>
+          <div class="device-showcase">
+            <img src="assets/mkbagents-open-source-devices.jpg" alt="Hermes op Apple Watch, iPhone en MacBook Air" />
           </div>
         </article>
       </div>
@@ -891,7 +847,6 @@
         "Automations": "Automations",
         "OpenClaw": "OpenClaw",
         "Geen koppellijn: dit zijn twee losse open-source varianten, geen vaste stack.": "No connection line: these are two separate open-source variants, not one fixed stack.",
-        "Hermes en OpenClaw zijn twee verschillende open-source routes met dezelfde praktische ingang: Telegram, WhatsApp, Slack, browser en automatiseringen. De keuze maken we per workflow, team en gewenste beheerroute. En dat allemaal met bekende apparaten zoals de Apple Watch, iPhone en Mac.": "Hermes and OpenClaw are two different open-source routes with the same practical entry points: Telegram, WhatsApp, Slack, browser and automations. We choose per workflow, team and preferred management route. And all of that with familiar devices like the Apple Watch, iPhone and Mac.",
         
         "Hermes-architectuur": "Hermes architecture",
         "Kanalen · geheugen · tools · modellen": "Channels · memory · tools · models",
