@@ -704,16 +704,16 @@
               </div>
             </div>
             <div class="field full">
-              <label>Telegram</label>
+              <label>Kanaal</label>
               <input type="hidden" name="channel" id="order-channel" value="telegram">
               <div class="segment-switch" aria-label="Kanaalkeuze">
                 <button type="button" class="active" data-channel-option="telegram">Telegram</button>
-                <button type="button" class="disabled" disabled>WhatsApp binnenkort</button>
+                <button type="button" data-channel-option="whatsapp">WhatsApp</button>
               </div>
             </div>
             <div class="field full">
-              <label for="order-telegram-token" class="label-help">Telegram Bot Token <details><summary aria-label="Uitleg Telegram Bot Token">?</summary><div class="help-pop">Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Maak de bot gratis aan via <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>. Hulp nodig? Lees deze <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.</div></details></label>
-              <input id="order-telegram-token" name="telegram_bot_token" required>
+              <label for="order-channel-token" class="label-help"><span id="order-channel-token-label">Telegram Bot Token</span> <details><summary aria-label="Uitleg kanaal-token">?</summary><div class="help-pop" id="order-channel-token-help">Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Maak de bot gratis aan via <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>. Hulp nodig? Lees deze <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.</div></details></label>
+              <input id="order-channel-token" name="channel_token" required>
             </div>
             <div class="field full">
               <label class="label-help">ChatGPT OAuth <details><summary aria-label="Uitleg ChatGPT OAuth">?</summary><div class="help-pop">ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Je hoeft hier niets in te vullen: tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.</div></details></label>
@@ -1052,10 +1052,13 @@
         "Gekozen AI-agent": "Selected AI agent",
         "Hermes Agent": "Hermes Agent",
         "Hermes Agent": "Hermes Agent",
+        "Kanaal": "Channel",
         "Telegram": "Telegram",
-        "WhatsApp binnenkort": "WhatsApp coming soon",
+        "WhatsApp": "WhatsApp",
         "Telegram Bot Token": "Telegram Bot Token",
+        "WhatsApp Token": "WhatsApp Token",
         "Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Maak de bot gratis aan via": "This is the key that lets your agent receive and answer messages through your own Telegram bot. Create the bot for free through",
+        "Plak hier de WhatsApp-token of toegangssleutel die we gebruiken om jouw agent aan WhatsApp te koppelen. We controleren de juiste route tijdens de installatie.": "Paste the WhatsApp token or access key we use to connect your agent to WhatsApp. We check the right route during installation.",
         "Hulp nodig? Lees deze": "Need help? Read this",
         "ChatGPT OAuth": "ChatGPT OAuth",
         "ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Je hoeft hier niets in te vullen: tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.": "ChatGPT OAuth means you sign in with your own ChatGPT/Codex account instead of copying a separate API key. You do not need to fill anything in here: during installation we open the official login, you confirm access and the secure connection is stored only in your private agent workspace.",
@@ -1146,6 +1149,9 @@
       if(orderAgentInput){
         setSelectedAgent(orderAgentInput.value || 'hermes');
       }
+      if(orderChannelInput){
+        setSelectedChannel(orderChannelInput.value || 'telegram');
+      }
       localStorage.setItem('trustedAgentsLang', lang);
     }
 
@@ -1161,6 +1167,9 @@
     const orderLead = document.querySelector('#order-lead');
     const orderAgentInput = document.querySelector('#order-agent');
     const orderChannelInput = document.querySelector('#order-channel');
+    const orderChannelToken = document.querySelector('#order-channel-token');
+    const orderChannelTokenLabel = document.querySelector('#order-channel-token-label');
+    const orderChannelTokenHelp = document.querySelector('#order-channel-token-help');
     const orderCopy = {
       nl: {
         hermes: {
@@ -1206,10 +1215,38 @@
 
     function setSelectedChannel(channel){
       if(!orderChannelInput) return;
-      orderChannelInput.value = channel;
+      const selectedChannel = channel === 'whatsapp' ? 'whatsapp' : 'telegram';
+      orderChannelInput.value = selectedChannel;
       document.querySelectorAll('[data-channel-option]').forEach(button => {
-        button.classList.toggle('active', button.dataset.channelOption === channel);
+        button.classList.toggle('active', button.dataset.channelOption === selectedChannel);
       });
+      const lang = document.body.dataset.lang === 'en' ? 'en' : 'nl';
+      const channelCopy = {
+        nl: {
+          telegram: {
+            label: 'Telegram Bot Token',
+            help: 'Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Maak de bot gratis aan via <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>. Hulp nodig? Lees deze <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.'
+          },
+          whatsapp: {
+            label: 'WhatsApp Token',
+            help: 'Plak hier de WhatsApp-token of toegangssleutel die we gebruiken om jouw agent aan WhatsApp te koppelen. We controleren de juiste route tijdens de installatie.'
+          }
+        },
+        en: {
+          telegram: {
+            label: 'Telegram Bot Token',
+            help: 'This is the key that lets your agent receive and answer messages through your own Telegram bot. Create the bot for free through <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>.'
+          },
+          whatsapp: {
+            label: 'WhatsApp Token',
+            help: 'Paste the WhatsApp token or access key we use to connect your agent to WhatsApp. We check the right route during installation.'
+          }
+        }
+      };
+      const copy = channelCopy[lang][selectedChannel];
+      if(orderChannelTokenLabel) orderChannelTokenLabel.textContent = copy.label;
+      if(orderChannelTokenHelp) orderChannelTokenHelp.innerHTML = copy.help;
+      if(orderChannelToken) orderChannelToken.placeholder = copy.label;
     }
 
     function revealOrderSection(agent){
@@ -1250,7 +1287,9 @@
           company_name: data.company_name || '',
           email: data.email || '',
           channel: data.channel || 'telegram',
-          telegram_bot_token: data.telegram_bot_token || '',
+          channel_token: data.channel_token || '',
+          telegram_bot_token: data.channel === 'telegram' ? (data.channel_token || '') : '',
+          whatsapp_token: data.channel === 'whatsapp' ? (data.channel_token || '') : '',
           voucher_code: data.voucher_code || ''
         };
 
