@@ -28,9 +28,7 @@ Doel: mkbagents.nl beter vindbaar, begrijpelijk en citeerbaar maken voor AI-syst
 
 ## Fase 3, externe signalen
 
-Nog uit te voeren na publicatie:
-
-- LinkedIn-post/video-URL koppelen of vermelden zodra de definitieve URL bekend is.
+- LinkedIn-post/video-URL gekoppeld: https://www.linkedin.com/posts/bernard-donners-288b0aa_hermes-nous-opensource-activity-7482889244345294848-jCQX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAHxqQgBjl8VcmDgKFsKjTXTThTAq0IOdF0
 - LinkedIn-bedrijf/profieltekst afstemmen op dezelfde definitie.
 - Eventueel korte blogposts toevoegen: AI-agent voor MKB, WhatsApp Business-agent, Hermes versus gesloten workflowplatforms, n8n naast agents.
 

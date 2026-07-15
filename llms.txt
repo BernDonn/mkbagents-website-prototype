@@ -28,6 +28,10 @@ Laat AI voor je werken, maar geef je bedrijf niet weg aan Big Tech. ChatGPT, Cla
 - De klant blijft verantwoordelijk voor AI-output die wordt gebruikt, verstuurd, gepubliceerd of omgezet in een besluit.
 - Gevoelige acties rond geld, reputatie, rechten, privacy of externe communicatie vragen menselijke goedkeuring.
 
+## Externe signalen
+
+- LinkedIn short over Hermes, open-source agentlaag en MKBAgents: https://www.linkedin.com/posts/bernard-donners-288b0aa_hermes-nous-opensource-activity-7482889244345294848-jCQX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAHxqQgBjl8VcmDgKFsKjTXTThTAq0IOdF0
+
 ## Belangrijke pagina's
 
 - Homepage: https://mkbagents.nl/
