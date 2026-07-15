@@ -1,0 +1,51 @@
+# Project: mkbagents.nl vindbaar maken voor AI
+
+Start: 2026-07-15
+Doel: mkbagents.nl beter vindbaar, begrijpelijk en citeerbaar maken voor AI-systemen zoals ChatGPT Search, Perplexity, Gemini en Google AI-antwoorden.
+
+## Werkmodus
+
+- Stap voor stap uitvoeren.
+- Bij elke grote stap verifiëren met echte checks.
+- Bernard op de hoogte houden in korte voortgangsblokken.
+- Geen claims publiceren die absoluut of onbewezen zijn, zoals 100% veilig, volledig onafhankelijk of gegarandeerd goedkoper.
+
+## Fase 1, technische basis
+
+- robots.txt toevoegen met toegang voor algemene crawlers en relevante AI/search crawlers.
+- sitemap.xml toevoegen.
+- llms.txt toevoegen als AI-leesbare index.
+- Structured data toevoegen aan de homepage: Organization, ProfessionalService en FAQPage.
+- Canonical en social metadata toevoegen.
+
+## Fase 2, citeerbare inhoud
+
+- Markdown-pagina: Wat is MKBAgents?
+- Markdown-pagina: Hermes als open-source agentlaag.
+- Markdown-pagina: FAQ over AI-agents voor MKB.
+- Homepage uitbreiden met AI-vindbaarheid, video en FAQ.
+- Hermes 60s short van Desktop toevoegen als website-asset.
+
+## Fase 3, externe signalen
+
+Nog uit te voeren na publicatie:
+
+- LinkedIn-post/video-URL koppelen of vermelden zodra de definitieve URL bekend is.
+- LinkedIn-bedrijf/profieltekst afstemmen op dezelfde definitie.
+- Eventueel korte blogposts toevoegen: AI-agent voor MKB, WhatsApp Business-agent, Hermes versus gesloten workflowplatforms, n8n naast agents.
+
+## Fase 4, meting
+
+Testvragen voor ChatGPT/Perplexity/Gemini:
+
+- Wat is MKBAgents?
+- Welke Nederlandse partij helpt MKB met AI-agents?
+- Welke AI-agent kan via WhatsApp Business werken voor MKB?
+- Wat is het verschil tussen ChatGPT en een beheerde AI-agent?
+- Hoe voorkom je vendor lock-in bij AI-workflowautomatisering?
+
+## Status
+
+- Project aangemaakt in Hermes Desktop als: MKBAgents AI Vindbaarheid.
+- Lokale repo: /Users/bernarddonners/projects/mkbagents-website-prototype.
+- Technische en contentwijzigingen worden in deze repo doorgevoerd en daarna geverifieerd.
