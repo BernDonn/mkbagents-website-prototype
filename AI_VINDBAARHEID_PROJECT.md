@@ -28,6 +28,7 @@ Doel: mkbagents.nl beter vindbaar, begrijpelijk en citeerbaar maken voor AI-syst
 
 ## Fase 3, externe signalen
 
+- Bluesky-profiel gekoppeld: https://bsky.app/profile/bernard-ai.bsky.social
 - LinkedIn-post/video-URL gekoppeld: https://www.linkedin.com/posts/bernard-donners-288b0aa_hermes-nous-opensource-activity-7482889244345294848-jCQX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAHxqQgBjl8VcmDgKFsKjTXTThTAq0IOdF0
 - LinkedIn-bedrijf/profieltekst afstemmen op dezelfde definitie.
 - Eventueel korte blogposts toevoegen: AI-agent voor MKB, WhatsApp Business-agent, Hermes versus gesloten workflowplatforms, n8n naast agents.
@@ -41,6 +42,8 @@ Testvragen voor ChatGPT/Perplexity/Gemini:
 - Welke AI-agent kan via WhatsApp Business werken voor MKB?
 - Wat is het verschil tussen ChatGPT en een beheerde AI-agent?
 - Hoe voorkom je vendor lock-in bij AI-workflowautomatisering?
+
+- WhatsApp Business AI-agent pagina toegevoegd: https://mkbagents.nl/whatsapp-business-ai-agent.md
 
 ## Status
 
