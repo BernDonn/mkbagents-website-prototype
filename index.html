@@ -275,8 +275,12 @@
     .compare-aside{margin-top:16px;max-width:860px;padding:14px 16px;border:1px solid rgba(20,63,43,.12);border-radius:18px;background:rgba(255,250,241,.72);color:#546259;font-size:13px;line-height:1.55;box-shadow:0 8px 24px rgba(20,35,24,.04)}
     .why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,360px);gap:28px;align-items:start}
     .why-grid .compare-aside{max-width:none}
-    .why-video-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:0 12px 35px rgba(20,35,24,.06);align-self:start;margin-top:205px}
+    .why-video-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:0 12px 35px rgba(20,35,24,.06);align-self:start;margin-top:118px}
     .why-video-card .tag{margin-bottom:12px}
+    .evolution-preview{display:block;margin:0 0 16px 0;text-decoration:none;color:inherit}
+    .evolution-preview img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 24px rgba(20,35,24,.06)}
+    .evolution-preview .caption{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:8px;color:#546259;font-size:12px;font-weight:750;line-height:1.35}
+    .evolution-preview .caption span:last-child{color:var(--green);white-space:nowrap}
     .why-video-card video{display:block;width:100%;max-height:300px;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:#10291f}
     .proof{background:#13291f;color:#fff;border-radius:42px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
     .proof h2{color:#fff}.proof .muted{color:#dce7dc}.quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:22px;border-radius:26px;font-size:22px;line-height:1.35;letter-spacing:-.03em}
@@ -451,6 +455,10 @@
         </div>
         <aside class="why-video-card" aria-label="Hermes-video">
           <span class="tag">Hermes-video</span>
+          <a class="evolution-preview" href="assets/evolutie-nederlands.png" target="_blank" rel="noopener" aria-label="Open de evolutie van AI als grotere afbeelding">
+            <img src="assets/evolutie-nederlands.png" alt="De evolutie van AI: van chat naar autonome agenten">
+            <span class="caption"><span>De evolutie van AI</span><span>Klik om te vergroten</span></span>
+          </a>
           <video controls preload="metadata" playsinline aria-label="MKBAgents Hermes video over open-source agentlaag">
             <source src="assets/hermes-agent-overview.mp4" type="video/mp4">
           </video>
@@ -544,7 +552,7 @@
       <div class="eyebrow">Oplossingen</div>
       <h2>Zes soorten werk om mee te starten</h2>
       <p class="lead">De eerste versie richt zich op concrete, terugkerende workflows voor ZZP’ers en MKB. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.</p>
-      <div class="compare-aside">Uiteindelijk is het doel niet dat AI losse trucjes uitvoert, maar dat kenniswerkers meer grip krijgen op het werk tussen oude systemen, data en nieuwe processen. Daar zit volgens Jan Baan de echte waarde: AI moet mensen helpen de kloof te overbruggen tussen verouderde systemen en moderne, datagedreven bedrijfsvoering.</div>
+      <p class="lead" style="max-width:980px">Uiteindelijk is het doel dat kenniswerkers meer grip krijgen op het werk tussen oude systemen, data en nieuwe processen. Daar zit de echte waarde: AI moet mensen helpen de kloof te overbruggen tussen verouderde systemen en moderne, datagedreven bedrijfsvoering.</p>
       <div class="usecases">
         <details class="case"><summary class="case-summary"><span><small>Inbox, agenda & monitoring</small><h3>Continu zicht op wat ertoe doet</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren en afspraken of signalen bewaken. Hermes kan je agenda bijhouden vanuit diverse mails en kanalen, zodat losse signalen samenkomen in één rustig overzicht.</p><div class="example">“Elke ochtend: vat mijn inbox en agenda samen en laat zien wat relevant is voor mijn dag.”</div></div></details>
         <details class="case"><summary class="case-summary"><span><small>Website & landingpage</small><h3>Van idee naar verkoopbare pagina</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Zet je propositie om in een compacte website of landingpage met heldere tekst, passende visuals, CTA’s en een intake- of contactroute die direct bruikbaar is voor ZZP’ers en MKB.</p><div class="example">“Maak van deze dienst een landingpage met doelgroep, aanbod, bewijs, prijsroute en WhatsApp-contact.”</div></div></details>
@@ -817,6 +825,8 @@
         "Contacteer MKBAgents": "Contact MKBAgents",
         "Modelkeuze": "Model choice",
         "Waarom Hermes?": "Why Hermes?",
+        "De evolutie van AI": "The evolution of AI",
+        "Klik om te vergroten": "Click to enlarge",
         "Vervang de (dure) premium modellen van ChatGPT en Claude door Hermes met een beter resultaat": "Replace the expensive premium models from ChatGPT and Claude with Hermes for a better result",
         "Modellen worden snel een commodity. De echte waarde zit in de workflows, het geheugen en de tools eromheen en in wie daar de regie over houdt.": "Models are quickly becoming a commodity. The real value sits in the workflows, memory and tools around them, and in who stays in control of that layer.",
         "Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. MKBAgents richt zich op dat tweede: AI levert pas echt iets op als het onderdeel wordt van een terugkerende workflow, niet wanneer het als losse tool naast het werk hangt. Een AI-workflow leest, vat samen, routeert, controleert of genereert in samenhang met bestaande systemen en duidelijke menselijke verantwoordelijkheid. Hermes zet klantinformatie, suggesties en conceptantwoorden klaar, de mens beslist wat er naar buiten gaat.": "There is a difference between ‘we use AI’ and ‘AI earns money for us’. MKBAgents focuses on the second: AI only really delivers value when it becomes part of a recurring workflow, not when it sits next to the work as a separate tool. An AI workflow reads, summarizes, routes, checks or generates in connection with existing systems and clear human responsibility. The agent prepares customer information, suggestions and draft replies, the human decides what goes out. That is exactly where the value of Hermes sits.",
@@ -914,7 +924,7 @@
         "Bernards rol als Lector AI helpt teams begrijpen wat AI wel en niet moet doen.": "Bernard's role as Professor of Applied AI helps teams understand what AI should and should not do.",
         "Zes soorten werk om mee te starten": "Six types of work to get started",
         "De eerste versie richt zich op concrete, terugkerende workflows voor ZZP’ers en MKB. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.": "The first version focuses on concrete, recurring workflows for freelancers and SMEs. Start small, prove that it works, then expand, with a focus on time savings, overview and controllable AI.",
-        "Uiteindelijk is het doel niet dat AI losse trucjes uitvoert, maar dat kenniswerkers meer grip krijgen op het werk tussen oude systemen, data en nieuwe processen. Daar zit volgens Jan Baan de echte waarde: AI moet mensen helpen de kloof te overbruggen tussen verouderde systemen en moderne, datagedreven bedrijfsvoering.": "Ultimately, the goal is not for AI to perform isolated tricks, but for knowledge workers to gain more control over the work between old systems, data and new processes. That is where Jan Baan sees the real value: AI should help people bridge the gap between legacy and modern, data-driven business operations.",
+        "Uiteindelijk is het doel dat kenniswerkers meer grip krijgen op het werk tussen oude systemen, data en nieuwe processen. Daar zit de echte waarde: AI moet mensen helpen de kloof te overbruggen tussen verouderde systemen en moderne, datagedreven bedrijfsvoering.": "Ultimately, the goal is for knowledge workers to gain more control over the work between old systems, data and new processes. That is where the real value sits: AI should help people bridge the gap between outdated systems and modern, data-driven operations.",
         "Inbox, agenda & monitoring": "Inbox, calendar & monitoring",
         "Continu zicht op wat ertoe doet": "Continuous visibility on what matters",
         "Laat mail samenvatten, urgente berichten markeren en afspraken of signalen bewaken. Hermes kan je agenda bijhouden vanuit diverse mails en kanalen, zodat losse signalen samenkomen in één rustig overzicht.": "Have email summarized, urgent messages marked and appointments or signals monitored. Hermes can keep your calendar up to date from different emails and channels, so loose signals come together in one calm overview.",
