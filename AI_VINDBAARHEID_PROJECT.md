@@ -24,7 +24,7 @@ Doel: mkbagents.nl beter vindbaar, begrijpelijk en citeerbaar maken voor AI-syst
 - Markdown-pagina: Hermes als open-source agentlaag.
 - Markdown-pagina: FAQ over AI-agents voor MKB.
 - Homepage uitbreiden met AI-vindbaarheid, video en FAQ.
-- Hermes 60s short van Desktop toevoegen als website-asset.
+- Hermes-video van Desktop toegevoegd als website-asset: `assets/hermes-agent-overview.mp4`.
 
 ## Fase 3, externe signalen
 
