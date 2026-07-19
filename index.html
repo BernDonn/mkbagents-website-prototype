@@ -212,6 +212,13 @@
     .provider-detail{display:grid;gap:20px;padding-top:8px}
     .provider-detail .provider-grid{margin-top:0}
     .provider-detail .provider-card{min-height:0}
+    .provider-disclosure-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:4px;align-items:start}
+    details.provider-disclosure{min-height:auto;padding:22px;border-radius:24px;background:#fff}
+    details.provider-disclosure .provider-summary{gap:10px}
+    .agent-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+    .agent-compare-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;display:grid;gap:10px}
+    .agent-compare-card strong{font-size:18px;letter-spacing:-.02em}
+    .agent-compare-card ul{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:6px;line-height:1.45}
     .macmini-inline .provider-grid{grid-template-columns:1fr;gap:12px}
     .macmini-inline .provider-card{padding:18px;border-radius:22px}
     .price-mini-table{display:grid;gap:10px;margin-top:4px}
@@ -334,7 +341,7 @@
       .hero,.two-col,.proof,.footer-cta,.trust-layout,.compare-grid,.why-grid{grid-template-columns:1fr}
       .why-video-card{margin-top:18px}
       .why-video-card video{max-height:none}
-      .products,.grid,.usecases,.deploy-grid,.provider-grid,.legal-grid,.integration-grid{grid-template-columns:1fr}
+      .products,.grid,.usecases,.deploy-grid,.provider-grid,.provider-disclosure-row,.agent-compare-grid,.legal-grid,.integration-grid{grid-template-columns:1fr}
       .hero{min-height:auto;padding-top:48px}
       h1{font-size:clamp(38px, 12vw, 54px);margin:18px 0}
       h2{font-size:clamp(30px, 9vw, 40px)}
@@ -660,49 +667,77 @@
       <div class="eyebrow">Modelkeuze & toegang</div>
       <h2>Wijs per taak het juiste model toe</h2>
       <p class="lead">Gebruik ChatGPT/Codex via OAuth, gebaseerd op je maandelijkse abonnement én commodity modellen via OpenRouter. Als een route zijn limiet bereikt, schakelt de agent over naar een vooraf gekozen alternatief. Hermes beschikt over MOA (Mix of Agents) en OpenClaw kan als alternatieve agentroute worden ingericht; per taak bepalen we welke route het beste past.</p>
-      <details class="provider-card">
-        <summary class="provider-summary">
+      <article class="provider-card">
+        <div class="provider-summary">
           <span class="tag">OAuth + OpenRouter</span>
           <strong>Twee toegangswegen, één agentlaag</strong>
           <p class="muted">Je logt in met ChatGPT/Codex of gebruikt OpenRouter als modelhub. Daarna kiest de agent per taak de ingestelde route en fallback.</p>
           <ul class="provider-summary-list"><li>ChatGPT/Codex via OAuth</li><li>Claude via OAuth (beperkte capaciteit)</li><li>OpenRouter voor meerdere modellen</li><li>Automatische fallback bij limieten of storingen</li></ul>
-          <span class="provider-toggle">Modelprijzen (per 1M tokens)</span>
-        </summary>
-        <div class="provider-detail">
-          <div class="provider-grid">
-            <article class="provider-card">
-              <span class="tag">OAuth</span>
-              <strong>ChatGPT / Codex OAuth</strong>
-              <p class="muted">Voor klanten die via ChatGPT of Codex willen werken zonder losse API-key. Je logt eenmalig in; daarna gebruikt de agent een beveiligde OAuth-koppeling als primaire route.</p>
-              <div class="price-mini-table" aria-label="ChatGPT Plus prijs">
-                <div class="price-mini-row"><div><strong>ChatGPT Plus · GPT-5</strong><span>Richtprijs in Nederland, inclusief btw. Gebruikslimieten kunnen wisselen.</span></div><div class="price-mini-cost">€23 / maand</div></div>
-              </div>
-              <ul><li>Geen API-key kopiëren</li><li>Handig voor ChatGPT- en Codex-workflows</li><li>Plus werkt met gebruikslimieten, niet met een publieke vaste tokenpot</li></ul>
-            </article>
-            <article class="provider-card">
-              <span class="tag">OAuth</span>
-              <strong>Claude OAuth</strong>
-              <p class="muted">Voor klanten die via Claude willen werken zonder losse API-key. Anthropic staat OAuth toe, maar de beschikbare capaciteit is beperkt — de yield is laag en limieten kunnen snel bereikt zijn.</p>
-              <ul><li>Geen API-key kopiëren</li><li>Anthropic OAuth-koppeling</li><li>Beperkte capaciteit — geschikt als lichte route, niet voor hoog volume</li></ul>
-            </article>
-            <article class="provider-card">
-              <span class="tag">Open Router</span>
-              <strong>Meerdere modellen onder één sleutel</strong>
-              <p class="muted">OpenRouter geeft via één sleutel toegang tot modellen zoals Claude, GPT, DeepSeek en GLM. Handig voor fallback, prijsbewuste routering en het kiezen van een ander model zodra dat beter past.</p>
-              <p class="muted">Bij deze modelprijzen tonen we twee bedragen per 1M tokens: input voor je prompt naar het model en output voor het antwoord terug. Bij deze modellen is output meestal duurder dan input.</p>
-              <div class="price-mini-table" aria-label="OpenRouter modelprijzen">
-                <div class="price-mini-row"><div><strong>Claude Sonnet 4</strong><span>Veelgekozen premium model voor schrijven, analyse en code.</span></div><div class="price-mini-cost">$3 / $15 per 1M</div></div>
-                <div class="price-mini-row"><div><strong>GPT-5</strong><span>Sterke allround route voor redeneren en tooling.</span></div><div class="price-mini-cost">$1.25 / $10 per 1M</div></div>
-                <div class="price-mini-row"><div><strong>GLM 5.2</strong><span>Open-weight model met sterke agentische coding- en tool-use, 1M context.</span></div><div class="price-mini-cost">$0.95 / $3 per 1M</div></div>
-                <div class="price-mini-row"><div><strong>DeepSeek V4 Pro</strong><span>Zwaardere DeepSeek-route voor complexere analyse, code en lange context.</span></div><div class="price-mini-cost">$0.435 / $0.87 per 1M</div></div>
-                <div class="price-mini-row"><div><strong>DeepSeek V4 Flash</strong><span>Snelle en goedkope DeepSeek-route voor veel volume en responsieve workflows.</span></div><div class="price-mini-cost">$0.09 / $0.18 per 1M</div></div>
-              </div>
-              <ul><li>Pay-as-you-go met officiële modelprijzen + circa 5,5% platform fee</li><li>Geschikt voor fallback, vergelijking en budgetcontrole</li><li>Hermes of OpenClaw kiest daarna per taak de ingestelde route</li></ul>
-            </article>
-          </div>
-          <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment bepalen we of een OAuth-route (ChatGPT of Claude) of OpenRouter de primaire route wordt, plus minimaal één fallback. Als een OAuth-route zijn limiet bereikt of niet beschikbaar is, schakelt de agent door naar het OpenRouter-model dat we vooraf hebben gekozen. Sleutels en OAuth-tokens horen in de private agent-workspace, niet in de website.</div>
         </div>
-      </section>
+        <div class="provider-disclosure-row">
+          <details class="provider-disclosure">
+            <summary class="provider-summary">
+              <span class="provider-toggle">Modelprijzen (per 1M tokens)</span>
+            </summary>
+            <div class="provider-detail">
+              <div class="provider-grid">
+                <article class="provider-card">
+                  <span class="tag">OAuth</span>
+                  <strong>ChatGPT / Codex OAuth</strong>
+                  <p class="muted">Voor klanten die via ChatGPT of Codex willen werken zonder losse API-key. Je logt eenmalig in; daarna gebruikt de agent een beveiligde OAuth-koppeling als primaire route.</p>
+                  <div class="price-mini-table" aria-label="ChatGPT Plus prijs">
+                    <div class="price-mini-row"><div><strong>ChatGPT Plus · GPT-5</strong><span>Richtprijs in Nederland, inclusief btw. Gebruikslimieten kunnen wisselen.</span></div><div class="price-mini-cost">€23 / maand</div></div>
+                  </div>
+                  <ul><li>Geen API-key kopiëren</li><li>Handig voor ChatGPT- en Codex-workflows</li><li>Plus werkt met gebruikslimieten, niet met een publieke vaste tokenpot</li></ul>
+                </article>
+                <article class="provider-card">
+                  <span class="tag">OAuth</span>
+                  <strong>Claude OAuth</strong>
+                  <p class="muted">Voor klanten die via Claude willen werken zonder losse API-key. Anthropic staat OAuth toe, maar de beschikbare capaciteit is beperkt — de yield is laag en limieten kunnen snel bereikt zijn.</p>
+                  <ul><li>Geen API-key kopiëren</li><li>Anthropic OAuth-koppeling</li><li>Beperkte capaciteit — geschikt als lichte route, niet voor hoog volume</li></ul>
+                </article>
+                <article class="provider-card">
+                  <span class="tag">Open Router</span>
+                  <strong>Meerdere modellen onder één sleutel</strong>
+                  <p class="muted">OpenRouter geeft via één sleutel toegang tot modellen zoals Claude, GPT, DeepSeek en GLM. Handig voor fallback, prijsbewuste routering en het kiezen van een ander model zodra dat beter past.</p>
+                  <p class="muted">Bij deze modelprijzen tonen we twee bedragen per 1M tokens: input voor je prompt naar het model en output voor het antwoord terug. Bij deze modellen is output meestal duurder dan input.</p>
+                  <div class="price-mini-table" aria-label="OpenRouter modelprijzen">
+                    <div class="price-mini-row"><div><strong>Claude Sonnet 4</strong><span>Veelgekozen premium model voor schrijven, analyse en code.</span></div><div class="price-mini-cost">$3 / $15 per 1M</div></div>
+                    <div class="price-mini-row"><div><strong>GPT-5</strong><span>Sterke allround route voor redeneren en tooling.</span></div><div class="price-mini-cost">$1.25 / $10 per 1M</div></div>
+                    <div class="price-mini-row"><div><strong>GLM 5.2</strong><span>Open-weight model met sterke agentische coding- en tool-use, 1M context.</span></div><div class="price-mini-cost">$0.95 / $3 per 1M</div></div>
+                    <div class="price-mini-row"><div><strong>DeepSeek V4 Pro</strong><span>Zwaardere DeepSeek-route voor complexere analyse, code en lange context.</span></div><div class="price-mini-cost">$0.435 / $0.87 per 1M</div></div>
+                    <div class="price-mini-row"><div><strong>DeepSeek V4 Flash</strong><span>Snelle en goedkope DeepSeek-route voor veel volume en responsieve workflows.</span></div><div class="price-mini-cost">$0.09 / $0.18 per 1M</div></div>
+                  </div>
+                  <ul><li>Pay-as-you-go met officiële modelprijzen + circa 5,5% platform fee</li><li>Geschikt voor fallback, vergelijking en budgetcontrole</li><li>Hermes of OpenClaw kiest daarna per taak de ingestelde route</li></ul>
+                </article>
+              </div>
+              <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment bepalen we of een OAuth-route (ChatGPT of Claude) of OpenRouter de primaire route wordt, plus minimaal één fallback. Als een OAuth-route zijn limiet bereikt of niet beschikbaar is, schakelt de agent door naar het OpenRouter-model dat we vooraf hebben gekozen. Sleutels en OAuth-tokens horen in de private agent-workspace, niet in de website.</div>
+            </div>
+          </details>
+          <details class="provider-disclosure">
+            <summary class="provider-summary">
+              <span class="provider-toggle">Vergelijk Hermes en OpenClaw</span>
+            </summary>
+            <div class="provider-detail">
+              <p class="muted">Hermes en OpenClaw zijn twee losse open-source routes. De keuze gaat niet over één vaste stack, maar over welke agentlaag het beste past bij jullie eerste workflow.</p>
+              <div class="agent-compare-grid">
+                <article class="agent-compare-card">
+                  <span class="tag">Hermes</span>
+                  <strong>Sterk als agent-engine</strong>
+                  <ul><li>Geheugen, skills en tools centraal</li><li>Modelroutering en fallback per taak</li><li>Goed voor analyse, opvolging en kenniswerk</li><li>Past bij teams die een lerende assistent willen</li></ul>
+                </article>
+                <article class="agent-compare-card">
+                  <span class="tag">OpenClaw</span>
+                  <strong>Sterk in kanalen en workflows</strong>
+                  <ul><li>Richting berichtenstromen, routing en interfaces</li><li>Telegram, WhatsApp en Slack als werkkanalen</li><li>Goed voor klantcontact en procesmatige flows</li><li>Past bij teams die kanaalwerk strak willen sturen</li></ul>
+                </article>
+              </div>
+              <div class="flow-note"><strong>Kort gezegd:</strong> Hermes is vaak de beste start als geheugen, skills en modelkeuze centraal staan. OpenClaw past beter als communicatiekanalen, routing en workflowinterfaces de kern zijn. Beide kunnen met dezelfde modelroutes en menselijke goedkeuring worden ingericht.</div>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
     <section class="section" id="contact">
       <div class="footer-cta">
         <div>
@@ -1056,6 +1091,20 @@
         "OpenRouter voor meerdere modellen": "OpenRouter for multiple models",
         "Automatische fallback bij limieten of storingen": "Automatic fallback when limits are hit or outages occur",
         "Modelprijzen (per 1M tokens)": "Model prices (per 1M tokens)",
+        "Vergelijk Hermes en OpenClaw": "Compare Hermes and OpenClaw",
+        "Hermes en OpenClaw zijn twee losse open-source routes. De keuze gaat niet over één vaste stack, maar over welke agentlaag het beste past bij jullie eerste workflow.": "Hermes and OpenClaw are two separate open-source routes. The choice is not about one fixed stack, but about which agent layer best fits your first workflow.",
+        "Sterk als agent-engine": "Strong as an agent engine",
+        "Geheugen, skills en tools centraal": "Memory, skills and tools at the center",
+        "Modelroutering en fallback per taak": "Model routing and fallback per task",
+        "Goed voor analyse, opvolging en kenniswerk": "Good for analysis, follow-up and knowledge work",
+        "Past bij teams die een lerende assistent willen": "Fits teams that want a learning assistant",
+        "Sterk in kanalen en workflows": "Strong in channels and workflows",
+        "Richting berichtenstromen, routing en interfaces": "Toward message flows, routing and interfaces",
+        "Telegram, WhatsApp en Slack als werkkanalen": "Telegram, WhatsApp and Slack as work channels",
+        "Goed voor klantcontact en procesmatige flows": "Good for customer contact and process-driven flows",
+        "Past bij teams die kanaalwerk strak willen sturen": "Fits teams that want tighter control of channel work",
+        "Kort gezegd:": "In short:",
+        "Hermes is vaak de beste start als geheugen, skills en modelkeuze centraal staan. OpenClaw past beter als communicatiekanalen, routing en workflowinterfaces de kern zijn. Beide kunnen met dezelfde modelroutes en menselijke goedkeuring worden ingericht.": "Hermes is often the best starting point when memory, skills and model choice are central. OpenClaw fits better when communication channels, routing and workflow interfaces are the core. Both can be configured with the same model routes and human approval.",
         "ChatGPT / Codex OAuth": "ChatGPT / Codex OAuth",
         "Voor klanten die via ChatGPT of Codex willen werken zonder losse API-key. Je logt eenmalig in; daarna gebruikt de agent een beveiligde OAuth-koppeling als primaire route.": "For customers who want to work through ChatGPT or Codex without a separate API key. You log in once; after that the agent uses a secure OAuth connection as the primary route.",
         "Geen API-key kopiëren": "No API key copying",
