@@ -424,7 +424,7 @@
           <template id="disc-privacy"><p style="margin-bottom:10px">MKBAgents verwerkt persoonsgegevens en bedrijfsgegevens alleen voor zover nodig om de agent te configureren, beveiligen, uitvoeren en beheren. Gevoelige informatie mag niet onnodig in prompts, geheugen of logs terechtkomen.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Gegevens worden niet verkocht aan derden.</li><li>Toegang wordt beperkt tot wat noodzakelijk is voor inrichting, beheer, beveiliging en support.</li><li>Datagovernance, AVG-afspraken en veilige contextbehandeling horen bij de inrichting.</li><li>Bij ontwerp en beheer houden we rekening met relevante kaders zoals EU AI Act, GDPR/AVG, Data Act, Cyber Resilience Act en auteursrecht.</li><li>Waar mogelijk worden gegevens geminimaliseerd en binnen een afgesproken hostingomgeving verwerkt.</li><li>Verzoeken over inzage, correctie of verwijdering kunnen via het contactadres van MKBAgents.</li></ul></template>
           <template id="disc-datasoevereiniteit"><p style="margin-bottom:10px">Europese hosting is waardevol, maar niet hetzelfde als volledige datasoevereiniteit. Een server in Frankfurt zegt waar data fysiek staat; eigendom, toepasselijk recht, modelroute en toegangsrechten bepalen wie er juridisch of technisch bij kan. Het FTC-Urteil van juni 2026 laat zien waarom dat verschil belangrijker wordt voor AI-strategie.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>We kijken per workflow welke data publiek, intern, persoonlijk of gevoelig is.</li><li>Gevoelige taken kunnen via EU-cloud, eigen VPS, lokale machine of self-hosted route worden ingericht.</li><li>Open-source agentlagen zoals Hermes beperken vendor lock-in: tools, context en modelkeuze blijven modulair.</li><li>Niet alles hoeft lokaal; minder kritische taken kunnen bewust naar externe modellen als dat praktisch en verantwoord is.</li><li>Het uitgangspunt: bewust routeren in plaats van ongemerkt afhankelijk worden van één Big Tech-platform.</li></ul></template>
           <template id="disc-controle"><p style="margin-bottom:10px">Een MKBAgent mag voorbereiden, samenvatten, signaleren, ordenen en concepten klaarzetten. Juist omdat agentic AI taken kan onthouden, herhalen, uitvoeren en opschalen over systemen heen, blijft menselijke controle nodig bij gevoelige of externe acties. Automatisering mag accountability niet verminderen en processen moeten te stoppen of bij te sturen blijven nadat ze gestart zijn.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Geen automatische verzending zonder akkoord waar reputatie, geld, rechten of privacy geraakt kunnen worden.</li><li>Geen zelfstandige uitvoering van real-world actions zonder expliciete begrenzing.</li><li>Geen gebruik voor onrechtmatige, misleidende of schadelijke doeleinden.</li><li>Geen invoer van bijzondere persoonsgegevens zonder passende grondslag.</li><li>Bij twijfel: eerst menselijke beoordeling, daarna pas actie.</li></ul><div class="quote" style="margin-top:12px;border-color:rgba(22,63,43,.18);background:rgba(22,63,43,.04);color:#17240f">"Niet alles wat technologisch kan is ook maatschappelijk gewenst."<br><span style="font-size:13px;color:#516156">— bernarddonners-ai.nl</span></div></template>
-          <script>function toggleDisclosure(key){var p=document.getElementById('disclosure-panel');var t=document.getElementById('disc-'+key);var btn=document.querySelector('[data-key="'+key+'"]');var cur=p.getAttribute('data-open');if(cur===key){p.style.display='none';p.removeAttribute('data-open');p.innerHTML='';btn.style.background='rgba(255,250,241,.72)';return}p.setAttribute('data-open',key);p.innerHTML=t.innerHTML;p.style.display='block';document.querySelectorAll('.disclosure-btn').forEach(function(b){b.style.background='rgba(255,250,241,.72)'});btn.style.background='rgba(215,242,104,.22)'}</script>
+          <script>function toggleDisclosure(key){var p=document.getElementById('disclosure-panel');var t=document.getElementById('disc-'+key);var btn=document.querySelector('[data-key="'+key+'"]');var cur=p.getAttribute('data-open');if(cur===key){p.style.display='none';p.removeAttribute('data-open');p.innerHTML='';btn.style.background='rgba(255,250,241,.72)';return}p.setAttribute('data-open',key);p.innerHTML=t.innerHTML;p.style.display='block';if(window.translateDynamicNode){window.translateDynamicNode(p)}document.querySelectorAll('.disclosure-btn').forEach(function(b){b.style.background='rgba(255,250,241,.72)'});btn.style.background='rgba(215,242,104,.22)'}</script>
         </div>
       </div>
       <aside class="agent-card" aria-label="AI agent demo kaart">
@@ -1273,6 +1273,20 @@
       translatableNodes.push(node);
     }
 
+    window.translateDynamicNode = function(root){
+      const lang = document.body.dataset.lang || document.documentElement.lang || 'nl';
+      const dict = translations[lang] || {};
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode(node){ return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT; }
+      });
+      while(walker.nextNode()){
+        const node = walker.currentNode;
+        if(!node.datasetKey){ node.datasetKey = node.nodeValue.trim().replace(/\s+/g, ' '); }
+        const original = node.datasetKey;
+        node.nodeValue = lang === 'en' && dict[original] ? node.nodeValue.replace(node.nodeValue.trim(), dict[original]) : node.nodeValue.replace(node.nodeValue.trim(), original);
+      }
+    }
+
     function setLanguage(lang){
       const dict = translations[lang] || {};
       document.documentElement.lang = lang;
@@ -1289,6 +1303,13 @@
       document.querySelectorAll('[data-lang-button]').forEach(button => {
         button.classList.toggle('active', button.dataset.langButton === lang);
       });
+      const openPanel = document.getElementById('disclosure-panel');
+      if(openPanel && openPanel.getAttribute('data-open')){
+        const key = openPanel.getAttribute('data-open');
+        const template = document.getElementById('disc-' + key);
+        if(template){ openPanel.innerHTML = template.innerHTML; }
+        if(window.translateDynamicNode){ window.translateDynamicNode(openPanel); }
+      }
       if(orderAgentInput){
         setSelectedAgent(orderAgentInput.value || 'hermes');
       }
