@@ -3,51 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MKBAgents, AI-agents voor MKB-bedrijven die snel willen automatiseren</title>
-  <meta name="description" content="MKBAgents levert beheerde AI-agents voor MKB-bedrijven die snel willen automatiseren: veilig, controleerbaar en AVG-bewust." />
-  <link rel="canonical" href="https://mkbagents.nl/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="MKBAgents, AI-agents voor MKB-bedrijven" />
-  <meta property="og:description" content="Beheerde AI-agents voor MKB-bedrijven, met Hermes, OpenClaw, WhatsApp, Telegram, modelkeuze, menselijke controle en minder workflow-lock-in." />
-  <meta property="og:url" content="https://mkbagents.nl/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEM9HLKQ43"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FEM9HLKQ43');
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://mkbagents.nl/#organization",
-        "name": "MKBAgents",
-        "url": "https://mkbagents.nl/",
-        "description": "MKBAgents levert beheerde AI-agents voor Nederlandse MKB-bedrijven, met open-source agentlagen zoals Hermes en OpenClaw, modelkeuze, menselijke controle en workflowautomatisering.",
-        "founder": {"@type": "Person", "name": "Bernard Donners"},
-        "areaServed": {"@type": "Country", "name": "Nederland"},
-        "knowsAbout": ["AI-agents", "Hermes", "OpenClaw", "workflowautomatisering", "n8n", "WhatsApp Business", "Telegram bots", "modelkeuze", "vendor lock-in", "menselijke controle"]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://mkbagents.nl/#service",
-        "name": "MKBAgents",
-        "url": "https://mkbagents.nl/",
-        "image": "https://mkbagents.nl/assets/mkbagents-open-source-devices.jpg",
-        "description": "Implementatie, configuratie en beheer van AI-agents voor MKB-bedrijven rond bestaande workflows, kanalen en modelroutes.",
-        "provider": {"@id": "https://mkbagents.nl/#organization"},
-        "areaServed": "NL",
-        "serviceType": "Managed AI agents and workflow automation"
-      }
-    ]
-  }
-  </script>
+  <title>MKBAgents, AI-agents voor ZZP’ers en MKB die snel willen automatiseren</title>
+  <meta name="description" content="MKBAgents levert beheerde AI-agents voor ZZP’ers en MKB die snel willen automatiseren: veilig, controleerbaar en AVG-bewust." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
     :root{
@@ -221,13 +178,6 @@
     .provider-detail{display:grid;gap:20px;padding-top:8px}
     .provider-detail .provider-grid{margin-top:0}
     .provider-detail .provider-card{min-height:0}
-    .provider-disclosure-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:4px;align-items:start}
-    details.provider-disclosure{min-height:auto;padding:22px;border-radius:24px;background:#fff}
-    details.provider-disclosure .provider-summary{gap:10px}
-    .agent-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
-    .agent-compare-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;display:grid;gap:10px}
-    .agent-compare-card strong{font-size:18px;letter-spacing:-.02em}
-    .agent-compare-card ul{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:6px;line-height:1.45}
     .macmini-inline .provider-grid{grid-template-columns:1fr;gap:12px}
     .macmini-inline .provider-card{padding:18px;border-radius:22px}
     .price-mini-table{display:grid;gap:10px;margin-top:4px}
@@ -263,7 +213,7 @@
     .trust-copy p{margin:0;color:#d0dbd0;line-height:1.45;font-size:14px}
     .trust-no{font-weight:800;color:#c4d1c3;font-size:14px;align-self:start;margin-top:2px}
     .trust-visual{position:relative;overflow:hidden;background:linear-gradient(180deg, rgba(19,46,33,.96), rgba(13,31,22,.98));border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:24px}
-    .trust-visual.align-lower{margin-top:46px}
+    .trust-visual.align-lower{margin-top:72px}
     .trust-visual:after{content:"";position:absolute;right:-90px;top:-70px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle, rgba(215,242,104,.14) 0%, rgba(215,242,104,0) 68%)}
     .trust-visual > *{position:relative;z-index:1}
     .diagram-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
@@ -289,15 +239,6 @@
     .compare-card.opensource .tag{background:rgba(215,242,104,.16);color:var(--lime);border-color:rgba(215,242,104,.3)}
     .compare-note{margin-top:18px;background:#f0e6d6;border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#304034;line-height:1.6}
     .compare-aside{margin-top:16px;max-width:860px;padding:14px 16px;border:1px solid rgba(20,63,43,.12);border-radius:18px;background:rgba(255,250,241,.72);color:#546259;font-size:13px;line-height:1.55;box-shadow:0 8px 24px rgba(20,35,24,.04)}
-    .why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,360px);gap:28px;align-items:start}
-    .why-grid .compare-aside{max-width:none}
-    .why-video-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:0 12px 35px rgba(20,35,24,.06);align-self:start;margin-top:52px}
-    .why-video-card .tag{margin-bottom:12px}
-    .evolution-preview{display:block;margin:0 0 14px 0;text-decoration:none;color:inherit}
-    .evolution-preview img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 24px rgba(20,35,24,.06)}
-    .evolution-preview .caption{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:8px 1px 0;color:#546259;font-size:12px;font-weight:750;line-height:1.35}
-    .evolution-preview .caption span:last-child{color:var(--green);white-space:nowrap}
-    .why-video-card video{display:block;width:100%;max-height:300px;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:#10291f;box-shadow:0 10px 24px rgba(20,35,24,.06)}
     .proof{background:#13291f;color:#fff;border-radius:42px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
     .proof h2{color:#fff}.proof .muted{color:#dce7dc}.quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:22px;border-radius:26px;font-size:22px;line-height:1.35;letter-spacing:-.03em}
     .footer-cta{background:linear-gradient(135deg, #143f2b, #0c1d16);color:#fff;border-radius:48px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;overflow:hidden;position:relative}
@@ -347,10 +288,8 @@
     @media(max-width:1100px){.nav-links{display:none}}
     @media(max-width:900px){
       .section{padding:64px 20px}
-      .hero,.two-col,.proof,.footer-cta,.trust-layout,.compare-grid,.why-grid{grid-template-columns:1fr}
-      .why-video-card{margin-top:18px}
-      .why-video-card video{max-height:none}
-      .products,.grid,.usecases,.deploy-grid,.provider-grid,.provider-disclosure-row,.agent-compare-grid,.legal-grid,.integration-grid{grid-template-columns:1fr}
+      .hero,.two-col,.proof,.footer-cta,.trust-layout,.compare-grid{grid-template-columns:1fr}
+      .products,.grid,.usecases,.deploy-grid,.provider-grid,.legal-grid,.integration-grid{grid-template-columns:1fr}
       .hero{min-height:auto;padding-top:48px}
       h1{font-size:clamp(38px, 12vw, 54px);margin:18px 0}
       h2{font-size:clamp(30px, 9vw, 40px)}
@@ -399,7 +338,8 @@
         <a href="#koppelingen">Koppelingen</a>
         <a href="#providers">Modelkeuze</a>
         <a class="button secondary" href="https://www.bernarddonners-ai.nl">Bernard Donners</a>
-        <a class="button" href="https://wa.me/31618569839?text=Hallo%20MKBAgents%2C%20ik%20wil%20graag%20advies%20over%20een%20AI-agent%20of%20workflowautomatisering." target="_blank" rel="noopener">Vraag advies</a>
+        <a class="button secondary" href="#contact">Vraag advies</a>
+        <a class="button" href="#contact">Plan pilot</a>
       </div>
     </div>
   </nav>
@@ -407,20 +347,22 @@
   <main>
     <section class="section hero">
       <div>
-        <div class="eyebrow">OpenSource Hermes- en OpenClaw-agent voor MKB</div>
-        <h1 style="font-size:clamp(46px,6vw,74px);font-weight:700;letter-spacing:-.04em">Minder vendor lock-in. Meer controle voor jou</h1>
-        <p class="lead">Claude en ChatGPT zijn sterke modellen, maar blijven proprietary routes met terugkerende tokenkosten en afhankelijkheid van één leverancier. Hermes is een gratis, open-source AI-assistent die op je eigen machine draait; met Hermes of OpenClaw houd je workflows, tools en providerkeuze in eigen hand en kun je goedkoper opschalen of wisselen wanneer dat nodig is.</p>
+        <div class="eyebrow">OpenSource Hermes-agent voor MKB en ZZP</div>
+        <h1 style="font-size:clamp(46px,6vw,74px);font-weight:700;letter-spacing:-.04em">Laat AI voor je werken, maar geef je bedrijf niet weg aan Big Tech</h1>
+        <p class="lead">Claude en ChatGPT zijn sterke modellen, maar blijven proprietary routes met terugkerende tokenkosten en afhankelijkheid van één leverancier. Hermes is een gratis, open-source AI-assistent die op je eigen machine draait, waarmee je workflows, tools en providerkeuze in eigen hand houdt en goedkoper kunt opschalen of wisselen wanneer dat nodig is.</p>
         <div class="hero-disclosures" style="margin:16px 0 10px 0">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:0">
             <button onclick="toggleDisclosure('security')" data-key="security" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Security</button>
             <button onclick="toggleDisclosure('voorwaarden')" data-key="voorwaarden" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Voorwaarden</button>
             <button onclick="toggleDisclosure('privacy')" data-key="privacy" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Privacy</button>
+            <button onclick="toggleDisclosure('datasoevereiniteit')" data-key="datasoevereiniteit" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Datasoevereiniteit</button>
             <button onclick="toggleDisclosure('controle')" data-key="controle" class="disclosure-btn" style="display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;color:#17240f;cursor:pointer;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15);font-family:inherit">Menselijke controle</button>
           </div>
           <div id="disclosure-panel" style="display:none;margin-top:12px;padding:20px 22px;background:rgba(255,250,241,.96);border:1px solid rgba(22,63,43,.18);border-radius:16px;font-size:14px;line-height:1.58;color:#17240f;box-shadow:0 14px 34px rgba(18,43,32,.08)"></div>
           <template id="disc-security"><p class="muted" style="margin-bottom:12px;color:#17240f">Controle, governance en privacy zijn geen details. Ze zijn de basis. AI-agents kunnen doelbewust of onbedoeld worden misbruikt via schadelijke instructies, promptmanipulatie of aanvallen. Daarom richten we inrichting, rechten en context zo in dat de agent begrensd blijft.</p><ul style="margin:0 0 12px 0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Prompt-instructies, tools en toegangsrechten worden gescheiden waar mogelijk.</li><li>Context wordt alleen meegegeven als dat nodig is voor de taak.</li><li>Logging en afspraken maken achteraf uitlegbaar wat de agent deed.</li><li>Security by design, safety by design en responsible by design zijn uitgangspunten bij inrichting en beheer.</li><li>Regelmatige interne en externe audits helpen fouten, prestatieverlies en nieuwe risico’s vroeg te ontdekken.</li></ul></template>
           <template id="disc-voorwaarden"><p style="margin-bottom:10px">MKBAgents levert advies, configuratie, automatisering en beheer van AI-agents voor zakelijke gebruikers. De dienstverlening is gericht op ondersteuning van werkprocessen, niet op het overnemen van professionele verantwoordelijkheid van de klant.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>De klant blijft verantwoordelijk voor AI-output die wordt gebruikt, verstuurd of omgezet in een besluit.</li><li>AI-output kan hallucineren, onjuist, onvolledig of ongeschikt zijn voor de specifieke situatie.</li><li>Risicovolle acties vereisen menselijke controle en expliciet akkoord.</li><li>MKBAgents neemt geen aansprakelijkheid over voor gebruik van AI-output; de klant blijft verantwoordelijk voor controle, besluiten en gevolgen.</li></ul></template>
           <template id="disc-privacy"><p style="margin-bottom:10px">MKBAgents verwerkt persoonsgegevens en bedrijfsgegevens alleen voor zover nodig om de agent te configureren, beveiligen, uitvoeren en beheren. Gevoelige informatie mag niet onnodig in prompts, geheugen of logs terechtkomen.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Gegevens worden niet verkocht aan derden.</li><li>Toegang wordt beperkt tot wat noodzakelijk is voor inrichting, beheer, beveiliging en support.</li><li>Datagovernance, AVG-afspraken en veilige contextbehandeling horen bij de inrichting.</li><li>Bij ontwerp en beheer houden we rekening met relevante kaders zoals EU AI Act, GDPR/AVG, Data Act, Cyber Resilience Act en auteursrecht.</li><li>Waar mogelijk worden gegevens geminimaliseerd en binnen een afgesproken hostingomgeving verwerkt.</li><li>Verzoeken over inzage, correctie of verwijdering kunnen via het contactadres van MKBAgents.</li></ul></template>
+          <template id="disc-datasoevereiniteit"><p style="margin-bottom:10px">Europese hosting is waardevol, maar niet hetzelfde als volledige datasoevereiniteit. Een server in Frankfurt zegt waar data fysiek staat; eigendom, toepasselijk recht, modelroute en toegangsrechten bepalen wie er juridisch of technisch bij kan. Het FTC-Urteil van juni 2026 laat zien waarom dat verschil belangrijker wordt voor AI-strategie.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>We kijken per workflow welke data publiek, intern, persoonlijk of gevoelig is.</li><li>Gevoelige taken kunnen via EU-cloud, eigen VPS, lokale machine of self-hosted route worden ingericht.</li><li>Open-source agentlagen zoals Hermes beperken vendor lock-in: tools, context en modelkeuze blijven modulair.</li><li>Niet alles hoeft lokaal; minder kritische taken kunnen bewust naar externe modellen als dat praktisch en verantwoord is.</li><li>Het uitgangspunt: bewust routeren in plaats van ongemerkt afhankelijk worden van één Big Tech-platform.</li></ul></template>
           <template id="disc-controle"><p style="margin-bottom:10px">Een MKBAgent mag voorbereiden, samenvatten, signaleren, ordenen en concepten klaarzetten. Juist omdat agentic AI taken kan onthouden, herhalen, uitvoeren en opschalen over systemen heen, blijft menselijke controle nodig bij gevoelige of externe acties. Automatisering mag accountability niet verminderen en processen moeten te stoppen of bij te sturen blijven nadat ze gestart zijn.</p><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Geen automatische verzending zonder akkoord waar reputatie, geld, rechten of privacy geraakt kunnen worden.</li><li>Geen zelfstandige uitvoering van real-world actions zonder expliciete begrenzing.</li><li>Geen gebruik voor onrechtmatige, misleidende of schadelijke doeleinden.</li><li>Geen invoer van bijzondere persoonsgegevens zonder passende grondslag.</li><li>Bij twijfel: eerst menselijke beoordeling, daarna pas actie.</li></ul><div class="quote" style="margin-top:12px;border-color:rgba(22,63,43,.18);background:rgba(22,63,43,.04);color:#17240f">"Niet alles wat technologisch kan is ook maatschappelijk gewenst."<br><span style="font-size:13px;color:#516156">— bernarddonners-ai.nl</span></div></template>
           <script>function toggleDisclosure(key){var p=document.getElementById('disclosure-panel');var t=document.getElementById('disc-'+key);var btn=document.querySelector('[data-key="'+key+'"]');var cur=p.getAttribute('data-open');if(cur===key){p.style.display='none';p.removeAttribute('data-open');p.innerHTML='';btn.style.background='rgba(255,250,241,.72)';return}p.setAttribute('data-open',key);p.innerHTML=t.innerHTML;p.style.display='block';document.querySelectorAll('.disclosure-btn').forEach(function(b){b.style.background='rgba(255,250,241,.72)'});btn.style.background='rgba(215,242,104,.22)'}</script>
         </div>
@@ -461,27 +403,15 @@
     </section>
 
     <section class="section" style="padding-top:10px;padding-bottom:18px">
-      <div class="why-grid">
-        <div class="why-copy">
-          <div class="eyebrow" style="background:rgba(255,255,255,.08);border:1px solid rgba(22,63,43,.15);color:#17240f">Waarom Hermes en OpenClaw?</div>
-          <h2>Vervang de (dure) premium modellen van ChatGPT en Claude door Hermes of OpenClaw met een beter resultaat</h2>
-          <p class="lead">Modellen worden snel een commodity. De echte waarde zit in de workflows, het geheugen en de tools eromheen en in wie daar de regie over houdt.</p>
-          <div class="compare-aside">Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. MKBAgents richt zich op dat tweede: AI levert pas echt iets op als het onderdeel wordt van een terugkerende workflow, niet wanneer het als losse tool naast het werk hangt. Een AI-workflow leest, vat samen, routeert, controleert of genereert in samenhang met bestaande systemen en duidelijke menselijke verantwoordelijkheid. Hermes of OpenClaw zet klantinformatie, suggesties en conceptantwoorden klaar, de mens beslist wat er naar buiten gaat.</div>
-        </div>
-        <aside class="why-video-card" aria-label="Hermes-video">
-          <a class="evolution-preview" href="assets/evolutie-nederlands.png" target="_blank" rel="noopener" aria-label="Open de evolutie van AI als grotere afbeelding">
-            <img src="assets/evolutie-nederlands.png" alt="De evolutie van AI: van chat naar autonome agenten">
-            <span class="caption"><span>De evolutie van AI</span><span>Klik om te vergroten</span></span>
-          </a>
-          <video controls preload="metadata" playsinline aria-label="MKBAgents Hermes video over open-source agentlaag">
-            <source src="assets/hermes-1b-overview.mp4" type="video/mp4">
-          </video>
-        </aside>
-      </div>
+      <div class="eyebrow" style="background:rgba(255,255,255,.08);border:1px solid rgba(22,63,43,.15);color:#17240f">Waarom Hermes?</div>
+      <h2>Vervang de (dure) premium modellen van ChatGPT en Claude door Hermes met een beter resultaat</h2>
+      <p class="lead">Modellen worden snel een commodity. De echte waarde zit in de workflows, het geheugen en de tools eromheen en in wie daar de regie over houdt.</p>
+      <div class="compare-aside">Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. MKBAgents richt zich op dat tweede: AI levert pas echt iets op als het onderdeel wordt van een terugkerende workflow, niet wanneer het als losse tool naast het werk hangt. Een AI-workflow leest, vat samen, routeert, controleert of genereert in samenhang met bestaande systemen en duidelijke menselijke verantwoordelijkheid. Hermes zet klantinformatie, suggesties en conceptantwoorden klaar, de mens beslist wat er naar buiten gaat.</div>
+      
     </section>
 
     <section class="section" id="agents">
-      <div class="eyebrow">Hermes / OpenClaw</div>
+      <div class="eyebrow">Hermes</div>
       <div class="trust-stack" style="margin-top:18px">
       <div class="trust-layout">
         <div>
@@ -527,16 +457,15 @@
         </div>
         <article class="trust-visual align-lower">
           <div class="diagram-title">
-            <h3>Hermes / OpenClaw-platform</h3>
-            <span>Twee open-source routes voor je dagelijkse werk</span>
+            <h3>Hermes-platform</h3>
+            <span>Eén betrouwbare agentlaag voor je dagelijkse werk</span>
           </div>
           <div class="diagram-frame">
-            <svg viewBox="0 0 760 470" role="img" aria-label="Hermes en OpenClaw als open-source agentlagen voor MKBAgents">
+            <svg viewBox="0 0 760 470" role="img" aria-label="Hermes als betrouwbare agentlaag voor MKBAgents">
               <rect x="8" y="8" width="744" height="454" rx="26" fill="rgba(3,12,8,.26)" stroke="rgba(255,255,255,.08)"/>
-              <text x="44" y="54" fill="#fffaf1" font-size="25" font-weight="700">Hermes of OpenClaw verbindt kanalen, tools en modellen</text>
+              <text x="44" y="54" fill="#fffaf1" font-size="25" font-weight="700">Hermes verbindt je kanalen, tools en modellen</text>
               <rect x="44" y="86" width="672" height="302" rx="30" fill="rgba(255,250,241,.05)" stroke="rgba(255,255,255,.1)"/>
               <text x="84" y="136" fill="#fffaf1" font-size="42" font-weight="800">Hermes</text>
-              <text x="450" y="136" fill="#fffaf1" font-size="34" font-weight="800">OpenClaw</text>
               <text x="84" y="166" fill="#dce7dc" font-size="19">geheugen · skills · tools · modelroutes</text>
               <rect x="84" y="204" width="132" height="52" rx="16" fill="rgba(215,242,104,.12)" stroke="rgba(215,242,104,.30)"/>
               <text x="150" y="236" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">Telegram</text>
@@ -552,11 +481,11 @@
               <text x="381" y="321" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">n8n workflows</text>
               <rect x="500" y="286" width="160" height="58" rx="18" fill="rgba(215,242,104,.10)" stroke="rgba(215,242,104,.24)"/>
               <text x="580" y="321" text-anchor="middle" fill="#fffaf1" font-size="18" font-weight="700">AI-modellen</text>
-              <text x="380" y="426" text-anchor="middle" fill="#d7e2d7" font-size="16">Hermes of OpenClaw houdt kanalen, geheugen, tools en modelroutes overzichtelijk bij elkaar.</text>
+              <text x="380" y="426" text-anchor="middle" fill="#d7e2d7" font-size="16">Hermes houdt kanalen, geheugen, tools en modelroutes overzichtelijk bij elkaar.</text>
             </svg>
           </div>
           <div class="device-showcase">
-            <img src="assets/mkbagents-open-source-devices.jpg" alt="Hermes en OpenClaw op Apple Watch, iPhone en MacBook Air" />
+            <img src="assets/mkbagents-open-source-devices.jpg" alt="Hermes op Apple Watch, iPhone en MacBook Air" />
           </div>
         </article>
       </div>
@@ -566,12 +495,11 @@
     <section class="section" id="oplossingen">
       <div class="eyebrow">Oplossingen</div>
       <h2>Zes soorten werk om mee te starten</h2>
-      <p class="lead">De eerste versie richt zich op concrete, terugkerende workflows voor MKB-bedrijven. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.</p>
-      <p class="lead" style="max-width:980px">Uiteindelijk is het doel dat kenniswerkers meer grip krijgen op het werk tussen oude systemen, data en nieuwe processen. Daar zit de echte waarde: AI moet mensen helpen de kloof te overbruggen tussen verouderde systemen en moderne, datagedreven bedrijfsvoering.</p>
+      <p class="lead">De eerste versie richt zich op concrete, terugkerende workflows voor ZZP’ers en MKB. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.</p>
       <div class="usecases">
         <details class="case"><summary class="case-summary"><span><small>Inbox, agenda & monitoring</small><h3>Continu zicht op wat ertoe doet</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren en afspraken of signalen bewaken. Hermes kan je agenda bijhouden vanuit diverse mails en kanalen, zodat losse signalen samenkomen in één rustig overzicht.</p><div class="example">“Elke ochtend: vat mijn inbox en agenda samen en laat zien wat relevant is voor mijn dag.”</div></div></details>
-        <details class="case"><summary class="case-summary"><span><small>Website & landingpage</small><h3>Van idee naar verkoopbare pagina</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Zet je propositie om in een compacte website of landingpage met heldere tekst, passende visuals, CTA’s en een intake- of contactroute die direct bruikbaar is voor MKB-bedrijven.</p><div class="example">“Maak van deze dienst een landingpage met doelgroep, aanbod, bewijs, prijsroute en WhatsApp-contact.”</div></div></details>
-        <details class="case"><summary class="case-summary"><span><small>Workflowautomatisering</small><h3>Het herhaalbare dagelijks geregeld</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Documenten ordenen, lijstjes bijhouden, intake vastleggen en ontbrekende informatie signaleren zonder onnodige frictie.</p><div class="example">“Nieuwe notitie binnen → op de juiste plek zetten → markeren wat nog ontbreekt.”</div><details style="margin-top:4px"><summary style="display:inline-block;padding:8px 16px;font-size:13px;font-weight:800;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Van losse AI-tool naar werkende workflow</summary><div style="margin-top:12px;padding:18px 20px;background:rgba(215,242,104,.10);border:1px solid rgba(215,242,104,.22);border-radius:18px;color:#304034;line-height:1.62"><p>De vraag is niet of een organisatie ergens AI gebruikt. De vraag is of AI onderdeel wordt van een terugkerende workflow. In klantcontact, softwareontwikkeling, juridische analyse, marketing, interne kennisbanken en financiële processen ontstaat pas waarde wanneer AI meeloopt in het werk zelf, met duidelijke grenzen en menselijke verantwoordelijkheid.</p><p style="margin-top:12px">Met een AI-workflow bedoel ik: een terugkerend bedrijfsproces waarin AI informatie leest, samenvat, routeert of controleert, gekoppeld aan bestaande systemen. Dus niet alleen een losse prompt in ChatGPT, maar een medewerker die tijdens het werk relevante klantinformatie, productsuggesties en conceptantwoorden krijgt. De mens beslist wat er naar buiten gaat.</p></div></details></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Website & landingpage</small><h3>Van idee naar verkoopbare pagina</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Zet je propositie om in een compacte website of landingpage met heldere tekst, passende visuals, CTA’s en een intake- of contactroute die direct bruikbaar is voor ZZP’ers en MKB.</p><div class="example">“Maak van deze dienst een landingpage met doelgroep, aanbod, bewijs, prijsroute en WhatsApp-contact.”</div></div></details>
+        <details class="case"><summary class="case-summary"><span><small>Workflowautomatisering</small><h3>Het herhaalbare dagelijks geregeld</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Documenten ordenen, lijstjes bijhouden, intake vastleggen en ontbrekende informatie signaleren zonder onnodige frictie.</p><div class="example">“Nieuwe notitie binnen → op de juiste plek zetten → markeren wat nog ontbreekt.”</div><details style="margin-top:4px"><summary style="display:inline-block;padding:8px 16px;font-size:13px;font-weight:800;color:#17240f;cursor:pointer;list-style:none;border-radius:100px;background:rgba(255,250,241,.72);border:1px solid rgba(22,63,43,.15)">Van AI gebruiken naar AI die waarde oplevert</summary><div style="margin-top:12px;padding:18px 20px;background:rgba(215,242,104,.10);border:1px solid rgba(215,242,104,.22);border-radius:18px;color:#304034;line-height:1.62"><p>Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. Dat verschil wordt in 2026 steeds belangrijker. Bij veel grote organisaties is AI inmiddels overal aanwezig: in klantcontact, softwareontwikkeling, juridische analyse, marketing, interne kennisbanken en financiële processen. Maar de opbrengst is grilliger dan de boardroomslides doen vermoeden. De eerste les uit de praktijk is vrij simpel: AI levert pas echt iets op als het onderdeel wordt van een workflow, niet wanneer het als losse tool naast het werk hangt.</p><p style="margin-top:12px">Met een AI-workflow bedoel ik: een terugkerend bedrijfsproces waarin AI informatie leest, samenvat, voorspelt, genereert, routeert of controleert, mét koppeling aan bestaande systemen en met duidelijke menselijke verantwoordelijkheid. Dus niet alleen een medewerker die ChatGPT gebruikt om een tekst te herschrijven, maar bijvoorbeeld een klantenservicemedewerker die tijdens een gesprek automatisch relevante klantinformatie, productsuggesties en conceptantwoorden krijgt. En daarna nog steeds zelf beslist wat er naar de klant gaat.</p></div></details></div></details>
         <details class="case"><summary class="case-summary"><span><small>Content & kennis</small><h3>Van briefing naar consistente output</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Artikelen, posts, klantupdates en interne notities in een herkenbare toon en vaste structuur.</p><div class="example">“Maak van deze briefing een LinkedIn-post, klantmail en interne notitie.”</div></div></details>
         <details class="case"><summary class="case-summary"><span><small>Business development</small><h3>Kansen vinden zonder ruis</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Zoek leads, beoordeel relevantie en bereid persoonlijke outreach of opvolging voor zonder handmatig speurwerk.</p><div class="example">“Vind 10 bedrijven die passen bij deze propositie en zet conceptmails klaar.”</div></div></details>
         <details class="case"><summary class="case-summary"><span><small>Vergaderingen & gesprekken</small><h3>Opnames transcriberen, rubriceren en samenvatten</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Werk vergader- en gespreksopnames uit, vat ze samen en verdeel inzichten, acties of thema’s per persoon, onderwerp of opvolging.</p><div class="example">“Werk deze opname uit, vat haar samen en verdeel acties per persoon en onderwerp.”</div></div></details>
@@ -582,15 +510,15 @@
       <div class="integration-wrap">
         <div class="eyebrow">Koppelingen met n8n</div>
         <h2>Koppelt met de software die je al gebruikt</h2>
-        <p class="lead">Hermes en OpenClaw zijn sterk in context, redeneren en samenwerking met mensen. Voor vaste, herhaalbare stappen kan n8n soms effectiever zijn: de agent denkt mee, de workflow voert voorspelbaar uit. Zo verbinden we je agent met de systemen waar je bedrijf nu al op draait: mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools. Waar een standaardkoppeling bestaat gebruiken we die. Waar die ontbreekt, kijken we naar API, webhook of een veilige handmatige route.</p>
+        <p class="lead">Hermes is sterk in context, redeneren en samenwerking met mensen. Hermes kan zelf tools en koppelingen aansturen. Voor processen die strak, herhaalbaar of goed controleerbaar moeten zijn, koppelen we Hermes bijvoorbeeld aan n8n als workflowlaag. Zo kan je agent samenwerken met mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools, terwijl n8n de vaste stappen voorspelbaar uitvoert. Bestaat er een standaardkoppeling, dan gebruiken we die. Anders kiezen we voor API, webhook of een veilige handmatige route.</p>
         <div class="integration-grid">
           <details class="integration-card">
             <summary class="integration-summary"><span><span class="tag">Mail & agenda</span><h3>Inbox, afspraken en opvolging</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en agenda-updates voorbereiden zonder dat de agent zomaar namens jou verstuurt.</p></div>
+            <div class="integration-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en Teams- of agenda-updates doorgeven zonder dat de agent zomaar namens jou verstuurt.</p><div class="integration-apps"><span class="app-chip">Outlook</span><span class="app-chip">Gmail</span><span class="app-chip">Teams</span><span class="app-chip">Google Calendar</span></div></div>
           </details>
           <details class="integration-card">
             <summary class="integration-summary"><span><span class="tag">Spreadsheets & bestanden</span><h3>Lijsten, rapportages en documenten</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Gebruik spreadsheets, bestanden en documentopslag als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.</p></div>
+            <div class="integration-body"><p class="muted">Gebruik Sheets, Excel, Drive of OneDrive als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.</p><div class="integration-apps"><span class="app-chip">Google Sheets</span><span class="app-chip">Excel</span><span class="app-chip">Drive</span><span class="app-chip">OneDrive</span></div></div>
           </details>
           <details class="integration-card">
             <summary class="integration-summary"><span><span class="tag">CRM & klantvragen</span><h3>Leads en dossiers komen op de juiste plek</h3></span><span class="expand-label">Bekijk details</span></summary>
@@ -601,7 +529,7 @@
             <div class="integration-body"><p class="muted">Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden.</p><div class="integration-apps"><span class="app-chip">Mollie</span><span class="app-chip">Webhooks</span><span class="app-chip">Formulieren</span><span class="app-chip">WooCommerce</span></div></div>
           </details>
           <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">AI & agenttaken</span><h3>n8n stuurt de flow, Hermes of OpenClaw doet het denkwerk</h3></span><span class="expand-label">Bekijk details</span></summary>
+            <summary class="integration-summary"><span><span class="tag">AI & agenttaken</span><h3>n8n stuurt de flow, Hermes doet het denkwerk</h3></span><span class="expand-label">Bekijk details</span></summary>
             <div class="integration-body"><p class="muted">Voor AI-flows koppelen we n8n aan modellen, documenten, vector databases en tools. De agent maakt samenvattingen, concepten of acties klaar.</p><div class="integration-apps"><span class="app-chip">OpenAI</span><span class="app-chip">Anthropic</span><span class="app-chip">Gemini</span><span class="app-chip">AI Agent</span></div></div>
           </details>
           <details class="integration-card">
@@ -609,18 +537,18 @@
             <div class="integration-body"><p class="muted">Heeft je software een API, database of webhook? Dan kunnen we vaak koppelen zonder dat je hoeft te migreren naar een ander platform.</p><div class="integration-apps"><span class="app-chip">HTTP/API</span><span class="app-chip">Postgres</span><span class="app-chip">MySQL</span><span class="app-chip">Supabase</span></div></div>
           </details>
         </div>
-        <div class="integration-note"><strong>Inzet van Deterministische Agenten</strong><p class="muted">Hermes en OpenClaw werken samen met deterministische workflow-tools zoals n8n: de agent denkt, de workflow voert uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper — terwijl de agent zich richt op waar echt inzicht nodig is.</p></div>
+        <div class="integration-note"><strong>Inzet van Deterministische Agenten</strong><p class="muted">Hermes werkt samen met deterministische workflow-tools zoals n8n: de agent denkt, de workflow voert uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper — terwijl Hermes zich richt op waar echt inzicht nodig is.</p></div>
       </div>
     </section>
 
     <section class="section" id="prijzen">
       <div class="eyebrow">Pakketten</div>
-      <h2>Drie manieren om Hermes en OpenClaw te draaien</h2>
+      <h2>Drie manieren om Hermes te draaien</h2>
       <div class="products">
         <article class="product featured">
           <span class="tag">1 · Starter</span>
           <h3>Managed Agent</h3>
-          <p class="muted">Voor MKB-bedrijven die snel willen starten: jouw agent draait op door MKBAgents beheerde Europese infrastructuur, met eigen botkoppeling, gescheiden configuratie en duidelijke beheerafspraken.</p>
+          <p class="muted">Voor MKB-bedrijven en zzp’ers die snel willen starten: jouw agent draait op door MKBAgents beheerde Europese infrastructuur, met eigen botkoppeling, gescheiden configuratie en duidelijke beheerafspraken.</p>
           <ul><li>Kies Telegram of WhatsApp om te communiceren met de agent</li><li>Opgezet met ChatGPT of OpenRouter, afhankelijk van de gekozen route</li><li>Snelle activatie met beheer, updates en monitoring inbegrepen</li><li>Menselijke goedkeuring voor gevoelige acties</li></ul>
           <div class="price">€29 <span>/ maand per bot</span></div>
         </article>
@@ -634,7 +562,7 @@
         <article class="product">
           <span class="tag">3 · Bring your own</span>
           <h3>Eigen cloud of Mac</h3>
-          <p class="muted">Voor MKB-bedrijven die zelf eigenaar willen blijven van de infrastructuurrelatie: eigen Mac mini, VPS of bestaande cloud. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.</p>
+          <p class="muted">Voor ZZP’ers en MKB-bedrijven die zelf eigenaar willen blijven van de infrastructuurrelatie: eigen Mac mini, VPS of bestaande cloud. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.</p>
           <ul><li>Eigen Mac mini, VPS of bestaande cloud</li><li>Eenmalige setup, verder geen beheerskosten</li><li>Maandelijkse support of beheerabonnement mogelijk</li><li>Jij houdt eigenaarschap over infrastructuur en toegang</li></ul>
           <div class="price package-price-inline">Set up: €399 <span class="macmini-price-note">(incl. Mac mini €1299)</span></div>
           <details class="macmini-inline" id="macmini" style="margin-top:18px">
@@ -649,7 +577,7 @@
                 <article class="provider-card">
                   <span class="tag">Setup</span>
                   <strong>Wat we opleveren</strong>
-                  <p class="muted">Een werkende zakelijke basisconfiguratie voor support, sales of interne workflowautomatisering, niet alleen een promptscherm.</p>
+                  <p class="muted">Een werkende zakelijke basisconfiguratie voor ZZP’ers, support, sales of interne workflowautomatisering, niet alleen een promptscherm.</p>
                   <ul><li>Installatie en configuratie van Hermes</li><li>Koppeling met Slack, Telegram, WhatsApp of browser</li><li>Modelroutes via jullie eigen accounts en budgetkeuzes</li><li>Eerste automatisering, overdracht en beheerafspraken</li></ul>
                 </article>
                 <article class="provider-card">
@@ -662,7 +590,7 @@
                   <span class="tag">Praktisch</span>
                   <strong>Samen testen op jullie eigen proces</strong>
                   <p class="muted">Tijdens de installatie testen we meteen jullie eigen vragen, documenten en workflows. Hebben jullie al een Mac? Dan kan alleen installatie en configuratie ook.</p>
-                  <ul><li>Intake vooraf op use-case, team en maandbudget</li><li>Directe live test tijdens de setup</li><li>Nazorg, updates en doorontwikkeling mogelijk</li><li>Geschikt voor kleine teams, directie en eigen kantooromgeving</li></ul>
+                  <ul><li>Intake vooraf op use-case, team en maandbudget</li><li>Directe live test tijdens de setup</li><li>Nazorg, updates en doorontwikkeling mogelijk</li><li>Geschikt voor ZZP’ers, kleine teams en eigen kantooromgeving</li></ul>
                 </article>
               </div>
               <div class="flow-note"><strong>Belangrijk over kosten:</strong> hardware, AI-API's, domeinen, telefonie, cloudopslag en andere externe diensten vallen buiten de setupprijs. Tijdens intake bepalen we of eigen Mac mini, managed cloud of een hybride route de beste zakelijke keuze is.</div>
@@ -675,78 +603,50 @@
     <section class="section" id="providers">
       <div class="eyebrow">Modelkeuze & toegang</div>
       <h2>Wijs per taak het juiste model toe</h2>
-      <p class="lead">Gebruik ChatGPT/Codex via OAuth, gebaseerd op je maandelijkse abonnement én commodity modellen via OpenRouter. Als een route zijn limiet bereikt, schakelt de agent over naar een vooraf gekozen alternatief. Hermes beschikt over MOA (Mix of Agents) en OpenClaw kan als alternatieve agentroute worden ingericht; per taak bepalen we welke route het beste past.</p>
-      <article class="provider-card">
-        <div class="provider-summary">
+      <p class="lead">Gebruik ChatGPT/Codex via OAuth, gebaseerd op je maandelijkse abonnement én commodity modellen via OpenRouter. Als een route zijn limiet bereikt, schakelt de agent over naar een vooraf gekozen alternatief. Hermes beschikt over MOA (Mix of Agents) waar je de modellen per taak kunt alloceren.</p>
+      <details class="provider-card">
+        <summary class="provider-summary">
           <span class="tag">OAuth + OpenRouter</span>
           <strong>Twee toegangswegen, één agentlaag</strong>
           <p class="muted">Je logt in met ChatGPT/Codex of gebruikt OpenRouter als modelhub. Daarna kiest de agent per taak de ingestelde route en fallback.</p>
           <ul class="provider-summary-list"><li>ChatGPT/Codex via OAuth</li><li>Claude via OAuth (beperkte capaciteit)</li><li>OpenRouter voor meerdere modellen</li><li>Automatische fallback bij limieten of storingen</li></ul>
-        </div>
-        <div class="provider-disclosure-row">
-          <details class="provider-disclosure">
-            <summary class="provider-summary">
-              <span class="provider-toggle">Modelprijzen (per 1M tokens)</span>
-            </summary>
-            <div class="provider-detail">
-              <div class="provider-grid">
-                <article class="provider-card">
-                  <span class="tag">OAuth</span>
-                  <strong>ChatGPT / Codex OAuth</strong>
-                  <p class="muted">Voor klanten die via ChatGPT of Codex willen werken zonder losse API-key. Je logt eenmalig in; daarna gebruikt de agent een beveiligde OAuth-koppeling als primaire route.</p>
-                  <div class="price-mini-table" aria-label="ChatGPT Plus prijs">
-                    <div class="price-mini-row"><div><strong>ChatGPT Plus · GPT-5</strong><span>Richtprijs in Nederland, inclusief btw. Gebruikslimieten kunnen wisselen.</span></div><div class="price-mini-cost">€23 / maand</div></div>
-                  </div>
-                  <ul><li>Geen API-key kopiëren</li><li>Handig voor ChatGPT- en Codex-workflows</li><li>Plus werkt met gebruikslimieten, niet met een publieke vaste tokenpot</li></ul>
-                </article>
-                <article class="provider-card">
-                  <span class="tag">OAuth</span>
-                  <strong>Claude OAuth</strong>
-                  <p class="muted">Voor klanten die via Claude willen werken zonder losse API-key. Anthropic staat OAuth toe, maar de beschikbare capaciteit is beperkt — de yield is laag en limieten kunnen snel bereikt zijn.</p>
-                  <ul><li>Geen API-key kopiëren</li><li>Anthropic OAuth-koppeling</li><li>Beperkte capaciteit — geschikt als lichte route, niet voor hoog volume</li></ul>
-                </article>
-                <article class="provider-card">
-                  <span class="tag">Open Router</span>
-                  <strong>Meerdere modellen onder één sleutel</strong>
-                  <p class="muted">OpenRouter geeft via één sleutel toegang tot modellen zoals Claude, GPT, DeepSeek en GLM. Handig voor fallback, prijsbewuste routering en het kiezen van een ander model zodra dat beter past.</p>
-                  <p class="muted">Bij deze modelprijzen tonen we twee bedragen per 1M tokens: input voor je prompt naar het model en output voor het antwoord terug. Bij deze modellen is output meestal duurder dan input.</p>
-                  <div class="price-mini-table" aria-label="OpenRouter modelprijzen">
-                    <div class="price-mini-row"><div><strong>Claude Sonnet 4</strong><span>Veelgekozen premium model voor schrijven, analyse en code.</span></div><div class="price-mini-cost">$3 / $15 per 1M</div></div>
-                    <div class="price-mini-row"><div><strong>GPT-5</strong><span>Sterke allround route voor redeneren en tooling.</span></div><div class="price-mini-cost">$1.25 / $10 per 1M</div></div>
-                    <div class="price-mini-row"><div><strong>GLM 5.2</strong><span>Open-weight model met sterke agentische coding- en tool-use, 1M context.</span></div><div class="price-mini-cost">$0.95 / $3 per 1M</div></div>
-                    <div class="price-mini-row"><div><strong>DeepSeek V4 Pro</strong><span>Zwaardere DeepSeek-route voor complexere analyse, code en lange context.</span></div><div class="price-mini-cost">$0.435 / $0.87 per 1M</div></div>
-                    <div class="price-mini-row"><div><strong>DeepSeek V4 Flash</strong><span>Snelle en goedkope DeepSeek-route voor veel volume en responsieve workflows.</span></div><div class="price-mini-cost">$0.09 / $0.18 per 1M</div></div>
-                  </div>
-                  <ul><li>Pay-as-you-go met officiële modelprijzen + circa 5,5% platform fee</li><li>Geschikt voor fallback, vergelijking en budgetcontrole</li><li>Hermes of OpenClaw kiest daarna per taak de ingestelde route</li></ul>
-                </article>
+          <span class="provider-toggle">Modelprijzen (per 1M tokens)</span>
+        </summary>
+        <div class="provider-detail">
+          <div class="provider-grid">
+            <article class="provider-card">
+              <span class="tag">OAuth</span>
+              <strong>ChatGPT / Codex OAuth</strong>
+              <p class="muted">Voor klanten die via ChatGPT of Codex willen werken zonder losse API-key. Je logt eenmalig in; daarna gebruikt de agent een beveiligde OAuth-koppeling als primaire route.</p>
+              <div class="price-mini-table" aria-label="ChatGPT Plus prijs">
+                <div class="price-mini-row"><div><strong>ChatGPT Plus · GPT-5</strong><span>Richtprijs in Nederland, inclusief btw. Gebruikslimieten kunnen wisselen.</span></div><div class="price-mini-cost">€23 / maand</div></div>
               </div>
-              <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment bepalen we of een OAuth-route (ChatGPT of Claude) of OpenRouter de primaire route wordt, plus minimaal één fallback. Als een OAuth-route zijn limiet bereikt of niet beschikbaar is, schakelt de agent door naar het OpenRouter-model dat we vooraf hebben gekozen. Sleutels en OAuth-tokens horen in de private agent-workspace, niet in de website.</div>
-            </div>
-          </details>
-          <details class="provider-disclosure">
-            <summary class="provider-summary">
-              <span class="provider-toggle">Vergelijk Hermes en OpenClaw</span>
-            </summary>
-            <div class="provider-detail">
-              <p class="muted">Hermes en OpenClaw zijn twee losse open-source routes. De keuze gaat niet over één vaste stack, maar over welke agentlaag het beste past bij jullie eerste workflow.</p>
-              <div class="agent-compare-grid">
-                <article class="agent-compare-card">
-                  <span class="tag">Hermes</span>
-                  <strong>Sterk als agent-engine</strong>
-                  <ul><li>Geheugen, skills en tools centraal</li><li>Modelroutering en fallback per taak</li><li>Goed voor analyse, opvolging en kenniswerk</li><li>Past bij teams die een lerende assistent willen</li></ul>
-                </article>
-                <article class="agent-compare-card">
-                  <span class="tag">OpenClaw</span>
-                  <strong>Sterk in kanalen en workflows</strong>
-                  <ul><li>Richting berichtenstromen, routing en interfaces</li><li>Goed voor klantcontact en procesmatige flows</li><li>Past bij teams die kanaalwerk strak willen sturen</li></ul>
-                </article>
+              <ul><li>Geen API-key kopiëren</li><li>Handig voor ChatGPT- en Codex-workflows</li><li>Plus werkt met gebruikslimieten, niet met een publieke vaste tokenpot</li></ul>
+            </article>
+            <article class="provider-card">
+              <span class="tag">OAuth</span>
+              <strong>Claude OAuth</strong>
+              <p class="muted">Voor klanten die via Claude willen werken zonder losse API-key. Anthropic staat OAuth toe, maar de beschikbare capaciteit is beperkt — de yield is laag en limieten kunnen snel bereikt zijn.</p>
+              <ul><li>Geen API-key kopiëren</li><li>Anthropic OAuth-koppeling</li><li>Beperkte capaciteit — geschikt als lichte route, niet voor hoog volume</li></ul>
+            </article>
+            <article class="provider-card">
+              <span class="tag">Open Router</span>
+              <strong>Meerdere modellen onder één sleutel</strong>
+              <p class="muted">OpenRouter geeft via één sleutel toegang tot modellen zoals Claude, GPT, DeepSeek en GLM. Handig voor fallback, prijsbewuste routering en het kiezen van een ander model zodra dat beter past.</p>
+              <p class="muted">Bij deze modelprijzen tonen we twee bedragen per 1M tokens: input voor je prompt naar het model en output voor het antwoord terug. Bij deze modellen is output meestal duurder dan input.</p>
+              <div class="price-mini-table" aria-label="OpenRouter modelprijzen">
+                <div class="price-mini-row"><div><strong>Claude Sonnet 4</strong><span>Veelgekozen premium model voor schrijven, analyse en code.</span></div><div class="price-mini-cost">$3 / $15 per 1M</div></div>
+                <div class="price-mini-row"><div><strong>GPT-5</strong><span>Sterke allround route voor redeneren en tooling.</span></div><div class="price-mini-cost">$1.25 / $10 per 1M</div></div>
+                <div class="price-mini-row"><div><strong>GLM 5.2</strong><span>Open-weight model met sterke agentische coding- en tool-use, 1M context.</span></div><div class="price-mini-cost">$0.95 / $3 per 1M</div></div>
+                <div class="price-mini-row"><div><strong>DeepSeek V4 Pro</strong><span>Zwaardere DeepSeek-route voor complexere analyse, code en lange context.</span></div><div class="price-mini-cost">$0.435 / $0.87 per 1M</div></div>
+                <div class="price-mini-row"><div><strong>DeepSeek V4 Flash</strong><span>Snelle en goedkope DeepSeek-route voor veel volume en responsieve workflows.</span></div><div class="price-mini-cost">$0.09 / $0.18 per 1M</div></div>
               </div>
-              <div class="flow-note"><strong>Kort gezegd:</strong> Hermes is vaak de beste start als geheugen, skills en modelkeuze centraal staan. OpenClaw past beter als communicatiekanalen, routing en workflowinterfaces de kern zijn. Beide kunnen met dezelfde modelroutes en menselijke goedkeuring worden ingericht.</div>
-            </div>
-          </details>
+              <ul><li>Pay-as-you-go met officiële modelprijzen + circa 5,5% platform fee</li><li>Geschikt voor fallback, vergelijking en budgetcontrole</li><li>Hermes kiest daarna per taak de ingestelde route</li></ul>
+            </article>
+          </div>
+          <div class="flow-note"><strong>Hoe het werkt:</strong> tijdens deployment bepalen we of een OAuth-route (ChatGPT of Claude) of OpenRouter de primaire route wordt, plus minimaal één fallback. Als een OAuth-route zijn limiet bereikt of niet beschikbaar is, schakelt de agent door naar het OpenRouter-model dat we vooraf hebben gekozen. Sleutels en OAuth-tokens horen in de private agent-workspace, niet in de website.</div>
         </div>
-      </article>
-    </section>
+      </section>
     <section class="section" id="contact">
       <div class="footer-cta">
         <div>
@@ -755,7 +655,6 @@
         </div>
         <div class="footer-cta-actions">
           <a class="button light" href="#bestel-agent" data-onboarding-agent="hermes">Start Hermes</a>
-          <a class="button secondary" href="#bestel-agent" data-onboarding-agent="openclaw">Start OpenClaw</a>
           <a class="button secondary" href="https://wa.me/31618569839?text=Hallo%20MKBAgents%2C%20ik%20wil%20graag%20contact%20over%20een%20AI-agent%20of%20landingpage." target="_blank" rel="noopener">Contacteer MKBAgents</a>
           <a class="button secondary" href="https://www.bernarddonners-ai.nl">Lees Bernards AI-visie</a>
           <p class="muted" style="font-size:14px">Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Start met één agent, één workflow en één team; daarna pas uitbreiden.</p>
@@ -767,7 +666,7 @@
         <div>
           <div class="order-steps">
             <div class="order-step"><span class="badge">1</span><div><strong>Vul je gegevens in</strong><p class="muted">Naam, e-mailadres en bedrijfsnaam voor de eerste intake.</p></div></div>
-            <div class="order-step"><span class="badge">2</span><div><strong>Kies Hermes of OpenClaw</strong><p class="muted">Bepaal welke agentroute je wilt starten voor de eerste workflow.</p></div></div>
+            <div class="order-step"><span class="badge">2</span><div><strong>Start met Hermes</strong><p class="muted">We bereiden je Hermes-agent voor op de eerste workflow.</p></div></div>
             <div class="order-step"><span class="badge">3</span><div><strong>Voeg je Telegram-token toe</strong><p class="muted">Maak je bot aan via BotFather en plak de token in het formulier. <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.</p></div></div>
             <div class="order-step"><span class="badge">4</span><div><strong>Koppel ChatGPT tijdens installatie</strong><p class="muted">Geen code nodig: we loggen samen in via de officiële ChatGPT-login.</p></div></div>
             <div class="order-step"><span class="badge">5</span><div><strong>Start intake en betaal eerste maand</strong><p class="muted">Na je intake ga je veilig naar Mollie. Na betaling zetten we je installatie klaar.</p></div></div>
@@ -781,7 +680,7 @@
         <article class="order-card">
           <div class="eyebrow" id="order-eyebrow">Hermes intake</div>
           <h2 id="order-title">Start je Hermes intake</h2>
-          <p class="lead" id="order-lead">Vul de gegevens in die nodig zijn om Hermes of OpenClaw voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.</p>
+          <p class="lead" id="order-lead">Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.</p>
           <form id="order-form" style="display:grid;gap:18px;margin-top:28px">
             <div class="field full">
               <label for="order-email">E-mailadres</label>
@@ -803,12 +702,6 @@
                   <strong style="display:flex;align-items:center;gap:10px">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="3" width="26" height="22" rx="5" fill="#D7F268" stroke="#10291f" stroke-width="1.2"/><rect x="6" y="8" width="7" height="5" rx="1.5" fill="#10291f" opacity=".4"/><rect x="15" y="8" width="7" height="5" rx="1.5" fill="#10291f" opacity=".4"/><rect x="6" y="16" width="16" height="4" rx="2" fill="#10291f" opacity=".25"/></svg>
                     Hermes Agent
-                  </strong>
-                </button>
-                <button type="button" class="agent-option" data-agent-option="openclaw">
-                  <strong style="display:flex;align-items:center;gap:10px">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="7" fill="#10291f" stroke="#D7F268" stroke-width="1.4"/><path d="M8 15c2.7-5.8 8.8-5.8 12 0" stroke="#D7F268" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="1.6" fill="#D7F268"/><circle cx="18" cy="10" r="1.6" fill="#D7F268"/></svg>
-                    OpenClaw Agent
                   </strong>
                 </button>
               </div>
@@ -846,9 +739,9 @@
     </section>
 
     <section class="section" style="padding-top:10px;padding-bottom:8px">
-      <div class="logos">Voor MKB-bedrijven waar transparantie, vertrouwen en privacy tellen
+      <div class="logos">Voor ZZP’ers en MKB waar details, vertrouwen en privacy tellen
         <div class="sector-row">
-          <span>Directie & MT</span><span>Inbox & agenda</span><span>CRM & opvolging</span><span>Workflowautomatisering</span><span>Telefoon assistent</span><span>WhatsApp automatiseren</span><span>Dossiers & intake</span>
+          <span>Directie & MT</span><span>Inbox & agenda</span><span>Microsoft 365</span><span>Google Workspace</span><span>CRM & opvolging</span><span>Workflowautomatisering</span><span>Dossiers & intake</span>
         </div>
       </div>
     </section>
@@ -863,8 +756,8 @@
   <script>
     const translations = {
       en: {
-        "MKBAgents, AI-agents voor MKB-bedrijven die snel willen automatiseren": "MKBAgents, AI agents for SMEs that want to automate quickly",
-        "MKBAgents levert beheerde AI-agents voor MKB-bedrijven die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.": "MKBAgents delivers managed AI agents for SMEs that want to automate quickly: secure, controllable and GDPR-aware.",
+        "MKBAgents, AI-agents voor ZZP’ers en MKB die snel willen automatiseren": "MKBAgents, AI agents for freelancers and SMEs that want to automate quickly",
+        "MKBAgents levert beheerde AI-agents voor ZZP’ers en MKB die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.": "MKBAgents delivers managed AI agents for freelancers and SMEs that want to automate quickly: secure, controllable and GDPR-aware.",
         "AI-agents": "AI agents",
         "Oplossingen": "Solutions",
         "Security-aanpak": "Security approach",
@@ -875,28 +768,30 @@
         "Contacteer MKBAgents": "Contact MKBAgents",
         "Modelkeuze": "Model choice",
         "Waarom Hermes?": "Why Hermes?",
-        "De evolutie van AI": "The evolution of AI",
-        "Klik om te vergroten": "Click to enlarge",
+        "Vervang de (dure) premium modellen van ChatGPT en Claude door Hermes met een beter resultaat": "Replace the expensive premium models from ChatGPT and Claude with Hermes for a better result",
+        "Modellen worden snel een commodity. De echte waarde zit in de workflows, het geheugen en de tools eromheen en in wie daar de regie over houdt.": "Models are quickly becoming a commodity. The real value sits in the workflows, memory and tools around them, and in who stays in control of that layer.",
+        "Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. MKBAgents richt zich op dat tweede: AI levert pas echt iets op als het onderdeel wordt van een terugkerende workflow, niet wanneer het als losse tool naast het werk hangt. Een AI-workflow leest, vat samen, routeert, controleert of genereert in samenhang met bestaande systemen en duidelijke menselijke verantwoordelijkheid. Hermes zet klantinformatie, suggesties en conceptantwoorden klaar, de mens beslist wat er naar buiten gaat.": "There is a difference between ‘we use AI’ and ‘AI earns money for us’. MKBAgents focuses on the second: AI only really delivers value when it becomes part of a recurring workflow, not when it sits next to the work as a separate tool. An AI workflow reads, summarizes, routes, checks or generates in connection with existing systems and clear human responsibility. The agent prepares customer information, suggestions and draft replies, the human decides what goes out. That is exactly where the value of Hermes sits.",
         
 
         "Voorwaarden": "Terms",
-        "Telefoon assistent": "Phone assistant",
-        "WhatsApp automatiseren": "Automate WhatsApp",
+        "Plan pilot": "Book pilot",
         "Vraag advies": "Ask for advice",
-        "OpenSource Hermes- en OpenClaw-agent voor MKB": "Open-source Hermes and OpenClaw agent for SMEs",
-        "Minder vendor lock-in. Meer controle voor jou": "Less vendor lock-in. More control for you",
-        "Claude en ChatGPT zijn sterke modellen, maar blijven proprietary routes met terugkerende tokenkosten en afhankelijkheid van één leverancier. Hermes is een gratis, open-source AI-assistent die op je eigen machine draait; met Hermes of OpenClaw houd je workflows, tools en providerkeuze in eigen hand en kun je goedkoper opschalen of wisselen wanneer dat nodig is.": "Claude and ChatGPT are strong models, but remain proprietary routes with recurring token costs and dependence on a single supplier. Hermes is a free, open-source AI assistant that runs on your own machine; with Hermes or OpenClaw, you keep workflows, tools and provider choice in your own hands and can scale or switch more cheaply when needed.",
-        "Waarom Hermes en OpenClaw?": "Why Hermes and OpenClaw?",
-        "Vervang de (dure) premium modellen van ChatGPT en Claude door Hermes of OpenClaw met een beter resultaat": "Replace the expensive premium models from ChatGPT and Claude with Hermes or OpenClaw for a better result",
-        "Modellen worden snel een commodity. De echte waarde zit in de workflows, het geheugen en de tools eromheen en in wie daar de regie over houdt.": "Models are quickly becoming a commodity. The real value sits in the workflows, memory and tools around them, and in who stays in control of that layer.",
-        "Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. MKBAgents richt zich op dat tweede: AI levert pas echt iets op als het onderdeel wordt van een terugkerende workflow, niet wanneer het als losse tool naast het werk hangt. Een AI-workflow leest, vat samen, routeert, controleert of genereert in samenhang met bestaande systemen en duidelijke menselijke verantwoordelijkheid. Hermes of OpenClaw zet klantinformatie, suggesties en conceptantwoorden klaar, de mens beslist wat er naar buiten gaat.": "There is a difference between ‘we use AI’ and ‘AI earns money for us’. MKBAgents focuses on the second: AI only creates real value when it becomes part of a recurring workflow, not when it sits beside the work as a separate tool. An AI workflow reads, summarizes, routes, checks or generates in connection with existing systems and clear human responsibility. Hermes or OpenClaw prepares customer information, suggestions and draft answers; the human decides what goes out.",
-        "Start OpenClaw": "Start OpenClaw",
+        "OpenSource Hermes-agent voor MKB en ZZP": "Open-source Hermes agent for SMEs and freelancers",
+        "Laat AI voor je werken, maar geef je bedrijf niet weg aan Big Tech": "Let AI work for you, but don’t give your business away to Big Tech",
+        "Claude en ChatGPT zijn sterke modellen, maar blijven proprietary routes met terugkerende tokenkosten en afhankelijkheid van één leverancier. Hermes is een gratis, open-source AI-assistent die op je eigen machine draait, waarmee je workflows, tools en providerkeuze in eigen hand houdt en goedkoper kunt opschalen of wisselen wanneer dat nodig is.": "Claude and ChatGPT are strong models, but remain proprietary routes with recurring token costs and dependence on a single supplier. Hermes is a free, open-source AI assistant that runs on your own machine, letting you keep workflows, tools and provider choice in your own hands and scale or switch more cheaply when needed.",
         "Controle, governance en privacy zijn geen details. Ze zijn de basis. AI-agents kunnen doelbewust of onbedoeld worden misbruikt via schadelijke instructies, promptmanipulatie of aanvallen. Daarom richten we inrichting, rechten en context zo in dat de agent begrensd blijft.": "Control, governance and privacy are not details. They are the basis. AI agents can be misused intentionally or unintentionally through harmful instructions, prompt manipulation or attacks. That is why setup, permissions and context are designed so the agent stays bounded.",
         "Prompt-instructies, tools en toegangsrechten worden gescheiden waar mogelijk.": "Prompt instructions, tools and access rights are separated where possible.",
         "Context wordt alleen meegegeven als dat nodig is voor de taak.": "Context is only provided when it is needed for the task.",
         "Logging en afspraken maken achteraf uitlegbaar wat de agent deed.": "Logging and agreements make it explainable afterwards what the agent did.",
         "AI-output kan hallucineren, onjuist, onvolledig of ongeschikt zijn voor de specifieke situatie.": "AI output can hallucinate, be incorrect, incomplete or unsuitable for the specific situation.",
         "MKBAgents verwerkt persoonsgegevens en bedrijfsgegevens alleen voor zover nodig om de agent te configureren, beveiligen, uitvoeren en beheren. Gevoelige informatie mag niet onnodig in prompts, geheugen of logs terechtkomen.": "MKBAgents processes personal data and business data only as far as needed to configure, secure, run and manage the agent. Sensitive information should not unnecessarily end up in prompts, memory or logs.",
+        "Datasoevereiniteit": "Data sovereignty",
+        "Europese hosting is waardevol, maar niet hetzelfde als volledige datasoevereiniteit. Een server in Frankfurt zegt waar data fysiek staat; eigendom, toepasselijk recht, modelroute en toegangsrechten bepalen wie er juridisch of technisch bij kan. Het FTC-Urteil van juni 2026 laat zien waarom dat verschil belangrijker wordt voor AI-strategie.": "European hosting is valuable, but not the same as full data sovereignty. A server in Frankfurt tells you where data physically lives; ownership, applicable law, model routing and access rights determine who can legally or technically access it. The FTC ruling of June 2026 shows why that difference is becoming more important for AI strategy.",
+        "We kijken per workflow welke data publiek, intern, persoonlijk of gevoelig is.": "We assess per workflow which data is public, internal, personal or sensitive.",
+        "Gevoelige taken kunnen via EU-cloud, eigen VPS, lokale machine of self-hosted route worden ingericht.": "Sensitive tasks can be set up through EU cloud, a dedicated VPS, a local machine or a self-hosted route.",
+        "Open-source agentlagen zoals Hermes beperken vendor lock-in: tools, context en modelkeuze blijven modulair.": "Open-source agent layers such as Hermes reduce vendor lock-in: tools, context and model choice remain modular.",
+        "Niet alles hoeft lokaal; minder kritische taken kunnen bewust naar externe modellen als dat praktisch en verantwoord is.": "Not everything has to run locally; less critical tasks can deliberately use external models when that is practical and responsible.",
+        "Het uitgangspunt: bewust routeren in plaats van ongemerkt afhankelijk worden van één Big Tech-platform.": "The principle: route deliberately instead of becoming quietly dependent on one Big Tech platform.",
         "Toegang wordt beperkt tot wat noodzakelijk is voor inrichting, beheer, beveiliging en support.": "Access is limited to what is necessary for setup, management, security and support.",
         "Datagovernance, AVG-afspraken en veilige contextbehandeling horen bij de inrichting.": "Data governance, GDPR agreements and secure context handling are part of the setup.",
         "Een MKBAgent mag voorbereiden, samenvatten, signaleren, ordenen en concepten klaarzetten. Juist omdat agentic AI taken kan onthouden, herhalen, uitvoeren en opschalen over systemen heen, blijft menselijke controle nodig bij gevoelige of externe acties. Automatisering mag accountability niet verminderen en processen moeten te stoppen of bij te sturen blijven nadat ze gestart zijn.": "An MKBAgent may prepare, summarize, signal, organize and draft concepts. Precisely because agentic AI can remember, repeat, execute and scale tasks across systems, human control remains necessary for sensitive or external actions. Automation must not reduce accountability and processes must remain stoppable or adjustable after they have started.",
@@ -911,7 +806,7 @@
         "Welke leads en dossiers vragen vandaag directe opvolging?": "Which leads and files need direct follow-up today?",
         "Ik zie drie dossiers en twee warme leads. Twee acties kunnen direct worden voorbereid; één voorstel wacht op akkoord. Ik zet de conceptmail klaar, maar verstuur niets zonder jouw bevestiging.": "I see three files and two warm leads. Two actions can be prepared immediately; one proposal is waiting for approval. I will draft the email, but send nothing without your confirmation.",
         "Actie vereist menselijke goedkeuring · gegevens blijven binnen EU-workspace.": "Action requires human approval · data remains inside the EU workspace.",
-        "Voor MKB-bedrijven waar transparantie, vertrouwen en privacy tellen": "For SMEs where transparency, trust and privacy matter",
+        "Voor ZZP’ers en MKB waar details, vertrouwen en privacy tellen": "For freelancers and SMEs where detail, trust and privacy matter",
         "Dossiers & intake": "Files & intake",
         "Business development": "Business development",
         "Directie & MT": "Leadership & management",
@@ -941,15 +836,15 @@
         "Waar je al werkt": "Where you already work",
         "Werkt waar je al werkt: Telegram, WhatsApp en Slack. Ook via de browser op je iPhone in Safari of op de Hermes app.": "Works where you already work: Telegram, WhatsApp and Slack. Also via the browser on your iPhone in Safari or on the Hermes app.",
         "Hermes-platform": "Hermes platform",
-        "Twee open-source routes voor je dagelijkse werk": "Two open-source routes for your daily work",
-        "Hermes of OpenClaw verbindt kanalen, tools en modellen": "Hermes or OpenClaw connects channels, tools and models",
+        "Eén betrouwbare agentlaag voor je dagelijkse werk": "One reliable agent layer for your daily work",
+        "Hermes verbindt je kanalen, tools en modellen": "Hermes connects your channels, tools and models",
         "Hermes": "Hermes",
         "kanalen · workflows · modellen": "channels · workflows · models",
         "Slack": "Slack",
         "Hermes app": "Hermes app",
         "Hermes app": "Hermes app",
         "Hermes": "Hermes",
-        "Hermes of OpenClaw houdt kanalen, geheugen, tools en modelroutes overzichtelijk bij elkaar.": "Hermes or OpenClaw keeps channels, memory, tools and model routes clearly connected.",
+        "Hermes houdt kanalen, geheugen, tools en modelroutes overzichtelijk bij elkaar.": "Hermes keeps channels, memory, tools and model routes clearly connected.",
         
         "Hermes-architectuur": "Hermes architecture",
         "Kanalen · geheugen · tools · modellen": "Channels · memory · tools · models",
@@ -976,23 +871,22 @@
         "AI-geletterdheid": "AI literacy",
         "Bernards rol als Lector AI helpt teams begrijpen wat AI wel en niet moet doen.": "Bernard's role as Professor of Applied AI helps teams understand what AI should and should not do.",
         "Zes soorten werk om mee te starten": "Six types of work to get started",
-        "De eerste versie richt zich op concrete, terugkerende workflows voor MKB-bedrijven. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.": "The first version focuses on concrete, recurring workflows for SMEs. Start small, prove that it works, then expand, with a focus on time savings, overview and controllable AI.",
-        "Uiteindelijk is het doel dat kenniswerkers meer grip krijgen op het werk tussen oude systemen, data en nieuwe processen. Daar zit de echte waarde: AI moet mensen helpen de kloof te overbruggen tussen verouderde systemen en moderne, datagedreven bedrijfsvoering.": "Ultimately, the goal is for knowledge workers to gain more control over the work between old systems, data and new processes. That is where the real value sits: AI should help people bridge the gap between outdated systems and modern, data-driven operations.",
+        "De eerste versie richt zich op concrete, terugkerende workflows voor ZZP’ers en MKB. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.": "The first version focuses on concrete, recurring workflows for freelancers and SMEs. Start small, prove that it works, then expand, with a focus on time savings, overview and controllable AI.",
         "Inbox, agenda & monitoring": "Inbox, calendar & monitoring",
         "Continu zicht op wat ertoe doet": "Continuous visibility on what matters",
         "Laat mail samenvatten, urgente berichten markeren en afspraken of signalen bewaken. Hermes kan je agenda bijhouden vanuit diverse mails en kanalen, zodat losse signalen samenkomen in één rustig overzicht.": "Have email summarized, urgent messages marked and appointments or signals monitored. Hermes can keep your calendar up to date from different emails and channels, so loose signals come together in one calm overview.",
         "“Elke ochtend: vat mijn inbox en agenda samen en laat zien wat relevant is voor mijn dag.”": "“Every morning: summarize my inbox and calendar and show what is relevant for my day.”",
         "Website & landingpage": "Website & landing page",
         "Van idee naar verkoopbare pagina": "From idea to sellable page",
-        "Zet je propositie om in een compacte website of landingpage met heldere tekst, passende visuals, CTA’s en een intake- of contactroute die direct bruikbaar is voor MKB-bedrijven.": "Turn your proposition into a compact website or landing page with clear copy, fitting visuals, CTAs and an intake or contact route that is immediately useful for SMEs.",
+        "Zet je propositie om in een compacte website of landingpage met heldere tekst, passende visuals, CTA’s en een intake- of contactroute die direct bruikbaar is voor ZZP’ers en MKB.": "Turn your proposition into a compact website or landing page with clear copy, fitting visuals, CTAs and an intake or contact route that is immediately useful for freelancers and SMEs.",
         "“Maak van deze dienst een landingpage met doelgroep, aanbod, bewijs, prijsroute en WhatsApp-contact.”": "“Turn this service into a landing page with audience, offer, proof, pricing route and WhatsApp contact.”",
         "Workflowautomatisering": "Workflow automation",
         "Het herhaalbare dagelijks geregeld": "Recurring daily work handled",
         "Documenten ordenen, lijstjes bijhouden, intake vastleggen en ontbrekende informatie signaleren zonder onnodige frictie.": "Organize documents, maintain lists, record intake and flag missing information without unnecessary friction.",
         "“Nieuwe notitie binnen → op de juiste plek zetten → markeren wat nog ontbreekt.”": "“New note received → place it correctly → mark what is still missing.”",
-        "Van losse AI-tool naar werkende workflow": "From a loose AI tool to a working workflow",
-        "De vraag is niet of een organisatie ergens AI gebruikt. De vraag is of AI onderdeel wordt van een terugkerende workflow. In klantcontact, softwareontwikkeling, juridische analyse, marketing, interne kennisbanken en financiële processen ontstaat pas waarde wanneer AI meeloopt in het werk zelf, met duidelijke grenzen en menselijke verantwoordelijkheid.": "The question is not whether an organization uses AI somewhere. The question is whether AI becomes part of a recurring workflow. In customer contact, software development, legal analysis, marketing, internal knowledge bases and financial processes, value appears when AI moves with the work itself, with clear boundaries and human responsibility.",
-        "Met een AI-workflow bedoel ik: een terugkerend bedrijfsproces waarin AI informatie leest, samenvat, routeert of controleert, gekoppeld aan bestaande systemen. Dus niet alleen een losse prompt in ChatGPT, maar een medewerker die tijdens het werk relevante klantinformatie, productsuggesties en conceptantwoorden krijgt. De mens beslist wat er naar buiten gaat.": "By an AI workflow I mean a recurring business process in which AI reads, summarizes, routes or checks information, connected to existing systems. So not just a loose prompt in ChatGPT, but an employee who receives relevant customer information, product suggestions and draft replies while working. The human decides what goes out.",
+        "Van AI gebruiken naar AI die waarde oplevert": "From using AI to AI that creates value",
+        "Er is een verschil tussen “we gebruiken AI” en “AI verdient geld voor ons”. Dat verschil wordt in 2026 steeds belangrijker. Bij veel grote organisaties is AI inmiddels overal aanwezig: in klantcontact, softwareontwikkeling, juridische analyse, marketing, interne kennisbanken en financiële processen. Maar de opbrengst is grilliger dan de boardroomslides doen vermoeden. De eerste les uit de praktijk is vrij simpel: AI levert pas echt iets op als het onderdeel wordt van een workflow, niet wanneer het als losse tool naast het werk hangt.": "There is a difference between ‘we use AI’ and ‘AI earns money for us’. That difference becomes increasingly important in 2026. In many large organizations AI is now everywhere: in customer contact, software development, legal analysis, marketing, internal knowledge bases and financial processes. But the return is more uneven than boardroom slides suggest. The first practical lesson is simple: AI only really delivers value when it becomes part of a workflow, not when it sits next to the work as a separate tool.",
+        "Met een AI-workflow bedoel ik: een terugkerend bedrijfsproces waarin AI informatie leest, samenvat, voorspelt, genereert, routeert of controleert, mét koppeling aan bestaande systemen en met duidelijke menselijke verantwoordelijkheid. Dus niet alleen een medewerker die ChatGPT gebruikt om een tekst te herschrijven, maar bijvoorbeeld een klantenservicemedewerker die tijdens een gesprek automatisch relevante klantinformatie, productsuggesties en conceptantwoorden krijgt. En daarna nog steeds zelf beslist wat er naar de klant gaat.": "By an AI workflow I mean a recurring business process in which AI reads, summarizes, predicts, generates, routes or checks information, connected to existing systems and with clear human responsibility. So not just an employee using ChatGPT to rewrite a text, but for example a customer-service employee who automatically receives relevant customer information, product suggestions and draft replies during a conversation. And still decides personally what is sent to the customer afterwards.",
         "Content & kennis": "Content & knowledge",
         "Van briefing naar consistente output": "From briefing to consistent output",
         "Artikelen, posts, klantupdates en interne notities in een herkenbare toon en vaste structuur.": "Articles, posts, client updates and internal notes in a recognizable tone and fixed structure.",
@@ -1009,13 +903,13 @@
         "Koppelingen met n8n": "Integrations with n8n",
         "Bekijk details": "View details",
         "Koppelt met de software die je al gebruikt": "Connects with the software you already use",
-        "Hermes en OpenClaw zijn sterk in context, redeneren en samenwerking met mensen. Voor vaste, herhaalbare stappen kan n8n soms effectiever zijn: de agent denkt mee, de workflow voert voorspelbaar uit. Zo verbinden we je agent met de systemen waar je bedrijf nu al op draait: mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools. Waar een standaardkoppeling bestaat gebruiken we die. Waar die ontbreekt, kijken we naar API, webhook of een veilige handmatige route.": "Hermes and OpenClaw are strong in context, reasoning and human collaboration. For fixed, repeatable steps, n8n can sometimes be more effective: the agent thinks along, the workflow executes predictably. This connects your agent with the systems your business already runs on: email, calendar, spreadsheets, forms, CRM, payments and internal tools. Where a standard integration exists, we use it. Where it is missing, we look at an API, webhook or a safe manual route.",
+        "Hermes is sterk in context, redeneren en samenwerking met mensen. Hermes kan zelf tools en koppelingen aansturen. Voor processen die strak, herhaalbaar of goed controleerbaar moeten zijn, koppelen we Hermes bijvoorbeeld aan n8n als workflowlaag. Zo kan je agent samenwerken met mail, agenda, spreadsheets, formulieren, CRM, betalingen en interne tools, terwijl n8n de vaste stappen voorspelbaar uitvoert. Bestaat er een standaardkoppeling, dan gebruiken we die. Anders kiezen we voor API, webhook of een veilige handmatige route.": "Hermes is strong in context, reasoning and human collaboration. Hermes can control tools and integrations itself. For processes that need to be tight, repeatable or easy to audit, we can connect Hermes to n8n as a workflow layer, for example. This lets your agent work with email, calendar, spreadsheets, forms, CRM, payments and internal tools, while n8n executes the fixed steps predictably. If a standard integration exists, we use it. Otherwise, we choose an API, webhook or a safe manual route.",
         "Mail & agenda": "Email & calendar",
         "Inbox, afspraken en opvolging": "Inbox, appointments and follow-up",
-        "Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en agenda-updates voorbereiden zonder dat de agent zomaar namens jou verstuurt.": "Have email summarized, urgent messages marked, reminders prepared and calendar updates drafted without the agent sending on your behalf by default.",
+        "Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en Teams- of agenda-updates doorgeven zonder dat de agent zomaar namens jou verstuurt.": "Have email summarized, urgent messages marked, reminders prepared and Teams or calendar updates passed on without the agent sending on your behalf by default.",
         "Spreadsheets & bestanden": "Spreadsheets & files",
         "Lijsten, rapportages en documenten": "Lists, reports and documents",
-        "Gebruik spreadsheets, bestanden en documentopslag als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.": "Use spreadsheets, files and document storage as practical sources for overviews, reports, intake files and document processing.",
+        "Gebruik Sheets, Excel, Drive of OneDrive als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.": "Use Sheets, Excel, Drive or OneDrive as a practical source for overviews, reports, intake files and document processing.",
         "CRM & klantvragen": "CRM & customer questions",
         "Leads en dossiers komen op de juiste plek": "Leads and files land in the right place",
         "Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.": "New requests can automatically go to your CRM, spreadsheet or mailbox, with a short summary and suggested follow-up.",
@@ -1023,22 +917,22 @@
         "Van aanvraag naar activatie": "From request to activation",
         "Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden.": "Forms, webhooks and Mollie can keep intake, payment status and activation separate.",
         "AI & agenttaken": "AI & agent tasks",
-        "n8n stuurt de flow, Hermes of OpenClaw doet het denkwerk": "n8n routes the flow, Hermes or OpenClaw does the thinking",
+        "n8n stuurt de flow, Hermes doet het denkwerk": "n8n routes the flow, Hermes does the thinking",
         "Voor AI-flows koppelen we n8n aan modellen, documenten, vector databases en tools. De agent maakt samenvattingen, concepten of acties klaar.": "For AI flows we connect n8n to models, documents, vector databases and tools. The agent prepares summaries, drafts or actions.",
         "Eigen systemen": "Own systems",
         "Ook zonder standaardknop vaak koppelbaar": "Often connectable even without a standard button",
         "Heeft je software een API, database of webhook? Dan kunnen we vaak koppelen zonder dat je hoeft te migreren naar een ander platform.": "Does your software have an API, database or webhook? Then we can often connect without requiring a migration to another platform.",
-        "Inzet van Deterministische Agenten": "Using deterministic agents",
-        "Hermes en OpenClaw werken samen met deterministische workflow-tools zoals n8n: de agent denkt, de workflow voert uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper — terwijl de agent zich richt op waar echt inzicht nodig is.": "Hermes and OpenClaw work together with deterministic workflow tools such as n8n: the agent thinks, the workflow executes. This makes routine tasks more reliable, predictable and cheaper, while the agent focuses on where real insight is needed.",
         "Waarom n8n noemen?": "Why mention n8n?",
         "MKBAgents is geen n8n-bureau, maar gebruikt n8n waar een proces zichtbaar, controleerbaar en uitbreidbaar moet zijn. Zo blijft de agentlaag open en blijft je bestaande software leidend.": "MKBAgents is not an n8n agency, but uses n8n where a process needs to be visible, controllable and extensible. That keeps the agent layer open and your existing software leading.",
+        "Microsoft 365": "Microsoft 365",
+        "Google Workspace": "Google Workspace",
         "CRM & opvolging": "CRM & follow-up",
         "Prijzen": "Pricing",
         "Pakketten": "Packages",
-        "Drie manieren om Hermes en OpenClaw te draaien": "Three ways to run Hermes and OpenClaw",
+        "Drie manieren om Hermes te draaien": "Three ways to run Hermes",
         "1 · Starter": "1 · Starter",
         "Managed Agent": "Managed Agent",
-        "Voor MKB-bedrijven die snel willen starten: jouw agent draait op door MKBAgents beheerde Europese infrastructuur, met eigen botkoppeling, gescheiden configuratie en duidelijke beheerafspraken.": "For SME companies that want to start quickly: your agent runs on European infrastructure managed by MKBAgents, with its own bot connection, separated configuration and clear management agreements.",
+        "Voor MKB-bedrijven en zzp’ers die snel willen starten: jouw agent draait op door MKBAgents beheerde Europese infrastructuur, met eigen botkoppeling, gescheiden configuratie en duidelijke beheerafspraken.": "For SME companies and freelancers who want to start quickly: your agent runs on European infrastructure managed by MKBAgents, with its own bot connection, separated configuration and clear management agreements.",
         "Kies Telegram of WhatsApp om te communiceren met de agent": "Choose Telegram or WhatsApp to communicate with the agent",
         "Opgezet met ChatGPT of OpenRouter, afhankelijk van de gekozen route": "Set up with ChatGPT or OpenRouter, depending on the chosen route",
         "Snelle activatie met beheer, updates en monitoring inbegrepen": "Quick activation with management, updates and monitoring included",
@@ -1052,7 +946,7 @@
         "Vanaf €79": "From €79",
         "/ maand": "/ month",
         "Eigen cloud of Mac": "Own cloud or Mac",
-        "Voor MKB-bedrijven die zelf eigenaar willen blijven van de infrastructuurrelatie: eigen Mac mini, VPS of bestaande cloud. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.": "For SMEs that want to remain owners of the infrastructure relationship: their own Mac mini, VPS or existing cloud. MKBAgents provides setup, integration, updates or support as agreed.",
+        "Voor ZZP’ers en MKB-bedrijven die zelf eigenaar willen blijven van de infrastructuurrelatie: eigen Mac mini, VPS of bestaande cloud. MKBAgents verzorgt setup, koppeling, updates of support volgens afspraak.": "For freelancers and SMBs that want to remain owners of the infrastructure relationship: their own Mac mini, VPS or existing cloud. MKBAgents provides setup, integration, updates or support as agreed.",
         "Eigen Mac mini, VPS of bestaande cloud": "Own Mac mini, VPS or existing cloud",
         "Eenmalige setup, verder geen beheerskosten": "One-time setup, no further management costs",
         "Maandelijkse support of beheerabonnement mogelijk": "Monthly support or management subscription possible",
@@ -1065,7 +959,7 @@
         "Voor bedrijven die hun agent liever op eigen hardware of in een eigen kantooropstelling laten draaien, richt MKBAgents een Mac mini M4 of bestaande Mac in als private AI-basis. Afhankelijk van de workflow kiezen we de best passende Hermes-route per kanaal, team en automatisering.": "For companies that prefer to run their agent on their own hardware or in their own office setup, MKBAgents can set up a Mac mini M4 or existing Mac as a private AI base. Depending on the workflow, we choose the best-fitting Hermes route per channel, team and automation.",
         "Setup": "Setup",
         "Wat we opleveren": "What we deliver",
-        "Een werkende zakelijke basisconfiguratie voor support, sales of interne workflowautomatisering, niet alleen een promptscherm.": "A working business base configuration for support, sales or internal workflow automation, not just a prompt screen.",
+        "Een werkende zakelijke basisconfiguratie voor ZZP’ers, support, sales of interne workflowautomatisering, niet alleen een promptscherm.": "A working business base configuration for freelancers, support, sales or internal workflow automation, not just a prompt screen.",
         "Installatie en configuratie van Hermes": "Installation and configuration of Hermes",
         "Koppeling met Slack, Telegram, WhatsApp of browser": "Connection to Slack, Telegram, WhatsApp or browser",
         "Modelroutes via jullie eigen accounts en budgetkeuzes": "Model routes through your own accounts and budget choices",
@@ -1083,7 +977,7 @@
         "Intake vooraf op use-case, team en maandbudget": "Intake first around use case, team and monthly budget",
         "Directe live test tijdens de setup": "Direct live testing during setup",
         "Nazorg, updates en doorontwikkeling mogelijk": "Aftercare, updates and further development possible",
-        "Geschikt voor kleine teams, directie en eigen kantooromgeving": "Suitable for small teams, leadership and your own office environment",
+        "Geschikt voor ZZP’ers, kleine teams en eigen kantooromgeving": "Suitable for freelancers, small teams and your own office environment",
         "Belangrijk over kosten:": "Important about costs:",
         "hardware, AI-API's, domeinen, telefonie, cloudopslag en andere externe diensten vallen buiten de setupprijs. Tijdens intake bepalen we of eigen Mac mini, managed cloud of een hybride route de beste zakelijke keuze is.": "hardware, AI APIs, domains, telephony, cloud storage and other external services fall outside the setup price. During intake we determine whether your own Mac mini, managed cloud or a hybrid route is the best business choice.",
         "2 · Dedicated": "2 · Dedicated",
@@ -1091,7 +985,7 @@
         "3 · Bring your own": "3 · Bring your own",
         "Modelkeuze & toegang": "Model choice & access",
         "Wijs per taak het juiste model toe": "Assign the right model to each task",
-        "Gebruik ChatGPT/Codex via OAuth, gebaseerd op je maandelijkse abonnement én commodity modellen via OpenRouter. Als een route zijn limiet bereikt, schakelt de agent over naar een vooraf gekozen alternatief. Hermes beschikt over MOA (Mix of Agents) en OpenClaw kan als alternatieve agentroute worden ingericht; per taak bepalen we welke route het beste past.": "Use ChatGPT/Codex through OAuth, based on your monthly subscription, and commodity models through OpenRouter. If a route reaches its limit, the agent switches to a preselected alternative. Hermes supports MOA (Mix of Agents), and OpenClaw can be configured as an alternative agent route; for each task, we determine which route fits best.",
+        "Gebruik ChatGPT/Codex via OAuth, gebaseerd op je maandelijkse abonnement én commodity modellen via OpenRouter. Als een route zijn limiet bereikt, schakelt de agent over naar een vooraf gekozen alternatief. Hermes beschikt over MOA (Mix of Agents) waar je de modellen per taak kunt alloceren.": "Use ChatGPT/Codex through OAuth, based on your monthly subscription, and commodity models through OpenRouter. If a route reaches its limit, the agent switches to a preselected alternative. Hermes supports MOA (Mix of Agents), letting you allocate models per task.",
         "OAuth + OpenRouter": "OAuth + OpenRouter",
         "Twee toegangswegen, één agentlaag": "Two access routes, one agent layer",
         "Je logt in met ChatGPT/Codex of gebruikt OpenRouter als modelhub. Daarna kiest de agent per taak de ingestelde route en fallback.": "You sign in with ChatGPT/Codex or use OpenRouter as a model hub. After that, the agent chooses the configured route and fallback per task.",
@@ -1100,20 +994,6 @@
         "OpenRouter voor meerdere modellen": "OpenRouter for multiple models",
         "Automatische fallback bij limieten of storingen": "Automatic fallback when limits are hit or outages occur",
         "Modelprijzen (per 1M tokens)": "Model prices (per 1M tokens)",
-        "Vergelijk Hermes en OpenClaw": "Compare Hermes and OpenClaw",
-        "Hermes en OpenClaw zijn twee losse open-source routes. De keuze gaat niet over één vaste stack, maar over welke agentlaag het beste past bij jullie eerste workflow.": "Hermes and OpenClaw are two separate open-source routes. The choice is not about one fixed stack, but about which agent layer best fits your first workflow.",
-        "Sterk als agent-engine": "Strong as an agent engine",
-        "Geheugen, skills en tools centraal": "Memory, skills and tools at the center",
-        "Modelroutering en fallback per taak": "Model routing and fallback per task",
-        "Goed voor analyse, opvolging en kenniswerk": "Good for analysis, follow-up and knowledge work",
-        "Past bij teams die een lerende assistent willen": "Fits teams that want a learning assistant",
-        "Sterk in kanalen en workflows": "Strong in channels and workflows",
-        "Richting berichtenstromen, routing en interfaces": "Toward message flows, routing and interfaces",
-
-        "Goed voor klantcontact en procesmatige flows": "Good for customer contact and process-driven flows",
-        "Past bij teams die kanaalwerk strak willen sturen": "Fits teams that want tighter control of channel work",
-        "Kort gezegd:": "In short:",
-        "Hermes is vaak de beste start als geheugen, skills en modelkeuze centraal staan. OpenClaw past beter als communicatiekanalen, routing en workflowinterfaces de kern zijn. Beide kunnen met dezelfde modelroutes en menselijke goedkeuring worden ingericht.": "Hermes is often the best starting point when memory, skills and model choice are central. OpenClaw fits better when communication channels, routing and workflow interfaces are the core. Both can be configured with the same model routes and human approval.",
         "ChatGPT / Codex OAuth": "ChatGPT / Codex OAuth",
         "Voor klanten die via ChatGPT of Codex willen werken zonder losse API-key. Je logt eenmalig in; daarna gebruikt de agent een beveiligde OAuth-koppeling als primaire route.": "For customers who want to work through ChatGPT or Codex without a separate API key. You log in once; after that the agent uses a secure OAuth connection as the primary route.",
         "Geen API-key kopiëren": "No API key copying",
@@ -1149,7 +1029,7 @@
         "$0.09 / $0.18 per 1M": "$0.09 / $0.18 per 1M",
         "Pay-as-you-go met officiële modelprijzen + circa 5,5% platform fee": "Pay-as-you-go with official model prices + about 5.5% platform fee",
         "Geschikt voor fallback, vergelijking en budgetcontrole": "Suitable for fallback, comparison and budget control",
-        "Hermes of OpenClaw kiest daarna per taak de ingestelde route": "Hermes or OpenClaw then chooses the configured route for each task",
+        "Hermes kiest daarna per taak de ingestelde route": "Hermes then chooses the configured route for each task",
         "Hoe het werkt:": "How it works:",
         "tijdens deployment bepalen we of een OAuth-route (ChatGPT of Claude) of OpenRouter de primaire route wordt, plus minimaal één fallback. Als een OAuth-route zijn limiet bereikt of niet beschikbaar is, schakelt de agent door naar het OpenRouter-model dat we vooraf hebben gekozen. Sleutels en OAuth-tokens horen in de private agent-workspace, niet in de website.": "during deployment we decide whether an OAuth route (ChatGPT or Claude) or OpenRouter becomes the primary route, plus at least one fallback. If an OAuth route hits its limit or is unavailable, the agent switches to the OpenRouter model we selected in advance. Keys and OAuth tokens belong in the private agent workspace, not in the website.",
         "Security & data": "Security & data",
@@ -1175,10 +1055,8 @@
         "€29 / maand per bot": "€29 / month per bot",
         "Geen grote startkosten en direct opzegbaar.": "No large start-up costs and cancel any time.",
         "Hermes intake": "Hermes intake",
-        "OpenClaw intake": "OpenClaw intake",
         "Start je Hermes intake": "Start your Hermes intake",
-        "Start je OpenClaw intake": "Start your OpenClaw intake",
-        "Vul de gegevens in die nodig zijn om Hermes of OpenClaw voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.": "Fill in the details needed to prepare Hermes or OpenClaw for your first workflow. Then you go safely to Mollie; installation follows after payment.",
+        "Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.": "Fill in the details needed to prepare Hermes for your first workflow. Then you go safely to Mollie; installation follows after payment.",
         "E-mailadres": "Email address",
         "Naam": "Name",
         "Bedrijf": "Company",
@@ -1246,8 +1124,7 @@
         "Privacybeleid": "Privacy policy",
         "· Gebouwd voor MKB met Bernard's AI visie.": "· Built for SMEs with Bernard's AI vision.",
         "Gebouwd voor MKB met Bernard's AI visie.": "Built for SMEs with Bernard's AI vision."
-,
-        "Hermes-video": "Hermes video"      }
+      }
     };
 
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
@@ -1268,10 +1145,10 @@
       const dict = translations[lang] || {};
       document.documentElement.lang = lang;
       document.body.dataset.lang = lang;
-      document.title = lang === 'en' ? dict['MKBAgents, AI-agents voor MKB-bedrijven die snel willen automatiseren'] : 'MKBAgents, AI-agents voor MKB-bedrijven die snel willen automatiseren';
+      document.title = lang === 'en' ? dict['MKBAgents, AI-agents voor ZZP’ers en MKB die snel willen automatiseren'] : 'MKBAgents, AI-agents voor ZZP’ers en MKB die snel willen automatiseren';
       const meta = document.querySelector('meta[name="description"]');
       if(meta){
-        meta.setAttribute('content', lang === 'en' ? dict['MKBAgents levert beheerde AI-agents voor MKB-bedrijven die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.'] : 'MKBAgents levert beheerde AI-agents voor MKB-bedrijven die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.');
+        meta.setAttribute('content', lang === 'en' ? dict['MKBAgents levert beheerde AI-agents voor ZZP’ers en MKB die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.'] : 'MKBAgents levert beheerde AI-agents voor ZZP’ers en MKB die snel willen automatiseren: veilig, controleerbaar en AVG-bewust.');
       }
       translatableNodes.forEach(node => {
         const original = node.datasetKey;
@@ -1309,31 +1186,31 @@
         hermes: {
           eyebrow: 'Hermes intake',
           title: 'Start je Hermes intake',
-          lead: 'Vul de gegevens in die nodig zijn om Hermes Agent voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.'
+          lead: 'Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.'
         },
-        openclaw: {
-          eyebrow: 'OpenClaw intake',
-          title: 'Start je OpenClaw intake',
-          lead: 'Vul de gegevens in die nodig zijn om OpenClaw Agent voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.'
+        hermes: {
+          eyebrow: 'Hermes intake',
+          title: 'Start je Hermes intake',
+          lead: 'Vul de gegevens in die nodig zijn om Hermes Agent voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.'
         }
       },
       en: {
         hermes: {
           eyebrow: 'Hermes intake',
           title: 'Start your Hermes intake',
-          lead: 'Fill in the details needed to prepare Hermes Agent for your first workflow. Then you go safely to Mollie; installation follows after payment.'
+          lead: 'Fill in the details needed to prepare Hermes for your first workflow. Then you go safely to Mollie; installation follows after payment.'
         },
-        openclaw: {
-          eyebrow: 'OpenClaw intake',
-          title: 'Start your OpenClaw intake',
-          lead: 'Fill in the details needed to prepare OpenClaw Agent for your first workflow. Then you go safely to Mollie; installation follows after payment.'
+        hermes: {
+          eyebrow: 'Hermes intake',
+          title: 'Start your Hermes intake',
+          lead: 'Fill in the details needed to prepare Hermes Agent for your first workflow. Then you go safely to Mollie; installation follows after payment.'
         }
       }
     };
 
     function setSelectedAgent(agent){
       if(!orderAgentInput) return;
-      const selectedAgent = agent === 'openclaw' ? 'openclaw' : 'hermes';
+      const selectedAgent = 'hermes';
       orderAgentInput.value = selectedAgent;
       document.querySelectorAll('[data-agent-option]').forEach(button => {
         button.classList.toggle('active', button.dataset.agentOption === selectedAgent);
