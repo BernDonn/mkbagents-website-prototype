@@ -2,4 +2,4 @@
 
 Publieke website voor MKBAgents.nl.
 
-Deze repository bevat de statische websitebestanden die via GitHub Pages worden gepubliceerd.
+Deze versie positioneert MKBAgents als implementatiepartner voor digitale medewerkers en AI-workflows voor het Nederlandse MKB.
