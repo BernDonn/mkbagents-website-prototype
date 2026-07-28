@@ -259,7 +259,7 @@
 
   <div class="btn-group">
     <a class="btn btn-primary" href="#scan">Start de scan →</a>
-    <a class="btn btn-secondary" href="mailto:info@mkbagents.nl">Liever mailen</a>
+    <a class="btn btn-secondary" href="mailto:info@zzpagent.nl">Liever mailen</a>
   </div>
 
   <h2 class="section-title">Wat is een AI Quickscan en wat krijg je?</h2>
@@ -464,7 +464,7 @@
   </div>
 
   <footer>
-    <p><a href="/">MKBagent</a> · <a href="mailto:info@mkbagents.nl">info@mkbagents.nl</a></p>
+    <p><a href="/">MKBagent</a> · <a href="mailto:info@zzpagent.nl">info@mkbagents.nl</a></p>
   </footer>
 
 </div>
@@ -586,7 +586,7 @@
   }
 
   async function sendQuickscanMail(data) {
-    const response = await fetch('https://formsubmit.co/ajax/info@mkbagents.nl', {
+    const response = await fetch('https://formsubmit.co/ajax/info@zzpagent.nl', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: buildMailPayload(data)
@@ -657,7 +657,7 @@
       }
     } catch (err) {
       console.error(err);
-      alert('Verzenden lukt nu niet. Mail je antwoorden naar info@mkbagents.nl, dan pak ik de Quickscan alsnog op.');
+      alert('Verzenden lukt nu niet. Gebruik de mailknop, dan pak ik de Quickscan alsnog op.');
       btn.disabled = false;
       btn.querySelector('.btn-text').textContent = 'Verzenden →';
       btn.querySelector('.spinner').style.display = 'none';
