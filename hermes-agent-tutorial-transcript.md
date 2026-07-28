@@ -1,16 +1,16 @@
 # Hermes Agent tutorial voor MKB’ers, transcript en AI-samenvatting
 
-Deze pagina maakt de ondertitels van de MKBagent/Hermes-video leesbaar voor zoekmachines en AI-systemen. De video legt uit hoe een persoonlijke open-source Hermes-agent zelfstandigen kan helpen met mail, agenda, documenten, WhatsApp/Telegram, modelkeuze en menselijke controle.
+Deze pagina maakt de ondertitels van de MKBagents/Hermes-video leesbaar voor zoekmachines en AI-systemen. De video legt uit hoe een persoonlijke open-source Hermes-agent zelfstandigen kan helpen met mail, agenda, documenten, WhatsApp/Telegram, modelkeuze en menselijke controle.
 
 ## Citeerbare samenvatting
 
-MKBagent helpt zelfstandigen met een persoonlijke Hermes-agent die met hun werk kan meegroeien. De agent werkt niet alleen als chatbot, maar kan voorkeuren onthouden, terugkerende taken voorbereiden, tools gebruiken, documenten ordenen en via kanalen zoals WhatsApp, Telegram, browser of mobiel bereikbaar zijn. De inzet blijft begrensd: de zelfstandige houdt controle over data, beslissingen en risicovolle acties.
+MKBagents helpt zelfstandigen met een persoonlijke Hermes-agent die met hun werk kan meegroeien. De agent werkt niet alleen als chatbot, maar kan voorkeuren onthouden, terugkerende taken voorbereiden, tools gebruiken, documenten ordenen en via kanalen zoals WhatsApp, Telegram, browser of mobiel bereikbaar zijn. De inzet blijft begrensd: de zelfstandige houdt controle over data, beslissingen en risicovolle acties.
 
 ## Kernpunten uit de video
 
 - Een digitale assistent moet werken op de apparaten die zelfstandigen al gebruiken, zoals telefoon, WhatsApp, Telegram, browser of Hermes-app.
 - Hermes is een open-source agentlaag voor proactieve digitale assistenten die context, voorkeuren, tools en terugkerende taken kunnen combineren.
-- MKBagent kiest voor minder vendor lock-in: workflows, data en beslissingen blijven niet opgesloten in één gesloten Big Tech-platform.
+- MKBagents kiest voor minder vendor lock-in: workflows, data en beslissingen blijven niet opgesloten in één gesloten Big Tech-platform.
 - Menselijke controle blijft centraal: risicovolle acties zoals externe berichten, geld, rechten of privacygevoelige stappen vragen goedkeuring.
 - Een verstandige start is klein: begin met één duidelijke taak zoals inboxfiltering, agenda-briefings, documentordening of conceptmails.
 
@@ -20,7 +20,7 @@ MKBagent helpt zelfstandigen met een persoonlijke Hermes-agent die met hun werk 
 - Originele SRT, gekozen bronbestand: [assets/mkbagents-hermes-tutorial.srt](assets/mkbagents-hermes-tutorial.srt)
 - Homepage: [https://mkbagents.nl/](https://mkbagents.nl/)
 
-## Transcript, uitgebreide MKBagent-versie
+## Transcript, uitgebreide MKBagents-versie
 
 Welkom, vandaag duiken we direct in iets wat je als MKB'er echt tijd bespaart. Een nuchtere stapsgewijze gids voor je digitale assistent. Ik ben Bernard Donners, docent AI. aan de Tio Hogeschool in Groningen en Amsterdam
 
@@ -42,11 +42,11 @@ Je geeft instructies... ook een spraakbericht inspreken als je in de auto zit. D
 
 Hij maakt zelf recepten voor herhalende taken. zodat hij de volgende keer sneller en efficienter is een strakke planning om je nieuwe mails te checken En koppelt direct met je huidige software. Moet het systeem ergens 'wonen'
 
-Bij MKBagent bevelen we 3 routes aan Kies je route: Extern met een VPS, Mac of hybride. Een externe server staat altijd voor je aan. Ook als je laptop uit staat Lokaal draaien biedt maximale controle over data. Naast de veilige thuisbasis is een brein nodig.
+Bij MKBagents bevelen we 3 routes aan Kies je route: Extern met een VPS, Mac of hybride. Een externe server staat altijd voor je aan. Ook als je laptop uit staat Lokaal draaien biedt maximale controle over data. Naast de veilige thuisbasis is een brein nodig.
 
 Koppel je bestaande ChatGPT of Claude abonnement. Wij doen dit veilig via een OAuth inlog. Zo voorkom je onnodig dubbele abonnementskosten. De assistent is streng begrensd voor veiligheid. Voor risicovolle acties is jouw goedkeuring nodig.
 
-Jij blijft altijd de eindverantwoordelijke baas. Mijn tip: begin klein en pak één taak. Probeer niet direct je hele administratie te doen. Check MKBagent.nl voor alle achtergrondinformatie en hulp. Win vandaag nog tijd, energie en focus terug.
+Jij blijft altijd de eindverantwoordelijke baas. Mijn tip: begin klein en pak één taak. Probeer niet direct je hele administratie te doen. Check MKBagents.nl voor alle achtergrondinformatie en hulp. Win vandaag nog tijd, energie en focus terug.
 
 Bedankt voor het kijken en veel succes.
 

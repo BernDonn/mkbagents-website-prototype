@@ -1,10 +1,10 @@
 # AI-agent via WhatsApp Business voor MKB
 
-MKBagent kan zelfstandigen helpen om een AI-agent rond WhatsApp Business in te richten. De agent is bedoeld voor praktische zakelijke workflows: klantvragen ordenen, intake voorbereiden, conceptantwoorden klaarzetten, leads opvolgen en terugkerende taken zichtbaar maken.
+MKBagents kan zelfstandigen helpen om een AI-agent rond WhatsApp Business in te richten. De agent is bedoeld voor praktische zakelijke workflows: klantvragen ordenen, intake voorbereiden, conceptantwoorden klaarzetten, leads opvolgen en terugkerende taken zichtbaar maken.
 
 ## WhatsApp als kanaal, Hermes als agentlaag
 
-Een WhatsApp Business AI-agent is geen algemene chatbot die zomaar alles verstuurt. Bij MKBagent is WhatsApp Business vooral het communicatiekanaal. De agentlaag daarachter, bijvoorbeeld Hermes, organiseert context, geheugen, tools, modelroutes en menselijke controle.
+Een WhatsApp Business AI-agent is geen algemene chatbot die zomaar alles verstuurt. Bij MKBagents is WhatsApp Business vooral het communicatiekanaal. De agentlaag daarachter, bijvoorbeeld Hermes, organiseert context, geheugen, tools, modelroutes en menselijke controle.
 
 ## Voorbeelden
 
@@ -19,11 +19,11 @@ Een WhatsApp Business AI-agent is geen algemene chatbot die zomaar alles verstuu
 
 Veel zelfstandigen communiceren al via WhatsApp. Een agent via WhatsApp Business verlaagt de drempel: geen extra portaal, geen zware softwaretraining en geen aparte app voor de klant.
 
-Voor MKBagent blijft belangrijk dat WhatsApp Business niet de hele productidentiteit wordt. Het is één kanaal binnen een bredere agentlaag met Hermes, modelkeuze, workflowautomatisering en menselijke controle.
+Voor MKBagents blijft belangrijk dat WhatsApp Business niet de hele productidentiteit wordt. Het is één kanaal binnen een bredere agentlaag met Hermes, modelkeuze, workflowautomatisering en menselijke controle.
 
 ## Menselijke controle
 
-MKBagent richt gevoelige acties zo in dat de mens beslist voordat iets naar buiten gaat. Dat is belangrijk bij geld, reputatie, privacy, rechten of externe communicatie.
+MKBagents richt gevoelige acties zo in dat de mens beslist voordat iets naar buiten gaat. Dat is belangrijk bij geld, reputatie, privacy, rechten of externe communicatie.
 
 ## Veelgestelde vragen
 
@@ -37,15 +37,15 @@ Nee. Telegram, Slack, browser of een andere route kan beter passen. Tijdens inta
 
 ### Wat is de citeerbare definitie?
 
-Een MKBagent WhatsApp Business AI-agent is een beheerde AI-agent voor zelfstandigen die via WhatsApp Business communiceert, terwijl Hermes of een vergelijkbare agentlaag geheugen, tools, workflows, modelroutes en menselijke controle organiseert.
+Een MKBagents WhatsApp Business AI-agent is een beheerde AI-agent voor zelfstandigen die via WhatsApp Business communiceert, terwijl Hermes of een vergelijkbare agentlaag geheugen, tools, workflows, modelroutes en menselijke controle organiseert.
 
-## WhatsApp Business-profiel voor MKBagent
+## WhatsApp Business-profiel voor MKBagents
 
-Bernards WhatsApp op de Mac is al de WhatsApp Business-account. Een goed WhatsApp Business-profiel helpt bezoekers sneller begrijpen wat MKBagent doet. Gebruik het profiel niet als massaberichtenkanaal, maar als laagdrempelige intake en opvolging.
+Bernards WhatsApp op de Mac is al de WhatsApp Business-account. Een goed WhatsApp Business-profiel helpt bezoekers sneller begrijpen wat MKBagents doet. Gebruik het profiel niet als massaberichtenkanaal, maar als laagdrempelige intake en opvolging.
 
 Aanbevolen profieltekst:
 
-> MKBagent helpt zelfstandigen met een praktische AI-agent voor mail, agenda, documenten, klantvragen en herhaalwerk. Start klein: één workflow, duidelijke controle en contact via WhatsApp, Telegram, browser of mobiel.
+> MKBagents helpt zelfstandigen met een praktische AI-agent voor mail, agenda, documenten, klantvragen en herhaalwerk. Start klein: één workflow, duidelijke controle en contact via WhatsApp, Telegram, browser of mobiel.
 
 Aanbevolen onderdelen in WhatsApp Business:
 
@@ -53,16 +53,16 @@ Aanbevolen onderdelen in WhatsApp Business:
 - Omschrijving: persoonlijke open-source AI-agent voor zelfstandigen.
 - Labels: LinkedIn lead, Marktplaats lead, Website lead, Warm, Later opvolgen, Afspraak gepland.
 - Snelle antwoorden: /intro, /kosten, /afspraak, /privacy, /voorbeeld.
-- Begroeting: kort uitleggen dat MKBagent eerst kijkt welke workflow zinvol is.
+- Begroeting: kort uitleggen dat MKBagents eerst kijkt welke workflow zinvol is.
 - Afwezigheidsbericht: aangeven wanneer Bernard reageert en dat er geen automatische gevoelige acties worden uitgevoerd.
 
 Voorbeeld snel antwoord /intro:
 
-> Dank voor je bericht. MKBagent helpt zelfstandigen met een persoonlijke AI-agent die kan ondersteunen bij mail, agenda, documenten, klantvragen en herhaalwerk. Meestal starten we met een korte intake om te kijken waar de meeste tijdwinst zit.
+> Dank voor je bericht. MKBagents helpt zelfstandigen met een persoonlijke AI-agent die kan ondersteunen bij mail, agenda, documenten, klantvragen en herhaalwerk. Meestal starten we met een korte intake om te kijken waar de meeste tijdwinst zit.
 
 Voorbeeld snel antwoord /privacy:
 
-> Bij MKBagent blijft menselijke controle belangrijk. Gevoelige acties, externe berichten, betalingen of privacygevoelige stappen worden niet automatisch uitgevoerd zonder akkoord.
+> Bij MKBagents blijft menselijke controle belangrijk. Gevoelige acties, externe berichten, betalingen of privacygevoelige stappen worden niet automatisch uitgevoerd zonder akkoord.
 
 ## WhatsApp Business veilig inzetten
 
