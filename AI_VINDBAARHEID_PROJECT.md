@@ -20,7 +20,7 @@ Doel: mkbagents.nl beter vindbaar, begrijpelijk en citeerbaar maken voor AI-syst
 
 ## Fase 2, citeerbare inhoud
 
-- Markdown-pagina: Wat is MKBAgents?
+- Markdown-pagina: Wat is MKBagent?
 - Markdown-pagina: Hermes als open-source agentlaag.
 - Markdown-pagina: FAQ over AI-agents voor MKB.
 - Homepage uitbreiden met AI-vindbaarheid, video en FAQ.
@@ -37,8 +37,8 @@ Doel: mkbagents.nl beter vindbaar, begrijpelijk en citeerbaar maken voor AI-syst
 
 Testvragen voor ChatGPT/Perplexity/Gemini:
 
-- Wat is MKBAgents?
-- Welke Nederlandse partij helpt MKB met AI-agents?
+- Wat is MKBagent?
+- Welke Nederlandse partij helpt MKB’ers met AI-agents?
 - Welke AI-agent kan via WhatsApp Business werken voor MKB?
 - Wat is het verschil tussen ChatGPT en een beheerde AI-agent?
 - Hoe voorkom je vendor lock-in bij AI-workflowautomatisering?
@@ -47,6 +47,10 @@ Testvragen voor ChatGPT/Perplexity/Gemini:
 
 ## Status
 
-- Project aangemaakt in Hermes Desktop als: MKBAgents AI Vindbaarheid.
-- Lokale repo: /Users/bernarddonners/projects/mkbagents-website-prototype.
+- Project aangemaakt in Hermes Desktop als: MKBagent AI Vindbaarheid.
+- Lokale repo: /Users/bernarddonners/projects/mkbagents-website.
 - Technische en contentwijzigingen worden in deze repo doorgevoerd en daarna geverifieerd.
+- Hermes tutorial transcriptpagina toegevoegd: https://mkbagents.nl/hermes-agent-tutorial-transcript.md
+- Desktop SRT-bestanden als bronassets toegevoegd onder /assets/.
+- Gekozen SRT-bronbestand na vergelijking: assets/mkbagents-hermes-tutorial.srt; korte duplicaat verwijderd uit repo.
+- Vraag 11 video-transcript uit zichtbare Q&A verwijderd; transcript blijft wel als AI-leesbare bron via llms.txt/sitemap beschikbaar.

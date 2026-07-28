@@ -1,5 +1,5 @@
-# MKBAgents website
+# MKBagent website
 
-Publieke website voor MKBAgents.nl.
+Publieke website voor MKBagent.nl.
 
-Deze versie positioneert MKBAgents als implementatiepartner voor digitale medewerkers en AI-workflows voor het Nederlandse MKB.
+Deze repository bevat de statische websitebestanden die via GitHub Pages worden gepubliceerd.

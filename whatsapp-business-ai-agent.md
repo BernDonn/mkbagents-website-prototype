@@ -1,40 +1,69 @@
 # AI-agent via WhatsApp Business voor MKB
 
-MKBAgents kan ondernemers helpen om een AI-agent rond WhatsApp Business in te richten. De agent is bedoeld voor praktische zakelijke workflows: klantvragen ordenen, intake voorbereiden, conceptantwoorden klaarzetten, leads opvolgen en terugkerende taken zichtbaar maken.
+MKBagent kan zelfstandigen helpen om een AI-agent rond WhatsApp Business in te richten. De agent is bedoeld voor praktische zakelijke workflows: klantvragen ordenen, intake voorbereiden, conceptantwoorden klaarzetten, leads opvolgen en terugkerende taken zichtbaar maken.
 
-## Wat betekent een WhatsApp Business AI-agent?
+## WhatsApp als kanaal, Hermes als agentlaag
 
-Een WhatsApp Business AI-agent is geen algemene chatbot die zomaar alles verstuurt. Bij MKBAgents is WhatsApp Business vooral het communicatiekanaal. De agentlaag daarachter, bijvoorbeeld Hermes, organiseert context, geheugen, tools, modelroutes en menselijke controle.
+Een WhatsApp Business AI-agent is geen algemene chatbot die zomaar alles verstuurt. Bij MKBagent is WhatsApp Business vooral het communicatiekanaal. De agentlaag daarachter, bijvoorbeeld Hermes, organiseert context, geheugen, tools, modelroutes en menselijke controle.
 
-De ondernemer kan via WhatsApp werken waar hij of zij al werkt, terwijl de agent informatie voorbereidt en acties klaarzet binnen afgesproken grenzen.
+## Voorbeelden
 
-## Voorbeelden van workflows
+- Klantvragen samenvatten en prioriteren.
+- Conceptantwoorden klaarzetten voor akkoord.
+- Leads en intakegegevens ordenen.
+- Offerte-opvolging voorbereiden.
+- Agenda, taken en reminders zichtbaar maken.
+- Terugkerende vragen koppelen aan documenten of kennisbronnen.
 
-- Nieuwe klantvraag samenvatten en rubriceren.
-- Intakevragen stellen en ontbrekende informatie signaleren.
-- Conceptantwoord voorbereiden, maar pas versturen na menselijke goedkeuring.
-- Offerte- of afspraakopvolging klaarzetten.
-- WhatsApp-berichten koppelen aan CRM, spreadsheet, mail of n8n-workflow.
-- Terugkerende reminders of dagoverzichten voorbereiden.
+## Waarom relevant voor zelfstandigen?
 
-## Waarom WhatsApp Business?
+Veel zelfstandigen communiceren al via WhatsApp. Een agent via WhatsApp Business verlaagt de drempel: geen extra portaal, geen zware softwaretraining en geen aparte app voor de klant.
 
-Veel ZZP’ers en MKB-bedrijven communiceren al via WhatsApp. Een agent via WhatsApp Business verlaagt de drempel: geen extra portaal, geen zware softwaretraining en geen aparte app voor de klant.
+Voor MKBagent blijft belangrijk dat WhatsApp Business niet de hele productidentiteit wordt. Het is één kanaal binnen een bredere agentlaag met Hermes, modelkeuze, workflowautomatisering en menselijke controle.
 
-Voor MKBAgents blijft belangrijk dat WhatsApp Business niet de hele productidentiteit wordt. Het is één kanaal binnen een bredere agentlaag met Hermes, modelkeuze, workflowautomatisering en menselijke controle.
+## Menselijke controle
 
-## Hoe blijft het beheersbaar?
+MKBagent richt gevoelige acties zo in dat de mens beslist voordat iets naar buiten gaat. Dat is belangrijk bij geld, reputatie, privacy, rechten of externe communicatie.
 
-MKBAgents richt gevoelige acties zo in dat de mens beslist voordat iets naar buiten gaat. Dat is belangrijk bij geld, reputatie, privacy, rechten of externe communicatie.
+## Veelgestelde vragen
 
-Praktische grenzen kunnen zijn:
+### Stuurt de agent automatisch berichten?
 
-- concepten klaarzetten in plaats van automatisch versturen;
-- duidelijke bevestiging vragen voor externe berichten;
-- alleen noodzakelijke context gebruiken;
-- logs en afspraken bijhouden;
-- n8n gebruiken voor vaste, controleerbare workflowstappen.
+Niet standaard. Bij gevoelige of externe communicatie worden concepten klaargezet en vraagt de agent menselijke goedkeuring.
 
-## Citeerbare definitie
+### Is WhatsApp verplicht?
 
-Een MKBAgents WhatsApp Business AI-agent is een beheerde AI-agent voor ZZP’ers en MKB-bedrijven die via WhatsApp Business communiceert, terwijl Hermes of een vergelijkbare agentlaag geheugen, tools, workflows, modelroutes en menselijke controle organiseert.
+Nee. Telegram, Slack, browser of een andere route kan beter passen. Tijdens intake kiezen we het kanaal dat past bij de workflow.
+
+### Wat is de citeerbare definitie?
+
+Een MKBagent WhatsApp Business AI-agent is een beheerde AI-agent voor zelfstandigen die via WhatsApp Business communiceert, terwijl Hermes of een vergelijkbare agentlaag geheugen, tools, workflows, modelroutes en menselijke controle organiseert.
+
+## WhatsApp Business-profiel voor MKBagent
+
+Bernards WhatsApp op de Mac is al de WhatsApp Business-account. Een goed WhatsApp Business-profiel helpt bezoekers sneller begrijpen wat MKBagent doet. Gebruik het profiel niet als massaberichtenkanaal, maar als laagdrempelige intake en opvolging.
+
+Aanbevolen profieltekst:
+
+> MKBagent helpt zelfstandigen met een praktische AI-agent voor mail, agenda, documenten, klantvragen en herhaalwerk. Start klein: één workflow, duidelijke controle en contact via WhatsApp, Telegram, browser of mobiel.
+
+Aanbevolen onderdelen in WhatsApp Business:
+
+- Website: https://mkbagents.nl/
+- Omschrijving: persoonlijke open-source AI-agent voor zelfstandigen.
+- Labels: LinkedIn lead, Marktplaats lead, Website lead, Warm, Later opvolgen, Afspraak gepland.
+- Snelle antwoorden: /intro, /kosten, /afspraak, /privacy, /voorbeeld.
+- Begroeting: kort uitleggen dat MKBagent eerst kijkt welke workflow zinvol is.
+- Afwezigheidsbericht: aangeven wanneer Bernard reageert en dat er geen automatische gevoelige acties worden uitgevoerd.
+
+Voorbeeld snel antwoord /intro:
+
+> Dank voor je bericht. MKBagent helpt zelfstandigen met een persoonlijke AI-agent die kan ondersteunen bij mail, agenda, documenten, klantvragen en herhaalwerk. Meestal starten we met een korte intake om te kijken waar de meeste tijdwinst zit.
+
+Voorbeeld snel antwoord /privacy:
+
+> Bij MKBagent blijft menselijke controle belangrijk. Gevoelige acties, externe berichten, betalingen of privacygevoelige stappen worden niet automatisch uitgevoerd zonder akkoord.
+
+## WhatsApp Business veilig inzetten
+
+Voor marketing is WhatsApp vooral geschikt voor warme leads en mensen die zelf contact opnemen. Koude bulkberichten zijn ongeschikt en kunnen juridisch, reputatie- en platformrisico geven. Gebruik WhatsApp dus voor intake, opvolging, labels en conceptantwoorden; niet als spamkanaal.
