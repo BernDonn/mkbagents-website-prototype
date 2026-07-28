@@ -235,7 +235,7 @@
     .pill{border:1px solid var(--line);background:rgba(255,250,241,.82);padding:9px 12px;border-radius:999px;font-weight:650}
     .agent-card{background:#122b20;color:#f7f2e7;border-radius:38px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
     .hero-mini-video{position:relative;z-index:1;margin:0 0 38px;max-width:100%;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px rgba(20,35,24,.12);background:#fffaf1}
-    .hero-mini-video video{display:block;width:100%;height:170px;object-fit:cover;background:#06100c}
+    .hero-mini-video video,.hero-mini-video iframe{display:block;width:100%;height:170px;object-fit:cover;background:#06100c;border:0}
     .hero-faq{margin-top:0;background:rgba(255,250,241,.96);color:#172019;border:1px solid var(--line);border-radius:30px;padding:24px;box-shadow:0 16px 42px rgba(20,35,24,.06);max-width:820px}
     .hero-faq .tag{margin-bottom:10px}
     .hero-faq h2{font-size:clamp(30px,3.5vw,44px);line-height:1.04;margin:0 0 10px;letter-spacing:-.035em;color:#172019}
@@ -804,9 +804,7 @@
         <aside class="why-video-card" aria-label="Hermes-video">
           <strong class="video-label">De digitale assistent, Hermes</strong>
           <div class="hero-mini-video">
-            <video controls preload="metadata" playsinline poster="assets/mkbagents-intro-poster.jpg" aria-label="MKBagent video voor zelfstandigen">
-              <source src="assets/mkbagents-intro-srt.mp4" type="video/mp4">
-            </video>
+            <iframe src="https://www.youtube-nocookie.com/embed/cJlLCROpLKI?start=1&rel=0" title="MKBagent video voor zelfstandigen" aria-label="MKBagent video voor zelfstandigen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
           </div>
           <strong class="video-label">De evolutie van AI: van chat naar autonome agenten</strong>
           <video controls preload="metadata" playsinline poster="assets/hermes-1b-overview-poster.jpg" aria-label="MKBagent Hermes video over open-source agentlaag">
