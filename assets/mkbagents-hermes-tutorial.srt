@@ -197,7 +197,7 @@
 
 50
 00:03:52,458 --> 00:03:56,541
-<font color="#ffffff">Bij MKBagent bevelen we 3 routes aan</font>
+<font color="#ffffff">Bij MKBagents bevelen we 3 routes aan</font>
 
 51
 00:03:57,166 --> 00:04:00,375
@@ -249,7 +249,7 @@
 
 63
 00:05:46,125 --> 00:05:54,125
-<font color="#ffffff">Check MKBagent.nl voor alle achtergrondinformatie en hulp.</font>
+<font color="#ffffff">Check MKBagents.nl voor alle achtergrondinformatie en hulp.</font>
 
 64
 00:05:57,375 --> 00:06:00,375

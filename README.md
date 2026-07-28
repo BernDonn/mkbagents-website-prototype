@@ -1,5 +1,5 @@
-# MKBagent website
+# MKBagents website
 
-Publieke website voor MKBagent.nl.
+Publieke website voor MKBagents.nl.
 
 Deze repository bevat de statische websitebestanden die via GitHub Pages worden gepubliceerd.
