@@ -678,7 +678,7 @@
       var key="mkbagents_visitor_ping_sent_v2";
       if (window.sessionStorage && sessionStorage.getItem(key)) return;
       if (window.sessionStorage) sessionStorage.setItem(key,"1");
-      var endpointBase=(window.MKBAGENT_VOICE_URL || "https://jackets-perhaps-handled-islands.trycloudflare.com?v=site").replace(/[?#].*$/, '').replace(/\/$/, '');
+      var endpointBase=(window.MKBAGENT_VOICE_URL || "https://slot-ladder-routing-chest.trycloudflare.com?v=site").replace(/[?#].*$/, '').replace(/\/$/, '');
       var visitorId;
       try {
         visitorId=localStorage.getItem('mkbagents_visitor_id_v1');
@@ -2272,7 +2272,7 @@
       try{
         inlineVoiceMic=await getSophieMicStream();
         const endpointBase=callbackEndpointBase();
-        const wsUrl=endpointBase.replace(/^https:/,'wss:').replace(/^http:/,'ws:') + '/ws/live';
+        const wsUrl=endpointBase.replace(/^https:/,'wss:').replace(/^http:/,'ws:') + '/ws/live?site=mkbagents.nl';
         inlineVoiceWs=new WebSocket(wsUrl);
         inlineVoiceWs.addEventListener('error', (event) => logInlineVoiceError(event, 'websocket'));
         inlineVoiceWs.addEventListener('message', async (event) => {
@@ -2405,7 +2405,7 @@
       }catch(e){ return String(Date.now()) + '-' + Math.random().toString(16).slice(2); }
     }
     function callbackEndpointBase(){
-      return (window.MKBAGENT_VOICE_URL || 'https://jackets-perhaps-handled-islands.trycloudflare.com?v=site').replace(/[?#].*$/, '').replace(/\/$/, '');
+      return (window.MKBAGENT_VOICE_URL || 'https://slot-ladder-routing-chest.trycloudflare.com?v=site').replace(/[?#].*$/, '').replace(/\/$/, '');
     }
     function openCallbackPanel(){
       if(!callbackPanel) return;
