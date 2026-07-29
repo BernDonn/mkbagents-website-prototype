@@ -757,7 +757,7 @@
       var key="mkbagents_visitor_ping_sent_v2";
       if (window.sessionStorage && sessionStorage.getItem(key)) return;
       if (window.sessionStorage) sessionStorage.setItem(key,"1");
-      var endpointBase=(window.MKBAGENT_VOICE_URL || "https://departure-yet-mountains-wells.trycloudflare.com?v=site").replace(/[?#].*$/, '').replace(/\/$/, '');
+      var endpointBase=(window.MKBAGENT_VOICE_URL || "https://assigned-recently-eligible-entitled.trycloudflare.com?v=site").replace(/[?#].*$/, '').replace(/\/$/, '');
       var visitorId;
       try {
         visitorId=localStorage.getItem('mkbagents_visitor_id_v1');
@@ -2395,6 +2395,7 @@
       if(!SophieAudioContext){ setInlineVoiceError('Deze browser ondersteunt de audio-engine niet goed. Probeer Safari/Chrome met microfoontoegang.'); return; }
       setInlineVoiceState(true, 'Microfoon openen…');
       try{
+        stopInlineOfficeAmbience();
         inlineVoiceMic=await getSophieMicStream();
         const endpointBase=callbackEndpointBase();
         const wsUrl=endpointBase.replace(/^https:/,'wss:').replace(/^http:/,'ws:') + '/ws/live?site=mkbagents.nl';
@@ -2447,7 +2448,6 @@
       closeCallbackPanel();
       voicePanel.classList.add('open');
       voicePanel.setAttribute('aria-hidden', 'false');
-      startInlineOfficeAmbience(callbackEndpointBase());
       requestAnimationFrame(() => document.querySelectorAll('.voice-reactor').forEach(canvas => canvas.dispatchEvent(new Event('sophie:resize'))));
     }
     function closeVoicePanel(){
@@ -2545,7 +2545,7 @@
       }catch(e){ return String(Date.now()) + '-' + Math.random().toString(16).slice(2); }
     }
     function callbackEndpointBase(){
-      return (window.MKBAGENT_VOICE_URL || 'https://departure-yet-mountains-wells.trycloudflare.com?v=site').replace(/[?#].*$/, '').replace(/\/$/, '');
+      return (window.MKBAGENT_VOICE_URL || 'https://assigned-recently-eligible-entitled.trycloudflare.com?v=site').replace(/[?#].*$/, '').replace(/\/$/, '');
     }
     function openCallbackPanel(){
       if(!callbackPanel) return;
