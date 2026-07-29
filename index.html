@@ -645,6 +645,15 @@
       .order-card{padding:26px}
       #voorwaarden,.acceptance-box,#privacy,.legal-card.agents-usage{grid-column:auto;grid-row:auto}
     }
+    @media(max-width:390px){
+      .nav-inner{padding:12px 12px}
+      .brand{font-size:19px;gap:7px}
+      .brand-dot{width:10px;height:10px;box-shadow:0 0 0 5px rgba(var(--accent-rgb),.20)}
+      .nav-compact-actions{gap:5px}
+      .nav-compact-actions .mobile-qa-link:not(.mobile-quickscan-link){display:none}
+      .nav-compact-actions .mobile-qa-link{padding:8px 10px;font-size:11px}
+      .nav-compact-actions .language-toggle button{padding:6px 7px}
+    }
     @media(max-width:560px){
       .case-summary,.integration-summary{grid-template-columns:1fr;gap:12px;padding:18px}
       .expand-label{justify-content:space-between;width:100%}
