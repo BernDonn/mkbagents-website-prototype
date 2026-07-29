@@ -19,17 +19,17 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
     :root{
-      --bg:#eef3f8;
-      --paper:#ffffff;
-      --ink:#07111f;
-      --muted:#586678;
-      --line:#d7e0ea;
-      --green:#0b2a4a;
-      --green2:#164b7a;
-      --lime:#41a5ff;
-      --sand:#dfe8f2;
-      --blue:#0b5cab;
-      --shadow: 0 22px 70px rgba(11,42,74,.13);
+      --bg:#f3f6fb;
+      --paper:#fffdf8;
+      --ink:#111827;
+      --muted:#596273;
+      --line:#dbe3ef;
+      --green:#123c7c;
+      --green2:#1e5aa8;
+      --lime:#ffb84d;
+      --sand:#eadfcf;
+      --blue:#2563eb;
+      --shadow: 0 22px 70px rgba(18,60,124,.13);
       --radius: 28px;
       --max: 820px;
     }
@@ -101,7 +101,7 @@
     .checklist{list-style:none;padding:0;margin:0}
     .checklist li{
       padding:10px 0 10px 32px;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230b2a4a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") left center no-repeat;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23123c7c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") left center no-repeat;
       background-size:20px;
     }
     .btn-group{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 16px}
@@ -240,19 +240,21 @@
     }
 
 
-    /* Navy Azure palette for the Quickscan flow */
+
+
+    /* Cobalt Sand palette for the Quickscan flow */
     :root{
-      --accent-rgb:65,165,255;
-      --primary-rgb:11,42,74;
-      --paper-rgb:255,255,255;
+      --accent-rgb:255,184,77;
+      --primary-rgb:18,60,124;
+      --paper-rgb:255,253,248;
     }
     body{
       background:
-        radial-gradient(circle at 8% 2%, rgba(var(--accent-rgb),.18), transparent 24rem),
-        linear-gradient(180deg,#ffffff 0%,var(--bg) 58%,#e3ebf3 100%);
+        radial-gradient(circle at 8% 2%, rgba(var(--accent-rgb),.15), transparent 24rem),
+        linear-gradient(180deg,#ffffff 0%,var(--bg) 58%,#e8eef8 100%);
     }
     .card,.form-section,.result-box,.question-card{background:rgba(var(--paper-rgb),.94);border-color:var(--line);box-shadow:0 12px 34px rgba(var(--primary-rgb),.055)}
-    .meta-row span,.step-indicator span.done,.btn-secondary:hover,.checkbox-grid label:hover{background:var(--lime);color:#061423}
+    .meta-row span,.step-indicator span.done,.btn-secondary:hover,.checkbox-grid label:hover{background:var(--lime);color:#172033}
     .btn-primary,.step-indicator span.active{background:var(--green);color:#fff}
     .btn-primary:hover{background:var(--green2)}
     .btn-secondary{color:var(--green);border-color:var(--green)}
