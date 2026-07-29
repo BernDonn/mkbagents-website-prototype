@@ -172,17 +172,17 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
     :root{
-      --bg:#f6f2ea;
-      --paper:#fffaf1;
-      --ink:#101512;
-      --muted:#5e665f;
-      --line:#ded5c4;
-      --green:#163f2b;
-      --green2:#23563c;
-      --lime:#d7f268;
-      --sand:#eadcc5;
-      --blue:#1b3f55;
-      --shadow: 0 22px 70px rgba(16,21,18,.12);
+      --bg:#eef3f8;
+      --paper:#ffffff;
+      --ink:#07111f;
+      --muted:#586678;
+      --line:#d7e0ea;
+      --green:#0b2a4a;
+      --green2:#164b7a;
+      --lime:#41a5ff;
+      --sand:#dfe8f2;
+      --blue:#0b5cab;
+      --shadow: 0 22px 70px rgba(11,42,74,.13);
       --radius: 28px;
       --max: 1180px;
     }
@@ -652,6 +652,55 @@
       .hero-disclosures > div:first-child{gap:6px!important;flex-wrap:nowrap!important}
       .hero-disclosures .disclosure-btn{padding:8px 11px!important;font-size:13px!important;line-height:1.15!important;white-space:nowrap!important}
     }
+
+
+    /* Navy Azure palette: full-site MKB color conversion */
+    :root{
+      --accent-rgb:65,165,255;
+      --primary-rgb:11,42,74;
+      --paper-rgb:255,255,255;
+    }
+    body{
+      background:
+        radial-gradient(circle at 8% 2%, rgba(var(--accent-rgb),.22), transparent 26rem),
+        radial-gradient(circle at 90% 10%, rgba(var(--primary-rgb),.16), transparent 28rem),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 54%, #e3ebf3 100%);
+    }
+    .nav{background:rgba(var(--paper-rgb),.84);border-bottom-color:rgba(215,224,234,.78)}
+    .brand-dot{background:var(--lime);box-shadow:0 0 0 6px rgba(var(--accent-rgb),.20)}
+    .nav-links{color:#26374b}
+    .language-toggle,.mobile-qa-link,.pill,.hero-faq,.top-panel-card,.package-card,.work-card,.model-card,.integrations-card,.pricing-card,.faq-section details,.compare-section details,.case,.integration-card,.compare-card,.deploy-panel,.provider-card,.legal-card,.price-mini-row{background:rgba(var(--paper-rgb),.94);border-color:var(--line);box-shadow:0 12px 34px rgba(var(--primary-rgb),.055)}
+    .button,.language-toggle button.active{background:var(--green);border-color:var(--green);color:#fff;box-shadow:0 10px 26px rgba(var(--primary-rgb),.18)}
+    .button.secondary{background:transparent;color:var(--green);box-shadow:none}
+    .button.light,.button.quickscan-nav,.mobile-qa-link.mobile-quickscan-link,.footer-cta-actions .button.light{background:var(--lime);border-color:var(--lime);color:#061423;box-shadow:0 10px 26px rgba(var(--accent-rgb),.18)}
+    .agent-card,.demo-card,.dark-card,.cta-band,.footer-card,.tile.dark,.trust-stack,.trust-visual,.integration-note,.product.featured,.acceptance-box,.compare-card.opensource,.proof,.footer-cta{background:linear-gradient(150deg,var(--green),color-mix(in srgb,var(--green2) 84%,#000));color:#f8fbff;border-color:rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    .agent-card p,.demo-card p,.dark-card p,.cta-band p,.footer-card p,.tile.dark p,.tile.dark li,.trust-stack p,.trust-stack li,.trust-copy p,.integration-note p,.integration-note li,.product.featured p,.product.featured li,.acceptance-box p,.acceptance-box li,.compare-card.opensource p,.compare-card.opensource li,.proof p,.proof li,.footer-cta p,.footer-cta li{color:rgba(248,251,255,.78)}
+    .tile.dark h2,.tile.dark h3,.trust-stack h2,.trust-stack h3,.trust-visual h2,.trust-visual h3,.integration-note h2,.integration-note h3,.product.featured h2,.product.featured h3,.acceptance-box h2,.acceptance-box h3,.compare-card.opensource h2,.compare-card.opensource h3,.proof h2,.proof h3,.footer-cta h2,.footer-cta h3{color:#f8fbff}
+    .hero-mini-video,.video-card video,.hero-mini-video video{background:color-mix(in srgb,var(--green) 86%,#000);border-color:color-mix(in srgb,var(--line) 55%,var(--green))}
+    .tag,.eyebrow,.label,.faq-group-title{background:rgba(var(--accent-rgb),.15);color:#0b3a63;border-color:rgba(var(--accent-rgb),.30)}
+    .lead,.muted,p{color:var(--muted)}
+    .hero-faq h2,.hero-faq summary,h1,h2,h3{color:var(--ink)}
+    .hero-faq summary:after,.faq-section summary:after,.compare-section summary:after,.expand-label:after,.provider-toggle:after{background:#f6f9fc;color:var(--green);border-color:var(--line)}
+    .integration-wrap,.flow-note,.compare-note,.deploy-step,.example,.expand-label,.app-chip,code{background:#edf4fb;border-color:var(--line);color:#26374c}
+    .checkline:before,.label-help summary{background:var(--lime);color:#061423}
+    .trust-visual{background:linear-gradient(180deg,color-mix(in srgb,var(--green2) 82%,#000),color-mix(in srgb,var(--green) 72%,#000))}
+    .trust-visual:after{background:radial-gradient(circle,rgba(var(--accent-rgb),.16) 0%,rgba(var(--accent-rgb),0) 68%)}
+    .trust-item.active{border-color:rgba(var(--accent-rgb),.44);box-shadow:0 0 0 1px rgba(var(--accent-rgb),.24) inset;background:rgba(var(--accent-rgb),.09)}
+    .trust-icon{background:rgba(var(--accent-rgb),.15);color:var(--lime)}
+    .floating-voice{background:linear-gradient(135deg,var(--green),var(--green2));box-shadow:0 18px 50px rgba(var(--primary-rgb),.28)}
+    .floating-voice small{color:var(--lime)}
+    .sophie-call-widget{background:linear-gradient(135deg,#fff,#f4f8fc);color:var(--green);box-shadow:0 18px 50px rgba(var(--primary-rgb),.16)}
+    .sophie-call-photo{box-shadow:0 0 0 3px rgba(var(--accent-rgb),.24),0 10px 26px rgba(var(--primary-rgb),.16)}
+    .sophie-call-photo:after{background:var(--lime);color:#061423}
+    .sophie-callback-panel,.sophie-voice-panel{background:rgba(var(--paper-rgb),.98);border-color:rgba(var(--primary-rgb),.16);box-shadow:0 24px 70px rgba(var(--primary-rgb),.22);color:var(--green)}
+    .sophie-callback-panel h3,.sophie-voice-panel h3{color:var(--ink)}
+    .sophie-callback-panel p{color:var(--muted)}
+    .footer-cta-actions .button.secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.42)}
+    .disclosure-btn{background:rgba(var(--paper-rgb),.76)!important;border-color:rgba(var(--primary-rgb),.15)!important;color:var(--ink)!important}
+    #disclosure-panel{background:rgba(var(--paper-rgb),.96)!important;border-color:var(--line)!important;color:var(--ink)!important;box-shadow:0 14px 34px rgba(var(--primary-rgb),.08)!important}
+    input,textarea,select{background:#fff;border-color:var(--line);color:var(--ink)}
+    ::selection{background:rgba(var(--accent-rgb),.30)}
+
   </style>
   <script type="text/javascript">
     window.$crisp=[];
@@ -1434,7 +1483,7 @@
         "OpenAI en Anthropic zullen hun investeringen terug willen verdienen met het aanbieden van autonome systemen waar je afhankelijk van wordt. Hebben zulke systemen zich eenmaal genesteld in je bedrijf, dan kom je er niet eenvoudig meer vanaf.": "OpenAI and Anthropic will want to earn back their investments by offering autonomous systems that you become dependent on. Once those systems have embedded themselves in your business, they are not easy to remove.",
         "Open-source systemen zijn transparant, breed getest door veel gebruikers en hebben deze vendor lock-in niet. Daardoor houd jij grip op je eigen workflows en de systeemintelligentie van je bedrijf.": "Open-source systems are transparent, broadly tested by many users and do not have this vendor lock-in. That means you keep control over your own workflows and the system intelligence of your business.",
         "Met Hermes zet je de volgende stap: van losse AI-hulp naar een autonome agent die context onthoudt en proactief werk kan voorbereiden. Je persoonlijke assistent dus. En hij staat altijd aan en is bereikbaar via WhatsApp, Signal, Telegram of de Hermes-app op je mobiel. En het spaart geld. Hermes kiest de LLM naar behoefte: meestal de goedkopere commodity-modellen en soms ook ChatGPT of Claude.": "With Hermes you take the next step: from loose AI help to an autonomous agent that remembers context and can proactively prepare work. Your personal assistant, in other words. It is always on and reachable via WhatsApp, Signal, Telegram or the Hermes app on your phone. And it saves money. Hermes chooses the LLM as needed: usually the cheaper commodity models and sometimes ChatGPT or Claude.",
-        
+
 
         "Voorwaarden": "Terms",
         "Adres:": "Address:",
@@ -1566,7 +1615,7 @@
         "Security by design, safety by design en responsible by design zijn uitgangspunten bij inrichting en beheer.": "Security by design, safety by design and responsible by design are guiding principles in setup and management.",
         "Regelmatige interne en externe audits helpen fouten, prestatieverlies en nieuwe risico’s vroeg te ontdekken.": "Regular internal and external audits help detect errors, performance degradation and new risks early.",
         "Bij ontwerp en beheer houden we rekening met relevante kaders zoals EU AI Act, GDPR/AVG, Data Act, Cyber Resilience Act en auteursrecht.": "In design and management we take relevant frameworks into account, such as the EU AI Act, GDPR, Data Act, Cyber Resilience Act and copyright.",
-        
+
         "Private EU-server": "Private EU server",
         "Ease of use met Whatsapp, Telegram of Slack": "Ease of use with WhatsApp, Telegram or Slack",
 
@@ -1613,7 +1662,7 @@
         "Hermes app": "Hermes app",
         "Hermes": "Hermes",
         "Hermes houdt kanalen, geheugen, tools en MoA (Mixture of Agents) overzichtelijk bij elkaar.": "Hermes keeps channels, memory, tools and MoA (Mixture of Agents) clearly connected.",
-        
+
         "Hermes-architectuur": "Hermes architecture",
         "Kanalen · geheugen · tools · modellen": "Channels · memory · tools · models",
         "WhatsApp": "WhatsApp",
@@ -1626,7 +1675,7 @@
         "geheugen": "memory",
         "modelroutes": "model routes",
         "De dagelijkse kanalen lopen via Hermes naar Hermes. Hermes gebruikt geheugen, skills, tools en modelroutes om werkflows veilig en herhaalbaar uit te voeren.": "Daily channels flow through Hermes into Hermes. Hermes uses memory, skills, tools and model routes to execute workflows safely and repeatably.",
-        
+
         "Agent & tools": "Agent & tools",
         "Modelkeuze": "Model choice",
         "Een geheugen dat zich opbouwt": "A memory that compounds",
@@ -2465,4 +2514,4 @@
     setLanguage(localStorage.getItem('mkbAgentLang') || 'nl');
   </script>
 </body>
-</html> 
+</html>

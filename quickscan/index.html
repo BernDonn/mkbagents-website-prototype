@@ -19,17 +19,17 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
     :root{
-      --bg:#f6f2ea;
-      --paper:#fffaf1;
-      --ink:#101512;
-      --muted:#5e665f;
-      --line:#ded5c4;
-      --green:#163f2b;
-      --green2:#23563c;
-      --lime:#d7f268;
-      --sand:#eadcc5;
-      --blue:#1b3f55;
-      --shadow: 0 22px 70px rgba(16,21,18,.12);
+      --bg:#eef3f8;
+      --paper:#ffffff;
+      --ink:#07111f;
+      --muted:#586678;
+      --line:#d7e0ea;
+      --green:#0b2a4a;
+      --green2:#164b7a;
+      --lime:#41a5ff;
+      --sand:#dfe8f2;
+      --blue:#0b5cab;
+      --shadow: 0 22px 70px rgba(11,42,74,.13);
       --radius: 28px;
       --max: 820px;
     }
@@ -101,7 +101,7 @@
     .checklist{list-style:none;padding:0;margin:0}
     .checklist li{
       padding:10px 0 10px 32px;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23163f2b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") left center no-repeat;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230b2a4a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") left center no-repeat;
       background-size:20px;
     }
     .btn-group{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 16px}
@@ -238,6 +238,31 @@
       .radio-group{flex-direction:column}
       .radio-group label{width:100%}
     }
+
+
+    /* Navy Azure palette for the Quickscan flow */
+    :root{
+      --accent-rgb:65,165,255;
+      --primary-rgb:11,42,74;
+      --paper-rgb:255,255,255;
+    }
+    body{
+      background:
+        radial-gradient(circle at 8% 2%, rgba(var(--accent-rgb),.18), transparent 24rem),
+        linear-gradient(180deg,#ffffff 0%,var(--bg) 58%,#e3ebf3 100%);
+    }
+    .card,.form-section,.result-box,.question-card{background:rgba(var(--paper-rgb),.94);border-color:var(--line);box-shadow:0 12px 34px rgba(var(--primary-rgb),.055)}
+    .meta-row span,.step-indicator span.done,.btn-secondary:hover,.checkbox-grid label:hover{background:var(--lime);color:#061423}
+    .btn-primary,.step-indicator span.active{background:var(--green);color:#fff}
+    .btn-primary:hover{background:var(--green2)}
+    .btn-secondary{color:var(--green);border-color:var(--green)}
+    .back-link,h1 em,.section-title em{color:var(--green2)}
+    .checkbox-grid label{background:#edf4fb}
+    .checkbox-grid input[type="checkbox"],.radio-grid input[type="radio"],input[type="range"]{accent-color:var(--blue)}
+    input,textarea,select{background:#fff;border-color:var(--line);color:var(--ink)}
+    input:focus,textarea:focus,select:focus{outline:2px solid rgba(var(--accent-rgb),.22);border-color:var(--blue)}
+    ::selection{background:rgba(var(--accent-rgb),.30)}
+
   </style>
 </head>
 <body>
