@@ -757,7 +757,7 @@
       var key="mkbagents_visitor_ping_sent_v2";
       if (window.sessionStorage && sessionStorage.getItem(key)) return;
       if (window.sessionStorage) sessionStorage.setItem(key,"1");
-      var endpointBase=(window.MKBAGENT_VOICE_URL || "https://latter-airfare-small-const.trycloudflare.com?v=site").replace(/[?#].*$/, '').replace(/\/$/, '');
+      var endpointBase=(window.MKBAGENT_VOICE_URL || "https://sophie.mkbagents.nl?v=site").replace(/[?#].*$/, '').replace(/\/$/, '');
       var visitorId;
       try {
         visitorId=localStorage.getItem('mkbagents_visitor_id_v1');
@@ -2535,7 +2535,7 @@
       }catch(e){ return String(Date.now()) + '-' + Math.random().toString(16).slice(2); }
     }
     function callbackEndpointBase(){
-      return (window.MKBAGENT_VOICE_URL || 'https://latter-airfare-small-const.trycloudflare.com?v=site').replace(/[?#].*$/, '').replace(/\/$/, '');
+      return (window.MKBAGENT_VOICE_URL || 'https://sophie.mkbagents.nl?v=site').replace(/[?#].*$/, '').replace(/\/$/, '');
     }
     function openCallbackPanel(){
       if(!callbackPanel) return;
