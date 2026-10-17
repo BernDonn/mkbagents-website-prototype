@@ -24,7 +24,7 @@ Ja. MKBagents kan agents voorbereiden voor WhatsApp Business, Telegram, Slack of
 
 ## Wat kost een Hermes-implementatie via MKBagents?
 
-Een eerste Hermes-agentproject via MKBagents start meestal rond €1.000–€3.000 excl. btw voor de implementatie. Daarvoor richten we een afgebakende agent in rond jouw werk: bijvoorbeeld mail, agenda, documenten, WhatsApp, Telegram, browsertoegang of een vaste workflow met n8n. Vooraf spreken we een vaste projectprijs af. Je betaalt dus niet onverwacht per uur door. Na de implementatie kun je kiezen voor maandelijkse ondersteuning voor beheer, monitoring, updates en optimalisatie. Hermes kan draaien in de cloud, bijvoorbeeld op een VPS bij Hostinger of Hetzner, of lokaal/on-premise, bijvoorbeeld op je eigen Mac mini. De VPS-kosten, vaak ongeveer €10–€20 per maand afhankelijk van capaciteit, of de aanschaf van lokale hardware, komen daar apart bij. Voor de AI-modellen gebruiken we waar mogelijk je bestaande ChatGPT- of Claude-route, bijvoorbeeld via OAuth. Daarnaast zetten we OpenRouter klaar als back-up, met sterke modellen die voor veel taken aanzienlijk goedkoper zijn dan premium modellen van OpenAI en Anthropic, soms een factor 10 tot 20.
+In het eerste startgesprek bepalen we welke taak, toegang en inrichting nodig zijn. Daarna ontvang je vooraf één vaste prijs voor het afgesproken starttraject. Geen open urenrekening en geen verrassingen achteraf. Reken voor het inrichten van een eerste afgebakende Hermes-assistent op ongeveer €1.000 exclusief btw. Het eenmalig inrichten van de aanvullende AI search loop kost €500 exclusief btw. Daarmee richten we de nulmeting, vervolgmetingen en rapportage over je AI-vindbaarheid in. Gebruikskosten van modellen en meetdiensten staan hier los van. Eventuele hosting, hardware en modelabonnementen komen daar apart bij. We bespreken de passende route en kosten vooraf. Er is geen verplicht beheerabonnement.
 
 ## Wanneer verdient een AI-agent zich terug?
 
@@ -84,3 +84,40 @@ Ja. Hermes kan helpen bij het bouwen, verbeteren en publiceren van een website. 
 ## Wanneer is AI lokaal draaien verstandig?
 
 Lokaal draaien betekent dat de agent of een deel van het AI-systeem op eigen hardware draait, bijvoorbeeld een Mac mini, bedrijfsserver of Europese VPS. Dat is vooral interessant bij gevoelige gegevens, strenge AVG-eisen, behoefte aan controle over data of intensief gebruik waarbij cloudkosten kunnen oplopen. Lokaal is niet automatisch beter: je hebt inrichting, onderhoud, beveiliging en soms extra hardware nodig. Daarom kiest MKBagents per workflow bewust: lokaal waar privacy en controle zwaar wegen, cloud of hybride waar gemak, snelheid of modelkwaliteit belangrijker is. Juist daarom is de keuze voor een open-source agent zoals Hermes strategisch belangrijk voor de toekomst. Open-source LLM’s worden snel krachtiger. Daardoor kan Hermes straks in de eigen omgeving, op een eigen computer of server, een lokaal taalmodel als basis gebruiken. Je blijft dan vrij om van model te wisselen, zonder de complete agent en alle opgebouwde workflows opnieuw te moeten bouwen. Zo verklein je de afhankelijkheid van Big Tech en voorkom je vendor lock-in. Bij volledig lokaal gebruik betaal je niet meer per token aan een externe modelleverancier; de kosten bestaan dan vooral uit hardware, beheer en elektriciteit. De keuze die je nu maakt tussen een open of gesloten agent is daarom niet alleen technisch, maar ook strategisch voor de toekomst.
+
+
+## Werkt Hermes met de tools die ik al gebruik?
+
+Ja, dat is precies het idee: mail, agenda, documenten, WhatsApp, Slack, CRM, boekhouding of n8n. Geen nieuw eiland, maar een laag over wat er al staat.
+
+## Kan Hermes mijn facturen verwerken met KNAB en DigiBoox?
+
+Ja. Hermes kan een factuur uit je e-mail of bestanden ophalen, leverancier, datum, bedrag, btw en factuurnummer controleren en nagaan of de kostenpost al bestaat. Na jouw goedkeuring kan Hermes de factuur automatisch in DigiBoox opnemen en koppelen aan de bijbehorende KNAB-banktransactie. Bij ontbrekende of onduidelijke gegevens stopt Hermes en vraagt het om jouw beoordeling.
+
+## Hoe begin ik klein met een AI-agent?
+
+Kies één concrete taak: inboxfiltering, agenda-briefings, klantvragen samenvatten, documenten ordenen of conceptmails voorbereiden. Of misschien wil je beginnen met een AI-telefoonassistent. Eerst één agent en één workflow betrouwbaar maken; daarna pas uitbreiden naar extra kanalen, tools of automatiseringen. Zie een AI-assistent als een slimme, razendsnelle stagiair: die kan veel, maar kent jouw bedrijf nog niet. Laat zien hoe jij een taak uitvoert, geef voorbeelden van een goed resultaat en spreek af wanneer jouw toestemming nodig is. Begin met één terugkerende taak, controleer het werk en leg de aanpak pas als vaste werkwijze vast wanneer die in de praktijk werkt. Goed inwerken is niet alleen beter prompten. Ook de omgeving rond het AI-model, de harness, moet goed zijn ingericht: met toegang tot de juiste bronnen en tools, duidelijke controles en vragen wanneer informatie ontbreekt.
+
+## Wat is een workflow en wat is het verschil met een losse prompt?
+
+Een workflow is een vaste reeks stappen die telkens in dezelfde logische volgorde wordt uitgevoerd. Een losse prompt is één afzonderlijke opdracht aan AI. Een workflow beschrijft het hele terugkerende proces, van de informatie die binnenkomt tot jouw controle of akkoord. Een eenvoudige workflow bestaat bijvoorbeeld uit vier stappen: een mail, formulier, bestand of bericht komt binnen; Hermes vat samen, ordent informatie of maakt een concept; Hermes zet een taak, antwoord of document klaar en kan waar nodig een tool gebruiken; jij controleert, past aan en beslist. Een agent kan binnen zo’n workflow zelfstandiger stappen uitvoeren en bepalen wat er vervolgens nodig is. Jij spreekt vooraf af waar Hermes zelf mag handelen en wanneer jouw akkoord nodig blijft. Bekijk ook de koppelingen en workflows voor jouw bedrijf.
+
+## Wat is het kernverschil tussen automatisering en een AI-agent?
+
+Automatisering volgt vooraf bepaalde stappen; een agent kiest dynamisch acties op basis van doel en context. Deterministische workflows zijn voorspelbaar en goed controleerbaar bij herhaalde taken. Agenten bieden flexibiliteit bij variatie, maar vragen grenzen, toezicht en controle op fouten.
+
+## Hoe helpt de AI-zichtbaarheidscheck mijn bedrijf?
+
+Met een nulmeting onderzoeken we met onze AI search check engine hoe jouw bedrijf voorkomt in AI-antwoorden op merkneutrale klantvragen. We vergelijken ook relevante concurrenten. De analyse bepaalt welke verbeteringen aan je communicatie, website en Q&A prioriteit hebben. Daarna herhalen we de meting met dezelfde vragen en zo vergelijkbaar mogelijke instellingen.
+
+## Kan Hermes de verbeteringen en vervolgmetingen uitvoeren?
+
+Hermes kan voorgestelde websitewijzigingen na jouw goedkeuring doorvoeren, als de websitekoppeling dat ondersteunt. Ook kunnen we herhaalmetingen en rapportage inrichten om je AI-zichtbaarheid over tijd te volgen. We spreken vooraf af welke toegang, meetfrequentie, kosten en menselijke controle daarbij passen. Dit is geen garantie op vermeldingen, een vaste positie of extra omzet.
+
+## Wat is MCP en heeft Hermes dat nodig?
+
+MCP staat voor Model Context Protocol. Het is een standaard waarmee een AI-agent verbinding kan maken met externe documenten, agenda’s, databases of andere systemen. Bij Hermes heb je MCP meestal niet nodig. Hermes kan het meeste zelf regelen met ingebouwde tools, vaardigheden en rechtstreekse koppelingen. Alleen als een specifiek extern systeem niet rechtstreeks bereikbaar is, kan MCP een aanvullende koppeling zijn. Het is dus een mogelijkheid, geen vereiste om met Hermes te beginnen.
+
+## Stuurt Hermes mijn bedrijfsdata naar een LLM?
+
+Niet standaard je volledige bedrijfsomgeving. Een extern model ontvangt alleen wat voor een taak in de context wordt geplaatst: je prompt, relevante gespreksinformatie, geselecteerde tool- of bestandsresultaten en eventueel memory. Memory wordt lokaal opgeslagen, maar kan bij gebruik wel in de modelcontext terechtkomen. Gebruik je /moa (Mixture of Agents) , een feature van Hermes, dan laat Hermes voor één opdracht meerdere referentiemodellen eerst naar dezelfde vraag kijken. Een aggregatormodel gebruikt hun analyses om één antwoord te maken. Daarna schakelt Hermes terug naar het model dat je al gebruikte. Als de gekozen modellen extern draaien, ontvangen zij dus dezelfde geselecteerde taakcontext. Open source geeft controle en keuze, maar is niet automatisch privé. Privacy ontwerp je per workflow: context minimaliseren, rechten scheiden en per taak kiezen tussen lokaal, eigen VPS, Europese cloud of externe modellen.
