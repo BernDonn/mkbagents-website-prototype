@@ -1026,8 +1026,12 @@
 #oplossingen .case.case-new .case-actions{position:static;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:0;padding-top:0}
 #oplossingen .case.case-new .new-badge{top:-20px;right:7px}
 @media(min-width:901px){#oplossingen .usecases{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:700px){#oplossingen .case.case-new .case-summary{padding-top:32px}}
+#oplossingen .case.case-new{margin-top:0}
+#oplossingen .case.case-new .case-summary{padding-top:20px}
+#oplossingen .case.case-new .new-badge{font-size:14px;padding:3px 11px}
+@media(max-width:700px){#oplossingen .case.case-new .new-badge{font-size:24px;padding:7px 19px}}
 </style>
+<link rel="stylesheet" href="/assets/sophie-invite.css?v=1">
 </head>
 <body>
   <nav class="nav">
@@ -1599,9 +1603,13 @@
           <p class="muted">Begin met een korte verkenning van je workflow, bereikbaarheid, privacywensen en budget. Daarna weet je of een VPS, eigen Mac mini of hybride route logisch is.</p>
         </div>
         <div class="footer-cta-actions">
-          <a class="button light" href="https://wa.me/31618569839?text=Hallo%20MKBagents%2C%20ik%20wil%20graag%20mijn%20Hermes-route%20verkennen." target="_blank" rel="noopener">Bespreek mijn Hermes-route</a>
-          <a class="button secondary" href="/over-ons/">Lees over mij</a>
-          <p class="muted" style="font-size:14px">Altijd met menselijke goedkeuring, duidelijke datagrenzen en verantwoord gebruik. Start met één agent en één workflow; daarna pas uitbreiden.</p>
+          <a class="button secondary" href="https://wa.me/31618569839?text=Hallo%20MKBagents%2C%20ik%20wil%20graag%20een%20persoonlijk%20startgesprek%20plannen." target="_blank" rel="noopener">Plan een persoonlijk gesprek (via WhatsApp)</a>
+          <a class="button secondary" href="/quickscan/">Doe de Hermes Quickscan</a>
+          <div class="sophie-invite">
+            <button class="sophie-invite-trigger" type="button" aria-expanded="false" aria-controls="sophie-invite-choices">Laat je verrassen door Sophie</button>
+            <div class="sophie-invite-choices" id="sophie-invite-choices" role="group" aria-label="Sophie" hidden></div>
+          </div>
+          <p class="muted" style="font-size:14px">Altijd met menselijke goedkeuring en duidelijke datagrenzen. Eerst één taak betrouwbaar maken; daarna pas uitbreiden.</p>
         </div>
       </div>
     </section>
@@ -2155,6 +2163,10 @@
 "Gevoelige context kan lokaal blijven, terwijl een online route bereikbaarheid of geplande taken ondersteunt.": "Sensitive context can remain local, while an online route supports availability or scheduled tasks.",
 "Reken op weken, niet op maanden:": "Expect weeks, not months:",
 "na het startgesprek spreken we doel, toegang, grenzen en testvoorbeelden af. Daarna richten we de gekozen taken in, testen we met jullie eigen werk en sturen we samen bij. De precieze planning hangt af van de gekozen taken en benodigde toegang.": "after the introductory conversation we agree on the goal, access, boundaries and test examples. We then set up the chosen tasks, test them with your own work and adjust them together. The exact schedule depends on the chosen tasks and the access required.",
+"Plan een persoonlijk gesprek (via WhatsApp)": "Arrange a personal conversation (via WhatsApp)",
+"Doe de Hermes Quickscan": "Take the Hermes Quickscan",
+"Laat je verrassen door Sophie": "Let Sophie surprise you",
+"Altijd met menselijke goedkeuring en duidelijke datagrenzen. Eerst één taak betrouwbaar maken; daarna pas uitbreiden.": "Always with human approval and clear data boundaries. First make one task reliable; only then expand.",
 "Zes soorten werk om mee te starten": "Six types of work to get started",
         "De eerste versie richt zich op concrete, terugkerende workflows voor ondernemers. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.": "The first version focuses on concrete, recurring workflows for entrepreneurs. Start small, prove that it works, then expand, with a focus on time savings, overview and controllable AI.",
         "We bouwen stap voor stap een persoonlijk “operating system” voor jouw werk: afgestemd op jouw manier van werken en in de tijd verder uit te breiden met Hermes.": "Step by step, we build a personal “operating system” for your work: tuned to the way you work and expandable over time with Hermes.",
@@ -3169,5 +3181,6 @@
 
     setLanguage(localStorage.getItem('mkbAgentLang') || 'nl');
   </script>
+<script src="/assets/sophie-invite.js?v=1"></script>
 </body>
 </html>
