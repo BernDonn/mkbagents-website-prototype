@@ -540,7 +540,10 @@
     .bubble.agent{background:var(--paper);color:#172019}
     .mini{font-size:13px;color:#c7d5cc;margin-bottom:6px}
     .logos{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;color:#646b65;text-transform:uppercase;letter-spacing:.08em;font-size:13px;font-weight:760}
-    .sector-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;color:#202720;text-transform:none;letter-spacing:0;font-size:16px;font-weight:650}
+    .sector-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px;row-gap:28px;color:#202720;text-transform:none;letter-spacing:0;font-size:16px;font-weight:650}
+    .sector-row a{display:inline-flex;align-items:center;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--green);text-decoration:none;font-weight:750}
+    .sector-row a:hover{text-decoration:underline;text-underline-offset:3px}
+    .sector-row a.visibility-pulse{margin:0}
     .two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
     .statement{font-size:clamp(28px,4vw,50px);line-height:1.08;letter-spacing:-.04em;font-weight:800}
     .muted{color:var(--muted);line-height:1.65;font-size:17px;letter-spacing:-.003em}
@@ -1693,7 +1696,11 @@
     <section class="section" style="padding-top:10px;padding-bottom:8px">
       <div class="logos">Voor ondernemers waar transparantie, vertrouwen en privacy tellen
         <div class="sector-row">
-          <span>Inbox & agenda</span><span>Offertes & opvolging</span><span>CRM & klantcontact</span><span>Workflowautomatisering</span><span>Telefoon assistent</span><span>WhatsApp automatiseren</span>
+          <a href="https://zzpagent.nl/wat-is-een-ai-agent-voor-zzp/">AI-agent voor ZZP</a>
+          <a href="https://zzpagent.nl/persoonlijke-ai-assistent-voor-zzp/">persoonlijke AI-assistent</a>
+          <a href="https://zzpagent.nl/telefoonassistent-voor-zzp/">Telefoonassistent</a>
+          <a href="https://zzpagent.nl/workflowautomatisering-voor-zzp/">Workflowautomatisering</a>
+          <a class="visibility-pulse" href="/ai-zichtbaarheidscheck/"><span class="visibility-new-badge">Nieuw</span><span>AI-zichtbaarheidscheck</span></a>
         </div>
       </div>
     </section>
@@ -1712,7 +1719,6 @@
       </div>
       <div class="footer-legal" aria-label="Voorwaarden en privacy MKBagents">
         <div class="footer-legal-links">
-<a class="visibility-pulse" href="/ai-zichtbaarheidscheck/"><span class="visibility-new-badge">Nieuw</span><span>AI-zichtbaarheidscheck</span></a>
           <details id="voorwaarden">
             <summary>Voorwaarden</summary>
             <div class="footer-legal-panel">
