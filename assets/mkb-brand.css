@@ -1,0 +1,5 @@
+/* Shared MKBagents wordmark, matching the homepage. */
+a.mkb-brand{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;white-space:nowrap;font-family:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:normal;color:#111827;text-decoration:none}
+a.mkb-brand>.brand-dot{display:block;flex:none;width:12px;height:12px;border-radius:50%;background:#ffb84d;box-shadow:0 0 0 6px rgba(255,184,77,.20)}
+@media(max-width:390px){a.mkb-brand{font-size:19px;gap:7px}a.mkb-brand>.brand-dot{width:10px;height:10px}}
+#oplossingen .case-body a[href="/ai-zichtbaarheidscheck/"]{font-weight:800}
