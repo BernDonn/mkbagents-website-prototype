@@ -811,7 +811,7 @@
       .brand{font-size:19px;gap:7px}
       .brand-dot{width:10px;height:10px;box-shadow:0 0 0 5px rgba(var(--accent-rgb),.20)}
       .nav-compact-actions{gap:5px}
-      .nav-compact-actions .mobile-quickscan-link{display:none}
+      .nav-compact-actions .mobile-quickscan-link{display:inline-flex}
       .nav-compact-actions .mobile-qa-link{padding:8px 10px;font-size:11px}
       .nav-compact-actions .language-toggle button{padding:6px 7px}
     }
@@ -1021,6 +1021,13 @@
       }, 900);
     })();
   </script>
+<style id="solutions-zzp-alignment">
+#oplossingen .case-summary{grid-template-columns:1fr}
+#oplossingen .case.case-new .case-actions{position:static;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:0;padding-top:0}
+#oplossingen .case.case-new .new-badge{top:-20px;right:7px}
+@media(min-width:901px){#oplossingen .usecases{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){#oplossingen .case.case-new .case-summary{padding-top:32px}}
+</style>
 </head>
 <body>
   <nav class="nav">
@@ -1039,7 +1046,7 @@
       </div>
       <div class="nav-links">
         <a href="#oplossingen">Oplossingen</a>
-        <a href="#koppelingen">Koppelingen</a>
+
         <a href="#vergelijking" data-open-panel="vergelijking">Agent Platform</a>
         <a href="#providers">Modelkeuze</a>
         <a class="nav-faq-link" href="#faq" data-open-panel="faq">Q&A</a>
@@ -1220,79 +1227,61 @@
 
     <section class="section" id="oplossingen">
       <div class="eyebrow">Oplossingen</div>
-      <h2>Zes soorten werk om mee te starten</h2>
-      <p class="lead">De eerste versie richt zich op concrete, terugkerende workflows voor ondernemers. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.</p>
-      <p class="lead" style="max-width:980px">We bouwen stap voor stap een persoonlijk “operating system” voor jouw werk: afgestemd op jouw manier van werken en in de tijd verder uit te breiden met Hermes.</p>
+      <h2>Zes taken waarmee je direct tijd terugwint</h2>
+      <p class="lead"><span>Begin met één terugkerende taak die nu onnodig veel tijd kost. We werken je persoonlijke assistent samen in op jouw manier van werken. Daarna bereidt Hermes het werk voor, jij controleert en beslist. Werkt dat goed, dan kun je stap voor stap uitbreiden.</span> Je kunt ook alvast een kijkje nemen in ons <a class="workflow-inline-link" href="https://zzpagent.nl/workflowautomatisering-voor-zzp/">workflowoverzicht</a>.</p>
       <div class="usecases">
         <details class="case"><summary class="case-summary"><span><small>AI inwerken</small><h3>Werk je AI één keer in als assistent voor routinetaken</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Je hebt vast zo’n klus die elke week terugkomt. Het rapport dat je uit drie bronnen samenstelt, de declaraties die je invoert of de vergadering die je uitwerkt. Je zou het willen uitbesteden, maar het uitleggen duurt langer dan het zelf doen.</p><p class="muted">Juist omdat jouw manier van werken vol kleine beslissingen zit die je nooit hebt opgeschreven: welke cijfers je afrondt, welke mailtjes prioriteit krijgen en wat je overslaat. Je doet de taak één keer voor, pratend alsof je een stagiair inwerkt. Hermes kijkt mee, luistert mee en giet jouw werkwijze om in een herbruikbaar recept.</p><p class="muted">Zo wordt AI geen losse tool, maar onderdeel van je werkritme: informatie lezen, samenvatten, routeren of controleren waar dat past en koppelen waar nodig met bestaande systemen. Jij blijft bepalen wat er naar buiten gaat.</p><div class="example">“Laat Hermes meekijken hoe ik deze terugkerende klus doe en maak er een skill van.”</div></div></details>
-<details class="case"><summary class="case-summary"><span><small>Inbox, agenda & monitoring</small><h3>Continu zicht op wat ertoe doet</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren en afspraken of signalen bewaken. Hermes kan je agenda bijhouden vanuit diverse mails en kanalen, zodat losse signalen samenkomen in één rustig overzicht.</p><div class="example">“Elke ochtend: vat mijn inbox en agenda samen en laat zien wat relevant is voor mijn dag.”</div></div></details>
-<details class="case"><summary class="case-summary"><span><small>Business development</small><h3>Kansen vinden op een slimme manier</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Zoek leads, beoordeel relevantie en bereid persoonlijke outreach of opvolging voor zonder handmatig speurwerk.</p><div class="example">“Vind 10 bedrijven die passen bij deze propositie en zet conceptmails klaar.”</div></div></details>
-<details class="case"><summary class="case-summary"><span><small>Vergaderingen & gesprekken</small><h3>Opnames transcriberen, rubriceren en samenvatten</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Werk vergader- en gespreksopnames uit, vat ze samen en verdeel inzichten, acties of thema’s per persoon, onderwerp of opvolging.</p><div class="example">“Werk deze opname uit, vat haar samen en verdeel acties per persoon en onderwerp.”</div></div></details>
-<details class="case"><summary class="case-summary"><span><small>Facturen, bonnen & administratie</small><h3>Bonnen en inkoopfacturen verwerken zonder overtypen</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Veel MKB-bedrijven willen vooral van losse administratie af: bonnetjes, inkoopfacturen, pakbonnen of declaraties direct digitaal bewaren, datum, bedrag, btw, leverancier en kostenpost herkennen en daarna klaarzetten voor boekhouding, budgetoverzicht of ERP. Hermes kan een foto, PDF of doorgestuurde mail lezen, ontbrekende informatie signaleren en een voorstel doen. Jij controleert voordat er iets definitief wordt geboekt of doorgestuurd.</p><div class="example">“Lees deze bon of inkoopfactuur uit en zet de kostenpost klaar voor mijn administratie of budgetoverzicht.”</div></div></details>
-<details class="case case-new"><summary class="case-summary"><span><small>gevonden worden én opvolgen</small><h3>AI vindbaarheid van jouw bedrijf verbeteren</h3></span><span class="case-actions"><span class="expand-label">Bekijk details</span><span class="new-badge">Nieuw</span></span></summary><div class="case-body"><p class="muted">Met een nulmeting bekijken we met onze AI search check engine hoe jouw bedrijf naar voren komt in AI-antwoorden. Daarna krijg je concrete verbeterpunten voor je communicatie, website en veelgestelde vragen.</p><p class="muted">Ook hier kan Hermes helpen: met deze input kan hij, waar de website dit toelaat, voorgestelde aanpassingen na jouw goedkeuring automatisch doorvoeren. Met Hermes kunnen we de metingen vervolgens automatisch herhalen en over tijd volgen of je AI-vindbaarheid verbetert.</p><p><a class="workflow-inline-link" href="/ai-zichtbaarheidscheck/">Meer over de AI-zichtbaarheidscheck</a></p><h4>Website en landingpage</h4><p class="muted">Zet je propositie om in een compacte website of landingpage met heldere tekst, passende visuals, CTA’s en een intake- of contactroute die direct bruikbaar is voor MKB’ers. Naar wens kan Hermes ook een chatbot zoals Sophie installeren voor live intake of eerste klantvragen.</p><div class="example">“Maak van deze dienst een landingpage met doelgroep, aanbod, bewijs, prijsroute en WhatsApp-contact.”</div></div></details>
-      </div>
-    </section>
-
-    <section class="section" id="koppelingen">
-      <div class="integration-wrap">
-        <div class="eyebrow">Koppelingen & workflows</div>
-        <h2>Koppelt met de software die je al gebruikt</h2>
-        <p class="lead">Hermes is sterk in context, redeneren en samenwerking met mensen. Hermes kan zelf tools en koppelingen aansturen en samenwerken met workflowtools zoals n8n, API’s, webhooks en bestaande bedrijfssoftware. Zo kan je agent informatie uit mail, agenda, documenten, CRM, formulieren, betalingen en interne systemen combineren, terwijl vaste stappen voorspelbaar en controleerbaar blijven. Bestaat er een standaardkoppeling, dan gebruiken we die. Anders kiezen we voor API, webhook of een veilige handmatige route.</p>
-        <div class="integration-grid">
-          <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">Mail & agenda</span><h3>Inbox, afspraken en opvolging</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en agenda-updates voorbereiden zonder dat de agent zomaar namens jou verstuurt. We beginnen bij voorkeur met één mailbox, label of afgebakende leesroute, niet met toegang tot alles.</p></div>
-          </details>
-          <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">Spreadsheets & bestanden</span><h3>Lijsten, rapportages en documenten</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Gebruik spreadsheets, bestanden en documentopslag als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.</p></div>
-          </details>
-          <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">CRM & klantvragen</span><h3>Leads en dossiers komen op de juiste plek</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.</p><div class="integration-apps"><span class="app-chip">HubSpot</span><span class="app-chip">Pipedrive</span><span class="app-chip">Airtable</span><span class="app-chip">Notion</span></div></div>
-          </details>
-          <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">Betaling & intake</span><h3>Van aanvraag naar activatie</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden.</p><div class="integration-apps"><span class="app-chip">Mollie</span><span class="app-chip">Webhooks</span><span class="app-chip">Formulieren</span><span class="app-chip">WooCommerce</span></div></div>
-          </details>
-          <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">AI & agenttaken</span><h3>De agent denkt mee, de workflow voert uit</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Voor AI-flows koppelen we Hermes aan modellen, documenten, zoekindexen, tools en workflowlagen. De agent maakt samenvattingen, concepten of acties klaar, waarna vaste stappen gecontroleerd kunnen worden uitgevoerd.</p><div class="integration-apps"><span class="app-chip">ChatGPT</span><span class="app-chip">Claude</span><span class="app-chip">Gemini</span><span class="app-chip">AI Agent</span></div></div>
-          </details>
-          <details class="integration-card">
-            <summary class="integration-summary"><span><span class="tag">Documenten & contracten</span><h3>Van akkoord naar conceptdocument</h3></span><span class="expand-label">Bekijk details</span></summary>
-            <div class="integration-body"><p class="muted">Na gesprekken, offertes en mailwisselingen kan een agent de relevante bronnen verzamelen, ontbrekende of tegenstrijdige informatie signaleren, de juiste template kiezen en een eerste conceptcontract of voorstel klaarzetten. Jij controleert, past aan en beslist wat er naar buiten gaat.</p><div class="integration-apps"><span class="app-chip">E-mail</span><span class="app-chip">Transcripties</span><span class="app-chip">Templates</span><span class="app-chip">ERP/CRM</span></div></div>
-          </details>
-        </div>
-        <div class="integration-note"><strong>Inzet van deterministische workflows</strong><p class="muted">Hermes kan samenwerken met workflowtools zoals n8n: de agent denkt mee, de workflow voert gecontroleerd uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper, terwijl Hermes zich richt op waar context, beoordeling en menselijk inzicht nodig zijn.</p></div>
+<details class="case"><summary class="case-summary"><span><small>Inbox, agenda en overzicht</small><h3>Begin je dag met één rustig overzicht</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Hermes verzamelt relevante afspraken, open acties en belangrijke berichten uit je mail en andere afgesproken kanalen. Hij zet ze overzichtelijk voor je klaar en zorgt dat concrete afspraken in je agenda terechtkomen.</p><p class="muted">Jij ziet wat aandacht vraagt en beslist wat er moet gebeuren. Er wordt niets namens jou verstuurd zonder jouw akkoord.</p><div class="example">“Geef mij iedere ochtend mijn afspraken, open acties en belangrijke berichten in één overzicht.”</div></div></details>
+<details class="case"><summary class="case-summary"><span><small>Vergaderingen en gesprekken</small><h3>Van opname naar besluiten en acties</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Hermes werkt een opname of gespreksnotitie uit, maakt een samenvatting en zet besluiten, vragen en acties apart. Iedere actie krijgt de juiste persoon en, wanneer die bekend is, een concrete datum.</p><p class="muted">Jij controleert de uitwerking voordat iets wordt gedeeld of in je agenda komt.</p><div class="example">“Werk dit gesprek uit en zet besluiten, open vragen en acties per persoon onder elkaar.”</div></div></details>
+<details class="case"><summary class="case-summary"><span><small>Mail en documenten</small><h3>Laat concepten voorbereiden in jouw stijl</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Hermes verzamelt de relevante achtergrond en maakt een eerste versie van een e-mail, voorstel, verslag of document. De assistent houdt rekening met jouw eerdere keuzes en manier van schrijven.</p><p class="muted">Het blijft een concept totdat jij het hebt gecontroleerd en goedgekeurd.</p><div class="example">“Bereid op basis van deze informatie een antwoord voor in mijn stijl, maar verstuur niets.”</div></div></details>
+<details class="case"><summary class="case-summary"><span><small>Bonnetjes en administratie</small><h3>Bonnetjes verwerken zonder overtypen</h3></span><span class="expand-label">Bekijk details</span></summary><div class="case-body"><p class="muted">Stuur een foto of bestand door. Hermes leest datum, bedrag, btw en leverancier en zet een voorstel klaar voor de juiste kostenpost of banktransactie.</p><p class="muted">Jij controleert alle gegevens voordat iets definitief in je administratie wordt geboekt. Hermes neemt geen fiscale of boekhoudkundige beslissing van je over.</p><div class="example">“Lees deze bon uit en zet de gegevens klaar voor mijn controle en boekhouding.”</div></div></details>
+<details class="case case-new"><summary class="case-summary"><span><small>gevonden worden én opvolgen</small><h3>AI vindbaarheid van jouw bedrijf verbeteren</h3></span><span class="case-actions"><span class="expand-label">Bekijk details</span><span class="new-badge">Nieuw</span></span></summary><div class="case-body"><p class="muted">Met een nulmeting bekijken we met onze AI search check engine hoe jouw bedrijf naar voren komt in AI-antwoorden. Daarna krijg je concrete verbeterpunten voor je communicatie, website en veelgestelde vragen.</p><p class="muted">Ook hier kan Hermes helpen: met deze input kan hij, waar de website dit toelaat, voorgestelde aanpassingen na jouw goedkeuring automatisch doorvoeren. Met Hermes kunnen we de metingen vervolgens automatisch herhalen en over tijd volgen of je AI-vindbaarheid verbetert.</p><p><a class="workflow-inline-link" href="/ai-zichtbaarheidscheck/">Meer over de AI-zichtbaarheidscheck</a></p></div></details>
       </div>
     </section>
 
     <section class="section" id="prijzen">
-      <div class="eyebrow">Inrichting</div>
-      <h2>Drie routes om Hermes te draaien</h2>
-      <p class="lead" style="max-width:980px">Hermes hoeft niet vast te zitten aan één platform of leverancier. Je kunt Hermes draaien op een VPS, op je eigen Mac mini of in een hybride opstelling. MKBagents helpt je vooral de route kiezen die past bij je werk, privacywensen, bereikbaarheid en budget.</p>
+      <div class="eyebrow">Hoe beginnen wij?</div>
+      <h2>Jullie beginnen met een persoonlijk startgesprek</h2>
+      <div style="max-width:980px">
+        <p class="lead">We beginnen met een kort persoonlijk startgesprek. Jullie vertellen hoe jullie werken, welke hulpmiddelen jullie gebruiken en welk werk jullie tijd of overzicht kost. Daarna gaan we met Hermes aan de slag. Jullie praten of typen wat jullie willen dat hij voor jullie voorbereidt. Door jullie aanwijzingen en correcties leert Hermes stap voor stap hoe jullie werken.</p>
+        <p class="lead">Jullie hoeven niets te programmeren en hoeven vooraf geen compleet proces uit te denken. Jullie zien meteen wat Hermes voorbereidt, passen het aan waar nodig en bepalen zelf wat er daarna gebeurt. Zo raakt jullie persoonlijke assistent vertrouwd met jullie manier van werken terwijl jullie hem gebruiken.</p>
+      </div>
       <div class="products">
         <article class="product featured">
-          <span class="tag">1 · VPS-route</span>
-          <h3>Hermes op een VPS (Virtual Private Server)</h3>
-          <p class="muted">Voor ondernemers die een altijd bereikbare agent willen zonder eigen hardware thuis of op kantoor. Denk aan een VPS bij bijvoorbeeld Hetzner, Hostinger of een andere Europese provider.</p>
-          <ul><li>Altijd online, ook als je laptop dicht is</li><li>Geschikt voor Telegram, WhatsApp, Slack en browsertoegang</li><li>Keuze tussen een kleine instap-VPS of krachtiger server</li><li>Externe kosten lopen via je eigen provideraccount</li></ul>
+          <span class="tag">Dit is inbegrepen</span>
+          <h3>Van startgesprek tot een werkende eerste taak</h3>
+          <p class="muted">Jullie beginnen meestal met een hulpmiddel dat jullie al gebruiken, bijvoorbeeld mail, agenda, documenten, Apple Notes, WhatsApp of Telegram. Hermes krijgt alleen de toegang die voor die eerste taak nodig is.</p>
+          <ul><li>Jullie praten tegen Hermes en vertellen (of typen) wat jullie willen dat er gebeurt</li><li>Samen één concrete terugkerende taak kiezen</li><li>De passende Hermes-inrichting en één kanaal voorbereiden</li><li>Toegang, grenzen en menselijke goedkeuring vastleggen</li></ul>
         </article>
         <article class="product">
-          <span class="tag">2 · Eigen systeem</span>
-          <h3>Hermes op je eigen Mac mini of Mac</h3>
-          <p class="muted">Voor ondernemers die maximale controle willen over data, toegang en lokale bestanden. Dit past goed bij lokaal werken, gevoelige documenten of een kantooromgeving waarin je zelf de toegang wilt beheren.</p>
-          <ul><li>Data en bestanden blijven dichter bij je eigen omgeving</li><li>Geschikt voor lokale workflows, documenten en macOS-integraties</li><li>Geen verplichte hostingpartij</li><li>Je bent zelf verantwoordelijk voor hardware, updates en bereikbaarheid</li></ul>
+          <span class="tag">Inrichten en testen</span>
+          <h3>Ingewerkt op jullie manier van werken</h3>
+          <ul><li>Één werkwijze of skill rond jullie taak inrichten</li><li>Testen met jullie eigen voorbeelden en samen bijsturen</li><li>Uitleg zodat jullie begrijpen wat Hermes doet en hem later zelf kunnen aanpassen</li><li>Een afgesproken periode voor nazorg na de oplevering</li></ul>
         </article>
         <article class="product">
-          <span class="tag">3 · Hybride route</span>
-          <h3>Lokaal waar het kan, cloud waar het handig is</h3>
-          <p class="muted">Soms is een hybride inrichting logisch: Hermes kan deels lokaal draaien voor gevoelige context en gebruikt een VPS of cloudroute voor bereikbaarheid, geplande taken of externe koppelingen.</p>
-          <ul><li>Lokale controle voor gevoelige context</li><li>VPS of cloud voor bereikbaarheid en geplande taken</li><li>Providerkeuze blijft aanpasbaar</li><li>Goed startpunt als je later wilt opschalen</li></ul>
+          <span class="tag">Vaste prijs</span>
+          <h3>Eerst duidelijkheid, daarna een vaste prijs</h3>
+          <p class="muted">In het startgesprek bepalen we welke taak, toegang en inrichting nodig zijn. Daarna ontvangen jullie vooraf één vaste prijs voor het afgesproken starttraject. Geen open urenrekening en geen verrassingen achteraf.</p>
+          <ul><li>Begeleiding, inrichting, test en overdracht in de projectprijs</li><li>Externe kosten vooraf apart zichtbaar</li><li>Geen verplicht beheerabonnement</li></ul>
         </article>
       </div>
-      <div class="flow-note"><strong>Geen standaard hostingpakket:</strong> MKBagents helpt je begrijpen welke inrichting past bij jouw werk, risico’s en budget. We leggen ook uit waarom die route past, zodat je later zelf betere keuzes kunt maken over hosting, modellen, data en uitbreidingen. Daarna kun je zelf kiezen of je de installatie zelf doet, samen voorbereidt of later apart laat beheren.</div>
+
+      <details class="provider-card" style="margin-top:22px">
+        <summary class="provider-summary">
+          <span class="tag">Technische inrichting</span>
+          <strong>We kiezen pas daarna waar Hermes het beste draait</strong>
+          <p class="muted">De gekozen taken bepalen welke inrichting logisch is: op jullie eigen Mac, op een Europese VPS of in een combinatie daarvan. De techniek ondersteunt jullie taak en is niet het product dat jullie eerst moeten kiezen.</p>
+          <span class="provider-toggle">Bekijk de drie mogelijkheden</span>
+        </summary>
+        <div class="provider-detail">
+          <div class="provider-grid">
+            <article class="provider-card"><span class="tag">VPS</span><strong>Altijd bereikbaar</strong><p class="muted">Een Europese VPS past bij taken die ook moeten werken als jullie eigen Mac uitstaat.</p></article>
+            <article class="provider-card"><span class="tag">Eigen Mac</span><strong>Dicht bij jullie eigen omgeving</strong><p class="muted">Lokaal draaien past bij lokale bestanden, macOS-integraties en extra controle over toegang.</p></article>
+            <article class="provider-card"><span class="tag">Hybride</span><strong>Lokaal en online combineren</strong><p class="muted">Gevoelige context kan lokaal blijven, terwijl een online route bereikbaarheid of geplande taken ondersteunt.</p></article>
+          </div>
+        </div>
+      </details>
+      <div class="flow-note" style="margin-top:22px"><strong>Reken op weken, niet op maanden:</strong> na het startgesprek spreken we doel, toegang, grenzen en testvoorbeelden af. Daarna richten we de gekozen taken in, testen we met jullie eigen werk en sturen we samen bij. De precieze planning hangt af van de gekozen taken en benodigde toegang.</div>
     </section>
 
     <section class="section top-panels nav-panel-overlay" id="agent-panelen" aria-label="Q&A en Agent Platform" hidden>
@@ -1372,7 +1361,7 @@
             <p>Een workflow is een vaste reeks stappen die telkens in dezelfde logische volgorde wordt uitgevoerd. Een losse prompt is één afzonderlijke opdracht aan AI. Een workflow beschrijft het hele terugkerende proces, van de informatie die binnenkomt tot jouw controle of akkoord.</p>
             <p>Een eenvoudige workflow bestaat bijvoorbeeld uit vier stappen: een mail, formulier, bestand of bericht komt binnen; Hermes vat samen, ordent informatie of maakt een concept; Hermes zet een taak, antwoord of document klaar en kan waar nodig een tool gebruiken; jij controleert, past aan en beslist.</p>
             <p>Een agent kan binnen zo’n workflow zelfstandiger stappen uitvoeren en bepalen wat er vervolgens nodig is. Jij spreekt vooraf af waar Hermes zelf mag handelen en wanneer jouw akkoord nodig blijft.</p>
-            <p>Bekijk ook de <a class="workflow-inline-link" href="#koppelingen">koppelingen en workflows</a> voor jouw bedrijf.</p>
+
           </details>
 <details>
             <summary>10c. Wat is het kernverschil tussen automatisering en een AI-agent?</summary>
@@ -2086,7 +2075,7 @@
         "Kanalen · geheugen · tools · modellen": "Channels · memory · tools · models",
         "WhatsApp": "WhatsApp",
         "Telegram": "Telegram",
-        "E-mail": "Email",
+
         "Browser": "Browser",
         "communicatie & routing": "communication & routing",
         "berichten → acties → feedback": "messages → actions → feedback",
@@ -2106,7 +2095,67 @@
         "Gebruik via mail, Telegram, WhatsApp of browser. Geen extra portaal als dat niet nodig is.": "Use it through email, Telegram, WhatsApp or browser. No extra portal when it is not needed.",
         "AI-geletterdheid": "AI literacy",
         "Bernards rol als Lector AI helpt teams begrijpen wat AI wel en niet moet doen.": "Bernard's role as Professor of Applied AI helps teams understand what AI should and should not do.",
-        "Zes soorten werk om mee te starten": "Six types of work to get started",
+        "Zes taken waarmee je direct tijd terugwint": "Six tasks that immediately save you time",
+"Begin met één terugkerende taak die nu onnodig veel tijd kost. We werken je persoonlijke assistent samen in op jouw manier van werken. Daarna bereidt Hermes het werk voor, jij controleert en beslist. Werkt dat goed, dan kun je stap voor stap uitbreiden.": "Start with one recurring task that currently takes up unnecessary time. Together, we train your personal assistant in your way of working. Hermes then prepares the work, while you review and decide. Once that works well, you can expand step by step.",
+"Je kunt ook alvast een kijkje nemen in ons": "You can also take a look at our",
+"Inbox, agenda en overzicht": "Inbox, calendar and overview",
+"Begin je dag met één rustig overzicht": "Start your day with one calm overview",
+"Hermes verzamelt relevante afspraken, open acties en belangrijke berichten uit je mail en andere afgesproken kanalen. Hij zet ze overzichtelijk voor je klaar en zorgt dat concrete afspraken in je agenda terechtkomen.": "Hermes collects relevant appointments, open actions and important messages from your email and other agreed channels. It organizes them clearly for you and makes sure concrete appointments are added to your calendar.",
+"Jij ziet wat aandacht vraagt en beslist wat er moet gebeuren. Er wordt niets namens jou verstuurd zonder jouw akkoord.": "You see what needs attention and decide what should happen. Nothing is sent on your behalf without your approval.",
+"“Geef mij iedere ochtend mijn afspraken, open acties en belangrijke berichten in één overzicht.”": "“Every morning, give me my appointments, open actions and important messages in one overview.”",
+"Vergaderingen en gesprekken": "Meetings and conversations",
+"Van opname naar besluiten en acties": "From recording to decisions and actions",
+"Hermes werkt een opname of gespreksnotitie uit, maakt een samenvatting en zet besluiten, vragen en acties apart. Iedere actie krijgt de juiste persoon en, wanneer die bekend is, een concrete datum.": "Hermes processes a recording or conversation note, creates a summary and separates decisions, questions and actions. Each action is assigned to the right person and, when known, a specific date.",
+"Jij controleert de uitwerking voordat iets wordt gedeeld of in je agenda komt.": "You review the result before anything is shared or added to your calendar.",
+"“Werk dit gesprek uit en zet besluiten, open vragen en acties per persoon onder elkaar.”": "“Process this conversation and list decisions, open questions and actions by person.”",
+"Mail en documenten": "Email and documents",
+"Laat concepten voorbereiden in jouw stijl": "Have drafts prepared in your style",
+"Hermes verzamelt de relevante achtergrond en maakt een eerste versie van een e-mail, voorstel, verslag of document. De assistent houdt rekening met jouw eerdere keuzes en manier van schrijven.": "Hermes collects the relevant background and creates a first version of an email, proposal, report or document. The assistant takes your previous choices and writing style into account.",
+"Het blijft een concept totdat jij het hebt gecontroleerd en goedgekeurd.": "It remains a draft until you have reviewed and approved it.",
+"“Bereid op basis van deze informatie een antwoord voor in mijn stijl, maar verstuur niets.”": "“Based on this information, prepare a response in my style, but do not send anything.”",
+"Bonnetjes en administratie": "Receipts and administration",
+"Bonnetjes verwerken zonder overtypen": "Process receipts without retyping",
+"Stuur een foto of bestand door. Hermes leest datum, bedrag, btw en leverancier en zet een voorstel klaar voor de juiste kostenpost of banktransactie.": "Forward a photo or file. Hermes reads the date, amount, VAT and supplier and prepares a suggestion for the correct expense category or bank transaction.",
+"Jij controleert alle gegevens voordat iets definitief in je administratie wordt geboekt. Hermes neemt geen fiscale of boekhoudkundige beslissing van je over.": "You check all details before anything is definitively recorded in your administration. Hermes does not make tax or accounting decisions for you.",
+"“Lees deze bon uit en zet de gegevens klaar voor mijn controle en boekhouding.”": "“Read this receipt and prepare the details for my review and bookkeeping.”",
+"Hoe beginnen wij?": "How do we start?",
+"Jullie beginnen met een persoonlijk startgesprek": "You start with a personal introductory conversation",
+"We beginnen met een kort persoonlijk startgesprek. Jullie vertellen hoe jullie werken, welke hulpmiddelen jullie gebruiken en welk werk jullie tijd of overzicht kost. Daarna gaan we met Hermes aan de slag. Jullie praten of typen wat jullie willen dat hij voor jullie voorbereidt. Door jullie aanwijzingen en correcties leert Hermes stap voor stap hoe jullie werken.": "We start with a short personal conversation. You explain how you work, which tools you use and which work costs you time or clarity. We then start working with Hermes. You speak or type what you want it to prepare. Through your guidance and corrections, Hermes gradually learns how you work.",
+"Jullie hoeven niets te programmeren en hoeven vooraf geen compleet proces uit te denken. Jullie zien meteen wat Hermes voorbereidt, passen het aan waar nodig en bepalen zelf wat er daarna gebeurt. Zo raakt jullie persoonlijke assistent vertrouwd met jullie manier van werken terwijl jullie hem gebruiken.": "You do not need to program anything or design a complete process in advance. You immediately see what Hermes prepares, adjust it where needed and decide what happens next. This is how your personal assistant becomes familiar with the way you work while you use it.",
+"Dit is inbegrepen": "This is included",
+"Van startgesprek tot een werkende eerste taak": "From introductory conversation to a working first task",
+"Jullie beginnen meestal met een hulpmiddel dat jullie al gebruiken, bijvoorbeeld mail, agenda, documenten, Apple Notes, WhatsApp of Telegram. Hermes krijgt alleen de toegang die voor die eerste taak nodig is.": "You usually start with a tool you already use, such as email, calendar, documents, Apple Notes, WhatsApp or Telegram. Hermes only gets the access needed for that first task.",
+"Jullie praten tegen Hermes en vertellen (of typen) wat jullie willen dat er gebeurt": "You talk to Hermes and tell it (or type) what you want to happen",
+"Samen één concrete terugkerende taak kiezen": "Choose one concrete recurring task together",
+"De passende Hermes-inrichting en één kanaal voorbereiden": "Prepare the appropriate Hermes setup and one channel",
+"Toegang, grenzen en menselijke goedkeuring vastleggen": "Define access, boundaries and human approval",
+"Inrichten en testen": "Set up and test",
+"Ingewerkt op jullie manier van werken": "Trained on your way of working",
+"Één werkwijze of skill rond jullie taak inrichten": "Set up one workflow or skill around your task",
+"Testen met jullie eigen voorbeelden en samen bijsturen": "Test with your own examples and adjust together",
+"Uitleg zodat jullie begrijpen wat Hermes doet en hem later zelf kunnen aanpassen": "Explanation so you understand what Hermes does and can adjust it yourself later",
+"Een afgesproken periode voor nazorg na de oplevering": "An agreed period of aftercare following delivery",
+"Vaste prijs": "Fixed price",
+"Eerst duidelijkheid, daarna een vaste prijs": "Clarity first, then a fixed price",
+"In het startgesprek bepalen we welke taak, toegang en inrichting nodig zijn. Daarna ontvangen jullie vooraf één vaste prijs voor het afgesproken starttraject. Geen open urenrekening en geen verrassingen achteraf.": "During the introductory conversation, we determine which task, access and setup are needed. You then receive one fixed price in advance for the agreed starting project. No open-ended hourly billing and no surprises afterwards.",
+"Begeleiding, inrichting, test en overdracht in de projectprijs": "Guidance, setup, testing and handover included in the project price",
+"Externe kosten vooraf apart zichtbaar": "External costs shown separately in advance",
+"Geen verplicht beheerabonnement": "No mandatory management subscription",
+"Technische inrichting": "Technical setup",
+"We kiezen pas daarna waar Hermes het beste draait": "Only then do we choose where Hermes runs best",
+"De gekozen taken bepalen welke inrichting logisch is: op jullie eigen Mac, op een Europese VPS of in een combinatie daarvan. De techniek ondersteunt jullie taak en is niet het product dat jullie eerst moeten kiezen.": "The chosen tasks determine which setup makes sense: on your own Mac, on a European VPS or in a combination of both. The technology supports your task and is not the product you have to choose first.",
+"Bekijk de drie mogelijkheden": "View the three options",
+"Altijd bereikbaar": "Always available",
+"Een Europese VPS past bij taken die ook moeten werken als jullie eigen Mac uitstaat.": "A European VPS suits tasks that also need to work when your own Mac is switched off.",
+"Eigen Mac": "Your own Mac",
+"Dicht bij jullie eigen omgeving": "Close to your own environment",
+"Lokaal draaien past bij lokale bestanden, macOS-integraties en extra controle over toegang.": "Running locally suits local files, macOS integrations and extra control over access.",
+"Hybride": "Hybrid",
+"Lokaal en online combineren": "Combine local and online",
+"Gevoelige context kan lokaal blijven, terwijl een online route bereikbaarheid of geplande taken ondersteunt.": "Sensitive context can remain local, while an online route supports availability or scheduled tasks.",
+"Reken op weken, niet op maanden:": "Expect weeks, not months:",
+"na het startgesprek spreken we doel, toegang, grenzen en testvoorbeelden af. Daarna richten we de gekozen taken in, testen we met jullie eigen werk en sturen we samen bij. De precieze planning hangt af van de gekozen taken en benodigde toegang.": "after the introductory conversation we agree on the goal, access, boundaries and test examples. We then set up the chosen tasks, test them with your own work and adjust them together. The exact schedule depends on the chosen tasks and the access required.",
+"Zes soorten werk om mee te starten": "Six types of work to get started",
         "De eerste versie richt zich op concrete, terugkerende workflows voor ondernemers. Klein beginnen, bewijzen dat het werkt, daarna uitbreiden, met focus op tijdswinst, overzicht en beheersbare AI.": "The first version focuses on concrete, recurring workflows for entrepreneurs. Start small, prove that it works, then expand, with a focus on time savings, overview and controllable AI.",
         "We bouwen stap voor stap een persoonlijk “operating system” voor jouw werk: afgestemd op jouw manier van werken en in de tijd verder uit te breiden met Hermes.": "Step by step, we build a personal “operating system” for your work: tuned to the way you work and expandable over time with Hermes.",
         "Inbox, agenda & monitoring": "Inbox, calendar & monitoring",
@@ -2136,30 +2185,30 @@
         "Veel MKB-bedrijven willen vooral van losse administratie af: bonnetjes, inkoopfacturen, pakbonnen of declaraties direct digitaal bewaren, datum, bedrag, btw, leverancier en kostenpost herkennen en daarna klaarzetten voor boekhouding, budgetoverzicht of ERP. Hermes kan een foto, PDF of doorgestuurde mail lezen, ontbrekende informatie signaleren en een voorstel doen. Jij controleert voordat er iets definitief wordt geboekt of doorgestuurd.": "Many SMEs mainly want to get rid of loose administration: store receipts, purchase invoices, packing slips or expenses digitally, recognize date, amount, VAT, supplier and cost category, and then prepare them for bookkeeping, budget overview or ERP. Hermes can read a photo, PDF or forwarded email, flag missing information and suggest the next entry. You review before anything is finally booked or forwarded.",
         "“Lees deze bon of inkoopfactuur uit en zet de kostenpost klaar voor mijn administratie of budgetoverzicht.”": "“Read this receipt or purchase invoice and prepare the cost item for my administration or budget overview.”",
         "Koppelingen": "Integrations",
-        "Koppelingen & workflows": "Integrations & workflows",
+
         "Bekijk details": "View details",
-        "Koppelt met de software die je al gebruikt": "Connects with the software you already use",
-        "Hermes is sterk in context, redeneren en samenwerking met mensen. Hermes kan zelf tools en koppelingen aansturen en samenwerken met workflowtools zoals n8n, API’s, webhooks en bestaande bedrijfssoftware. Zo kan je agent informatie uit mail, agenda, documenten, CRM, formulieren, betalingen en interne systemen combineren, terwijl vaste stappen voorspelbaar en controleerbaar blijven. Bestaat er een standaardkoppeling, dan gebruiken we die. Anders kiezen we voor API, webhook of een veilige handmatige route.": "Hermes is strong in context, reasoning and human collaboration. Hermes can control tools and integrations itself and work together with workflow tools such as n8n, APIs, webhooks and existing business software. This lets your agent combine information from email, calendar, documents, CRM, forms, payments and internal systems, while fixed steps remain predictable and controllable. If a standard integration exists, we use it. Otherwise, we choose an API, webhook or a safe manual route.",
-        "Mail & agenda": "Email & calendar",
-        "Inbox, afspraken en opvolging": "Inbox, appointments and follow-up",
-        "Laat mail samenvatten, urgente berichten markeren, reminders klaarzetten en agenda-updates voorbereiden zonder dat de agent zomaar namens jou verstuurt. We beginnen bij voorkeur met één mailbox, label of afgebakende leesroute, niet met toegang tot alles.": "Have email summarized, urgent messages marked, reminders prepared and calendar updates drafted without the agent sending on your behalf by default. We prefer to start with one mailbox, label or bounded read-only route, not access to everything.",
-        "Spreadsheets & bestanden": "Spreadsheets & files",
-        "Lijsten, rapportages en documenten": "Lists, reports and documents",
-        "Gebruik spreadsheets, bestanden en documentopslag als praktische bron voor overzichten, rapportages, intakebestanden en documentverwerking.": "Use spreadsheets, files and document storage as practical sources for overviews, reports, intake files and document processing.",
-        "CRM & klantvragen": "CRM & customer questions",
-        "Leads en dossiers komen op de juiste plek": "Leads and files land in the right place",
-        "Nieuwe aanvragen kunnen automatisch naar je CRM, spreadsheet of mailbox, met een korte samenvatting en voorgestelde opvolging.": "New requests can automatically go to your CRM, spreadsheet or mailbox, with a short summary and suggested follow-up.",
-        "Betaling & intake": "Payment & intake",
-        "Van aanvraag naar activatie": "From request to activation",
-        "Formulieren, webhooks en Mollie kunnen intake, betaalstatus en activatie gescheiden houden.": "Forms, webhooks and Mollie can keep intake, payment status and activation separate.",
-        "AI & agenttaken": "AI & agent tasks",
-        "De agent denkt mee, de workflow voert uit": "The agent thinks along, the workflow executes",
-        "Voor AI-flows koppelen we Hermes aan modellen, documenten, zoekindexen, tools en workflowlagen. De agent maakt samenvattingen, concepten of acties klaar, waarna vaste stappen gecontroleerd kunnen worden uitgevoerd.": "For AI flows we connect Hermes to models, documents, search indexes, tools and workflow layers. The agent prepares summaries, drafts or actions, after which fixed steps can be executed in a controlled way.",
-        "Documenten & contracten": "Documents & contracts",
-        "Van akkoord naar conceptdocument": "From agreement to draft document",
-        "Na gesprekken, offertes en mailwisselingen kan een agent de relevante bronnen verzamelen, ontbrekende of tegenstrijdige informatie signaleren, de juiste template kiezen en een eerste conceptcontract of voorstel klaarzetten. Jij controleert, past aan en beslist wat er naar buiten gaat.": "After conversations, proposals and email exchanges, an agent can gather the relevant sources, flag missing or contradictory information, choose the right template and prepare a first draft contract or proposal. You review, adjust and decide what goes out.",
-        "Inzet van deterministische workflows": "Using deterministic workflows",
-        "Hermes kan samenwerken met workflowtools zoals n8n: de agent denkt mee, de workflow voert gecontroleerd uit. Dat maakt routinetaken betrouwbaarder, voorspelbaarder en goedkoper, terwijl Hermes zich richt op waar context, beoordeling en menselijk inzicht nodig zijn.": "Hermes can work together with workflow tools such as n8n: the agent thinks along, the workflow executes in a controlled way. This makes routine tasks more reliable, predictable and cost-effective, while Hermes focuses on where context, judgement and human insight are needed.",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         "CRM & opvolging": "CRM & follow-up",
         "Prijzen": "Pricing",
         "Inrichting": "Setup routes",
@@ -2456,7 +2505,7 @@
       });
     });
     panelClose?.addEventListener('click', closeNavPanels);
-    document.querySelector('#faq a[href="#koppelingen"]')?.addEventListener('click', closeNavPanels);
+
     panelOverlay?.addEventListener('click', event => {
       if(event.target === panelOverlay) closeNavPanels();
     });
