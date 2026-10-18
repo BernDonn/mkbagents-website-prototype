@@ -3,7 +3,7 @@
 <rect width="1600" height="1000" fill="#fffaf1"/><circle cx="124" cy="86" r="16" fill="#d7f268"/><text x="154" y="99" font-family="Arial,sans-serif" font-size="42" font-weight="800" fill="#10291c">MKBagents</text>
 <rect x="1190" y="55" width="270" height="54" rx="27" fill="#eef5cf"/><text x="1325" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#143f2b">PRAKTIJKVOORBEELD</text>
 <text x="110" y="205" font-family="Arial,sans-serif" font-size="70" font-weight="850" letter-spacing="-2" fill="#111a12">Eén opdracht, een rustig dagoverzicht</text>
-<text x="110" y="260" font-family="Arial,sans-serif" font-size="29" fill="#526057">Hermes brengt verspreide informatie samen en zet alleen het relevante voor jullie klaar.</text>
+<text x="110" y="260" font-family="Arial,sans-serif" font-size="29" fill="#526057">Hermes brengt verspreide informatie samen en zet alleen het relevante voor je klaar.</text>
 <g filter="url(#shadow)" font-family="Arial,sans-serif">
 <rect x="90" y="335" width="330" height="110" rx="24" fill="#e5f4e8"/><text x="125" y="380" font-size="28" font-weight="800" fill="#143f2b">Belangrijke mail</text><text x="125" y="417" font-size="22" fill="#526057">Wie wacht op antwoord?</text>
 <rect x="90" y="475" width="330" height="110" rx="24" fill="#fff0c9"/><text x="125" y="520" font-size="28" font-weight="800" fill="#143f2b">Taken en deadlines</text><text x="125" y="557" font-size="22" fill="#526057">Wat moet vandaag?</text>
@@ -15,5 +15,5 @@
 <rect x="1180" y="745" width="330" height="130" rx="26" fill="#ffffff" stroke="#bdd4c4" stroke-width="2"/><text x="1215" y="795" font-size="28" font-weight="800" fill="#143f2b">Dagoverzicht</text><text x="1215" y="835" font-size="22" fill="#526057">Bewaard als naslag</text>
 </g>
 <g stroke="#2b6a4a" stroke-width="5" fill="none" marker-end="url(#arrow)"><path d="M430 390 C500 390 500 500 550 520"/><path d="M430 530 C500 530 500 560 550 570"/><path d="M430 670 C500 670 500 650 550 640"/><path d="M430 810 C500 810 500 720 550 700"/><path d="M1045 520 C1110 500 1120 450 1170 450"/><path d="M1045 610 C1110 610 1120 630 1170 630"/><path d="M1045 700 C1110 720 1120 810 1170 810"/></g>
-<rect x="475" y="865" width="650" height="78" rx="26" fill="#eef5cf"/><text x="800" y="915" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="800" fill="#143f2b">Jullie controleren, passen aan en bepalen wat er gebeurt.</text>
+<rect x="475" y="865" width="650" height="78" rx="26" fill="#eef5cf"/><text x="800" y="915" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="800" fill="#143f2b">Je controleert, past aan en bepaalt wat er gebeurt.</text>
 </svg>
