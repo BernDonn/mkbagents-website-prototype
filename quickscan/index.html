@@ -265,7 +265,30 @@
     input:focus,textarea:focus,select:focus{outline:2px solid rgba(var(--accent-rgb),.22);border-color:var(--blue)}
     ::selection{background:rgba(var(--accent-rgb),.30)}
 
-  </style>
+  .contact-card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      margin:18px 0 32px;
+    }
+.contact-card[hidden]{display:none}
+.contact-card h2{font-size:24px;line-height:1.2;margin:0 0 6px}
+.contact-card > p{color:var(--muted);margin:0 0 20px}
+.contact-card textarea{min-height:130px;resize:vertical}
+.contact-consent{
+      display:flex;
+      align-items:flex-start;
+      gap:9px;
+      font-size:13px;
+      color:var(--muted);
+      margin:0 0 18px;
+    }
+.contact-consent input{margin-top:4px;accent-color:var(--green)}
+.contact-status{font-size:14px;font-weight:600;margin:14px 0 0}
+.contact-status.is-error{color:#a33}
+.contact-status.is-success{color:var(--green)}
+</style>
 </head>
 <body>
 
@@ -286,8 +309,39 @@
 
   <div class="btn-group">
     <a class="btn btn-primary" href="#scan">Start de scan →</a>
-    <a class="btn btn-secondary" href="/#contact">Liever contact</a>
+    <button class="btn btn-secondary" type="button" id="open-contact-form" aria-expanded="false" aria-controls="email-contact">Liever mailen</button>
   </div>
+
+<section class="contact-card" id="email-contact" hidden aria-labelledby="email-contact-title">
+    <h2 id="email-contact-title">Stuur ons een bericht</h2>
+    <p>Je bericht gaat rechtstreeks naar info@mkbagents.nl. Je hoeft hiervoor geen mailprogramma te openen.</p>
+    <form id="quick-contact-form" action="https://formsubmit.co/info@mkbagents.nl" method="post">
+      <input type="hidden" name="_subject" value="Bericht via Hermes Quickscan" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_autoresponse" value="Bedankt voor je bericht aan MKBagents. We hebben het goed ontvangen en nemen per e-mail contact met je op." />
+      <input type="hidden" name="_next" value="https://mkbagents.nl/quickscan/?contact=bedankt" />
+      <div class="two-col">
+        <div class="form-group">
+          <label class="field-label" for="contact-name">Naam</label>
+          <input id="contact-name" name="Naam" type="text" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="contact-email">E-mailadres</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="field-label" for="contact-message">Bericht</label>
+        <textarea id="contact-message" name="Bericht" maxlength="1500" required></textarea>
+      </div>
+      <label class="contact-consent">
+        <input name="Akkoord contact" type="checkbox" value="Ja" required />
+        <span>Ik ga akkoord dat MKBagents deze gegevens gebruikt om op mijn bericht te reageren.</span>
+      </label>
+      <button class="btn btn-primary" type="submit" id="contact-submit">Verstuur bericht →</button>
+      <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
 
   <h2 class="section-title">Wat onderzoekt de Hermes Quickscan?</h2>
 
@@ -462,6 +516,84 @@
 (function(){
   let currentStep = 1;
   const totalSteps = 3;
+  const contactToggle = document.getElementById('open-contact-form');
+  const contactCard = document.getElementById('email-contact');
+  const contactForm = document.getElementById('quick-contact-form');
+  const contactStatus = document.getElementById('contact-status');
+  const contactSubmit = document.getElementById('contact-submit');
+
+  function showContactForm() {
+    contactCard.hidden = false;
+    contactToggle.setAttribute('aria-expanded', 'true');
+    contactToggle.textContent = 'Contactformulier sluiten';
+    document.getElementById('contact-name').focus({ preventScroll: true });
+    contactCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function hideContactForm() {
+    contactCard.hidden = true;
+    contactToggle.setAttribute('aria-expanded', 'false');
+    contactToggle.textContent = 'Liever mailen';
+  }
+
+  contactToggle.addEventListener('click', function() {
+    if (contactCard.hidden) showContactForm();
+    else hideContactForm();
+  });
+
+  if (new URLSearchParams(location.search).get('contact') === 'bedankt') {
+    showContactForm();
+    contactStatus.textContent = 'Bedankt. Je bericht is ontvangen. Er is een bevestiging naar je e-mailadres gestuurd.';
+    contactStatus.className = 'contact-status is-success';
+  }
+
+  contactForm.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    contactStatus.textContent = '';
+    contactStatus.className = 'contact-status';
+    if (!contactForm.reportValidity()) return;
+
+    const formData = new FormData(contactForm);
+    contactSubmit.disabled = true;
+    contactSubmit.textContent = 'Versturen...';
+
+    try {
+      const receiptResponse = await fetch('https://sophie.mkbagents.nl/quickscan-submit', {
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          site: 'mkbagents.nl',
+          visitorId: (crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()),
+          scanType: 'mail_contact',
+          name: String(formData.get('Naam') || ''),
+          email: String(formData.get('email') || ''),
+          dream: String(formData.get('Bericht') || ''),
+          consent: formData.get('Akkoord contact') === 'Ja',
+          path: location.pathname + location.search,
+          referrer: document.referrer || '',
+          userAgent: navigator.userAgent || ''
+        }),
+        keepalive: true
+      });
+      if (!receiptResponse.ok) throw new Error('Ontvangstregistratie mislukt: ' + receiptResponse.status);
+      if (typeof gtag === 'function') {
+        gtag('event', 'quickscan_contact_submit', { 'event_category': 'conversion' });
+      }
+      contactStatus.textContent = 'Je bericht is veilig ontvangen. Rond zo nodig de e-mailcontrole af.';
+      contactStatus.className = 'contact-status is-success';
+      contactForm.submit();
+      return;
+    } catch (receiptError) {
+      console.error(receiptError);
+      contactStatus.textContent = 'Versturen lukt nu niet. Noteer eventueel info@mkbagents.nl en probeer het later opnieuw.';
+      contactStatus.className = 'contact-status is-error';
+      contactSubmit.disabled = false;
+      contactSubmit.textContent = 'Verstuur bericht →';
+    }
+  });
+
+
 
   function showStep(n) {
     for (let i = 1; i <= totalSteps; i++) {
