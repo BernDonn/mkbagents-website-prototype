@@ -1708,82 +1708,6 @@
         </div>
       </div>
     </section>
-    <section class="section" id="bestel-agent" hidden>
-      <div class="order-layout">
-        <div>
-          <div class="order-steps">
-            <div class="order-step"><span class="badge">1</span><div><strong>Vul je gegevens in</strong><p class="muted">Naam, e-mailadres en bedrijfsnaam voor de eerste intake.</p></div></div>
-            <div class="order-step"><span class="badge">2</span><div><strong>Start met Hermes</strong><p class="muted">We bereiden je Hermes-agent voor op de eerste workflow.</p></div></div>
-            <div class="order-step"><span class="badge">3</span><div><strong>Voeg je Telegram-token toe</strong><p class="muted">Maak je bot aan via BotFather en plak de token in het formulier. <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.</p></div></div>
-            <div class="order-step"><span class="badge">4</span><div><strong>Koppel ChatGPT tijdens installatie</strong><p class="muted">Geen code nodig: we loggen samen in via de officiële ChatGPT-login.</p></div></div>
-            <div class="order-step"><span class="badge">5</span><div><strong>Start intake en betaal eerste maand</strong><p class="muted">Na je intake ga je veilig naar Mollie. Na betaling zetten we je installatie klaar.</p></div></div>
-          </div>
-          <div class="order-price">
-            <div class="eyebrow" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:var(--lime)">€29 / maand per bot</div>
-            <div class="price" style="margin-top:18px">€29 <span>/ maand per agent</span></div>
-            <p class="muted" style="margin-top:14px">Geen grote startkosten en direct opzegbaar.</p>
-          </div>
-        </div>
-        <article class="order-card">
-          <div class="eyebrow" id="order-eyebrow">Hermes intake</div>
-          <h2 id="order-title">Start je Hermes intake</h2>
-          <p class="lead" id="order-lead">Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.</p>
-          <form id="order-form" style="display:grid;gap:18px;margin-top:28px">
-            <div class="field full">
-              <label for="order-email">E-mailadres</label>
-              <input id="order-email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="order-name">Naam</label>
-              <input id="order-name" name="customer_name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="order-company">Bedrijf</label>
-              <input id="order-company" name="company_name" autocomplete="organization" required>
-            </div>
-            <div class="field full">
-              <label>Gekozen AI-agent</label>
-              <input type="hidden" name="agent" id="order-agent" value="hermes">
-              <div class="agent-choice-grid">
-                <button type="button" class="agent-option active" data-agent-option="hermes">
-                  <strong style="display:flex;align-items:center;gap:10px">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="3" width="26" height="22" rx="5" fill="#D7F268" stroke="#10291f" stroke-width="1.2"/><rect x="6" y="8" width="7" height="5" rx="1.5" fill="#10291f" opacity=".4"/><rect x="15" y="8" width="7" height="5" rx="1.5" fill="#10291f" opacity=".4"/><rect x="6" y="16" width="16" height="4" rx="2" fill="#10291f" opacity=".25"/></svg>
-                    Hermes Agent
-                  </strong>
-                </button>
-              </div>
-            </div>
-            <div class="field full">
-              <label>Kanaal</label>
-              <input type="hidden" name="channel" id="order-channel" value="telegram">
-              <div class="segment-switch" aria-label="Kanaalkeuze">
-                <button type="button" class="active" data-channel-option="telegram">Telegram</button>
-                <button type="button" data-channel-option="whatsapp">WhatsApp</button>
-              </div>
-            </div>
-            <div class="field full">
-              <label for="order-channel-token" class="label-help"><span id="order-channel-token-label">Telegram Bot Token</span> <details><summary aria-label="Uitleg kanaal-token">?</summary><div class="help-pop" id="order-channel-token-help">Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Maak de bot aan via <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>. Hulp nodig? Lees deze <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.</div></details></label>
-              <input id="order-channel-token" name="channel_token" required>
-            </div>
-            <div class="field full">
-              <label class="label-help">ChatGPT OAuth <details><summary aria-label="Uitleg ChatGPT OAuth">?</summary><div class="help-pop">ChatGPT OAuth betekent dat je inlogt met je eigen ChatGPT/Codex-account in plaats van een losse API-sleutel te kopiëren. Je hoeft hier niets in te vullen: tijdens de installatie openen we de officiële login, jij bevestigt de toegang en de beveiligde koppeling wordt alleen in je private agent-workspace opgeslagen.</div></details></label>
-              <div class="setup-note">Geen code nodig in dit formulier. We koppelen ChatGPT OAuth samen tijdens de installatie via de officiële login.</div>
-              <input type="hidden" id="order-model-key" name="model_api_key" value="Koppelen tijdens installatie via officiële login">
-            </div>
-            <div class="field full">
-              <label for="order-voucher">Vouchercode</label>
-              <input id="order-voucher" name="voucher_code">
-            </div>
-            <label class="check"><input type="checkbox" name="accepted_terms" required> <span>Ik heb de voorwaarden en het privacybeleid gelezen.</span></label>
-            <label class="check"><input type="checkbox" name="accepted_responsibility" required> <span>Ik begrijp dat ik verantwoordelijk blijf voor de configuratie en antwoorden van mijn bot en gevoelige acties eerst moet goedkeuren.</span></label>
-            <div class="hero-actions" style="margin:0">
-              <button type="submit" class="button light">Start intake en betaal eerste maand</button>
-            </div>
-            <div id="order-result" class="notice" hidden></div>
-          </form>
-        </article>
-      </div>
-    </section>
 
     <section class="section" style="padding-top:10px;padding-bottom:8px">
       <div class="logos">
@@ -2463,13 +2387,8 @@
         "Nederlandse uitleg": "Dutch guide",
         "Koppel ChatGPT tijdens installatie": "Connect ChatGPT during installation",
         "Geen code nodig: we loggen samen in via de officiële ChatGPT-login.": "No code needed: we log in together through the official ChatGPT login.",
-        "Start intake en betaal eerste maand": "Start intake and pay the first month",
-        "Na je intake ga je veilig naar Mollie. Na betaling zetten we je installatie klaar.": "After your intake you go safely to Mollie. After payment we prepare your installation.",
-        "€29 / maand per bot": "€29 / month per bot",
-        "Geen grote startkosten en direct opzegbaar.": "No large start-up costs and cancel any time.",
         "Hermes intake": "Hermes intake",
         "Start je Hermes intake": "Start your Hermes intake",
-        "Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.": "Fill in the details needed to prepare Hermes for your first workflow. Then you go safely to Mollie; installation follows after payment.",
         "E-mailadres": "Email address",
         "Naam": "Name",
         "Bedrijf": "Company",
@@ -2490,15 +2409,9 @@
         "Vouchercode": "Voucher code",
         "Ik heb de voorwaarden en het privacybeleid gelezen.": "I have read the terms and the privacy policy.",
         "Ik begrijp dat ik verantwoordelijk blijf voor de configuratie en antwoorden van mijn bot en gevoelige acties eerst moet goedkeuren.": "I understand that I remain responsible for my bot's configuration and answers and must approve sensitive actions first.",
-        "Start intake en betaal eerste maand": "Start intake and pay the first month",
-        "We zetten je veilige Mollie-checkout klaar...": "Preparing your secure Mollie checkout...",
-        "Je wordt doorgestuurd naar Mollie om de eerste maand te betalen. Na betaling zetten we je installatie klaar.": "You will be redirected to Mollie to pay the first month. After payment we prepare your installation.",
         "Gekozen agent:": "Selected agent:",
         "Kanaal:": "Channel:",
         "Modelroute:": "Model route:",
-        "Ga naar Mollie checkout": "Go to Mollie checkout",
-        "Lukt doorsturen niet? Gebruik de knop hierboven.": "Redirect not working? Use the button above.",
-        "Checkout kon niet worden gestart. Probeer opnieuw of gebruik de contactknop.": "Checkout could not be started. Try again or use the contact button.",
         "Voorwaarden & privacy": "Terms & privacy",
         "Duidelijke afspraken voor verantwoord gebruik": "Clear agreements for responsible use",
         "MKBagents werkt met heldere grenzen: AI ondersteunt, de gebruiker houdt controle en gevoelige acties vragen expliciete menselijke goedkeuring.": "MKBagents works with clear boundaries: AI supports, the user remains in control and sensitive actions require explicit human approval.",
@@ -2585,12 +2498,6 @@
       document.querySelectorAll('[data-lang-button]').forEach(button => {
         button.classList.toggle('active', button.dataset.langButton === lang);
       });
-      if(orderAgentInput){
-        setSelectedAgent(orderAgentInput.value || 'hermes');
-      }
-      if(orderChannelInput){
-        setSelectedChannel(orderChannelInput.value || 'telegram');
-      }
       document.querySelector('#faq .hero-faq').setAttribute('aria-label', lang === 'en' ? 'Frequently asked questions about Hermes and MKBagents' : 'Veelgestelde vragen over Hermes en MKBagents');
       document.querySelector('#faq img').alt = lang === 'en' ? 'Illustration of the harness around a model: loop, tools, context, persistence and policy' : 'Illustratie van waar een harness uit bestaat rond een model: loop, tools, context, persistence en policy';
       const structured = document.querySelector('script[type="application/ld+json"]');
@@ -2662,185 +2569,6 @@
 
     window.addEventListener('hashchange', openTopPanelFromHash);
     openTopPanelFromHash();
-
-    const orderForm = document.querySelector('#order-form');
-    const orderResult = document.querySelector('#order-result');
-    const orderSection = document.querySelector('#bestel-agent');
-    const orderEyebrow = document.querySelector('#order-eyebrow');
-    const orderTitle = document.querySelector('#order-title');
-    const orderLead = document.querySelector('#order-lead');
-    const orderAgentInput = document.querySelector('#order-agent');
-    const orderChannelInput = document.querySelector('#order-channel');
-    const orderChannelToken = document.querySelector('#order-channel-token');
-    const orderChannelTokenLabel = document.querySelector('#order-channel-token-label');
-    const orderChannelTokenHelp = document.querySelector('#order-channel-token-help');
-    const orderCopy = {
-      nl: {
-        hermes: {
-          eyebrow: 'Hermes intake',
-          title: 'Start je Hermes intake',
-          lead: 'Vul de gegevens in die nodig zijn om Hermes voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.'
-        },
-        hermes: {
-          eyebrow: 'Hermes intake',
-          title: 'Start je Hermes intake',
-          lead: 'Vul de gegevens in die nodig zijn om Hermes Agent voor jouw eerste workflow voor te bereiden. Daarna ga je veilig naar Mollie; installatie volgt na betaling.'
-        }
-      },
-      en: {
-        hermes: {
-          eyebrow: 'Hermes intake',
-          title: 'Start your Hermes intake',
-          lead: 'Fill in the details needed to prepare Hermes for your first workflow. Then you go safely to Mollie; installation follows after payment.'
-        },
-        hermes: {
-          eyebrow: 'Hermes intake',
-          title: 'Start your Hermes intake',
-          lead: 'Fill in the details needed to prepare Hermes Agent for your first workflow. Then you go safely to Mollie; installation follows after payment.'
-        }
-      }
-    };
-
-    function setSelectedAgent(agent){
-      if(!orderAgentInput) return;
-      const selectedAgent = 'hermes';
-      orderAgentInput.value = selectedAgent;
-      document.querySelectorAll('[data-agent-option]').forEach(button => {
-        button.classList.toggle('active', button.dataset.agentOption === selectedAgent);
-      });
-      const lang = document.body.dataset.lang === 'en' ? 'en' : 'nl';
-      const copy = orderCopy[lang][selectedAgent];
-      if(copy){
-        if(orderEyebrow) orderEyebrow.textContent = copy.eyebrow;
-        if(orderTitle) orderTitle.textContent = copy.title;
-        if(orderLead) orderLead.textContent = copy.lead;
-      }
-    }
-
-    function setSelectedChannel(channel){
-      if(!orderChannelInput) return;
-      const selectedChannel = channel === 'whatsapp' ? 'whatsapp' : 'telegram';
-      orderChannelInput.value = selectedChannel;
-      document.querySelectorAll('[data-channel-option]').forEach(button => {
-        button.classList.toggle('active', button.dataset.channelOption === selectedChannel);
-      });
-      const lang = document.body.dataset.lang === 'en' ? 'en' : 'nl';
-      const channelCopy = {
-        nl: {
-          telegram: {
-            label: 'Telegram Bot Token',
-            help: 'Dit is de sleutel waarmee jouw agent via jouw eigen Telegram-bot berichten kan ontvangen en beantwoorden. Maak de bot aan via <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>. Hulp nodig? Lees deze <a href="https://imsocial.nl/telegram/wat-is-een-telegram-bot-wat-kun-je-ermee-en-hoe-maak-je-er-een" target="_blank" rel="noopener">Nederlandse uitleg</a>.'
-          },
-          whatsapp: {
-            label: 'WhatsApp Token',
-            help: 'Plak hier de WhatsApp-token of toegangssleutel die we gebruiken om jouw agent aan WhatsApp te koppelen. We controleren de juiste route tijdens de installatie.'
-          }
-        },
-        en: {
-          telegram: {
-            label: 'Telegram Bot Token',
-            help: 'This is the key that lets your agent receive and answer messages through your own Telegram bot. Create the bot through <a href="https://telegram.me/BotFather" target="_blank" rel="noopener">BotFather</a>.'
-          },
-          whatsapp: {
-            label: 'WhatsApp Token',
-            help: 'Paste the WhatsApp token or access key we use to connect your agent to WhatsApp. We check the right route during installation.'
-          }
-        }
-      };
-      const copy = channelCopy[lang][selectedChannel];
-      if(orderChannelTokenLabel) orderChannelTokenLabel.textContent = copy.label;
-      if(orderChannelTokenHelp) orderChannelTokenHelp.innerHTML = copy.help;
-      if(orderChannelToken) orderChannelToken.placeholder = copy.label;
-    }
-
-    function revealOrderSection(agent){
-      setSelectedAgent(agent || 'hermes');
-      if(orderSection){
-        orderSection.hidden = false;
-        requestAnimationFrame(() => orderSection.scrollIntoView({behavior:'smooth', block:'start'}));
-      }
-    }
-
-    document.querySelectorAll('[data-onboarding-agent]').forEach(link => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        revealOrderSection(link.dataset.onboardingAgent || 'hermes');
-        history.replaceState(null, '', '#bestel-agent');
-      });
-    });
-
-    document.querySelectorAll('[data-agent-option]').forEach(button => {
-      button.addEventListener('click', () => setSelectedAgent(button.dataset.agentOption || 'hermes'));
-    });
-
-    document.querySelectorAll('[data-channel-option]').forEach(button => {
-      button.addEventListener('click', () => setSelectedChannel(button.dataset.channelOption || 'telegram'));
-    });
-
-    const checkoutEndpoint = 'https://hermes2eva.app.n8n.cloud/webhook/mkbagents-intake-checkout';
-
-    if(orderForm){
-      orderForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const submitButton = orderForm.querySelector('button[type="submit"]');
-        const data = Object.fromEntries(new FormData(orderForm).entries());
-        const agentLabel = data.agent === 'hermes' ? 'Hermes Agent' : 'Hermes Agent';
-        const payload = {
-          source_brand: 'MKBagents',
-          source_domain: 'mkbagents.nl',
-          agent: 'hermes',
-          customer_name: data.customer_name || '',
-          company_name: data.company_name || '',
-          email: data.email || '',
-          channel: data.channel || 'telegram',
-          channel_token: data.channel_token || '',
-          telegram_bot_token: data.channel === 'telegram' ? (data.channel_token || '') : '',
-          whatsapp_token: data.channel === 'whatsapp' ? (data.channel_token || '') : '',
-          voucher_code: data.voucher_code || ''
-        };
-
-        if(submitButton){
-          submitButton.disabled = true;
-          submitButton.textContent = 'We zetten je veilige Mollie-checkout klaar...';
-        }
-        orderResult.hidden = false;
-        orderResult.innerHTML = `
-          <strong>We zetten je veilige Mollie-checkout klaar...</strong><br>
-          Je wordt doorgestuurd naar Mollie om de eerste maand te betalen. Na betaling zetten we je installatie klaar.<br><br>
-          <span><strong>Gekozen agent:</strong> ${agentLabel}</span><br>
-          <span><strong>Kanaal:</strong> ${payload.channel}</span><br>
-          <span><strong>Modelroute:</strong> ChatGPT OAuth</span>
-        `;
-
-        try{
-          const response = await fetch(checkoutEndpoint, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(payload)
-          });
-          const result = await response.json().catch(() => ({}));
-          if(!response.ok || !result.ok || !result.checkoutUrl){
-            throw new Error(result.message || result.error || 'checkout_failed');
-          }
-          orderResult.innerHTML = `
-            <strong>Je Mollie-checkout staat klaar.</strong><br>
-            Je wordt doorgestuurd om de eerste maand te betalen. Na betaling zetten we je installatie klaar.<br><br>
-            <a class="button secondary" href="${result.checkoutUrl}">Ga naar Mollie checkout</a>
-            <div style="margin-top:12px">Lukt doorsturen niet? Gebruik de knop hierboven.</div>
-          `;
-          window.location.href = result.checkoutUrl;
-        }catch(error){
-          orderResult.innerHTML = `
-            <strong>Checkout kon niet worden gestart.</strong><br>
-            Probeer opnieuw of gebruik de contactknop. Foutmelding: ${String(error.message || error)}
-          `;
-          if(submitButton){
-            submitButton.disabled = false;
-            submitButton.textContent = 'Start intake en betaal eerste maand';
-          }
-        }
-      });
-    }
 
     function openCrispWithVoiceContext(){
       try{
