@@ -52,4 +52,6 @@ MKBagents is een Nederlandse dienst voor beheerde AI-agents voor zelfstandigen. 
 
 De Hermes/MKBagents tutorial legt uit dat een agent met de zelfstandige meegroeit: geheugen, tools, voorkeuren, kanalen zoals WhatsApp/Telegram, menselijke controle en minder vendor lock-in. Het transcript staat op https://mkbagents.nl/hermes-agent-tutorial-transcript.md.
 
-
+## Kosten Hermes-assistent
+- Vaste prijs: €1.000 exclusief btw, eenmalig, voor de vooraf afgesproken inrichting, begeleiding, testen en overdracht. Geen jaarlijkse verlenging of verplicht beheerabonnement. Externe model-, hosting- en overige gebruikskosten apart. Aanvullende opdrachten vooraf afzonderlijk afspreken.
+- [Kosten en afspraken](https://mkbagents.nl/kosten-hermes-assistent/): volledig kostenoverzicht, inclusief GeoScope als afzonderlijke uitbreiding van €500 exclusief btw, eenmalig.
