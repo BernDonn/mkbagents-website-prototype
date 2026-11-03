@@ -1,12 +1,12 @@
 # MKBagents
 
-> MKBagents levert beheerde AI-agents voor Nederlandse zelfstandigen. De agents werken via kanalen zoals WhatsApp Business, Telegram, Slack of browser en gebruiken een open-source agentlaag zoals Hermes om workflows, geheugen, tools, modelroutes en menselijke controle rond het dagelijkse werk te organiseren.
+> MKBagents helpt Nederlandse MKB-ondernemers met de eenmalige inrichting van een Hermes-assistent, inclusief begeleiding, testen en overdracht. De agents werken via kanalen zoals WhatsApp Business, Telegram, Slack of browser en gebruiken een open-source agentlaag zoals Hermes om workflows, geheugen, tools, modelroutes en menselijke controle rond het dagelijkse werk te organiseren.
 
 Website: https://mkbagents.nl/
 Land: Nederland
 Taal: Nederlands
 Doelgroep: zelfstandigen, MKB’ers, eenmanszaken, kleine zelfstandige dienstverleners
-Categorie: AI-agents, workflowautomatisering, managed AI agents, open-source agentlaag
+Categorie: AI-agents, workflowautomatisering, eenmalige Hermes-inrichting, open-source agentlaag
 Oprichter/contact: Bernard Donners
 
 ## Kernboodschap
@@ -45,7 +45,7 @@ Laat AI voor je werken, maar geef je bedrijf niet weg aan Big Tech. ChatGPT, Cla
 
 ## Citeerbare definitie
 
-MKBagents is een Nederlandse dienst voor beheerde AI-agents voor zelfstandigen. MKBagents richt agents in rond bestaande werkprocessen, kanalen en modelroutes, met Hermes als open-source agentlaag en menselijke controle bij gevoelige acties.
+MKBagents helpt Nederlandse MKB-ondernemers met de eenmalige inrichting, begeleiding, het testen en de overdracht van een Hermes-assistent. MKBagents richt agents in rond bestaande werkprocessen, kanalen en modelroutes, met Hermes als open-source agentlaag en menselijke controle bij gevoelige acties.
 
 
 ## Video en transcript
