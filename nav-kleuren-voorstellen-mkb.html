@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voorstellen nav-kleuren Q&A en Over ons — MKBagents</title>
+  <style>
+    :root{
+      --paper:#f3f6fb;
+      --paper2:#fffdf8;
+      --ink:#111827;
+      --muted:#596273;
+      --green:#123c7c;
+      --green2:#1e5aa8;
+      --lime:#ffb84d;
+      --line:#dbe3ef;
+      --shadow:0 18px 55px rgba(18,60,124,.14);
+      --blue:#2563eb;
+      --teal:#60a5fa;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 15% 8%,rgba(255,184,77,.24),transparent 32%),radial-gradient(circle at 90% 8%,rgba(37,99,235,.12),transparent 30%),linear-gradient(180deg,#fffdf8,#eef4fb);font-family:"Hanken Grotesk",Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);padding:34px}
+    h1{font-size:clamp(34px,4vw,58px);line-height:.98;letter-spacing:-.05em;margin:0 0 12px;font-weight:850}
+    .intro{max-width:860px;color:#4c5b50;font-size:18px;line-height:1.55;margin:0 0 28px}
+    .grid{display:grid;gap:28px;max-width:1320px;margin:auto}
+    .card{background:rgba(255,250,241,.78);border:1px solid var(--line);border-radius:34px;padding:24px;box-shadow:var(--shadow)}
+    .card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
+    .label{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:rgba(18,60,124,.08);border:1px solid rgba(18,60,124,.11);padding:8px 12px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+    h2{font-size:28px;letter-spacing:-.035em;margin:8px 0 6px}
+    .why{color:var(--muted);line-height:1.5;max-width:720px;margin:0}
+    .mock-wrap{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:18px;align-items:start}
+    .frame{background:linear-gradient(180deg,#f8f4ed,#eee6da);border:1px solid rgba(18,60,124,.12);border-radius:26px;padding:18px;overflow:hidden}
+    .frame-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#6a756e;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}
+    .nav{border-radius:20px;background:rgba(246,242,234,.82);border:1px solid rgba(222,213,196,.82);backdrop-filter:blur(18px);padding:13px 16px;box-shadow:0 10px 30px rgba(22,63,43,.10)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.045em;white-space:nowrap}
+    .brand-dot{width:12px;height:12px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 6px rgba(255,184,77,.24)}
+    .links{display:flex;align-items:center;gap:8px;font-size:12px;color:#303832;white-space:nowrap}
+    a{text-decoration:none;color:inherit}
+    .button{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 12px;font-weight:760;border:1px solid var(--green);background:var(--green);color:#fff;box-shadow:0 10px 26px rgba(18,60,124,.16)}
+    .button.secondary{background:transparent;color:var(--green);box-shadow:none}
+    .button.quickscan{background:var(--lime);border-color:var(--lime);color:var(--green);box-shadow:none}
+    .phone{width:100%;max-width:390px;margin:auto;border-radius:36px;background:#101827;padding:12px;box-shadow:0 22px 70px rgba(0,0,0,.24)}
+    .screen{height:310px;border-radius:28px;background:linear-gradient(180deg,#fffaf1,#eee6da);padding:14px;overflow:hidden}
+    .mobile-top{display:flex;align-items:center;gap:6px;justify-content:space-between}
+    .mobile-brand{display:flex;align-items:center;gap:7px;font-weight:850;letter-spacing:-.04em;font-size:14px}
+    .mobile-brand .brand-dot{width:10px;height:10px;box-shadow:0 0 0 5px rgba(255,184,77,.24)}
+    .mobile-actions{display:flex;gap:4px;align-items:center;min-width:0}
+    .mobile-pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--line);padding:8px 7px;font-size:10px;font-weight:850;white-space:nowrap;background:rgba(255,250,241,.9);color:var(--green);box-shadow:0 8px 22px rgba(18,60,124,.08)}
+    .hero-placeholder{margin-top:28px;border-radius:26px;background:linear-gradient(140deg,var(--green),#0f2d5c);height:188px;padding:22px;color:white;position:relative;overflow:hidden}
+    .hero-placeholder:after{content:"";position:absolute;right:-35px;bottom:-45px;width:170px;height:170px;border-radius:50%;background:rgba(255,184,77,.20)}
+    .hero-placeholder h3{font-size:30px;line-height:1;letter-spacing:-.045em;margin:0 0 12px;max-width:260px}
+    .hero-placeholder p{color:rgba(255,255,255,.72);margin:0;line-height:1.45;max-width:300px}
+
+    /* Variant A: zachte lime accenten */
+    .v-a .qa,.v-a .over{background:rgba(255,184,77,.30);border:1px solid rgba(18,60,124,.12);color:var(--green);border-radius:999px;padding:10px 13px;font-weight:820;box-shadow:none}
+    .v-a .qa:hover,.v-a .over:hover{background:var(--lime)}
+    .v-a .mobile-pill.qa,.v-a .mobile-pill.over{background:rgba(255,184,77,.38);border-color:rgba(18,60,124,.12)}
+
+    /* Variant B: Q&A als subtiele outline, Over ons als groene knop */
+    .v-b .qa{border:1px solid rgba(18,60,124,.22);border-radius:999px;padding:10px 13px;color:var(--green);background:rgba(255,250,241,.62);font-weight:820}
+    .v-b .over{border-radius:999px;padding:10px 14px;background:var(--green);border:1px solid var(--green);color:#fff;font-weight:820;box-shadow:0 10px 24px rgba(18,60,124,.15)}
+    .v-b .mobile-pill.qa{background:rgba(255,250,241,.9);border-color:rgba(18,60,124,.22)}
+    .v-b .mobile-pill.over{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 10px 22px rgba(18,60,124,.15)}
+
+    /* Variant C: compact cyan/teal tint als duidelijke utility-links */
+    .v-c .qa,.v-c .over{border-radius:999px;padding:10px 13px;font-weight:850;border:1px solid rgba(31,151,128,.22);background:linear-gradient(180deg,rgba(68,227,193,.18),rgba(54,213,255,.10));color:#123c7c;box-shadow:0 8px 22px rgba(31,151,128,.08)}
+    .v-c .over{background:linear-gradient(180deg,rgba(255,184,77,.36),rgba(68,227,193,.16));border-color:rgba(18,60,124,.14)}
+    .v-c .mobile-pill.qa,.v-c .mobile-pill.over{border-color:rgba(31,151,128,.22);background:linear-gradient(180deg,rgba(68,227,193,.18),rgba(54,213,255,.10));color:#123c7c}
+    .v-c .mobile-pill.over{background:linear-gradient(180deg,rgba(255,184,77,.38),rgba(68,227,193,.14))}
+
+    .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .note{border:1px solid rgba(18,60,124,.11);background:rgba(255,255,255,.42);border-radius:18px;padding:12px;color:#56635a;font-size:14px;line-height:1.42}
+    .note strong{display:block;color:var(--green);margin-bottom:4px}
+    @media(max-width:980px){body{padding:20px}.mock-wrap{grid-template-columns:1fr}.links{gap:8px;font-size:12px}.links .optional{display:none}.notes{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="grid">
+    <header>
+      <h1>Voorstellen MKBagents: Q&A en Over ons meer kleur geven</h1>
+      <p class="intro">Drie compacte opties voor de bovenste navigatie. Elke kaart laat links desktop zien en rechts mobile. Ik zou vooral letten op: niet te druk, Quickscan blijft primair, maar Q&A en Over ons worden makkelijker zichtbaar.</p>
+    </header>
+
+    <section class="card v-a">
+      <div class="card-head">
+        <div>
+          <span class="label">Optie A · zacht en veilig</span>
+          <h2>Lime chips voor Q&A en Over ons</h2>
+          <p class="why">Rustigste optie. Q&A en Over ons krijgen dezelfde familie als Quickscan, maar lichter, zodat Quickscan de primaire knop blijft.</p>
+        </div>
+      </div>
+      <div class="mock-wrap">
+        <div class="frame">
+          <div class="frame-title"><span>Desktop nav</span><span>MKBagents</span></div>
+          <div class="nav"><div class="nav-inner"><a class="brand"><span class="brand-dot"></span>MKBagents</a><div class="links"><a class="optional">Oplossingen</a><a class="optional">Koppelingen</a><a class="optional">Agent Platform</a><a class="optional">Modelkeuze</a><a class="qa">Q&A</a><a class="button quickscan">Quickscan</a><a class="over">Over ons</a></div></div></div>
+        </div>
+        <div class="frame">
+          <div class="frame-title"><span>Mobile top</span><span>390px</span></div>
+          <div class="phone"><div class="screen"><div class="mobile-top"><div class="mobile-brand"><span class="brand-dot"></span>MKBagents</div><div class="mobile-actions"><a class="mobile-pill qa">Q&A</a><a class="mobile-pill quickscan">Quickscan</a><a class="mobile-pill over">Over ons</a></div></div><div class="hero-placeholder"><h3>Laat je team slimmer werken</h3><p>Open-source agents, duidelijke controle en workflows voor teams.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card v-b">
+      <div class="card-head">
+        <div>
+          <span class="label">Optie B · mijn voorkeur voor MKB</span>
+          <h2>Q&A subtiel, Over ons blauw</h2>
+          <p class="why">Meest duidelijk zonder rommelig te worden. Over ons voelt als echte navigatieknop in de MKB-kleur; Q&A blijft vindbaar maar rustiger. Goede balans naast Quickscan.</p>
+        </div>
+      </div>
+      <div class="mock-wrap">
+        <div class="frame">
+          <div class="frame-title"><span>Desktop nav</span><span>MKBagents</span></div>
+          <div class="nav"><div class="nav-inner"><a class="brand"><span class="brand-dot"></span>MKBagents</a><div class="links"><a class="optional">Oplossingen</a><a class="optional">Koppelingen</a><a class="optional">Agent Platform</a><a class="optional">Modelkeuze</a><a class="qa">Q&A</a><a class="button quickscan">Quickscan</a><a class="over">Over ons</a></div></div></div>
+        </div>
+        <div class="frame">
+          <div class="frame-title"><span>Mobile top</span><span>390px</span></div>
+          <div class="phone"><div class="screen"><div class="mobile-top"><div class="mobile-brand"><span class="brand-dot"></span>MKBagents</div><div class="mobile-actions"><a class="mobile-pill qa">Q&A</a><a class="mobile-pill quickscan">Quickscan</a><a class="mobile-pill over">Over ons</a></div></div><div class="hero-placeholder"><h3>Laat je team slimmer werken</h3><p>Open-source agents, duidelijke controle en workflows voor teams.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card v-c">
+      <div class="card-head">
+        <div>
+          <span class="label">Optie C · frisser / tech</span>
+          <h2>Teal/cyan utility chips</h2>
+          <p class="why">Iets moderner en meer tech. Werkt visueel, maar is drukker dan A/B en introduceert een extra kleuraccent in de nav.</p>
+        </div>
+      </div>
+      <div class="mock-wrap">
+        <div class="frame">
+          <div class="frame-title"><span>Desktop nav</span><span>MKBagents</span></div>
+          <div class="nav"><div class="nav-inner"><a class="brand"><span class="brand-dot"></span>MKBagents</a><div class="links"><a class="optional">Oplossingen</a><a class="optional">Koppelingen</a><a class="optional">Agent Platform</a><a class="optional">Modelkeuze</a><a class="qa">Q&A</a><a class="button quickscan">Quickscan</a><a class="over">Over ons</a></div></div></div>
+        </div>
+        <div class="frame">
+          <div class="frame-title"><span>Mobile top</span><span>390px</span></div>
+          <div class="phone"><div class="screen"><div class="mobile-top"><div class="mobile-brand"><span class="brand-dot"></span>MKBagents</div><div class="mobile-actions"><a class="mobile-pill qa">Q&A</a><a class="mobile-pill quickscan">Quickscan</a><a class="mobile-pill over">Over ons</a></div></div><div class="hero-placeholder"><h3>Laat je team slimmer werken</h3><p>Open-source agents, duidelijke controle en workflows voor teams.</p></div></div></div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note"><strong>A</strong>Meest rustig. Nauwelijks risico op visuele herrie.</div>
+        <div class="note"><strong>B</strong>Mijn keuze: Over ons duidelijk, Q&A subtiel, Quickscan blijft primair.</div>
+        <div class="note"><strong>C</strong>Meer tech uitstraling, maar minder sober.</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
